@@ -4,7 +4,7 @@
 * [Introduction](introduction/README.md)
   * [Acknowledgments](introduction/acknowledgments.md)
   * [Getting Started](introduction/getting\_started.md)
-* [Part I - Script Type Overview](part\_i\_-\_script\_type\_overview/README.md)
+* [Script Type Overview](part\_i\_-\_script\_type\_overview/README.md)
   * [Custom (Mixer) Scripts](part\_i\_-\_script\_type\_overview/mix.md)
   * [Telemetry Scripts](part\_i\_-\_script\_type\_overview/telemetry.md)
   * [One-Time Scripts](part\_i\_-\_script\_type\_overview/one-time\_scripts.md)
