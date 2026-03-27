@@ -1,0 +1,46 @@
+# Filesystem
+
+File and directory access for scripts.
+
+## General
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-fstat/">
+<span class="api-card-title">fstat</span>
+<span class="api-card-summary">Checks the existence of file or directory.
+ If not exist, return nil.
+ If exist, return the object information.</span>
+</a>
+</div>
+
+## Directories
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-chdir/">
+<span class="api-card-title">chdir</span>
+<span class="api-card-summary">Change the working directory</span>
+</a>
+<a class="api-card" href="../runtime-dir/">
+<span class="api-card-title">dir</span>
+<span class="api-card-summary">Return an iterator listing all the files and directories name in a directory</span>
+</a>
+<a class="api-card" href="../runtime-mkdir/">
+<span class="api-card-title">mkdir</span>
+<span class="api-card-summary">Create a directory</span>
+</a>
+</div>
+
+## File Management
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-del/">
+<span class="api-card-title">del</span>
+<span class="api-card-summary">Returns FRESULT (e.g. 0=OK, 4=File not found, 5=Path not found, 6=Path invalid)</span>
+</a>
+<a class="api-card" href="../runtime-rename/">
+<span class="api-card-title">rename</span>
+<span class="api-card-summary">Rename a file or directory
+  If the file or directory is being moved to a new parent directory, then the new parent
+  directory must already exist.</span>
+</a>
+</div>

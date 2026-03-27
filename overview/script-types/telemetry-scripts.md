@@ -4,10 +4,9 @@
 
 Although they are named "Telemetry scripts" in fact they can be used to perform constant task while running in background. Telemetry scripts are mostly used for building customized screens that are avalilable to user directly from main screen using key shortcut. Each model can have up to three active scripts as configured on the model's Telemetry configuration page. The same script can be assigned to multiple models.
 
-{% hint style="warning" %}
-Telemetry scripts are only available on radios with B\&W LCD screens, such as e.g. FrSky Taranis models (including Xlite), Radiomaster TX12, Zorro, Boxer or Jumper T12.\
-Read more about <mark style="color:red;">\<radios></mark>.
-{% endhint %}
+!!! warning
+    Telemetry scripts are only available on radios with B&W LCD screens, such as e.g. FrSky Taranis models (including Xlite), Radiomaster TX12, Zorro, Boxer or Jumper T12.\
+    Read more about <mark style="color:red;">\<radios></mark>.
 
 ## Execution & Lifetime
 
@@ -22,9 +21,8 @@ Script executes until:
 
 Telemetry scripts are located on the SD card in the folder /SCRIPTS/TELEMETRY/.&#x20;
 
-{% hint style="warning" %}
-Telemetry script file name length (without extension) **must be 6 characters or less**&#x20;
-{% endhint %}
+!!! warning
+    Telemetry script file name length (without extension) **must be 6 characters or less**&#x20;
 
 ## Interface
 

@@ -1,0 +1,72 @@
+# Review: lcd.setColor
+
+[Back to dashboard](review.md) | [Open API page](lcd-set-color.md)
+
+## Snapshot
+
+- Module: `lcd`
+- Current symbol: `lcd.setColor`
+- Doc id: `lcd.set-color`
+- Source: `radio/src/lua/api_colorlcd.cpp:932`
+- Recommended action: **No action needed**
+- Why: Parsed output looks structurally healthy.
+
+## Decide
+
+- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+
+### Decision Controls
+
+No fields to edit.
+
+<div class="review-workbench">
+<section class="review-panel">
+### Source luadoc
+
+~~~~text
+@function lcd.setColor(colorIndex, color)
+
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+
+Please notice that changing theme colors affects not only other Lua widgets, but the entire radio interface.
+
+@notice Only available on radios with color display
+
+@status current Introduced in 2.2.0
+~~~~
+</section>
+<section class="review-panel">
+### Parsed doc
+
+#### Summary
+
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+
+#### Parameters
+
+None.
+
+#### Returns
+
+None.
+
+#### Notes
+
+- Only available on radios with color display
+
+</section>
+</div>
+
+## Suggested luadoc patch
+
+Use this as a starting point when the issue is in the C++ annotation. `TODO` means you still need to choose the real type.
+
+~~~~text
+@function lcd.setColor()
+
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+
+@notice Only available on radios with color display
+
+@status current Introduced in 2.2.0
+~~~~

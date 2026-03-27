@@ -1,0 +1,174 @@
+site_name: EdgeTX LuaDoc
+site_description: Next-generation Lua API docs generated from EdgeTX source annotations
+site_url: https://luadoc.edgetx.org/
+docs_dir: docs-site
+site_dir: site
+theme:
+  name: material
+  logo: assets/edgetx-logo.svg
+  favicon: assets/edgetx-logo.svg
+  palette:
+    primary: custom
+    accent: custom
+  features:
+    - navigation.path
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/review-workbench.js
+  - javascripts/version-switcher.js
+  - javascripts/legacy-version-banner.js
+  - javascripts/nav-section-links.js
+extra:
+  version:
+    provider: mike
+    default: latest
+    alias: true
+  legacy_version:
+    enabled: false
+    label: Legacy version
+    message: This documentation version is preserved for reference and may not include later corrections or the newest docs structure.
+nav:
+  - EdgeTX LuaDoc: index.md
+  - API Overview:
+      - API Overview: api-overview/README.md
+      - Lua version:
+          - Lua version: api-overview/version-libraries/README.md
+          - io Library: api-overview/version-libraries/io-library.md
+      - Script Types:
+          - Script Types: api-overview/script-types/README.md
+          - One-Time Scripts: api-overview/script-types/one-time-scripts.md
+          - Telemetry Scripts: api-overview/script-types/telemetry-scripts.md
+          - Widget Scripts: api-overview/script-types/widget-scripts.md
+          - Function Scripts: api-overview/script-types/function-scripts.md
+          - Mixes Scripts: api-overview/script-types/mixes-scripts.md
+      - Constants:
+          - constants/README.md
+          - Color Constants: constants/color-constants.md
+          - Flags and Pattern Constants: constants/flags-and-pattern-constants.md
+          - Key Event Constants: constants/key-event-constants.md
+          - Logical Switch Function Constants: constants/logical-switch-function-constants.md
+          - Screen Constants: constants/screen-constants.md
+          - Special Character Constants: constants/special-character-constants.md
+          - Special Function Constants: constants/special-function-constants.md
+          - Touch Event Constants: constants/touch-event-constants.md
+          - Widget Options Constants: constants/widget-options.md
+          - Units: constants/units.md
+      - Sources and Switches:
+          - Sources and Switches: api-overview/internal-indexes/README.md
+          - Sources: api-overview/internal-indexes/source-list.md
+          - Switches: api-overview/internal-indexes/switch-positions-id.md
+      - Fonts: api-overview/fonts.md
+  - API Reference:
+      - API Reference: api-reference/index.md
+      - Audio-Sound: api-reference/audio-sound.md
+      - Display LCD: api-reference/display-lcd.md
+      - Display LVGL: api-reference/lvgl-for-lua.md
+      - Filesystem: api-reference/filesystem.md
+      - Lua Scripts: api-reference/lua-scripts.md
+      - Model Functions: api-reference/model-functions.md
+      - Radio Hardware: api-reference/radio-hardware.md
+      - RF module: api-reference/rf-module.md
+      - Serial Ports: api-reference/serial-ports.md
+      - Sources: api-reference/sources.md
+      - Switches: api-reference/switches.md
+      - System: api-reference/system.md
+      - Telemetry: api-reference/telemetry.md
+      - Time: api-reference/time.md
+      - Variables: api-reference/variables.md
+  - Programming:
+      - Programming: lua-api-programming/README.md
+      - Lua Basics: api-overview/lua-basics.md
+      - Data Exchange with the EdgeTX Model Setup: lua-api-programming/data-exchange-with-the-edgetx-model-setup.md
+      - Drawing Flags and Colors: lua-api-programming/drawing-flags-and-colors.md
+      - Init Function Syntax: lua-api-programming/init-function-syntax.md
+      - Input Table Syntax: lua-api-programming/input-table-syntax.md
+      - Loading Code Modules Dynamically: lua-api-programming/loading-code-modules-dynamically.md
+      - Output Table Syntax: lua-api-programming/output-table-syntax.md
+      - Return Statement Syntax: lua-api-programming/return-statement-syntax.md
+      - Run Function Syntax: lua-api-programming/run-function-syntax.md
+      - Saving Memory: lua-api-programming/saving-memory.md
+      - Using Key and Touch Events: lua-api-programming/using-key-and-touch-events.md
+      - Advanced Topics:
+          - Overview: advanced-topics/README.md
+          - Debugging techniques: advanced-topics/debugging-techniques.md
+          - Lua data sharing across scripts: advanced-topics/lua-data-sharing-across-scripts.md
+          - Speed/memory optimizaton tricks: advanced-topics/optimization-tricks.md
+  - Radios:
+      - api-overview/radios/README.md
+      - BetaFPV:
+          - api-overview/radios/betafpv/README.md
+          - LiteRadio3 Pro: api-overview/radios/betafpv/betafpv-literadio3-pro.md
+      - FatFish:
+          - api-overview/radios/fatfish/README.md
+          - F16: api-overview/radios/fatfish/fatfish-f16.md
+      - FlySky:
+          - api-overview/radios/flysky/README.md
+          - EL18: api-overview/radios/flysky/flysky-el18.md
+          - NB4+: api-overview/radios/flysky/flysky-nb4-plus.md
+          - NV14: api-overview/radios/flysky/flysky-nv14.md
+          - PA01: api-overview/radios/flysky/flysky-pa01.md
+          - PL18 / PL18EV: api-overview/radios/flysky/flysky-pl18-pl18ev.md
+          - PL18U: api-overview/radios/flysky/flysky-pl18u.md
+          - ST16: api-overview/radios/flysky/flysky-st16.md
+      - FrSky:
+          - api-overview/radios/frsky/README.md
+          - QX7 / QX7S / QX7 ACCESS / QX7S ACCESS: api-overview/radios/frsky/frsky-qx7-qx7s.md
+          - X-Lite / X-Lite S / X-Lite Pro: api-overview/radios/frsky/frsky-x-lite-x-lite-s-x-lite-pro.md
+          - X9 Lite / X9 Lite S: api-overview/radios/frsky/frsky-x9-lite-x9-lite-s.md
+          - X9D / X9D+ / X9D SE: api-overview/radios/frsky/frsky-x9d-x9d-plus-x9d-plus-se.md
+          - X9D+ 2019 / X9D+ 2019 SE: api-overview/radios/frsky/frsky-x9dp2019.md
+          - X9E / X9E Hall: api-overview/radios/frsky/frsky-x9e-x9e-hall.md
+          - X10 / X10S / X10 Express / X10S Express: api-overview/radios/frsky/frsky-x10express.md
+          - X12S / X12S IRSM: api-overview/radios/frsky/frsky-x12s-x12s-irsm.md
+      - HelloRadioSky:
+          - api-overview/radios/helloradiosky/README.md
+          - V12: api-overview/radios/helloradiosky/helloradiosky-v12.md
+          - V14: api-overview/radios/helloradiosky/helloradiosky-v14.md
+          - V16: api-overview/radios/helloradiosky/helloradiosky-v16.md
+      - iFlight:
+          - api-overview/radios/iflight/README.md
+          - Commando8: api-overview/radios/iflight/iflight-commando8.md
+          - Commando14: api-overview/radios/iflight/iflight-commando14.md
+      - Jumper:
+          - api-overview/radios/jumper/README.md
+          - Bumblebee: api-overview/radios/jumper/jumper-bumblebee.md
+          - T-Lite / T-Lite v2: api-overview/radios/jumper/jumper-t-lite-t-lite-v2.md
+          - T-Pro: api-overview/radios/jumper/jumper-t-pro.md
+          - T-12 / T12 Plus / T12 Pro Hall: api-overview/radios/jumper/jumper-t12-t12-plus-t12-pro-hall.md
+          - T-14: api-overview/radios/jumper/jumper-t14.md
+          - T-20: api-overview/radios/jumper/jumper-t20.md
+          - T15: api-overview/radios/jumper/jumper-t15.md
+          - T15 Pro: api-overview/radios/jumper/jumper-t15-pro.md
+          - T16 / T16 Plus / T16 Pro Hall: api-overview/radios/jumper/jumper-t16-t16-plus-t16-pro-hall.md
+          - T18 / T18 Lite / T18 Pro: api-overview/radios/jumper/jumper-t18-t18-lite-t18-pro.md
+          - T20 V2: api-overview/radios/jumper/jumper-t20-v2.md
+      - RadioMaster:
+          - api-overview/radios/radiomaster/README.md
+          - Boxer: api-overview/radios/radiomaster/radiomaster-boxer.md
+          - GX12: api-overview/radios/radiomaster/radiomaster-gx12.md
+          - MT12: api-overview/radios/radiomaster/radiomaster-mt12.md
+          - Pocket: api-overview/radios/radiomaster/radiomaster-pocket.md
+          - T8 Pro: api-overview/radios/radiomaster/radiomaster-t8-pro.md
+          - TX12: api-overview/radios/radiomaster/radiomaster-tx12.md
+          - TX12 Mark II: api-overview/radios/radiomaster/radiomaster-tx12-mark-ii.md
+          - Zorro: api-overview/radios/radiomaster/radiomaster-zorro.md
+          - TX15: api-overview/radios/radiomaster/radiomaster-tx15.md
+          - TX16S / TX16S MAX / TX16S Mark II: api-overview/radios/radiomaster/radiomaster-tx16s.md
+          - TX16S MK3 / TX16S MK3 MAX: api-overview/radios/radiomaster/radiomaster-tx16smk3.md
+      # - TBS:
+      #     - api-overview/radios/tbs/README.md
+  - Migration / Update:
+      - Overview: migration-plan.md
+      - Pipeline:
+          - Overview: pipeline/index.md
+          - Annotation Contract: pipeline/annotation-contract.md
+          - Overlay Contract: pipeline/overlay-contract.md
+          - API Schema: pipeline/api-schema.md
+          - Real Extraction Notes: pipeline/real-extraction-notes.md
+      - Internal Review Tools:
+          - API Review Dashboard: api-reference/review.md
+markdown_extensions:
+  - tables
+  - admonition
+  - fenced_code

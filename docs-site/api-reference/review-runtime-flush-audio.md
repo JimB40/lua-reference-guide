@@ -1,0 +1,66 @@
+# Review: flushAudio
+
+[Back to dashboard](review.md) | [Open API page](runtime-flush-audio.md)
+
+## Snapshot
+
+- Module: `runtime`
+- Current symbol: `flushAudio`
+- Doc id: `runtime.flush-audio`
+- Source: `radio/src/lua/api_general.cpp:2078`
+- Recommended action: **No action needed**
+- Why: Parsed output looks structurally healthy.
+
+## Decide
+
+- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+
+### Decision Controls
+
+No fields to edit.
+
+<div class="review-workbench">
+<section class="review-panel">
+### Source luadoc
+
+~~~~text
+@function flushAudio()
+
+flushes audio queue
+
+@status experimental
+~~~~
+</section>
+<section class="review-panel">
+### Parsed doc
+
+#### Summary
+
+flushes audio queue
+
+#### Parameters
+
+None.
+
+#### Returns
+
+None.
+
+#### Notes
+
+None.
+
+</section>
+</div>
+
+## Suggested luadoc patch
+
+Use this as a starting point when the issue is in the C++ annotation. `TODO` means you still need to choose the real type.
+
+~~~~text
+@function flushAudio()
+
+flushes audio queue
+
+@status current Introduced in unknown
+~~~~

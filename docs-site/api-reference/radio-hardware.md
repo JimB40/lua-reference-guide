@@ -1,0 +1,85 @@
+# Radio Hardware
+
+Hardware-facing APIs, keys, sticks, and other low-level radio controls.
+
+## Key Inputs and Events
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-get-rot-enc-mode/">
+<span class="api-card-title">getRotEncMode</span>
+<span class="api-card-summary">Return rotary encoder mode</span>
+</a>
+<a class="api-card" href="../runtime-get-rot-enc-speed/">
+<span class="api-card-title">getRotEncSpeed</span>
+<span class="api-card-summary">Return rotary encoder current speed</span>
+</a>
+<a class="api-card" href="../runtime-kill-events/">
+<span class="api-card-title">killEvents</span>
+<span class="api-card-summary">Stops key state machine. See [Key Events](../key_events.md) for the detailed description.</span>
+</a>
+</div>
+
+## Trainer Input
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-get-trainer-status/">
+<span class="api-card-title">getTrainerStatus</span>
+<span class="api-card-summary">Return the current trainer connection status.</span>
+</a>
+</div>
+
+## Stick Mapping
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-default-channel/">
+<span class="api-card-title">defaultChannel</span>
+<span class="api-card-summary">Get channel assigned to stick. See Default Channel Order in General Settings</span>
+</a>
+<a class="api-card" href="../runtime-default-stick/">
+<span class="api-card-title">defaultStick</span>
+<span class="api-card-summary">Get stick that is assigned to a channel. See Default Channel Order in General Settings.</span>
+</a>
+<a class="api-card" href="../runtime-get-stick-mode/">
+<span class="api-card-title">getStickMode</span>
+<span class="api-card-summary">Return the current radio stick mode.</span>
+</a>
+</div>
+
+## LEDs
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-apply-rgbled-colors/">
+<span class="api-card-title">applyRGBLedColors</span>
+<span class="api-card-summary">Apply RGB led colors previously defined by setRGBLedColor</span>
+</a>
+<a class="api-card" href="../runtime-set-cfsled-color/">
+<span class="api-card-title">setCFSLedColor</span>
+<span class="api-card-summary">Overrides the LED color for a custom function switch</span>
+</a>
+<a class="api-card" href="../runtime-set-rgbled-color/">
+<span class="api-card-title">setRGBLedColor</span>
+<span class="api-card-summary">Needs summary review</span>
+</a>
+</div>
+
+## GPS
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-get-tx-gps/">
+<span class="api-card-title">getTxGPS</span>
+<span class="api-card-summary">Return the internal GPS position or nil if no valid hardware found</span>
+</a>
+</div>
+
+## Gyroscope
+
+<div class="api-grid">
+<a class="api-card" href="../runtime-set-imu-x/">
+<span class="api-card-title">setIMU_X</span>
+<span class="api-card-summary">Needs summary review</span>
+</a>
+<a class="api-card" href="../runtime-set-imu-y/">
+<span class="api-card-title">setIMU_Y</span>
+<span class="api-card-summary">Needs summary review</span>
+</a>
+</div>

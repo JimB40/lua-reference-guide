@@ -18,17 +18,15 @@ Script executes until
 * it misbehaves (e.g. run-time error or low memory)
 * [One-time Script](one-time-scripts.md) is running. When One-time script finishes execution, Wigdet Script resumes execution.
 
-{% hint style="warning" %}
-Function scripts **DO NOT HAVE ACCESS TO LCD DISPLAY**
-{% endhint %}
+!!! warning
+    Function scripts **DO NOT HAVE ACCESS TO LCD DISPLAY**
 
 ## File Location
 
 Function scripts are located on the SD card in the folder /SCRIPTS/FUNCTIONS/&#x20;
 
-{% hint style="warning" %}
-File name length (without extension) **must be 6 characters or less**
-{% endhint %}
+!!! warning
+    File name length (without extension) **must be 6 characters or less**
 
 ## Interface
 

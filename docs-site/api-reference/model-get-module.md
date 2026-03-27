@@ -1,0 +1,27 @@
+# model.getModule
+
+`model.getModule(index)`
+
+Get RF module parameters
+
+## Parameters
+
+| Name | Req | Type | Description |
+| --- | --- | --- | --- |
+| `index` | yes | `integer` | module index (0 for internal, 1 for external) |
+
+## Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `-` | `nil` | requested module does not exist |
+| `-` | `table` | module parameters: * `subType` (number) protocol index  * `modelId` (number) receiver number  * `firstChannel` (number) start channel (0 is CH1)  * `channelsCount` (number) number of channels sent to module  * `Type` (number) module type  * if the module type is Multi additional information are available  * `protocol` (number) protocol number (Multi only)  * `subProtocol` (number) sub-protocol number (Multi only)  * `channelsOrder` (number) first 4 channels expected order (Multi only)  * if the module type is LemonDSMP additional info is available  * `channelsOrder` (number) first 4 channels expected order (DSMP only) |
+
+## Availability
+
+- Since: `2.2.0`
+- Radio support: `all`
+
+## Source
+
+`radio/src/lua/api_model.cpp`

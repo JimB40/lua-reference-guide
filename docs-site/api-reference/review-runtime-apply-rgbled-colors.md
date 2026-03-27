@@ -1,0 +1,66 @@
+# Review: applyRGBLedColors
+
+[Back to dashboard](review.md) | [Open API page](runtime-apply-rgbled-colors.md)
+
+## Snapshot
+
+- Module: `runtime`
+- Current symbol: `applyRGBLedColors`
+- Doc id: `runtime.apply-rgbled-colors`
+- Source: `radio/src/lua/api_general.cpp:3009`
+- Recommended action: **No action needed**
+- Why: Parsed output looks structurally healthy.
+
+## Decide
+
+- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+
+### Decision Controls
+
+No fields to edit.
+
+<div class="review-workbench">
+<section class="review-panel">
+### Source luadoc
+
+~~~~text
+@function applyRGBLedColors()
+
+ Apply RGB led colors previously defined by setRGBLedColor
+
+@status current Introduced in 2.10
+~~~~
+</section>
+<section class="review-panel">
+### Parsed doc
+
+#### Summary
+
+Apply RGB led colors previously defined by setRGBLedColor
+
+#### Parameters
+
+None.
+
+#### Returns
+
+None.
+
+#### Notes
+
+None.
+
+</section>
+</div>
+
+## Suggested luadoc patch
+
+Use this as a starting point when the issue is in the C++ annotation. `TODO` means you still need to choose the real type.
+
+~~~~text
+@function applyRGBLedColors()
+
+Apply RGB led colors previously defined by setRGBLedColor
+
+@status current Introduced in 2.10
+~~~~

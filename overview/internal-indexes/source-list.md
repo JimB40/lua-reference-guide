@@ -10,15 +10,13 @@ EdgeTX internal Source List contains every source available on particular radio 
 
 Particular Source List ID is a integer number from 1 to whatever last source entry is used by EdgeTX developers during firmware implementation. Different Radios have different number of physical inputs that affects this list. Therefore for the same source type (ie LS04 - Logical switch number 4) **sourceListID** can have different value on particular radio model
 
-{% hint style="info" %}
-To avoid confusion wherever there is reference to Source List ID short-name **sourceListID** is used.
-{% endhint %}
+!!! info
+    To avoid confusion wherever there is reference to Source List ID short-name **sourceListID** is used.
 
 ## Source List Name
 
 Source List name can also change due to firmware changes during development or user configuration (ie. assigning custom name to input). In current version of EdgeTX firmware Source List Name also may contain special visual symbols to indicate type source (see [Special Charactes Constants](../../lua-api-reference/constants/special-character-constants.md)). \
 &#x20;  &#x20;
 
-{% hint style="info" %}
-To avoid confusion wherever there is reference to Source List Name short-name **sourceListName** is used.
-{% endhint %}
+!!! info
+    To avoid confusion wherever there is reference to Source List Name short-name **sourceListName** is used.

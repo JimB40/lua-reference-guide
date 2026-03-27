@@ -1,0 +1,131 @@
+{
+  "modules": {
+    "lcd": {
+      "items": 39,
+      "unknown_param_types": 1,
+      "unknown_return_types": 0,
+      "suspicious_items": [
+        {
+          "id": "lcd.clear",
+          "issues": [
+            "unknown_param_type"
+          ]
+        }
+      ]
+    },
+    "model": {
+      "items": 37,
+      "unknown_param_types": 0,
+      "unknown_return_types": 0,
+      "suspicious_items": []
+    },
+    "runtime": {
+      "items": 72,
+      "unknown_param_types": 2,
+      "unknown_return_types": 5,
+      "suspicious_items": [
+        {
+          "id": "getStickMode",
+          "issues": [
+            "unknown_return_type"
+          ]
+        },
+        {
+          "id": "multiBuffer",
+          "issues": [
+            "unknown_param_type"
+          ]
+        },
+        {
+          "id": "popupConfirmation",
+          "issues": [
+            "unknown_return_type"
+          ]
+        },
+        {
+          "id": "popupInput",
+          "issues": [
+            "unknown_return_type"
+          ]
+        },
+        {
+          "id": "popupWarning",
+          "issues": [
+            "unknown_return_type"
+          ]
+        },
+        {
+          "id": "resetGlobalTimer",
+          "issues": [
+            "unknown_param_type"
+          ]
+        }
+      ]
+    }
+  },
+  "backlog": [
+    {
+      "id": "getStickMode",
+      "doc_id": "runtime.get-stick-mode",
+      "module": "runtime",
+      "parser_fixable": [],
+      "upstream_fix_likely": [
+        "unknown_return_type"
+      ]
+    },
+    {
+      "id": "lcd.clear",
+      "doc_id": "lcd.clear",
+      "module": "lcd",
+      "parser_fixable": [],
+      "upstream_fix_likely": [
+        "unknown_param_type"
+      ]
+    },
+    {
+      "id": "multiBuffer",
+      "doc_id": "runtime.multi-buffer",
+      "module": "runtime",
+      "parser_fixable": [],
+      "upstream_fix_likely": [
+        "unknown_param_type"
+      ]
+    },
+    {
+      "id": "popupConfirmation",
+      "doc_id": "runtime.popup-confirmation",
+      "module": "runtime",
+      "parser_fixable": [],
+      "upstream_fix_likely": [
+        "unknown_return_type"
+      ]
+    },
+    {
+      "id": "popupInput",
+      "doc_id": "runtime.popup-input",
+      "module": "runtime",
+      "parser_fixable": [],
+      "upstream_fix_likely": [
+        "unknown_return_type"
+      ]
+    },
+    {
+      "id": "popupWarning",
+      "doc_id": "runtime.popup-warning",
+      "module": "runtime",
+      "parser_fixable": [],
+      "upstream_fix_likely": [
+        "unknown_return_type"
+      ]
+    },
+    {
+      "id": "resetGlobalTimer",
+      "doc_id": "runtime.reset-global-timer",
+      "module": "runtime",
+      "parser_fixable": [],
+      "upstream_fix_likely": [
+        "unknown_param_type"
+      ]
+    }
+  ]
+}

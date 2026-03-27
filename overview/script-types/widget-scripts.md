@@ -2,24 +2,22 @@
 
 ## Purpose
 
-Widget scripts are avaiable on radios equiped with color LCD. They are designed to run constantly in the background performinfg various task. Widget scripts are mostly used to extend EdgeTX functionality via _<mark style="color:purple;">Widgets</mark>_ that are places by user on _<mark style="color:purple;">Main Views</mark>_. They are equivalent of Telemetry Scripts on radios equiped with B\&W LCD.&#x20;
+Widget scripts are avaiable on radios equiped with color LCD. They are designed to run constantly in the background performinfg various task. Widget scripts are mostly used to extend EdgeTX functionality via _<mark style="color:purple;">Widgets</mark>_ that are places by user on _<mark style="color:purple;">Main Views</mark>_. They are equivalent of Telemetry Scripts on radios equiped with B&W LCD.&#x20;
 
 Most of the time, widget scripts show some info in a _<mark style="color:purple;">Widget's zone</mark>_ in one of the user defined _<mark style="color:purple;">Main Views.</mark>_ They cannot receive direct input from the user via key events with exeption of being displayed in so called _<mark style="color:purple;">Full Screen mode</mark>_. Full screen mode can be entered by selecting the widget, pressing ENTER and selecting **Full screen** from the widget's contextual menu, ~~or by double tapping the widget on radios with a touch screen~~. Full screen mode can be exited by long pressing the EXIT (RTN) button, or by calling the Lua function `lcd.exitFullScreen()`.
 
 Each model can have up to nine Main Views, with up to 8 widgets per screen, depending on their size and layout. Each instance of a widget has his own _options_ table.
 
-{% hint style="warning" %}
-Widget scripts are only available on radios with color LCD screens, such as e.g. FrSky X10 or X12, Radiomaster TX16S, Jumper T16 or T18, Flysky NV14., etc.\
-Read more about _<mark style="color:purple;">radios</mark>_.
-{% endhint %}
+!!! warning
+    Widget scripts are only available on radios with color LCD screens, such as e.g. FrSky X10 or X12, Radiomaster TX16S, Jumper T16 or T18, Flysky NV14., etc.\
+    Read more about _<mark style="color:purple;">radios</mark>_.
 
 ## Execution & Lifetime
 
 All widget scripts on the SD card are loaded into memory when the model is selected, even widgets that are not used. This has the side effect that any global functions defined in a widget script will always be available to other widget scripts. It also means that any Widget Script placed in proper location on the SD card will consume part of the radio's memory - even if it is not being used.&#x20;
 
-{% hint style="warning" %}
-&#x20;It is important to either keep Widget Scripts small, or to use Lua's [loadScript()](../../lua-api-reference/lua-scripts/loadscript.md) function to load code dynamically
-{% endhint %}
+!!! warning
+    &#x20;It is important to either keep Widget Scripts small, or to use Lua's [loadScript()](../../lua-api-reference/lua-scripts/loadscript.md) function to load code dynamically
 
 Script executes until:
 
@@ -31,20 +29,17 @@ Script executes until:
 Widget scripts are located on the SD card, each one in their specific folder: \
 /WIDGETS/\<folder _name_>/
 
-{% hint style="warning" %}
-Widget script folder name length **must be 8 characters or less**&#x20;
-{% endhint %}
+!!! warning
+    Widget script folder name length **must be 8 characters or less**&#x20;
 
 Widget script name is constant and has to be named **main.lua**
 
-{% hint style="info" %}
-Example of proper Widget script placement to be registered by EdgeTX as valid Widget script available to user in Widgets selection menu:\
-/WIDGETS/MYWGT/main.lua&#x20;
-{% endhint %}
+!!! info
+    Example of proper Widget script placement to be registered by EdgeTX as valid Widget script available to user in Widgets selection menu:\
+    /WIDGETS/MYWGT/main.lua&#x20;
 
-{% hint style="info" %}
-Try to use unique folder name. In case of naming clash, previously installed widget will be overwritten. &#x20;
-{% endhint %}
+!!! info
+    Try to use unique folder name. In case of naming clash, previously installed widget will be overwritten. &#x20;
 
 ## Interface
 
@@ -52,9 +47,8 @@ Every Widget Script must include a `return` statement at the end, defining its i
 
 <table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>name</strong></td><td>string</td><td>true</td><td>This variable holds a name that is displayed to user as Widget scripts name in available Widgets list.</td></tr></tbody></table>
 
-{% hint style="warning" %}
-The `name` length must be 10 **characters or less**.
-{% endhint %}
+!!! warning
+    The `name` length must be 10 **characters or less**.
 
 
 
@@ -62,13 +56,11 @@ The `name` length must be 10 **characters or less**.
 
 <table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>options</strong></td><td>table</td><td>false</td><td>Options table is to store Widget's options available to EdgeTX user via Widget's Settings menu. <br>To see valid options read <a href="../../lua-api-reference/constants/widget-options.md">Widget Options Constants</a>.</td></tr></tbody></table>
 
-{% hint style="info" %}
-`options` table is passed to `create` function when invoked and then stored in Lua. Changing options table values while Widget script is running has no effect. This table is designed to be changed with EdgeTX system menus.
-{% endhint %}
+!!! info
+    `options` table is passed to `create` function when invoked and then stored in Lua. Changing options table values while Widget script is running has no effect. This table is designed to be changed with EdgeTX system menus.
 
-{% hint style="info" %}
-If `options` is changed by the user in the Widget Settings menu, then `update` will be called with a new `options` table, unaffected by any changes made by Lua code to the old `options` table.
-{% endhint %}
+!!! info
+    If `options` is changed by the user in the Widget Settings menu, then `update` will be called with a new `options` table, unaffected by any changes made by Lua code to the old `options` table.
 
 
 
@@ -84,16 +76,14 @@ _Return values_
 
 <table data-header-hidden><thead><tr><th width="140.33333333333331">Returns</th><th>Description</th></tr></thead><tbody><tr><td><strong>widget</strong><br>table</td><td>Create function will return table that has to be later passed to <code>update</code> ,  <code>background</code> &#x26; <code>refresh</code>  functions allowing to access widget's unique variables </td></tr></tbody></table>
 
-{% hint style="info" %}
-The size of the widget's zone area is as follows:
+!!! info
+    The size of the widget's zone area is as follows:
 
-* Full screen mode: `LCD_W` by `LCD_H`
-* Not full screen mode: `zone.w` by `zone.h` (updated if screen options are changed)
-{% endhint %}
+    * Full screen mode: `LCD_W` by `LCD_H`
+    * Not full screen mode: `zone.w` by `zone.h` (updated if screen options are changed)
 
-{% hint style="info" %}
-If local variables are declared outside functions in the widget script, then they are shared between all instances of the widget. Therefore, local variables that are private for each instance should be added to the `widget` table in the `create` function before returning the `widget` table to EdgeTX.
-{% endhint %}
+!!! info
+    If local variables are declared outside functions in the widget script, then they are shared between all instances of the widget. Therefore, local variables that are private for each instance should be added to the `widget` table in the `create` function before returning the `widget` table to EdgeTX.
 
 
 
@@ -134,9 +124,8 @@ _Parameters_
 _Return values_\
 _none_
 
-{% hint style="info" %}
-if you want `background` function to run when the widget is visible, then call it from `refresh function.`
-{% endhint %}
+!!! info
+    if you want `background` function to run when the widget is visible, then call it from `refresh function.`
 
 
 

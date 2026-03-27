@@ -16,26 +16,23 @@ The script executes until:
 
     memory)
 
-{% hint style="danger" %}
-<mark style="color:red;">**Running a One-Time script will suspend execution of all other currently loaded Lua scripts (Custom, Telemetry, and Functions). They are automatically restarted once the One-Time script is finished. This is done to provide enough system resources to execute the One-Time script.**</mark>
-{% endhint %}
+!!! danger
+    <mark style="color:red;">**Running a One-Time script will suspend execution of all other currently loaded Lua scripts (Custom, Telemetry, and Functions). They are automatically restarted once the One-Time script is finished. This is done to provide enough system resources to execute the One-Time script.**</mark>
 
 ## File Location
 
 One-Time Scripts can be placed anywhere on SD card, however, the folder /SCRIPTS/ is recommended.
 
-{% hint style="info" %}
-If One-Time Script is placed in special folder /SCRIPTS/TOOLS it will be visible in EdgeTX RADIO>TOOLS tab\
-\
-To give this One-Time Script unique name place at the beginning of lua script line:\
-`-- toolName = "TNS|ScriptName|TNE`
+!!! info
+    If One-Time Script is placed in special folder /SCRIPTS/TOOLS it will be visible in EdgeTX RADIO>TOOLS tab\
+    \
+    To give this One-Time Script unique name place at the beginning of lua script line:\
+    `-- toolName = "TNS|ScriptName|TNE`
 
-Otherwise script's filename will be used to display in RADIO>TOOLS list.
-{% endhint %}
+    Otherwise script's filename will be used to display in RADIO>TOOLS list.
 
-{% hint style="info" %}
-Wizard scripts must be stored in the same subfolder of /TEMPLATES/ with the same "first name" as the template file using it. Some Wizard scripts are just small scripts that load one of the common scripts located in /SCRIPTS/WIZARD/.
-{% endhint %}
+!!! info
+    Wizard scripts must be stored in the same subfolder of /TEMPLATES/ with the same "first name" as the template file using it. Some Wizard scripts are just small scripts that load one of the common scripts located in /SCRIPTS/WIZARD/.
 
 ## **Interface**
 
@@ -76,9 +73,8 @@ end
 return { run = my_run }
 ```
 
-{% hint style="info" %}
-Because 0 is returned all the time this script will continue running until user long press EXIT (RTN) key.
-{% endhint %}
+!!! info
+    Because 0 is returned all the time this script will continue running until user long press EXIT (RTN) key.
 
 ***
 

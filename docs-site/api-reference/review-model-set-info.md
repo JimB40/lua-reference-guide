@@ -1,0 +1,89 @@
+# Review: model.setInfo
+
+[Back to dashboard](review.md) | [Open API page](model-set-info.md)
+
+## Snapshot
+
+- Module: `model`
+- Current symbol: `model.setInfo`
+- Doc id: `model.set-info`
+- Source: `radio/src/lua/api_model.cpp:83`
+- Recommended action: **No action needed**
+- Why: Parsed output looks structurally healthy.
+
+## Decide
+
+- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+
+### Decision Controls
+
+<div class="decision-panel" data-item-id="model.setInfo">
+<div class="decision-status" data-role="status">Decision server not connected yet.</div>
+<table class="decision-table">
+<thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
+<tbody>
+<tr><td><code>value</code></td><td>param</td><td><code>table</code></td><td>model information data, see model.getInfo()</td><td><select data-field-kind="param" data-field-name="value" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="value" data-custom-type="true" /></td></tr>
+</tbody>
+</table>
+<div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.setInfo&quot;, &quot;symbol&quot;: &quot;model.setInfo&quot;, &quot;summary&quot;: &quot;Set the current Model information&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;table&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;model information data, see model.getInfo()&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;If a parameter is missing from the value, then\nthat parameter remains unchanged.&quot;], &quot;since&quot;: &quot;2.0.6&quot;}</script>
+</div>
+
+<div class="review-workbench">
+<section class="review-panel">
+### Source luadoc
+
+~~~~text
+@function model.setInfo(value)
+
+Set the current Model information
+
+@param value (table) model information data, see model.getInfo()
+
+@notice If a parameter is missing from the value, then
+that parameter remains unchanged.
+
+@status current Introduced in 2.0.6, extendedLimits and jitterFilter added in 2.8.0
+~~~~
+</section>
+<section class="review-panel">
+### Parsed doc
+
+#### Summary
+
+Set the current Model information
+
+#### Parameters
+
+| Name | Req | Type | Description |
+| --- | --- | --- | --- |
+| `value` | yes | `table` | model information data, see model.getInfo() |
+
+#### Returns
+
+None.
+
+#### Notes
+
+- If a parameter is missing from the value, then
+that parameter remains unchanged.
+
+</section>
+</div>
+
+## Suggested luadoc patch
+
+Use this as a starting point when the issue is in the C++ annotation. `TODO` means you still need to choose the real type.
+
+~~~~text
+@function model.setInfo([value])
+
+Set the current Model information
+
+@param value (table) model information data, see model.getInfo()
+
+@notice If a parameter is missing from the value, then
+that parameter remains unchanged.
+
+@status current Introduced in 2.0.6
+~~~~
