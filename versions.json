@@ -1,12 +1,12 @@
 [
   {
     "version": "stable-preview",
-    "title": "Stable",
+    "title": "2.11",
     "aliases": []
   },
   {
     "version": "preview",
-    "title": "2.12",
+    "title": "Preview",
     "aliases": []
   }
 ]
