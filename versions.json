@@ -17,5 +17,10 @@
     "aliases": [
       "stable-preview"
     ]
+  },
+  {
+    "version": "2.10",
+    "title": "2.10",
+    "aliases": []
   }
 ]
