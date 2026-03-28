@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../assets/radios/radiomaster-t8pro-500.png" alt="RadioMaster T8 Pro">
+<img src="../../../../assets/radios/radiomaster-t8pro-500.png" alt="RadioMaster T8 Pro">
 </div>
 <div class="radio-overview-table">
 

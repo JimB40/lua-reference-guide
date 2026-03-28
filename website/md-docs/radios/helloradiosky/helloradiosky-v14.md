@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../assets/radios/hrs-v14-500.png" alt="HelloRadioSky V14">
+<img src="../../../../assets/radios/hrs-v14-500.png" alt="HelloRadioSky V14">
 </div>
 <div class="radio-overview-table">
 

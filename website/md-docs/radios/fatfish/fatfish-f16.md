@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../assets/radios/fatfish-f16-500.png" alt="FatFish F16">
+<img src="../../../../assets/radios/fatfish-f16-500.png" alt="FatFish F16">
 </div>
 <div class="radio-overview-table">
 

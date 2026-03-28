@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../assets/radios/frsky-x12s-500.png" alt="FrSky X12S">
+<img src="../../../../assets/radios/frsky-x12s-500.png" alt="FrSky X12S">
 </div>
 <div class="radio-overview-table">
 
