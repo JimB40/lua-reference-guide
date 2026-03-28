@@ -16,6 +16,16 @@ The live documentation source for the current site is in [website](website).
 uv run mkdocs serve -a 127.0.0.1:8014
 ```
 
+## Review Workbench
+
+For live API review pages with saved type decisions, run the local decision server in a second terminal:
+
+```sh
+uv run python3 tools/review_decision_server.py
+```
+
+Then open the preview at `http://127.0.0.1:8014/` and use the API review dashboard under the site navigation.
+
 ## Contributing
 
 - Edit the current docs under `website/`

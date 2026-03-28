@@ -26,16 +26,17 @@ uv run python3 tools/docs_pipeline.py report /tmp/api-model.2.12.json \
 uv run python3 tools/docs_pipeline.py build \
   --input /tmp/api-model.2.12.json \
   --overlay-dir docs-system/overlays \
-  --docs-output website/api-reference \
+  --docs-output website/md-docs/api-reference \
   --luals-output docs-system/generated/luals
 
 uv run python3 tools/docs_pipeline.py validate docs-system/examples/api-model.sample.json
 uv run python3 tools/docs_pipeline.py build \
   --input docs-system/examples/api-model.sample.json \
   --overlay-dir docs-system/overlays \
-  --docs-output website/api-reference \
+  --docs-output website/md-docs/api-reference \
   --luals-output docs-system/generated/luals
 
+uv run python3 tools/review_decision_server.py
 uv run mkdocs build
 ```
 

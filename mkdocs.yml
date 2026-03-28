@@ -13,12 +13,13 @@ theme:
   features:
     - navigation.path
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra-live-v2.css
 extra_javascript:
+  - javascripts/api-function-breadcrumb.js
+  - javascripts/mobile-nav-inline.js
   - javascripts/review-workbench.js
   - javascripts/version-switcher.js
   - javascripts/legacy-version-banner.js
-  - javascripts/nav-section-links.js
   - javascripts/toc-visibility.js
 extra:
   version:

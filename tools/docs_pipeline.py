@@ -4,6 +4,7 @@ import argparse
 import datetime
 import json
 import html
+import os
 from pathlib import Path
 import re
 import sys
@@ -131,22 +132,76 @@ def page_slug(text: str) -> str:
     return safe_file_stem(text).replace(".", "-")
 
 
+def group_for_item(item: dict) -> dict:
+    for group in load_api_groups():
+        if item_matches_group(item, group):
+            return group
+    return {
+        "name": "Uncategorized",
+        "slug": "uncategorized",
+        "description": "APIs not yet assigned to a user-facing group.",
+    }
+
+
 def page_name_for_item(item: dict) -> str:
+    group = group_for_item(item)
+    return str(Path(group["slug"]) / f"{page_slug(item['doc_id'])}.md")
+
+
+def legacy_page_name_for_item(item: dict) -> str:
     return f"{page_slug(item['doc_id'])}.md"
 
 
 def review_page_name_for_item(item: dict) -> str:
+    group = group_for_item(item)
+    return str(Path("review") / group["slug"] / f"{page_slug(item['doc_id'])}.md")
+
+
+def legacy_review_page_name_for_item(item: dict) -> str:
     return f"review-{page_slug(item['doc_id'])}.md"
 
 
-def built_page_href(page_name: str, *, from_subdir: bool = False) -> str:
-    stem = page_name[:-3] if page_name.endswith(".md") else page_name
-    prefix = "../" if from_subdir else ""
-    return f"{prefix}{stem}/"
+def page_href(from_page: str | Path, to_page: str | Path) -> str:
+    from_path = docs_path(from_page)
+    to_path = docs_path(to_page)
+    rel = Path(os.path.relpath(to_path, start=from_path.parent))
+    parts = list(rel.parts)
+    if parts[-1] == "index.md":
+        parts = parts[:-1]
+        href = "/".join(parts)
+        return f"{href}/" if href else "./"
+    filename = parts[-1]
+    if filename.endswith(".md"):
+        parts[-1] = filename[:-3]
+    href = "/".join(parts)
+    return f"{href}/" if href else "./"
+
+
+def doc_link(from_page: str | Path, to_page: str | Path) -> str:
+    return os.path.relpath(docs_path(to_page), start=docs_path(from_page).parent).replace(os.sep, "/")
+
+
+def docs_path(path: str | Path) -> Path:
+    path = Path(path)
+    if path.is_absolute():
+        return path
+    return Path(os.path.normpath(str(Path("/__docs__") / path)))
 
 
 def group_page_name(group: dict) -> str:
+    return str(Path(group["slug"]) / "index.md")
+
+
+def legacy_group_page_name(group: dict) -> str:
     return f"group-{group['slug']}.md"
+
+
+def module_page_name(module_name: str) -> str:
+    return str(Path("modules") / f"{safe_file_stem(module_name)}.md")
+
+
+def legacy_module_page_name(module_name: str) -> str:
+    return f"module-{safe_file_stem(module_name)}.md"
 
 
 def item_matches_group(item: dict, group: dict) -> bool:
@@ -313,13 +368,17 @@ def render_decision_controls(item: dict) -> list[str]:
     return lines
 
 
-def render_api_page(item: dict, overlay_text: str | None) -> str:
+def render_doc_text(text: str, page_path: str | Path) -> str:
+    return rewrite_legacy_doc_links(text, page_path)
+
+
+def render_api_page(item: dict, overlay_text: str | None, page_path: str | Path) -> str:
     lines = []
     lines.append(f"# {item['symbol']}")
     lines.append("")
     lines.append(f"`{item['syntax']}`")
     lines.append("")
-    lines.append(item["summary"])
+    lines.append(render_doc_text(item["summary"], page_path))
     lines.append("")
     if item["aliases"]:
         lines.append("## Aliases")
@@ -337,7 +396,7 @@ def render_api_page(item: dict, overlay_text: str | None) -> str:
         lines.append("| --- | --- | --- | --- |")
         for param in item["parameters"]:
             req = "yes" if param["required"] else "no"
-            description = param["description"].replace("\n", " ")
+            description = render_doc_text(param["description"], page_path).replace("\n", " ")
             lines.append(f"| `{param['name']}` | {req} | `{param['type']}` | {description} |")
     else:
         lines.append("None.")
@@ -349,7 +408,7 @@ def render_api_page(item: dict, overlay_text: str | None) -> str:
         lines.append("| --- | --- | --- |")
         for retval in item["returns"]:
             name = retval.get("name") or "-"
-            description = retval["description"].replace("\n", " ")
+            description = render_doc_text(retval["description"], page_path).replace("\n", " ")
             lines.append(f"| `{name}` | `{retval['type']}` | {description} |")
     else:
         lines.append("None.")
@@ -364,7 +423,7 @@ def render_api_page(item: dict, overlay_text: str | None) -> str:
         lines.append("## Notes")
         lines.append("")
         for note in item["notes"]:
-            lines.append(f"- {note}")
+            lines.append(f"- {render_doc_text(note, page_path)}")
         lines.append("")
     lines.append("## Source")
     lines.append("")
@@ -376,16 +435,17 @@ def render_api_page(item: dict, overlay_text: str | None) -> str:
 
 
 def render_api_index(model: dict) -> str:
+    current_page = Path("index.md")
     lines = []
     lines.append("# Generated API Reference")
     lines.append("")
     lines.append("This section is generated from the normalized API model and grouped with the same user-facing topic names used in the 2.11 docs.")
     lines.append("")
-    lines.append("Start with the [API Review Dashboard](review.md) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.")
+    lines.append(f"Start with the [API Review Dashboard]({doc_link(current_page, Path('review') / 'index.md')}) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.")
     lines.append("")
     for group, items in items_by_group(model):
         page = group_page_name(group)
-        lines.append(f"## [{group['name']}]({page})")
+        lines.append(f"## [{group['name']}]({doc_link(current_page, page)})")
         lines.append("")
         lines.append(f"- `{len(items)}` APIs")
         lines.append(f"- {group.get('description', 'User-facing topic grouping for this API area.')}")
@@ -399,13 +459,24 @@ def render_api_index(model: dict) -> str:
     for item in model["items"]:
         modules.setdefault(item["module"], []).append(item)
     for module_name in sorted(modules):
-        module_page = f"module-{safe_file_stem(module_name)}.md"
-        lines.append(f"- [{module_name}]({module_page})")
+        lines.append(f"- [{module_name}]({doc_link(current_page, module_page_name(module_name))})")
 
     return "\n".join(lines)
 
 
-def render_module_page(module_name: str, items: list[dict], report: dict) -> str:
+def card_summary_text(summary: str) -> str:
+    summary = compact_whitespace(summary)
+    if not summary:
+        return "Needs summary review"
+    first_sentence = re.split(r"(?<=[.!?])\s+", summary, maxsplit=1)[0].strip()
+    candidate = first_sentence or summary
+    if len(candidate) <= 120:
+        return candidate
+    shortened = candidate[:117].rsplit(" ", 1)[0].strip()
+    return f"{shortened}..." if shortened else f"{candidate[:117]}..."
+
+
+def render_module_page(module_name: str, items: list[dict], report: dict, page_path: str | Path) -> str:
     suspicious_by_id = {}
     module_report = report["modules"].get(module_name, {})
     for suspicious in module_report.get("suspicious_items", []):
@@ -416,7 +487,7 @@ def render_module_page(module_name: str, items: list[dict], report: dict) -> str
     lines.append("")
     lines.append(f"`{len(items)}` APIs in this module.")
     lines.append("")
-    lines.append('[Back to API overview](index.md) | [Open review dashboard](review.md)')
+    lines.append(f"[Back to API overview]({doc_link(page_path, 'index.md')}) | [Open review dashboard]({doc_link(page_path, Path('review') / 'index.md')})")
     lines.append("")
     lines.append('<div class="api-grid">')
     for item in sorted(items, key=lambda entry: entry["symbol"]):
@@ -424,8 +495,8 @@ def render_module_page(module_name: str, items: list[dict], report: dict) -> str
         badge = ""
         if issues:
             badge = f'<span class="api-card-badge">{" / ".join(issues)}</span>'
-        summary = item["summary"] or "Needs summary review"
-        lines.append('<a class="api-card" href="{href}">'.format(href=built_page_href(page_name_for_item(item), from_subdir=True)))
+        summary = card_summary_text(item["summary"])
+        lines.append('<a class="api-card" href="{href}">'.format(href=page_href(page_path, page_name_for_item(item))))
         lines.append(f'<span class="api-card-title">{item["symbol"]}</span>')
         lines.append(f'<span class="api-card-summary">{summary}</span>')
         if badge:
@@ -436,7 +507,7 @@ def render_module_page(module_name: str, items: list[dict], report: dict) -> str
     return "\n".join(lines)
 
 
-def render_group_page(group: dict, items: list[dict], report: dict) -> str:
+def render_group_page(group: dict, items: list[dict], report: dict, page_path: str | Path) -> str:
     suspicious_by_id = {}
     for module_name, data in report["modules"].items():
         for suspicious in data.get("suspicious_items", []):
@@ -457,8 +528,8 @@ def render_group_page(group: dict, items: list[dict], report: dict) -> str:
         badge = ""
         if issues:
             badge = f'<span class="api-card-badge">{" / ".join(issues)}</span>'
-        summary = item["summary"] or "Needs summary review"
-        lines.append('<a class="api-card" href="{href}">'.format(href=built_page_href(page_name_for_item(item), from_subdir=True)))
+        summary = card_summary_text(item["summary"])
+        lines.append('<a class="api-card" href="{href}">'.format(href=page_href(page_path, page_name_for_item(item))))
         lines.append(f'<span class="api-card-title">{item["symbol"]}</span>')
         lines.append(f'<span class="api-card-summary">{summary}</span>')
         if badge:
@@ -487,6 +558,7 @@ def render_overlay_sections(overlay_text: str) -> list[str]:
 
 
 def render_review_page(model: dict) -> str:
+    current_page = Path("review") / "index.md"
     report = quality_report(model)
     decisions = load_review_decisions()
     lines = []
@@ -527,7 +599,7 @@ def render_review_page(model: dict) -> str:
             if decision:
                 status = f"`reviewed` ({decision.get('updated_at', 'saved')})"
             lines.append(
-                f"| [`{entry['id']}`]({page_name}) | {status} | `{entry['module']}` | `{parser_fixable}` | `{upstream_fix_likely}` |"
+                f"| [`{entry['id']}`]({doc_link(current_page, page_name)}) | {status} | `{entry['module']}` | `{parser_fixable}` | `{upstream_fix_likely}` |"
             )
     else:
         lines.append("No backlog items.")
@@ -546,7 +618,7 @@ def render_review_page(model: dict) -> str:
             item = item_by_id[suspicious["id"]]
             issues = ", ".join(suspicious["issues"])
             lines.append(
-                f"| [`{item['id']}`]({review_page_name_for_item(item)}) | `{issues}` | `{source_label(item)}` |"
+                f"| [`{item['id']}`]({doc_link(current_page, review_page_name_for_item(item))}) | `{issues}` | `{source_label(item)}` |"
             )
         lines.append("")
     lines.append("## Suggested Spot Checks")
@@ -561,19 +633,19 @@ def render_review_page(model: dict) -> str:
         item = item_by_id.get(item_id)
         if not item:
             continue
-        lines.append(f"- [`{item_id}`]({review_page_name_for_item(item)}) - {item['summary'] or 'Needs summary review'}")
+        lines.append(f"- [`{item_id}`]({doc_link(current_page, review_page_name_for_item(item))}) - {item['summary'] or 'Needs summary review'}")
     lines.append("")
     return "\n".join(lines)
 
 
-def render_review_item_page(item: dict) -> str:
+def render_review_item_page(item: dict, page_path: str | Path) -> str:
     action_title, action_detail = review_action(item)
     unknown_params = [param["name"] for param in item["parameters"] if param["type"] == "unknown"]
     unknown_returns = [ret.get("name") or "-" for ret in item["returns"] if ret["type"] == "unknown"]
     lines = []
     lines.append(f"# Review: {item['id']}")
     lines.append("")
-    lines.append(f"[Back to dashboard](review.md) | [Open API page]({page_name_for_item(item)})")
+    lines.append(f"[Back to dashboard]({doc_link(page_path, Path('review') / 'index.md')}) | [Open API page]({doc_link(page_path, page_name_for_item(item))})")
     lines.append("")
     lines.append("## Snapshot")
     lines.append("")
@@ -619,7 +691,7 @@ def render_review_item_page(item: dict) -> str:
     lines.append("")
     lines.append("#### Summary")
     lines.append("")
-    lines.append(item["summary"] or "None.")
+    lines.append(render_doc_text(item["summary"], page_path) or "None.")
     lines.append("")
     lines.append("#### Parameters")
     lines.append("")
@@ -629,7 +701,7 @@ def render_review_item_page(item: dict) -> str:
         for param in item["parameters"]:
             req = "yes" if param["required"] else "no"
             lines.append(
-                f"| `{param['name']}` | {req} | `{param['type']}` | {param['description'].replace(chr(10), ' ')} |"
+                f"| `{param['name']}` | {req} | `{param['type']}` | {render_doc_text(param['description'], page_path).replace(chr(10), ' ')} |"
             )
     else:
         lines.append("None.")
@@ -642,7 +714,7 @@ def render_review_item_page(item: dict) -> str:
         for retval in item["returns"]:
             name = retval.get("name") or "-"
             lines.append(
-                f"| `{name}` | `{retval['type']}` | {retval['description'].replace(chr(10), ' ')} |"
+                f"| `{name}` | `{retval['type']}` | {render_doc_text(retval['description'], page_path).replace(chr(10), ' ')} |"
             )
     else:
         lines.append("None.")
@@ -651,7 +723,7 @@ def render_review_item_page(item: dict) -> str:
     lines.append("")
     if item["notes"]:
         for note in item["notes"]:
-            lines.append(f"- {note}")
+            lines.append(f"- {render_doc_text(note, page_path)}")
     else:
         lines.append("None.")
     lines.append("")
@@ -692,6 +764,36 @@ KNOWN_VALUE_TYPES = {
     "buffer",
 }
 GOLDEN_MODULES = {"runtime", "lcd", "model"}
+LEGACY_DOC_LINK_REWRITES = [
+    (
+        "../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants",
+        "../api-overview/constants/color-constants.md#indexed-colors",
+    ),
+    (
+        "../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html",
+        "../programming/core-concepts/drawing-flags-and-colors.md",
+    ),
+    (
+        "../../part_vii_-_appendix/fonts.md",
+        "../api-overview/fonts.md",
+    ),
+    (
+        "../../appendix/units.html",
+        "../api-overview/constants/units.md",
+    ),
+    (
+        "../appendix/units.html",
+        "../api-overview/constants/units.md",
+    ),
+    (
+        "(../appendix/units.html)",
+        "(../api-overview/constants/units.md)",
+    ),
+    (
+        "../key_events.md",
+        "../api-overview/constants/key-event-constants.md",
+    ),
+]
 
 
 def extract_blocks(text: str) -> list[dict]:
@@ -747,12 +849,61 @@ def clean_inline_markup(text: str) -> str:
     return compact_whitespace(text)
 
 
+def api_overview_doc_link(from_page: str | Path, relative_target: str) -> str:
+    return sibling_doc_link(from_page, "api-overview", relative_target)
+
+
+def sibling_doc_link(from_page: str | Path, sibling_dir: str, relative_target: str) -> str:
+    from_path = Path(from_page)
+    up_levels = [".."] * (len(from_path.parent.parts) + 1)
+    target = Path(*up_levels) / sibling_dir / relative_target
+    return str(target).replace(os.sep, "/")
+
+
+def rewrite_legacy_doc_links(text: str, from_page: str | Path) -> str:
+    rewritten = text
+    rewritten = rewritten.replace(
+        "[Full list]((../appendix/units.html))",
+        f"[Full list]({api_overview_doc_link(from_page, 'constants/units.md')})",
+    )
+    for old, new in LEGACY_DOC_LINK_REWRITES:
+        if old == "../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants":
+            target = api_overview_doc_link(from_page, "constants/color-constants.md#indexed-colors")
+        elif old == "../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html":
+            target = sibling_doc_link(from_page, "programming", "core-concepts/drawing-flags-and-colors.md")
+        elif old == "../../part_vii_-_appendix/fonts.md":
+            target = api_overview_doc_link(from_page, "fonts.md")
+        elif old in {"../appendix/units.html", "(../appendix/units.html)", "../../appendix/units.html"}:
+            target = api_overview_doc_link(from_page, "constants/units.md")
+            if old.startswith("("):
+                target = f"({target})"
+        elif old == "../key_events.md":
+            target = api_overview_doc_link(from_page, "constants/key-event-constants.md")
+        else:
+            target = new
+        rewritten = rewritten.replace(old, target)
+    rewritten = rewritten.replace(
+        "[Full list]((../api-overview/constants/units.md))",
+        f"[Full list]({api_overview_doc_link(from_page, 'constants/units.md')})",
+    )
+    return rewritten
+
+
 def normalize_type_annotation(raw_type: str) -> str:
     raw_type = compact_whitespace(raw_type)
     if not raw_type:
         return "unknown"
     primary = raw_type.split(",", 1)[0].strip()
     return primary or "unknown"
+
+
+def normalize_item_links(item: dict) -> None:
+    item["summary"] = rewrite_legacy_doc_links(item["summary"])
+    item["notes"] = [rewrite_legacy_doc_links(note) for note in item["notes"]]
+    for param in item["parameters"]:
+        param["description"] = rewrite_legacy_doc_links(param["description"])
+    for retval in item["returns"]:
+        retval["description"] = rewrite_legacy_doc_links(retval["description"])
 
 
 def luals_type_parts(type_name: str) -> list[str]:
@@ -1239,12 +1390,28 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
     ensure_dir(luals_output)
     report = quality_report(model)
 
-    for stale_page in docs_output.glob("*.md"):
-        stale_page.unlink()
+    generated_pages = {
+        "index.md",
+        str(Path("review") / "index.md"),
+        "review.md",
+    }
+    generated_pages.update(module_page_name(module_name) for module_name in {item["module"] for item in model["items"]})
+    generated_pages.update(group_page_name(group) for group, _ in items_by_group(model))
+    generated_pages.update(page_name_for_item(item) for item in model["items"])
+    generated_pages.update(review_page_name_for_item(item) for item in model["items"])
+    generated_pages.update(legacy_module_page_name(module_name) for module_name in {item["module"] for item in model["items"]})
+    generated_pages.update(legacy_group_page_name(group) for group, _ in items_by_group(model))
+    generated_pages.update(legacy_page_name_for_item(item) for item in model["items"])
+    generated_pages.update(legacy_review_page_name_for_item(item) for item in model["items"])
+    for page_name in generated_pages:
+        stale_page = docs_output / page_name
+        if stale_page.exists():
+            stale_page.unlink()
 
     index_path = docs_output / "index.md"
     index_path.write_text(render_api_index(model), encoding="utf-8")
-    review_path = docs_output / "review.md"
+    review_path = docs_output / "review" / "index.md"
+    ensure_dir(review_path.parent)
     review_path.write_text(render_review_page(model), encoding="utf-8")
 
     modules: dict[str, list[dict]] = {}
@@ -1252,12 +1419,14 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
         modules.setdefault(item["module"], []).append(item)
 
     for module_name, module_items in sorted(modules.items()):
-        module_path = docs_output / f"module-{safe_file_stem(module_name)}.md"
-        module_path.write_text(render_module_page(module_name, module_items, report), encoding="utf-8")
+        module_path = docs_output / module_page_name(module_name)
+        ensure_dir(module_path.parent)
+        module_path.write_text(render_module_page(module_name, module_items, report, module_page_name(module_name)), encoding="utf-8")
 
     for group, group_items in items_by_group(model):
         group_path = docs_output / group_page_name(group)
-        group_path.write_text(render_group_page(group, group_items, report), encoding="utf-8")
+        ensure_dir(group_path.parent)
+        group_path.write_text(render_group_page(group, group_items, report, group_page_name(group)), encoding="utf-8")
 
     for item in model["items"]:
         overlay_text = None
@@ -1266,9 +1435,11 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
                 overlay_text = overlay_path.read_text(encoding="utf-8")
                 break
         page_path = docs_output / page_name_for_item(item)
-        page_path.write_text(render_api_page(item, overlay_text), encoding="utf-8")
+        ensure_dir(page_path.parent)
+        page_path.write_text(render_api_page(item, overlay_text, page_name_for_item(item)), encoding="utf-8")
         review_item_path = docs_output / review_page_name_for_item(item)
-        review_item_path.write_text(render_review_item_page(item), encoding="utf-8")
+        ensure_dir(review_item_path.parent)
+        review_item_path.write_text(render_review_item_page(item, review_page_name_for_item(item)), encoding="utf-8")
 
     for module_name, module_items in sorted(modules.items()):
         target_path = luals_output / f"{module_name}.d.lua"

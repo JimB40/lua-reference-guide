@@ -9,9 +9,9 @@ This guide covers the development of user-written scripts for R/C transmitters r
 
 | Chapter | Content |
 | --- | --- |
-| [API Overview](api-overview/) | Covers various topics of Lua implementation in the EdgeTX operating system |
+| [API Overview](api-overview/README.md) | Covers various topics of Lua implementation in the EdgeTX operating system |
 | [API Reference](api-reference/index.md) | Reference of all constants and functions available in the EdgeTX Lua API |
-| [Programming](programming/) | EdgeTX Lua programming guide that covers coding techniques with examples |
+| [Programming](programming/README.md) | EdgeTX Lua programming guide that covers coding techniques with examples |
 
 ## EdgeTX Lua development support
 

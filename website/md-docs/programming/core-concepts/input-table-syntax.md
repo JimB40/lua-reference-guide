@@ -2,7 +2,7 @@
 
 ## Overview
 
-The input table defines what values are available as input\(s\) to [mix scripts](../part_i_-_script_type_overview/mix.md). There are two forms of input table entries.
+The input table defines what values are available as input\(s\) to [mix scripts](../../api-overview/script-types/mixes-scripts.md). There are two forms of input table entries.
 
 * **SOURCE syntax**
 
@@ -48,4 +48,3 @@ end
 
 return {input=input, run=run}
 ```
-

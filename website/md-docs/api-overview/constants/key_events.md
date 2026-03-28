@@ -22,14 +22,14 @@ Couple of examples:
 * a longer pres on key would generate: `FIRST`, `LONG`, `BREAK`
 * even longer press: `FIRST`, `LONG`, `REPEAT,`REPEAT, ..., `BREAK`
 
-This normal key event sequence can be altered with the [killEvents(key)](../general-functions-less-than-greater-than-luadoc-begin-general/killevents.md) function. Any time this function is called (after the `FIRST` event) all further key events for this key will be suppressed until the next key press of this key. Examples:
+This normal key event sequence can be altered with the [killEvents(key)](../../api-reference/key-inputs/runtime-kill-events.md) function. Any time this function is called (after the `FIRST` event) all further key events for this key will be suppressed until the next key press of this key. Examples:
 
 * kill immediately after the key press would generate: `FIRST`
 * kill after the long key press would generate: `FIRST`, `LONG`
 
 ## Constants
 
-The `event` parameter in the [Telemetry](../../part\_i\_-\_script\_type\_overview/telemetry.md) and [One-Time](https://github.com/opentx/opentx-2-3-lua-reference-guide/tree/0d355d19f1961b689994cf78b84005864d33f9b5/one-time\_scripts.md) scripts run function actually carries two pieces of information:
+The `event` parameter in the [Telemetry](../script-types/telemetry-scripts.md) and [One-Time](../script-types/one-time-scripts.md) scripts run function actually carries two pieces of information:
 
 * key number
 * type of event

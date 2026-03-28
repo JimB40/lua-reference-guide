@@ -17,7 +17,7 @@ Each model can have up to nine Main Views, with up to 8 widgets per screen, depe
 All widget scripts on the SD card are loaded into memory when the model is selected, even widgets that are not used. This has the side effect that any global functions defined in a widget script will always be available to other widget scripts. It also means that any Widget Script placed in proper location on the SD card will consume part of the radio's memory - even if it is not being used.&#x20;
 
 !!! warning
-    &#x20;It is important to either keep Widget Scripts small, or to use Lua's [loadScript()](../../lua-api-reference/lua-scripts/loadscript.md) function to load code dynamically
+    &#x20;It is important to either keep Widget Scripts small, or to use Lua's [loadScript()](../../api-reference/lua-scripts/runtime-load-script.md) function to load code dynamically
 
 Script executes until:
 
@@ -54,7 +54,7 @@ Every Widget Script must include a `return` statement at the end, defining its i
 
 
 
-<table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>options</strong></td><td>table</td><td>false</td><td>Options table is to store Widget's options available to EdgeTX user via Widget's Settings menu. <br>To see valid options read <a href="../../lua-api-reference/constants/widget-options.md">Widget Options Constants</a>.</td></tr></tbody></table>
+<table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>options</strong></td><td>table</td><td>false</td><td>Options table is to store Widget's options available to EdgeTX user via Widget's Settings menu. <br>To see valid options read <a href="../constants/widget-options.md">Widget Options Constants</a>.</td></tr></tbody></table>
 
 !!! info
     `options` table is passed to `create` function when invoked and then stored in Lua. Changing options table values while Widget script is running has no effect. This table is designed to be changed with EdgeTX system menus.
@@ -119,7 +119,7 @@ _none_
 
 _Parameters_
 
-<table data-header-hidden><thead><tr><th width="145">Parameter</th><th>Decription</th></tr></thead><tbody><tr><td><strong>widget</strong><br>table</td><td>Widget's table returned by <code>create</code> function, decribed above.</td></tr><tr><td><strong>event</strong><br>number</td><td><ul><li>When Widget Script is in full screen mode, then <code>event</code> is either 0, a <a href="../../lua-api-reference/constants/key-event-constants.md">key event value</a>, or a <a href="../../lua-api-reference/constants/touch-event-constants.md">touch event value</a>.</li><li>When the widget is not in full screen mode, then <code>event</code> is <code>nil</code></li></ul><p>See <a href="../../lua-api-reference/constants/key-event-constants.md">Key Events</a>.</p></td></tr><tr><td><strong>touchState</strong><br>table</td><td><p>This parameter is only present when radio is equiped with touch interface and <code>event</code> is a touch event.<br></p><ul><li>If <code>event</code> is a <a href="../../lua-api-reference/constants/touch-event-constants.md">touch event value</a>, then <code>touchState</code> is a table. Otherwise, it is <code>nil</code>.</li><li>When the widget is not in full screen mode then <code>touchState</code> is <code>nil</code></li></ul><p><br>See <a href="../part_iii_-_opentx_lua_api_reference/constants/touch-event-constants.md">Touch State Events</a>.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="145">Parameter</th><th>Decription</th></tr></thead><tbody><tr><td><strong>widget</strong><br>table</td><td>Widget's table returned by <code>create</code> function, decribed above.</td></tr><tr><td><strong>event</strong><br>number</td><td><ul><li>When Widget Script is in full screen mode, then <code>event</code> is either 0, a <a href="../constants/key-event-constants.md">key event value</a>, or a <a href="../constants/touch-event-constants.md">touch event value</a>.</li><li>When the widget is not in full screen mode, then <code>event</code> is <code>nil</code></li></ul><p>See <a href="../constants/key-event-constants.md">Key Events</a>.</p></td></tr><tr><td><strong>touchState</strong><br>table</td><td><p>This parameter is only present when radio is equiped with touch interface and <code>event</code> is a touch event.<br></p><ul><li>If <code>event</code> is a <a href="../constants/touch-event-constants.md">touch event value</a>, then <code>touchState</code> is a table. Otherwise, it is <code>nil</code>.</li><li>When the widget is not in full screen mode then <code>touchState</code> is <code>nil</code></li></ul><p><br>See <a href="../constants/touch-event-constants.md">Touch State Events</a>.</p></td></tr></tbody></table>
 
 _Return values_\
 _none_

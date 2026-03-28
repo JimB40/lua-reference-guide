@@ -6,7 +6,7 @@ description: >-
 
 # Loading Code Modules Dynamically
 
-The [`loadScript(<file>)`](../lua_api_reference/general-functions-less-than-greater-than-luadoc-begin-general/loadscript.md) function will load a script from a the file and return a function that is the body of the script, as described in the previous section. So you could have the following Lua script file saved on the SD card:
+The [`loadScript(<file>)`](../../api-reference/lua-scripts/runtime-load-script.md) function will load a script from a the file and return a function that is the body of the script, as described in the previous section. So you could have the following Lua script file saved on the SD card:
 
 ```lua
 -- /SCRIPTS/TestScript.lua
@@ -34,4 +34,3 @@ local z = f2(5)
 ```
 
 So here we put together what we learned in the previous section. The body of the script is an anonymous function returned by `loadScript` and stored in the variable `chunk`. It returns the function `f` when it is called. The local variable `c` in the script is assigned to the first _vararg_ passed to the call. Since a new closure is created every time we call `chunk`, `f1` and `f2` have different closures with different values of `c`.
-

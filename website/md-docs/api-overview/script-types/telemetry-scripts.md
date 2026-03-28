@@ -33,7 +33,7 @@ This statement returns a table with the following fields:
 
 _Parameters_
 
-<table data-header-hidden><thead><tr><th width="145">Parameter</th><th>Decription</th></tr></thead><tbody><tr><td><strong>event</strong><br>number</td><td>Used to indicates which radio key has been pressed (see <a href="../part_iii_-_opentx_lua_api_reference/constants/key_events.md">Key Events</a>)</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="145">Parameter</th><th>Decription</th></tr></thead><tbody><tr><td><strong>event</strong><br>number</td><td>Used to indicates which radio key has been pressed (see <a href="../constants/key-event-constants.md">Key Events</a>)</td></tr></tbody></table>
 
 _Return values_\
 _none_
@@ -75,4 +75,3 @@ end
 
 return { run = my_run, background = my_background, init = my_init }
 ```
-

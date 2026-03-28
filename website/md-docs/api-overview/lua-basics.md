@@ -52,7 +52,7 @@ The function is returned directly without being assigned to a variable name. The
 
 Likewise, the local variables that you declare outside the functions of your script can be used by all of the functions in your script, and they persist between function calls, but they are not visible to other scripts.
 
-The [widget scripts](../part\_i\_-\_script\_type\_overview/widget\_scripts.md) are a little trickier, as you can register multiple instances of the same widget script, and all of these instances run within the same Lua closure. Therefore, local variables declared outside any functions in a widget script are shared among all of the instances of that script. But each call to the `create(...)` function returns a new `widget` list to the system. And since this list is unique to each instance, you can add private instance variables to it.
+The [widget scripts](script-types/widget-scripts.md) are a little trickier, as you can register multiple instances of the same widget script, and all of these instances run within the same Lua closure. Therefore, local variables declared outside any functions in a widget script are shared among all of the instances of that script. But each call to the `create(...)` function returns a new `widget` list to the system. And since this list is unique to each instance, you can add private instance variables to it.
 
 ## Functions with Variable Number of Arguments
 

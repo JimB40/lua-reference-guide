@@ -42,7 +42,7 @@ Every script must include a `return` statement at the end, defining its interfac
 
 _Parameters_
 
-<table data-header-hidden><thead><tr><th width="145">Parameter</th><th>Decription</th></tr></thead><tbody><tr><td><strong>event</strong><br>number</td><td>Used to indicates which radio key has been pressed (see <a href="../part_iii_-_opentx_lua_api_reference/constants/key_events.md">Key Events</a>)</td></tr><tr><td><strong>touchState</strong><br>table</td><td>This parameter is only present when radio is equiped with touch interface and <code>event</code> is a touch event (see <a href="../part_iii_-_opentx_lua_api_reference/constants/touch-event-constants.md">Touch State Events</a>).</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="145">Parameter</th><th>Decription</th></tr></thead><tbody><tr><td><strong>event</strong><br>number</td><td>Used to indicates which radio key has been pressed (see <a href="../constants/key-event-constants.md">Key Events</a>)</td></tr><tr><td><strong>touchState</strong><br>table</td><td>This parameter is only present when radio is equiped with touch interface and <code>event</code> is a touch event (see <a href="../constants/touch-event-constants.md">Touch State Events</a>).</td></tr></tbody></table>
 
 _Return values_
 

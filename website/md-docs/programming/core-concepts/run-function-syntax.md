@@ -1,6 +1,6 @@
 # Run Function Syntax
 
-The run function is the function that is periodically called for the lifetime of script execution. Syntax of the run function is different between [mix scripts](../part\_i\_-\_script\_type\_overview/mix.md) and [telemetry scripts](../part\_i\_-\_script\_type\_overview/telemetry.md).
+The run function is the function that is periodically called for the lifetime of script execution. Syntax of the run function is different between [mix scripts](../../api-overview/script-types/mixes-scripts.md) and [telemetry scripts](../../api-overview/script-types/telemetry-scripts.md).
 
 ## Run Function for Mix Scripts
 
@@ -37,7 +37,7 @@ end
 
 *   **Input parameters:**
 
-    The _key-event_ parameter indicates which transmitter button has been pressed (see [Key Events](broken-reference))
+    The _key-event_ parameter indicates which transmitter button has been pressed (see [Key Events](../../api-overview/constants/key-event-constants.md))
 *   **Return values:**
 
     A non-zero return value will halt the script
