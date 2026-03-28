@@ -1,10 +1,5 @@
 [
   {
-    "version": "stable-preview",
-    "title": "2.11",
-    "aliases": []
-  },
-  {
     "version": "edgetx-v2.12",
     "title": "2.12",
     "aliases": [
