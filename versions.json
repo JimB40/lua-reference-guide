@@ -1,5 +1,10 @@
 [
   {
+    "version": "stable-preview",
+    "title": "Stable",
+    "aliases": []
+  },
+  {
     "version": "preview",
     "title": "Preview",
     "aliases": []
