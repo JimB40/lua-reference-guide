@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://luadoc.edgetx.org/preview/</loc>
+         <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/preview/md-docs/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
@@ -38,6 +42,10 @@
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/preview/md-docs/api-overview/constants/logical-switch-function-constants/</loc>
+         <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/preview/md-docs/api-overview/constants/lvgl-constants/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
@@ -1685,27 +1693,11 @@
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/init-function-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/input-table-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
          <loc>https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/loading-code-modules-dynamically/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/output-table-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/return-statement-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/run-function-syntax/</loc>
+         <loc>https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/lvgl-for-lua/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>

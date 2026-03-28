@@ -4,6 +4,15 @@ function normalizePath(pathname) {
   return pathname.endsWith("/") ? pathname : `${pathname}/`;
 }
 
+function stripPathPrefix(pathname, prefix) {
+  const normalizedPath = normalizePath(pathname);
+  const normalizedPrefix = normalizePath(prefix);
+  if (!normalizedPath.startsWith(normalizedPrefix)) return normalizedPath;
+
+  const stripped = normalizedPath.slice(normalizedPrefix.length);
+  return stripped ? `/${stripped}` : "/";
+}
+
 function getVersionConfig() {
   const configNode = document.querySelector("#__config");
   if (!configNode) return null;
@@ -13,6 +22,50 @@ function getVersionConfig() {
   } catch {
     return null;
   }
+}
+
+function getVersionRootUrl(config) {
+  const base = config?.base || ".";
+  return new URL(`${base.replace(/\/?$/, "/")}`, window.location.href);
+}
+
+function candidateManifestRoots(versionRootUrl) {
+  const candidates = [];
+  let current = new URL(versionRootUrl.href);
+
+  for (let remaining = 0; remaining < 6; remaining += 1) {
+    const normalized = normalizePath(current.pathname);
+    if (!candidates.some((candidate) => candidate.pathname === normalized)) {
+      candidates.push(new URL(normalized, current.origin));
+    }
+
+    if (normalized === "/") break;
+    current = new URL("..", current);
+  }
+
+  return candidates;
+}
+
+async function loadVersionsManifest(config) {
+  const versionRootUrl = getVersionRootUrl(config);
+
+  for (const rootUrl of candidateManifestRoots(versionRootUrl)) {
+    const manifestUrl = new URL("versions.json", rootUrl);
+
+    try {
+      const response = await fetch(manifestUrl, { credentials: "same-origin" });
+      if (!response.ok) continue;
+
+      const versions = await response.json();
+      if (!Array.isArray(versions)) continue;
+
+      return { versions, manifestRootUrl: rootUrl };
+    } catch {
+      // Try the next parent path.
+    }
+  }
+
+  return null;
 }
 
 function inferCurrentVersion(entries, pathname, defaultAlias) {
@@ -35,29 +88,25 @@ function inferCurrentVersion(entries, pathname, defaultAlias) {
   };
 }
 
-function buildVersionUrl(entry, suffix, defaultAlias) {
+function buildVersionUrl(entry, suffix, defaultAlias, manifestRootPath) {
   const normalizedSuffix = suffix === "/" ? "" : suffix.replace(/^\//, "");
-  const prefix = entry.aliases.includes(defaultAlias) ? "/" : `/${entry.version}/`;
+  const prefix =
+    entry.aliases.includes(defaultAlias) ? manifestRootPath : `${manifestRootPath}${entry.version}/`;
   return normalizedSuffix ? `${prefix}${normalizedSuffix}` : prefix;
 }
 
 async function mountVersionSwitcher() {
   const config = getVersionConfig();
   const defaultAlias = config?.version?.default || "latest";
-  const sidebarInner = document.querySelector(".md-sidebar--primary .md-sidebar__inner");
-  const nav = sidebarInner?.querySelector(".md-nav--primary");
-  if (!sidebarInner || !nav) return;
+  const headerInner = document.querySelector(".md-header__inner");
+  const headerTitle = headerInner?.querySelector(".md-header__title");
+  if (!headerInner || !headerTitle) return;
 
-  let versions;
-  try {
-    const response = await fetch("/versions.json", { credentials: "same-origin" });
-    if (!response.ok) return;
-    versions = await response.json();
-  } catch {
-    return;
-  }
+  const manifest = await loadVersionsManifest(config);
+  if (!manifest) return;
 
-  if (!Array.isArray(versions) || versions.length < 2) return;
+  const { versions, manifestRootUrl } = manifest;
+  if (versions.length < 2) return;
 
   const entries = versions
     .filter((entry) => entry && entry.version && entry.title)
@@ -69,18 +118,20 @@ async function mountVersionSwitcher() {
 
   if (entries.length < 2) return;
 
-  const { currentVersion, suffix } = inferCurrentVersion(entries, window.location.pathname, defaultAlias);
+  const manifestRootPath = normalizePath(manifestRootUrl.pathname);
+  const relativePath = stripPathPrefix(window.location.pathname, manifestRootPath);
+  const { currentVersion, suffix } = inferCurrentVersion(entries, relativePath, defaultAlias);
 
   const wrapper = document.createElement("div");
-  wrapper.className = "sidebar-version-switcher";
+  wrapper.className = "header-version-switcher";
 
   const select = document.createElement("select");
-  select.className = "sidebar-version-switcher__select";
+  select.className = "header-version-switcher__select";
   select.setAttribute("aria-label", "Select version");
 
   for (const entry of entries) {
     const option = document.createElement("option");
-    option.value = buildVersionUrl(entry, suffix, defaultAlias);
+    option.value = buildVersionUrl(entry, suffix, defaultAlias, manifestRootPath);
     option.textContent = entry.title;
     option.selected = entry.version === currentVersion;
     select.appendChild(option);
@@ -93,7 +144,7 @@ async function mountVersionSwitcher() {
   });
 
   wrapper.appendChild(select);
-  nav.parentNode?.insertBefore(wrapper, nav);
+  headerTitle.insertAdjacentElement("afterend", wrapper);
 }
 
 if (document.readyState === "loading") {

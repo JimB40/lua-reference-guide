@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Next-generation Lua API docs generated from EdgeTX source annotations">
+        <meta name="description" content="How to enable and use the LVGL UI layer in EdgeTX Lua scripts.">
       
       
       
-        <link rel="canonical" href="https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/init-function-syntax/">
+        <link rel="canonical" href="https://luadoc.edgetx.org/preview/md-docs/programming/core-concepts/lvgl-for-lua/">
       
       
         <link rel="prev" href="../drawing-flags-and-colors/">
       
       
-        <link rel="next" href="../input-table-syntax/">
+        <link rel="next" href="../using-key-and-touch-events/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Init Function Syntax - EdgeTX LuaDoc</title>
+        <title>Using LVGL Library - EdgeTX LuaDoc</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#init-function-syntax" class="md-skip">
+        <a href="#using-lvgl-library" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Init Function Syntax
+              Using LVGL Library
             
           </span>
         </div>
@@ -815,6 +815,34 @@
     
   
     Logical Switch Function Constants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api-overview/constants/lvgl-constants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LVGL Constants
   
 
     
@@ -2120,34 +2148,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-exchange-with-the-edgetx-model-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data Exchange with the EdgeTX Model Setup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../drawing-flags-and-colors/" class="md-nav__link">
         
   
@@ -2155,7 +2155,7 @@
   <span class="md-ellipsis">
     
   
-    Drawing Flags and Colors
+    Using Flags and Colors
   
 
     
@@ -2185,6 +2185,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using LVGL Library
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2192,7 +2210,7 @@
   <span class="md-ellipsis">
     
   
-    Init Function Syntax
+    Using LVGL Library
   
 
     
@@ -2202,174 +2220,169 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../input-table-syntax/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
+  
     
   
-    Input Table Syntax
   
-
-    
-  </span>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activating-the-lvgl-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activating the LVGL API
+      
+    </span>
+  </a>
   
-
-      </a>
-    </li>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
   
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../loading-code-modules-dynamically/" class="md-nav__link">
+    <nav class="md-nav" aria-label="Usage Patterns">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#one-time-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time scripts
+      
+    </span>
+  </a>
   
-  
-  <span class="md-ellipsis">
-    
-  
-    Loading Code Modules Dynamically
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../output-table-syntax/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#widget-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget scripts
+      
+    </span>
+  </a>
   
-  
-  <span class="md-ellipsis">
-    
-  
-    Output Table Syntax
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../return-statement-syntax/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#controls-and-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls and focus
+      
+    </span>
+  </a>
   
-  
-  <span class="md-ellipsis">
-    
-  
-    Return Statement Syntax
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../run-function-syntax/" class="md-nav__link">
+</li>
         
+      </ul>
+    </nav>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-call-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Call Pattern
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Settings
+      
+    </span>
+  </a>
   
-    Run Function Syntax
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adapting-to-different-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adapting To Different Screens
+      
+    </span>
+  </a>
   
-
-    
-  </span>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
   
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../saving-memory/" class="md-nav__link">
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#one-time-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time script
+      
+    </span>
+  </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widget-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget script
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
+</li>
+        
+      </ul>
+    </nav>
   
-    Saving Memory
+</li>
+      
+    </ul>
   
-
-    
-  </span>
-  
-  
-
-      </a>
+</nav>
+      
     </li>
   
 
@@ -2390,6 +2403,34 @@
     
   
     Using Key and Touch Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-exchange-with-the-edgetx-model-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Exchange with the EdgeTX Model Setup
   
 
     
@@ -2493,6 +2534,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../loading-code-modules-dynamically/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loading Code Modules Dynamically
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../advanced-topics/lua-data-sharing-across-scripts/" class="md-nav__link">
         
   
@@ -2501,6 +2570,34 @@
     
   
     Lua data sharing across scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../saving-memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Saving Memory
   
 
     
@@ -4971,6 +5068,158 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activating-the-lvgl-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activating the LVGL API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-time-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widget-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls-and-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls and focus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-call-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Call Pattern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adapting-to-different-screens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adapting To Different Screens
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-time-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widget-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget script
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5013,7 +5262,7 @@
     
     
       <li class="md-path__item">
-        <a href="../data-exchange-with-the-edgetx-model-setup/" class="md-path__link">
+        <a href="../drawing-flags-and-colors/" class="md-path__link">
           
   <span class="md-ellipsis">
     Core Concepts
@@ -5035,26 +5284,219 @@
 
 
 
-<h1 id="init-function-syntax">Init Function Syntax</h1>
-<p>If defined, <em>init</em> function is called right after the script is loaded from SD card and begins execution. Init is called only once before the run function is called for the first time.</p>
-<pre><code class="language-lua">local function &lt;init_function_name&gt;()
-  -- code here runs only once when the model is loaded
-end
+<h1 id="using-lvgl-library">Using LVGL Library</h1>
+<p>LVGL gives EdgeTX Lua scripts access to the same style of UI controls used by the firmware on color-screen radios. Instead of redrawing every element manually with the <code>lcd</code> API, a script can build a UI from objects such as labels, boxes, pages, buttons, toggles, sliders, and dialogs.</p>
+<p>The practical result is:</p>
+<ul>
+<li>less manual redraw logic</li>
+<li>better support for state-driven UI updates</li>
+<li>a closer match to native EdgeTX screens</li>
+</ul>
+<p>For the detailed constructor pages, see <a href="../../../api-reference/display-lvgl/">Display LVGL</a>. For LVGL-specific constants, see <a href="../../../api-overview/constants/lvgl-constants/">LVGL Constants</a>.</p>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>Direct drawing through the <code>lcd</code> API is not available inside scripts that use LVGL to create the UI.</li>
+<li>LVGL is only available on radios and builds that support the LVGL UI layer.</li>
+</ul>
+<h2 id="activating-the-lvgl-api">Activating the LVGL API</h2>
+<p>A script must return <code>useLvgl = true</code> in the table it exports:</p>
+<pre><code class="language-lua">return { init = init, run = run, useLvgl = true }
 </code></pre>
+<p>When LVGL is available, EdgeTX exposes a global <code>lvgl</code> object. This is the main entry point for building and updating the UI.</p>
+<p>Scripts should still check that <code>lvgl</code> is not <code>nil</code> before using it. If it is <code>nil</code>, the script is usually:</p>
 <ul>
-<li><strong>Input Parameters:</strong></li>
+<li>running on an earlier EdgeTX version</li>
+<li>running on a target without LVGL support</li>
+<li>missing <code>useLvgl = true</code></li>
 </ul>
-<p>none</p>
+<p>In that case, the script should show a clear error or fall back to a non-LVGL implementation.</p>
+<h2 id="usage-patterns">Usage Patterns</h2>
+<h3 id="one-time-scripts">One-Time scripts</h3>
+<p>For One-Time scripts, <code>init()</code> should still prepare the initial script state, but it should also create the LVGL UI tree. The <code>run()</code> function can still handle events, but most interaction should be delegated to the LVGL objects themselves.</p>
+<p>When used this way, the UI updates automatically as state changes instead of being redrawn by hand every cycle.</p>
+<h3 id="widget-scripts">Widget scripts</h3>
+<p>Widget scripts should usually create or rebuild their LVGL UI in <code>update()</code>, using the widget zone size to decide layout. The <code>background()</code> and <code>refresh()</code> functions should focus on state updates that are not already managed by the LVGL objects.</p>
+<h3 id="controls-and-focus">Controls and focus</h3>
+<p>Interactive controls such as buttons, toggles, and text editors show a focus outline when selected. Leave enough space between nearby controls so that outline remains visible and does not collide with surrounding content.</p>
+<h2 id="common-call-pattern">Common Call Pattern</h2>
+<p>Most LVGL constructors follow this shape:</p>
+<pre><code class="language-lua">lvgl.function([parent], { settings })
+</code></pre>
+<p>The optional <code>parent</code> object determines where the new object is attached. If no parent is passed, the object is created in the top-level script window.</p>
+<p>Most functions return an LVGL object, so you can keep a reference and update it later or call object methods on it.</p>
+<p>LVGL functions can also be used with Lua OO syntax:</p>
+<pre><code class="language-lua">lvgl.show(parent)
+parent:show()
+</code></pre>
+<h2 id="shared-settings">Shared Settings</h2>
+<p>Many LVGL objects share a few common settings:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code>, <code>y</code></td>
+<td><code>number</code></td>
+<td>Position relative to the top-left of the parent</td>
+</tr>
+<tr>
+<td><code>w</code>, <code>h</code></td>
+<td><code>number</code></td>
+<td>Width and height</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>color or function</td>
+<td>Primary color for the object</td>
+</tr>
+<tr>
+<td><code>pos</code></td>
+<td>function</td>
+<td>Dynamic position callback returning <code>x, y</code></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>function</td>
+<td>Dynamic size callback returning <code>w, h</code></td>
+</tr>
+<tr>
+<td><code>visible</code></td>
+<td>function</td>
+<td>Dynamic visibility callback</td>
+</tr>
+<tr>
+<td><code>floating</code></td>
+<td><code>boolean</code></td>
+<td>Keep an object fixed inside a scrollable container</td>
+</tr>
+</tbody>
+</table>
+<p>Functions used for settings are called repeatedly by the firmware. When the function returns a new value, the object updates automatically.</p>
+<h2 id="adapting-to-different-screens">Adapting To Different Screens</h2>
+<p>EdgeTX supports several color-screen sizes and orientations, so fixed coordinates do not always scale cleanly. A few LVGL helpers make this easier:</p>
 <ul>
-<li><strong>Return values:</strong></li>
+<li>flex layouts can reduce manual positioning</li>
+<li><code>lvgl.PAGE_BODY_HEIGHT</code> gives the body height of a page container</li>
+<li><code>lvgl.UI_ELEMENT_HEIGHT</code> gives the default control height</li>
+<li><code>lvgl.LCD_SCALE</code> helps scale fixed values for the current screen</li>
+<li><code>lvgl.PERCENT_SIZE + N</code> can be used for percentage-based sizes and positions</li>
 </ul>
-<p>none</p>
+<p>Use percentage sizing carefully: the parent container must already have a defined size, and not every object type supports percentage-based values equally well.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="one-time-script">One-Time script</h3>
+<pre><code class="language-lua">local exitTool = false
+
+local function close()
+  lvgl.confirm({
+    title = &quot;Exit&quot;,
+    message = &quot;Really exit?&quot;,
+    confirm = function()
+      exitTool = true
+    end,
+  })
+end
+
+local function init()
+  if lvgl == nil then
+    return
+  end
+
+  lvgl.clear()
+
+  local pg = lvgl.page({
+    title = &quot;Test Tool&quot;,
+    subtitle = &quot;Page 1&quot;,
+    back = close,
+  })
+
+  pg:label({ x = 70, y = 16, color = BLACK, font = DBLSIZE, text = &quot;Test Page&quot; })
+  pg:button({ x = 200, y = 150, text = &quot;CLOSE&quot;, press = close })
+end
+
+local function run()
+  if lvgl == nil then
+    lcd.drawText(0, 0, &quot;LVGL support required&quot;, COLOR_THEME_WARNING)
+  end
+
+  if exitTool then
+    return 2
+  end
+
+  return 0
+end
+
+return { init = init, run = run, useLvgl = true }
+</code></pre>
+<h3 id="widget-script">Widget script</h3>
+<pre><code class="language-lua">local options = {
+  { &quot;Color&quot;, COLOR, COLOR_THEME_SECONDARY1 },
+  { &quot;Shadow&quot;, BOOL, 0 },
+}
+
+local function create(zone, options)
+  return { zone = zone, options = options, counter = 0 }
+end
+
+local function update(wgt, options)
+  wgt.options = options
+
+  lvgl.clear()
+
+  if wgt.options.Shadow ~= 0 then
+    lvgl.label({
+      x = wgt.zone.x + 1,
+      y = wgt.zone.y + 1,
+      color = BLACK,
+      font = DBLSIZE,
+      text = function()
+        return wgt.counter
+      end,
+    })
+  end
+
+  lvgl.label({
+    x = wgt.zone.x,
+    y = wgt.zone.y,
+    color = wgt.options.Color,
+    font = DBLSIZE,
+    text = function()
+      return wgt.counter
+    end,
+  })
+end
+
+local function background(wgt)
+  wgt.counter = wgt.counter + 1
+end
+
+local function refresh(wgt)
+  wgt.counter = wgt.counter + 1
+end
+
+return {
+  name = &quot;CounterLVGL&quot;,
+  options = options,
+  create = create,
+  update = update,
+  refresh = refresh,
+  background = background,
+  useLvgl = true,
+}
+</code></pre>
 
 
 
 
 
 
+
+  
+  
 
 
 
