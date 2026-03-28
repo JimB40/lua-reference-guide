@@ -5,10 +5,6 @@
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/SUMMARY/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
          <loc>https://luadoc.edgetx.org/2.11/appendix/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
@@ -113,11 +109,11 @@
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/bitmap/bitmap.resize/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/bitmap/bitmap-resize/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/bitmap/bitmap.tomask/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/bitmap/bitmap-tomask/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
@@ -297,27 +293,27 @@
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd-drawbitmappattern/</loc>
+         <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd-drawbitmappatternpie/</loc>
+         <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd-drawtextlines/</loc>
+         <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd-exitfullscreen/</loc>
+         <lastmod>2026-03-28</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd-functions-overview/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd.drawbitmappattern/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd.drawbitmappatternpie/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd.drawtextlines/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd.exitfullscreen/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd.invertrect/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/display-lcd/lcd-invertrect/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
@@ -429,171 +425,171 @@
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.align/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-align/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.arc/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-arc/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.box/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-box/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.build/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-build/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.button/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-button/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.choice/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-choice/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.circle/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-circle/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.clear/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-clear/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.color/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-color/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.confirm/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-confirm/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.dialog/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-dialog/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.exitfullscreen/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-exitfullscreen/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.file/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-file/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.font/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-font/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.getcontext/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-getcontext/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.getscrollpos/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-getscrollpos/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.hide/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-hide/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.hline/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-hline/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.image/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-image/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.isappmode/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-isappmode/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.isfullscreen/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-isfullscreen/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.label/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-label/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.line/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-line/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.menu/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-menu/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.message/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-message/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.momentarybutton/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-momentarybutton/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.numberedit/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-numberedit/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.page/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-page/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.qrcode/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-qrcode/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.rectangle/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-rectangle/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.set/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-set/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.setting/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-setting/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.show/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-show/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.slider/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-slider/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.source/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-source/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.switch/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-switch/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.textedit/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-textedit/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.timer/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-timer/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.toggle/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-toggle/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.triangle/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-triangle/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.verticalslider/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-verticalslider/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl.vline/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/lvgl-for-lua/lvgl-vline/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
@@ -693,11 +689,11 @@
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/model/model.getswashring/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/model/model-getswashring/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/model/model.setswashring-params/</loc>
+         <loc>https://luadoc.edgetx.org/2.11/lua-api-reference/model/model-setswashring-params/</loc>
          <lastmod>2026-03-28</lastmod>
     </url>
     <url>
