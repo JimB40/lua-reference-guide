@@ -99,8 +99,8 @@ async function mountVersionSwitcher() {
   const config = getVersionConfig();
   const defaultAlias = config?.version?.default || "latest";
   const headerInner = document.querySelector(".md-header__inner");
-  const headerTitle = headerInner?.querySelector(".md-header__title");
-  if (!headerInner || !headerTitle) return;
+  const titleTopic = headerInner?.querySelector(".md-header__title .md-header__topic:first-child");
+  if (!headerInner || !titleTopic) return;
 
   const manifest = await loadVersionsManifest(config);
   if (!manifest) return;
@@ -144,7 +144,7 @@ async function mountVersionSwitcher() {
   });
 
   wrapper.appendChild(select);
-  headerTitle.insertAdjacentElement("afterend", wrapper);
+  titleTopic.appendChild(wrapper);
 }
 
 if (document.readyState === "loading") {
