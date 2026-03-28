@@ -88,11 +88,10 @@ function inferCurrentVersion(entries, pathname, defaultAlias) {
   };
 }
 
-function buildVersionUrl(entry, suffix, defaultAlias, manifestRootPath) {
-  const normalizedSuffix = suffix === "/" ? "" : suffix.replace(/^\//, "");
+function buildVersionUrl(entry, defaultAlias, manifestRootPath) {
   const prefix =
     entry.aliases.includes(defaultAlias) ? manifestRootPath : `${manifestRootPath}${entry.version}/`;
-  return normalizedSuffix ? `${prefix}${normalizedSuffix}` : prefix;
+  return prefix;
 }
 
 async function mountVersionSwitcher() {
@@ -120,7 +119,7 @@ async function mountVersionSwitcher() {
 
   const manifestRootPath = normalizePath(manifestRootUrl.pathname);
   const relativePath = stripPathPrefix(window.location.pathname, manifestRootPath);
-  const { currentVersion, suffix } = inferCurrentVersion(entries, relativePath, defaultAlias);
+  const { currentVersion } = inferCurrentVersion(entries, relativePath, defaultAlias);
 
   const wrapper = document.createElement("div");
   wrapper.className = "header-version-switcher";
@@ -131,7 +130,7 @@ async function mountVersionSwitcher() {
 
   for (const entry of entries) {
     const option = document.createElement("option");
-    option.value = buildVersionUrl(entry, suffix, defaultAlias, manifestRootPath);
+    option.value = buildVersionUrl(entry, defaultAlias, manifestRootPath);
     option.textContent = entry.title;
     option.selected = entry.version === currentVersion;
     select.appendChild(option);
