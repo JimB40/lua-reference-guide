@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../../assets/radios/flysky-pa01-500.png" alt="FlySky PA01">
+<img src="../../assets/radios/flysky-pa01-500.png" alt="FlySky PA01">
 </div>
 <div class="radio-overview-table">
 

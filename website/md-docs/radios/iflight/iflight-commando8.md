@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../../assets/radios/iflight-commando-8-500.png" alt="iFlight Commando8">
+<img src="../../assets/radios/iflight-commando-8-500.png" alt="iFlight Commando8">
 </div>
 <div class="radio-overview-table">
 

@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../../assets/radios/betafpv-literadio-3-pro-500.png" alt="BetaFPV LiteRadio3 Pro">
+<img src="../../assets/radios/betafpv-literadio-3-pro-500.png" alt="BetaFPV LiteRadio3 Pro">
 </div>
 <div class="radio-overview-table">
 

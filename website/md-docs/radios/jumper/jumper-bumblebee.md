@@ -6,7 +6,7 @@
 
 <div class="radio-overview">
 <div class="radio-overview-image">
-<img src="../../../../assets/radios/jumper-bumblebee-500.png" alt="Jumper Bumblebee">
+<img src="../../assets/radios/jumper-bumblebee-500.png" alt="Jumper Bumblebee">
 </div>
 <div class="radio-overview-table">
 
