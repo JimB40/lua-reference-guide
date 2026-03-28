@@ -490,8 +490,10 @@ def main() -> None:
     output_config = (root / (args.output_config or f".site-legacy-generated/{version_name}/mkdocs.yml")).resolve()
     site_dir = (root / (args.site_dir or f"site-legacy/{version_name}")).resolve()
     legacy_assets_dir = f"legacy-{version_name}"
+    temp_root = root / ".tmp"
+    temp_root.mkdir(parents=True, exist_ok=True)
 
-    with tempfile.TemporaryDirectory(dir=root / ".tmp", prefix="legacy-gitbook-") as temp_dir:
+    with tempfile.TemporaryDirectory(dir=temp_root, prefix="legacy-gitbook-") as temp_dir:
         source_root = Path(temp_dir)
         run_archive(args.ref, source_root)
         summary_text = (source_root / "SUMMARY.md").read_text(encoding="utf-8")
