@@ -2,5 +2,8 @@
 /node_modules/
 /book.pdf
 /site/
+/site-legacy-2.11/
+.generated/
+.tmp/
 .venv/
 __pycache__/
