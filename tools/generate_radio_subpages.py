@@ -7,7 +7,7 @@ from typing import Iterable
 
 
 ROOT = Path(__file__).resolve().parent.parent
-DOCS_ROOT = ROOT / "docs-site"
+DOCS_ROOT = ROOT / "website"
 RADIOS_ROOT = DOCS_ROOT / "overview" / "radios"
 RADIO_ASSETS_ROOT = DOCS_ROOT / "assets" / "radios"
 WEBSIM_RADIOS_ROOT = ROOT.parent / "edgetx-websim" / "source-gfx" / "radios-white-bg-original"

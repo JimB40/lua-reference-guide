@@ -1,0 +1,37 @@
+# lvgl.choice
+
+`lvgl.choice(params)`
+
+Create an LVGL choice control.
+
+## Parameters
+
+| Name | Req | Type | Description |
+| --- | --- | --- | --- |
+| `params` | yes | `table` | object definition table |
+
+## Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `-` | `table` | created LVGL object |
+
+## Availability
+
+- Since: `3.0.0`
+- Radio support: `color-lcd`
+
+## Notes
+
+- Available only in standalone scripts and fullscreen widgets.
+- Choice keys:
+ * `x`, `y`, `w`, `h`
+ * `title` (string or function)
+ * `values` (table of strings)
+ * `get`, `set`
+ * `filter` (function receiving a 1-based item index)
+ * `popupWidth` (number)
+
+## Source
+
+`radio/src/lua/api_colorlcd_lvgl.cpp`

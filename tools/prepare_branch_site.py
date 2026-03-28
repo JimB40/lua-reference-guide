@@ -144,7 +144,7 @@ def rewrite_legacy_links(docs_dir: Path) -> None:
 
 
 def copy_shared_site_shell(repo_root: Path, docs_dir: Path) -> None:
-    shared_root = repo_root / "docs-site"
+    shared_root = repo_root / "website"
     if not shared_root.exists():
         return
 

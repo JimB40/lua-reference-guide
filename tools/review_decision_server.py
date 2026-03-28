@@ -6,9 +6,9 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 
-DECISIONS_PATH = Path("docs-pipeline/generated/review-decisions.json")
-TYPE_OPTIONS_PATH = Path("docs-pipeline/review-type-options.json")
-TYPE_DEFINITIONS_PATH = Path("docs-pipeline/type-definitions.json")
+DECISIONS_PATH = Path("docs-system/generated/review-decisions.json")
+TYPE_OPTIONS_PATH = Path("docs-system/review-type-options.json")
+TYPE_DEFINITIONS_PATH = Path("docs-system/type-definitions.json")
 
 
 def read_decisions() -> dict:

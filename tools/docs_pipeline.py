@@ -10,9 +10,9 @@ import sys
 from collections import Counter
 
 
-TYPE_DEFINITIONS_PATH = Path("docs-pipeline/type-definitions.json")
-REVIEW_DECISIONS_PATH = Path("docs-pipeline/generated/review-decisions.json")
-API_GROUPS_PATH = Path("docs-pipeline/api-groups.json")
+TYPE_DEFINITIONS_PATH = Path("docs-system/type-definitions.json")
+REVIEW_DECISIONS_PATH = Path("docs-system/generated/review-decisions.json")
+API_GROUPS_PATH = Path("docs-system/api-groups.json")
 LUALS_BUILTIN_TYPES = {
     "any",
     "boolean",
@@ -371,10 +371,6 @@ def render_api_page(item: dict, overlay_text: str | None) -> str:
     lines.append(f"`{item['source_location']}`")
     lines.append("")
     if overlay_text:
-        lines.append("## Enrichment")
-        lines.append("")
-        lines.append("The sections below are authored outside the firmware source so examples, compatibility notes, and learning material can evolve without bloating C++ API comments.")
-        lines.append("")
         lines.extend(render_overlay_sections(overlay_text))
     return "\n".join(lines)
 
@@ -602,7 +598,7 @@ def render_review_item_page(item: dict) -> str:
             lines.append(f"- Unknown params to decide: `{', '.join(unknown_params)}`")
         if unknown_returns:
             lines.append(f"- Unknown returns to decide: `{', '.join(unknown_returns)}`")
-        lines.append("- Use the selector table below. Your choices are saved into `docs-pipeline/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.")
+        lines.append("- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.")
     else:
         lines.append("- This one looks structurally complete, but you can still change any param or return type below if you want to override it.")
     lines.append("")
