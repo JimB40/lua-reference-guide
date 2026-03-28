@@ -17,4 +17,5 @@ This section describes various constants that are provided for Lua by EdgeTX.
 | [Special Functions](special-function-constants.md) | Special function constants used by model configuration APIs. |
 | [Special Characters](special-character-constants.md) | Character constants that appear in source and switch labels. |
 | [Widget Options](widget-options.md) | Constants used when defining widget option metadata. |
+| [LVGL Constants](lvgl-constants.md) | LVGL-specific layout, picker, scrolling, and object-construction constants. |
 | [Units](units.md) | Unit constants used by telemetry and value-display APIs. |

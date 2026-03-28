@@ -2,7 +2,7 @@
 description: This section will give some technical details for radios with a color screen.
 ---
 
-# Drawing Flags and Colors
+# Using Flags and Colors
 
 An argument with drawing flags can be given to the various functions that draw on the LCD screen. The lower half of the flags (bits 1-16) are the flag attributes shown below, and the upper half of the flags (bits 17-32) are a color value.
 

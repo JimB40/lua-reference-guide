@@ -50,6 +50,7 @@ nav:
           - Flags and Pattern Constants: md-docs/api-overview/constants/flags-and-pattern-constants.md
           - Key Event Constants: md-docs/api-overview/constants/key-event-constants.md
           - Logical Switch Function Constants: md-docs/api-overview/constants/logical-switch-function-constants.md
+          - LVGL Constants: md-docs/api-overview/constants/lvgl-constants.md
           - Screen Constants: md-docs/api-overview/constants/screen-constants.md
           - Special Character Constants: md-docs/api-overview/constants/special-character-constants.md
           - Special Function Constants: md-docs/api-overview/constants/special-function-constants.md
@@ -91,19 +92,15 @@ nav:
           - Memory: md-docs/programming/basics/memory.md
           - Performance: md-docs/programming/basics/performance.md
       - Core Concepts:
-          - Data Exchange with the EdgeTX Model Setup: md-docs/programming/core-concepts/data-exchange-with-the-edgetx-model-setup.md
-          - Drawing Flags and Colors: md-docs/programming/core-concepts/drawing-flags-and-colors.md
-          - Init Function Syntax: md-docs/programming/core-concepts/init-function-syntax.md
-          - Input Table Syntax: md-docs/programming/core-concepts/input-table-syntax.md
-          - Loading Code Modules Dynamically: md-docs/programming/core-concepts/loading-code-modules-dynamically.md
-          - Output Table Syntax: md-docs/programming/core-concepts/output-table-syntax.md
-          - Return Statement Syntax: md-docs/programming/core-concepts/return-statement-syntax.md
-          - Run Function Syntax: md-docs/programming/core-concepts/run-function-syntax.md
-          - Saving Memory: md-docs/programming/core-concepts/saving-memory.md
+          - Using Flags and Colors: md-docs/programming/core-concepts/drawing-flags-and-colors.md
+          - Using LVGL Library: md-docs/programming/core-concepts/lvgl-for-lua.md
           - Using Key and Touch Events: md-docs/programming/core-concepts/using-key-and-touch-events.md
+          - Data Exchange with the EdgeTX Model Setup: md-docs/programming/core-concepts/data-exchange-with-the-edgetx-model-setup.md
       - Advanced Topics:
           - Debugging techniques: md-docs/programming/advanced-topics/debugging-techniques.md
+          - Loading Code Modules Dynamically: md-docs/programming/core-concepts/loading-code-modules-dynamically.md
           - Lua data sharing across scripts: md-docs/programming/advanced-topics/lua-data-sharing-across-scripts.md
+          - Saving Memory: md-docs/programming/core-concepts/saving-memory.md
           - Speed/memory optimizaton tricks: md-docs/programming/advanced-topics/optimization-tricks.md
   - Radios:
       - md-docs/radios/README.md

@@ -2,6 +2,8 @@
 
 LVGL bindings for Lua scripts on radios with color display.
 
+For guidance on enabling LVGL in scripts and typical usage patterns, see [Using LVGL Library](../programming/core-concepts/lvgl-for-lua.md). For layout and picker constants, see [LVGL Constants](../api-overview/constants/lvgl-constants.md).
+
 ## Runtime Helpers
 
 <div class="api-grid">
