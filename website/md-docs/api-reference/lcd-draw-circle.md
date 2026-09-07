@@ -11,7 +11,7 @@ Draw a circle at (x, y) of specified radius
 | `x` | yes | `integer` | center position |
 | `y` | yes | `integer` | center position |
 | `r` | yes | `integer` | radius in pixels |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

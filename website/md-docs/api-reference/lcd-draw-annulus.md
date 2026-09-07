@@ -14,7 +14,7 @@ Draw an arc
 | `r2` | yes | `integer` | radii of the inside and outside of the annulus |
 | `start` | yes | `integer` | start and end of the annulus |
 | `end` | yes | `integer` | start and end of the annulus |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

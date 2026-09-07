@@ -14,7 +14,7 @@ Draw a simple gauge that is filled based upon fill value
 | `h` | yes | `integer` | height in pixels |
 | `fill` | yes | `integer` | amount of fill to apply |
 | `maxfill` | yes | `integer` | total value of fill |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

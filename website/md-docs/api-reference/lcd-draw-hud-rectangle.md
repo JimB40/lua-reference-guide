@@ -14,7 +14,7 @@ Draw a rectangle in perspective
 | `xmax` | yes | `integer` | the limits of the rectangle |
 | `ymin` | yes | `integer` | the limits of the rectangle |
 | `ymax` | yes | `integer` | the limits of the rectangle |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

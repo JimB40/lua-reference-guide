@@ -8,7 +8,7 @@ Get the color value from flags
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `flags` | yes | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | yes | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

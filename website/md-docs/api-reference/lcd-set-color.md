@@ -2,7 +2,7 @@
 
 `lcd.setColor(colorIndex, color)`
 
-Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../api-overview/constants/color-constants.md#indexed-colors)
 
 ## Parameters
 

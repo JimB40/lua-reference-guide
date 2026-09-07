@@ -9,7 +9,7 @@ Get the width and height of a text string drawn with flags
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `text` | yes | `string` |  |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

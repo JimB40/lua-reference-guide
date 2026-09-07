@@ -16,8 +16,8 @@ Draw a line only inside a rectangle
 | `xmax` | yes | `integer` | the limits of the rectangle inside which the line is drawn |
 | `ymin` | yes | `integer` | the limits of the rectangle inside which the line is drawn |
 | `ymax` | yes | `integer` | the limits of the rectangle inside which the line is drawn |
-| `pattern` | yes | `FORCE` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `pattern` | yes | `FORCE` | please see [Lcd functions overview](display-lcd.md) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

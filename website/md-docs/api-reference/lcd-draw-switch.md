@@ -11,7 +11,7 @@ Draw a text representation of switch at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `switch` | yes | `integer` | number of switch to display, negative number displays negated switch |
-| `flags` | yes | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html), only SMLSIZE, BLINK and INVERS. |
+| `flags` | yes | `integer` | please see [Lcd functions overview](display-lcd.md), only SMLSIZE, BLINK and INVERS. |
 
 ## Returns
 
