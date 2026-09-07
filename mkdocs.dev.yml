@@ -1,40 +1,25 @@
-site_name: EdgeTX LuaDoc
-site_description: Next-generation Lua API docs generated from EdgeTX source annotations
-site_url: https://luadoc.edgetx.org/
-docs_dir: website/md-docs
-site_dir: site
-exclude_docs: |
-  migration/
-  api-reference/review.md
-  api-reference/review-*.md
-  api-reference/module-*.md
-  javascripts/review-workbench.js
-theme:
-  name: material
-  logo: assets/edgetx-logo.svg
-  favicon: assets/edgetx-logo.svg
-  palette:
-    primary: custom
-    accent: custom
-  features:
-    - navigation.path
-extra_css:
-  - stylesheets/extra-live-v2.css
+INHERIT: mkdocs.yml
+
+# Internal working config: un-excludes everything mkdocs.yml drops from the
+# public build (migration/ pipeline docs, the review workbench, and the
+# per-module dashboards), restates nav with the Migration section added
+# back, and restates extra_javascript with review-workbench.js added back
+# (it talks to a localhost-only decision server and has no reason to ship
+# in the public build; MkDocs replaces rather than merges list-type keys
+# on INHERIT, so both of these have to be full restatements, not diffs).
+#
+# Usage: mkdocs serve -f mkdocs.dev.yml (defaults to http://127.0.0.1:8014,
+# per HANDOFF.md's local-preview convention)
+exclude_docs: ""
+
 extra_javascript:
   - javascripts/api-function-breadcrumb.js
   - javascripts/mobile-nav-inline.js
+  - javascripts/review-workbench.js
   - javascripts/version-switcher.js
   - javascripts/legacy-version-banner.js
   - javascripts/toc-visibility.js
-extra:
-  version:
-    provider: mike
-    default: latest
-    alias: true
-  legacy_version:
-    enabled: false
-    label: Legacy version
-    message: This documentation version is preserved for reference and may not include later corrections or the newest docs structure.
+
 nav:
   - EdgeTX LuaDoc: index.md
   - API Overview:
@@ -172,7 +157,15 @@ nav:
           - TX16S MK3 / TX16S MK3 MAX: radios/radiomaster/radiomaster-tx16smk3.md
       # - TBS:
       #     - radios/tbs/README.md
-markdown_extensions:
-  - tables
-  - admonition
-  - fenced_code
+  - Migration:
+      - Overview: migration/overview.md
+      - Pipeline:
+          - Overview: migration/pipeline/index.md
+          - Annotation Contract: migration/pipeline/annotation-contract.md
+          - Overlay Contract: migration/pipeline/overlay-contract.md
+          - API Schema: migration/pipeline/api-schema.md
+          - LVGL Migration Notes: migration/pipeline/lvgl-migration.md
+          - Real Extraction Notes: migration/pipeline/real-extraction-notes.md
+      - Internal Review Tools:
+          - API Review Dashboard: api-reference/review.md
+          - Developer Questions: migration/internal-review-tools/developer-questions.md
