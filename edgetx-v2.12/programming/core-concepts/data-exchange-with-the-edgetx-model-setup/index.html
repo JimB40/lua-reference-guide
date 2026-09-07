@@ -4974,7 +4974,7 @@
 <li>Values, which generally fall on a scale between -1024 and 1024, also sometimes reported as -100% to 100%, e.g. for mixer values and channel outputs.</li>
 <li>Switches, which are either <code>true</code> or <code>false.</code></li>
 </ul>
-<p>A specific data source type, e.g. Global Variables, can be indexed directly with an index that starts with 0 for the first one. This can be a little confusing, as e.g. GV1 for FM0 is read with <a href="../../api-reference/model-functions/model-get-global-variable.md"><code>model.getGlobalVariable(0, 0)</code></a>, because GV1 is the first global variable, and FM0 is the first flight mode. But as long as you remember that all direct indices start with 0 for the first one, you should be fine!</p>
+<p>A specific data source type, e.g. Global Variables, can be indexed directly with an index that starts with 0 for the first one. This can be a little confusing, as e.g. GV1 for FM0 is read with <a href="../../../api-reference/model-get-global-variable/"><code>model.getGlobalVariable(0, 0)</code></a>, because GV1 is the first global variable, and FM0 is the first flight mode. But as long as you remember that all direct indices start with 0 for the first one, you should be fine!</p>
 <p>Global Variables is a <em>value</em> data source that can return a value between -1024 and 1024. Examples of value sources are:</p>
 <ul>
 <li>Global Variables</li>
@@ -4985,17 +4985,17 @@
 <li>Trainer channel inputs</li>
 <li>Telemetry sensors</li>
 </ul>
-<p>There is a way to access a value of <em>any</em> such type with a <em>meta-index</em>. You use the function <a href="../../api-reference/variables/runtime-get-field-info.md"><code>getFieldInfo(name)</code></a> where <code>name</code> can be any of the valid source names listed <a href="../../api-reference/variables/runtime-get-field-info.md">here</a>. It returns a table with a description of the value source, including the field <code>id,</code> which is the meta-index.</p>
-<p>You can use <code>id</code> with the function <a href="../../api-reference/variables/runtime-get-value.md"><code>getValue(id)</code></a> to read the current value. You can also use <code>name</code> directly, but this is less efficient, as EdgeTX does a linear search for the name every time it is called. Therefore, the procedure of first extracting the meta-index from <code>getFieldInfo(name).id</code>, and then using that, is recommended.</p>
-<p>For switches, <a href="../../api-reference/variables/runtime-get-logical-switch-value.md"><code>getLogicalSwitchValue(index)</code></a> uses a direct index to read this specific type of switch sources, again using the <code>index</code> 0 for LS1 etc. But there are also several types of switch sources, such as:</p>
+<p>There is a way to access a value of <em>any</em> such type with a <em>meta-index</em>. You use the function <a href="../../../api-reference/runtime-get-field-info/"><code>getFieldInfo(name)</code></a> where <code>name</code> can be any of the valid source names listed <a href="../../../api-reference/runtime-get-field-info/">here</a>. It returns a table with a description of the value source, including the field <code>id,</code> which is the meta-index.</p>
+<p>You can use <code>id</code> with the function <a href="../../../api-reference/runtime-get-value/"><code>getValue(id)</code></a> to read the current value. You can also use <code>name</code> directly, but this is less efficient, as EdgeTX does a linear search for the name every time it is called. Therefore, the procedure of first extracting the meta-index from <code>getFieldInfo(name).id</code>, and then using that, is recommended.</p>
+<p>For switches, <a href="../../../api-reference/runtime-get-logical-switch-value/"><code>getLogicalSwitchValue(index)</code></a> uses a direct index to read this specific type of switch sources, again using the <code>index</code> 0 for LS1 etc. But there are also several types of switch sources, such as:</p>
 <ul>
 <li>Logical switches</li>
 <li>Switch positions, testing if a physical switch is in a particular position, e.g. <code>SA↑</code>.&#x20;</li>
 <li>Trim buttons</li>
 <li>Transmitter and telemetry activity</li>
 </ul>
-<p>You can find the meta-index of a particular switch source with <a href="../../api-reference/variables/runtime-get-switch-index.md"><code>getSwitchIndex(name)</code></a>, where <code>name</code> is exactly the name that you see in the radio menus where you can select a switch source.</p>
-<p>You can read the current value of a switch source with <a href="../../api-reference/variables/runtime-get-switch-value.md"><code>getSwitchValue(index)</code></a> as a <code>true</code>/<code>false</code> value.</p>
+<p>You can find the meta-index of a particular switch source with <a href="../../../api-reference/runtime-get-switch-index/"><code>getSwitchIndex(name)</code></a>, where <code>name</code> is exactly the name that you see in the radio menus where you can select a switch source.</p>
+<p>You can read the current value of a switch source with <a href="../../../api-reference/runtime-get-switch-value/"><code>getSwitchValue(index)</code></a> as a <code>true</code>/<code>false</code> value.</p>
 <p>It can be very confusing that some source can be read both as a value and as a switch. As an example, elevator trim can be read as the current value of the <em>trim</em>:&#x20;</p>
 <pre><code class="language-lua">local id = getFieldInfo(&quot;trim-ele&quot;)
 local eleTrim = getValue(id)

@@ -5037,7 +5037,7 @@
 
 <h1 id="speedmemory-optimizaton-tricks">Speed/memory optimizaton tricks</h1>
 <h2 id="faster-getvalue">Faster getValue()</h2>
-<p>Normally one uses <a href="../../api-reference/variables/runtime-get-value.md">getValue()</a> function with the source/filed name like so:</p>
+<p>Normally one uses <a href="../../../api-reference/runtime-get-value/">getValue()</a> function with the source/filed name like so:</p>
 <pre><code class="language-lua">local foo = getValue(&quot;bar&quot;)
 </code></pre>
 <p>This works and is recommended method for portability. But if a particular script needs to get the value of certain field a lot, then it is faster to use this syntax:</p>
@@ -5047,7 +5047,7 @@ local function run_a_lot()
   local my_value = getValue(my_id)      -- exactly the same effect as local my_value = getValue(&quot;bar&quot;), but faster
 end
 </code></pre>
-<p>Why is this method faster? With the function <a href="../../api-reference/variables/runtime-get-field-info.md">getFieldInfo(name)</a> we get the <code>numerical id</code> of the wanted filed. The function has to find the requested value by its name in the table of all available sources. That search takes some time.</p>
+<p>Why is this method faster? With the function <a href="../../../api-reference/runtime-get-field-info/">getFieldInfo(name)</a> we get the <code>numerical id</code> of the wanted filed. The function has to find the requested value by its name in the table of all available sources. That search takes some time.</p>
 <p>When we use this syntax the search is only done once. In comparison in the first example the search must be performed every time <code>getValue("bar")</code> is called.</p>
 <p>So when the <code>getValue(my_id)</code> is called the search can be skipped and the requested value if fetched directly.</p>
 <p>Of course there is a trade-of, the second example uses little more memory (for variable <code>my_id</code>).</p>

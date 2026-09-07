@@ -4948,7 +4948,7 @@
 <li>a longer pres on key would generate: <code>FIRST</code>, <code>LONG</code>, <code>BREAK</code></li>
 <li>even longer press: <code>FIRST</code>, <code>LONG</code>, <code>REPEAT,</code>REPEAT, ..., <code>BREAK</code></li>
 </ul>
-<p>This normal key event sequence can be altered with the <a href="../../api-reference/key-inputs/runtime-kill-events.md">killEvents(key)</a> function. Any time this function is called (after the <code>FIRST</code> event) all further key events for this key will be suppressed until the next key press of this key. Examples:</p>
+<p>This normal key event sequence can be altered with the <a href="../../../api-reference/runtime-kill-events/">killEvents(key)</a> function. Any time this function is called (after the <code>FIRST</code> event) all further key events for this key will be suppressed until the next key press of this key. Examples:</p>
 <ul>
 <li>kill immediately after the key press would generate: <code>FIRST</code></li>
 <li>kill after the long key press would generate: <code>FIRST</code>, <code>LONG</code></li>
