@@ -49,6 +49,7 @@ nav:
           - Color Constants: api-overview/constants/color-constants.md
           - Flags and Pattern Constants: api-overview/constants/flags-and-pattern-constants.md
           - Key Event Constants: api-overview/constants/key-event-constants.md
+          - Key Event Mechanism: api-overview/constants/key_events.md
           - Logical Switch Function Constants: api-overview/constants/logical-switch-function-constants.md
           - LVGL Constants: api-overview/constants/lvgl-constants.md
           - Screen Constants: api-overview/constants/screen-constants.md
