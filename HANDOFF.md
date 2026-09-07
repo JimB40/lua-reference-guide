@@ -22,6 +22,12 @@ The current local preview port in use is:
 
 - `http://127.0.0.1:8014/`
 
+There are now two configs: `mkdocs.yml` (public/production, what actually
+ships) and `mkdocs.dev.yml` (internal, adds back the Migration section,
+per-module dashboards, and the API Review Dashboard). Use
+`mkdocs serve -f mkdocs.dev.yml -a 127.0.0.1:8014` to see the full internal
+site; see README.md for details.
+
 ## Navigation Decisions Locked In
 
 These decisions were made intentionally and should be treated as the current baseline:
@@ -98,4 +104,5 @@ When work resumes, start here:
 - prefer user-facing labels over internal/developer naming
 - keep only one preview server active at a time on `8014`
 - if preview looks stale, restart `8014` from the current files before assuming the docs are wrong
+- to see Migration/review content locally, serve with `-f mkdocs.dev.yml`; plain `mkdocs serve` uses the public config and won't show it
 - upstream C++ comments remain the long-term source of truth for generated API syntax
