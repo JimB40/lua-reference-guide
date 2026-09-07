@@ -2,21 +2,19 @@
 
 `lvgl.isAppMode()`
 
-Return whether the current script is running in app mode.
+Test if widget is running in App Mode.
 
 ## Parameters
 
-None.
+The function has no parameters.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `boolean` | true when the current script runs in app mode |
+True if the widget is running in App Mode, false otherwise.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Source

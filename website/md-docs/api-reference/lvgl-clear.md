@@ -1,22 +1,26 @@
 # lvgl.clear
 
-`lvgl.clear([obj])`
+`lvgl.clear([parent])`
 
-Clear all LVGL content created by the current script, or clear the children of a specific object.
+`parent:clear()`
+
+Delete LVGL objects.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `obj` | no | `table` | LVGL object to clear instead of clearing the whole script UI |
+See the API page for parameter description and common settings.
 
-## Returns
+The 'settings' parameter is not used.
 
-None.
+### Notes
+
+If 'parent' is not set then the entire script UI is deleted. Use this when the UI changes dramatically (e.g. widget size changes).
+
+When the 'parent' parameter is defined, only the child LVGL objects within the parent are deleted. Use this to remove and replace a specific set of objects.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Source

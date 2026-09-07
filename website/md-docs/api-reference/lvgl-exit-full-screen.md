@@ -2,19 +2,15 @@
 
 `lvgl.exitFullScreen()`
 
-Exit LVGL fullscreen mode for the current script.
+If widget is running in full screen mode, then return to normal mode.
 
 ## Parameters
 
-None.
-
-## Returns
-
-None.
+The function has no parameters.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Source

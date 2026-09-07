@@ -1,35 +1,34 @@
 # lvgl.circle
 
-`lvgl.circle(params)`
+`lvgl.circle([parent], {settings})`
 
-Create an LVGL circle object.
+`parent:circle({settings})`
+
+Display a solid or filled circle.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Note: 'w', 'h' and 'size' should not be used with lvgl.circle. Use 'radius' instead.
+
+Circle specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| thickness | Number | Sets the width of the line used to draw the arc. | 1 |
+| filled | Boolean | If true the circle is filled with the 'color'value | false |
+| radius | Number or Function | Sets the radius of the arc | 0 |
+| opacity | Number or Function | Sets the opacity.; Note: range is 0 (transparent) to 255 (opaque). | 255 (opaque) |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- Common bordered-object keys:
- * `color`, `opacity`, `visible`
- * `thickness` (number)
- * `filled` (boolean or function)
- * `radius` (number or function)
- * `flexFlow`, `flexPad`, `borderPad`
-- Circle position uses the center point with `radius`.
 
 ## Source
 

@@ -1,32 +1,33 @@
 # lvgl.setting
 
-`lvgl.setting(params)`
+`lvgl.setting([parent], {settings})`
 
-Create an LVGL setting control.
+`parent:setting({settings})`
+
+Create a container for managing object layout.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Setting specific settings:
+
+| Name | Type | Description | Default |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| title | String or Function; (Function support available in 2.11.6 or later) | Text to be displayed on the left. | Empty string |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Notes
 
-- Available only in standalone scripts and fullscreen widgets.
-- Setting keys:
- * `x`, `y`, `w`, `h`
- * `title` (string or function)
+The setting object is designed to manage a single row in a page of user settings. It automatically includes the necesary padding for correctly displaying controls such as toggle, textEdit, button etc.
 
 ## Source
 

@@ -1,36 +1,31 @@
 # lvgl.label
 
-`lvgl.label(params)`
+`lvgl.label([parent], {settings})`
 
-Create an LVGL label object.
+`parent:label({settings})`
+
+Display a text label.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Label specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| text | String or Function | Set the text to be displayed on the label | Empty string |
+| font | Font value or Function | Sets the font size.; E.G.:; - MIDSIZE; - DBLSIZE | STDSIZE |
+| align | Text alignment value or function | Sets the justification for the text.; E.G.:; - RIGHT; - VCENTER; Notes:RIGHT and CENTER alignment require the width for the label to be set.; LEFT, RIGHT and CENTER will align the text horizontally within the label bounding box (x,y,w,h).; VCENTER, VTOP and VBOTTOM will align the label bounding box vertically within the parent object. | LEFT |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- Common keys:
- * `x`, `y`, `w`, `h`
- * `color`, `opacity`
- * `visible`, `pos`, `size`
-- Label keys:
- * `text` (string or function)
- * `font` (number or function)
- * `align` (number or function)
 
 ## Source
 

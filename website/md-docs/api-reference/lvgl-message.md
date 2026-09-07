@@ -1,30 +1,23 @@
 # lvgl.message
 
-`lvgl.message(params)`
+`lvgl.message({settings})`
 
-Show a message dialog using the LVGL UI layer.
+Display a message dialog box.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+The lvgl.confirm function uses only the settings shown below. The common settings shown on the API page are not used.
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | dialog definition table |
-
-## Returns
-
-None.
+| title | String | Text to be displayed in the header of the dialog box. | Empty string |
+| message | String | Text to be displayed in the body of the dialog box | Empty string |
+| details | Function | Text to be displayed in the body of the dialog box | Empty string |
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- Message dialog keys:
- * `title` (string or function)
- * `message` (string)
- * `details` (string)
 
 ## Source
 

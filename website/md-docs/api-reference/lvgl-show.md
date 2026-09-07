@@ -1,22 +1,26 @@
 # lvgl.show
 
-`lvgl.show(obj)`
+`lvgl.show(parent)`
 
-Show an LVGL object that was previously hidden.
+`parent:show()`
+
+Show an LVGL object.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `obj` | yes | `table` | LVGL object previously created by the `lvgl` library |
+See the API page for parameter description and common settings.
 
-## Returns
+The 'parent' parameter is mandatory.
 
-None.
+The 'settings' parameter is not used.
+
+### Notes
+
+The 'visible' setting function can also be used to dynamically show and hide objects.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Source

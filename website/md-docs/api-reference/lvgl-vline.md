@@ -1,35 +1,36 @@
 # lvgl.vline
 
-`lvgl.vline(params)`
+`lvgl.vline([parent], {settings})`
 
-Create an LVGL vertical line object.
+`parent:hline({settings})`
+
+Display a vertical line.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+The 'h' setting determinse the length of the line.
+
+The 'w' setting determines the thickness of the line.
+
+Vline specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| rounded | Boolean | If true then the end caps of the line are rounded. | false |
+| opacity | Number or Function | Sets the opacity.; Note: range is 0 (transparent) to 255 (opaque) | 255 (opaque) |
+| dashGap | Number | Sets the gap size for drawing dashed lines. | 0 |
+| dashWidth | Number | Sets the dash size for drawing dashed lines.; Note: both dashGap and dashWidth must be > 0 in order to draw dashed lines. | 0 |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- Common keys:
- * `x`, `y`, `w`, `h`
- * `color`, `opacity`, `visible`
-- Vertical line keys:
- * `rounded` (boolean)
- * `dashGap` (number)
- * `dashWidth` (number)
 
 ## Source
 

@@ -1,24 +1,26 @@
 # lvgl.getScrollPos
 
-`lvgl.getScrollPos(obj)`
+`lvgl.getScrollPos(parent)`
 
-Return the current scroll position of an LVGL object.
+`parent:getScrollPos()`
+
+Get the current scroll position (X, Y) of a container object.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `obj` | yes | `table` | LVGL object previously created by the `lvgl` library |
+None.
 
-## Returns
+### Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `x,y` | `integer` | horizontal and vertical scroll offsets |
+Two values, X and Y, being the current scroll position of the top left corner of the container.
+
+### Notes
+
+Only applies to container objects such as 'box', 'rectangle' and 'page'.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.2`
 - Radio support: `color-lcd`
 
 ## Source

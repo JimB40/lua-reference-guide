@@ -1,33 +1,32 @@
 # lvgl.qrcode
 
-`lvgl.qrcode(params)`
+`lvgl.qrcode([parent], {settings})`
 
-Create an LVGL QR code object.
+`parent:qrcode({settings})`
+
+Display a QR code.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Note: 'w' and 'h' should be set to the same value for a QR code.
+
+QR code specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| data | String | Sets the URL or other content to be enccoded in the QR code. | Empty string |
+| bgColor | Color | Sets the background color for the QR code image. | COLOR_THEME_SECONDARY3 |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- QR code keys:
- * `x`, `y`, `w`
- * `data` (string)
- * `color` (number)
- * `bgColor` (number)
 
 ## Source
 

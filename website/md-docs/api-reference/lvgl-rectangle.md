@@ -1,37 +1,38 @@
 # lvgl.rectangle
 
-`lvgl.rectangle(params)`
+`lvgl.rectangle([parent], {settings})`
 
-Create an LVGL rectangle object.
+`parent:rectangle({settings})`
+
+Display a text label.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Rectangle are based on the 'lvgl.box' object so all of the settings from 'lvgl.box' also apply.
+
+Rectangle specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| thickness | Number | Sets the width of the line used to draw the border. | 1 |
+| filled | Boolean or Function | If true the rectangle is filled with the 'color' value.; Filled can be a function in 2.11.4 or later. | false |
+| rounded | Number | If greater than 0 makes the corners rounded with a radius set this value.; When set to a value greater than 0, must also be >= thickness. | 0 |
+| opacity | Number or Function | Sets the opacity.; Note: range is 0 (transparent) to 255 (opaque) | 255 (opaque) |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Notes
 
-- Common keys:
- * `x`, `y`, `w`, `h`
- * `color`, `opacity`, `visible`
-- Rectangle keys:
- * `rounded` (number)
- * `thickness` (number)
- * `filled` (boolean or function)
- * `flexFlow`, `flexPad`, `borderPad`
- * `align`, `scrollBar`, `scrollDir`, `scrollTo`, `scrolled`
+When used in a stand alone tool script, the rectangle will automatically add scroll bars if any child objects are placed outside of the rectangle boundaries. For widgtes, child objects outside the rectangle bounds will be clipped.
 
 ## Source
 

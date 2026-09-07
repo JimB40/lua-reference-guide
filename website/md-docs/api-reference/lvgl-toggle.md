@@ -1,33 +1,31 @@
 # lvgl.toggle
 
-`lvgl.toggle(params)`
+`lvgl.toggle([parent], {settings})`
 
-Create an LVGL toggle control.
+`parent:toggle({settings})`
+
+Add a toggle switch using the EdgeTX style.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Toggle specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| get | Function | Called to get the curent state of the toggle switch.; Must return a boolean or a number value. 0 or false if the toggle switch is off, 1 or true if it should be on. | nil |
+| set | Function | Called when the user interacts with the toggle switch.; The function is passed a single number parameter - 0 if the toggle switch is off, 1 if it is on. | nil |
+| active | Function | Set the enabled / disabled state. Return value must be a boolean - true to enable the control, false to disable. | nil |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- Available only in standalone scripts and fullscreen widgets.
-- Toggle keys:
- * `x`, `y`
- * `get` (function)
- * `set` (function)
 
 ## Source
 

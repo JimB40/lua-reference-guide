@@ -1,32 +1,36 @@
 # lvgl.color
 
-`lvgl.color(params)`
+`lvgl.color([parent], {settings})`
 
-Create an LVGL color picker control.
+`parent:color({settings})`
+
+Display a button showing a color swatch. When tapped the color picker dialog is opened allowing the user to select a new color. Uses EdgeTX styling.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Choice specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| get | Function | Called to get the currently selected color, when the popup menu is first opened. | nil |
+| set | Function | Called when the user taps on an color button.; The function is passed a single parameter wihich is the selected color value. | nil |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Notes
 
-- Available only in standalone scripts and fullscreen widgets.
-- Color picker keys:
- * `x`, `y`, `w`, `h`
- * `get`, `set`
+The popup menu is closed when the user selects an item, and the 'set' function is called.
+
+If the user taps outside the menu or the RTN key is pressed, the popup menu is closed and the 'set' function is not called.
 
 ## Source
 

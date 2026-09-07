@@ -1,33 +1,34 @@
 # lvgl.line
 
-`lvgl.line(params)`
+`lvgl.line([parent], {settings})`
 
-Create an LVGL line object.
+`parent:line({settings})`
+
+Display one or more connected lines.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+The 'x, 'y, 'w' and 'h' settings are not used.
+
+Line specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| rounded | Boolean | If true then the end caps of the line are rounded. | false |
+| thickness | Number | Sets the thickness of each line segment. | 1 |
+| opacity | Number or Function | Sets the opacity.; Note: range is 0 (transparent) to 255 (opaque) | 255 (opaque) |
+| pts | Table or FunctionTable of points. Each point must be a table with two number values ({x, y}) | Defines the points used to draw the line segments. There must be at least two points. | nil |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- Line keys:
- * `color`, `opacity`, `visible`
- * `rounded` (boolean)
- * `thickness` (number)
- * `pts` (table of `{x, y}` points or function returning that table)
 
 ## Source
 

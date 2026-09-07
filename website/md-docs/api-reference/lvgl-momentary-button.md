@@ -1,36 +1,40 @@
 # lvgl.momentaryButton
 
-`lvgl.momentaryButton(params)`
+`lvgl.momentaryButton([parent], {settings})`
 
-Create an LVGL momentary button control.
+`parent:momentaryButton({settings})`
+
+Add a momentary text button using the EdgeTX style.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Button specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| text | String or Function | Text to be displayed in the button. | Empty string |
+| press | Function | Called when the user first taps on the button. | nil |
+| release | Function | Called when the user releases the ENTER key or stops touching the screen. | nil |
+| active | Function | Set the enabled / disabled state. Return value must be a boolean - true to enable the control, false to disable. | nil |
+| color | Color or Function | Sets the background color for the button. | EdgeTx button style color - PRIMARY2 theme color. |
+| textColor | Color or Function | Sets the text color for the button label. | EdgeTx button style color - SECONDARY1 theme color. |
+| cornerRadius | Number | Sets the radius for the corners of the button. | EdgeTx button style radius. |
+| font | Font value or Function | Sets the font size.; E.G.:; - MIDSIZE; - DBLSIZE | STDSIZE |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Notes
 
-- Available only in standalone scripts and fullscreen widgets.
-- Momentary button keys:
- * `x`, `y`, `w`, `h`
- * `text`, `font`
- * `color`, `textColor`
- * `cornerRadius` (number)
- * `press` (function)
- * `release` (function)
+Unlike the standard button the press function is called immediately when the user taps on the screen or presses the ENTER key when the momentary button is selected. The button shows in the 'checked' state until the user releases the ENTER key or stops touching the screen.
 
 ## Source
 

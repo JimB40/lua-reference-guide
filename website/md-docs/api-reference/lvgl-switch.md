@@ -1,33 +1,38 @@
 # lvgl.switch
 
-`lvgl.switch(params)`
+`lvgl.switch([parent], {settings})`
 
-Create an LVGL switch picker control.
+`parent:switch({settings})`
+
+Display a button showing a switch name. When tapped the switch select popup is opened to allow the user to select a new switch. Uses EdgeTX styling.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+See the API page for parameter description and common settings.
+
+Switch specific settings:
+
+| Name | Type | Description | Default if not set |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| get | Function | Called to get the currently selected switch, when the popup menu is first opened. | nil |
+| set | Function | Called when the user taps on an switch button.; The function is passed a single parameter wihich is the selected switch value. | nil |
+| active | Function | Set the enabled / disabled state. Return value must be a boolean - true to enable the control, false to disable. | nil |
+|  |  |  |  |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Notes
 
-- Available only in standalone scripts and fullscreen widgets.
-- Switch picker keys:
- * `x`, `y`, `w`, `h`
- * `get`, `set`
- * `filter` (number mask such as `lvgl.SW_*`)
+The popup menu is closed when the user selects an item, and the 'set' function is called.
+
+If the user taps outside the menu or the RTN key is pressed, the popup menu is closed and the 'set' function is not called.
 
 ## Source
 

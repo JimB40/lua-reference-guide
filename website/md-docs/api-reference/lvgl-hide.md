@@ -1,22 +1,26 @@
 # lvgl.hide
 
-`lvgl.hide(obj)`
+`lvgl.hide(parent)`
 
-Hide an LVGL object without destroying it.
+`parent:hide()`
+
+Hide an LVGL object.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `obj` | yes | `table` | LVGL object previously created by the `lvgl` library |
+See the API page for parameter description and common settings.
 
-## Returns
+The 'parent' parameter is mandatory.
 
-None.
+The 'settings' parameter is not used.
+
+### Notes
+
+The 'visible' setting function can also be used to dynamically show and hide objects.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Source

@@ -2,21 +2,21 @@
 
 `lvgl.isFullScreen()`
 
-Return whether the current script is running in fullscreen mode.
+Test if widget is running in full screen mode.
 
 ## Parameters
 
-None.
+The function has no parameters.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `boolean` | true when the current script runs in fullscreen mode |
+True if the widget is running in full screen mode, false otherwise.
+
+Always returns true for stand alone tool scripts.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Source

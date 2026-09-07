@@ -2,22 +2,21 @@
 
 `lvgl.getContext()`
 
-Return the Lua context table associated with the current LVGL script, if any.
+For a widget, returns the local instance table created (and returned from) the script 'create()' function.
 
 ## Parameters
 
-None.
+The function has no parameters.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | current LVGL context table |
-| `-` | `nil` | no LVGL context is available |
+Widget scripts return a table of data local to the instance of the script from the script 'create()' function. This function retrieves this table for use in other functions.
+
+Always returns nil for stand alone tool scripts.
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
 
 ## Source

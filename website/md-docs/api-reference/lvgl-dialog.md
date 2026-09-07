@@ -1,34 +1,28 @@
 # lvgl.dialog
 
-`lvgl.dialog(params)`
+`lvgl.dialog({settings})`
 
-Create an LVGL dialog container.
+Display a dialog box.
 
 ## Parameters
 
-| Name | Req | Type | Description |
+The lvgl.dialog function uses only the settings shown below. The common settings shown on the API page are not used.
+
+| Name | Type | Description | Default |
 | --- | --- | --- | --- |
-| `params` | yes | `table` | object definition table |
+| title | String | Text to be displayed in the header of the dialog box. | Empty string |
+| close | Function | Called when the dialog box is closed. | nil |
+| flexFlow | Flow type - lvgl.FLOW_COLUMN or lvgl.FLOW_ROW | Enable flex layout for this box. | not used |
+| flexPad | Number | When flex layout is used, set the padding between rows or columns.; Recommended to use the lvgl.PAD_xxx values. | 0 |
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | created LVGL object |
+LVGL object
 
 ## Availability
 
-- Since: `3.0.0`
+- Since: `2.11.0`
 - Radio support: `color-lcd`
-
-## Notes
-
-- Available only in standalone scripts and fullscreen widgets.
-- Dialog keys:
- * `title` (string or function)
- * `w`, `h`
- * `close` (function)
- * `children`
 
 ## Source
 
