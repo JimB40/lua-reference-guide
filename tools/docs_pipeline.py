@@ -117,15 +117,35 @@ def slugify_token(text: str) -> str:
     return text.strip("-").lower()
 
 
-def default_doc_id(module: str, symbol: str) -> str:
+def scoped_symbol_parts(module: str, symbol: str) -> list[str]:
     scoped_name = symbol
     if module != "runtime" and symbol.startswith(f"{module}."):
         scoped_name = symbol[len(module) + 1 :]
     elif module == "runtime" and "." in symbol:
         scoped_name = symbol.split(".", 1)[1]
+    return [slugify_token(part) for part in scoped_name.split(".")]
+
+
+def default_doc_id(module: str, symbol: str) -> str:
     parts = [slugify_token(module)] if module else []
-    parts.extend(slugify_token(part) for part in scoped_name.split("."))
+    parts.extend(scoped_symbol_parts(module, symbol))
     return ".".join(part for part in parts if part)
+
+
+def nested_item_slug(item: dict) -> str:
+    """Item-page filename stem for the nested-by-topic-group scheme.
+
+    Unlike doc_id, this drops the "runtime" module qualifier for bare/
+    ungrouped functions -- "runtime" is an internal doc-grouping label,
+    not a real Lua namespace, and the topic-group folder already
+    disambiguates those. Real namespaces (model., lcd., lvgl., Bitmap.)
+    are kept since the group folder doesn't imply a namespace.
+    """
+    module = item["module"]
+    parts = scoped_symbol_parts(module, item["symbol"])
+    if module != "runtime":
+        parts = [slugify_token(module)] + parts
+    return "-".join(part for part in parts if part)
 
 
 def page_slug(text: str) -> str:
@@ -145,36 +165,29 @@ def group_for_item(item: dict) -> dict:
 
 def page_name_for_item(item: dict) -> str:
     group = group_for_item(item)
-    return str(Path(group["slug"]) / f"{page_slug(item['doc_id'])}.md")
-
-
-def legacy_page_name_for_item(item: dict) -> str:
-    return f"{page_slug(item['doc_id'])}.md"
+    return str(Path(group["slug"]) / f"{nested_item_slug(item)}.md")
 
 
 def review_page_name_for_item(item: dict) -> str:
-    group = group_for_item(item)
-    return str(Path("review") / group["slug"] / f"{page_slug(item['doc_id'])}.md")
-
-
-def legacy_review_page_name_for_item(item: dict) -> str:
     return f"review-{page_slug(item['doc_id'])}.md"
 
 
+def rendered_dir(path: Path) -> Path:
+    """The effective directory a page is served from under mkdocs' default
+    use_directory_urls behavior: foo/bar.md serves at .../foo/bar/, so its
+    own directory (for the purposes of resolving a relative link FROM it)
+    is one level deeper than its file-system parent. foo/index.md serves at
+    .../foo/, i.e. its own file-system parent -- no extra depth to add."""
+    if path.name == "index.md":
+        return path.parent
+    return path.parent / path.stem
+
+
 def page_href(from_page: str | Path, to_page: str | Path) -> str:
-    from_path = docs_path(from_page)
-    to_path = docs_path(to_page)
-    rel = Path(os.path.relpath(to_path, start=from_path.parent))
-    parts = list(rel.parts)
-    if parts[-1] == "index.md":
-        parts = parts[:-1]
-        href = "/".join(parts)
-        return f"{href}/" if href else "./"
-    filename = parts[-1]
-    if filename.endswith(".md"):
-        parts[-1] = filename[:-3]
-    href = "/".join(parts)
-    return f"{href}/" if href else "./"
+    from_dir = rendered_dir(docs_path(from_page))
+    to_dir = rendered_dir(docs_path(to_page))
+    href = os.path.relpath(to_dir, start=from_dir).replace(os.sep, "/")
+    return f"{href}/" if href != "." else "./"
 
 
 def doc_link(from_page: str | Path, to_page: str | Path) -> str:
@@ -189,18 +202,10 @@ def docs_path(path: str | Path) -> Path:
 
 
 def group_page_name(group: dict) -> str:
-    return str(Path(group["slug"]) / "index.md")
-
-
-def legacy_group_page_name(group: dict) -> str:
-    return f"group-{group['slug']}.md"
+    return f"{group['slug']}.md"
 
 
 def module_page_name(module_name: str) -> str:
-    return str(Path("modules") / f"{safe_file_stem(module_name)}.md")
-
-
-def legacy_module_page_name(module_name: str) -> str:
     return f"module-{safe_file_stem(module_name)}.md"
 
 
@@ -441,7 +446,7 @@ def render_api_index(model: dict) -> str:
     lines.append("")
     lines.append("This section is generated from the normalized API model and grouped with the same user-facing topic names used in the 2.11 docs.")
     lines.append("")
-    lines.append(f"Start with the [API Review Dashboard]({doc_link(current_page, Path('review') / 'index.md')}) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.")
+    lines.append(f"Start with the [API Review Dashboard]({doc_link(current_page, 'review.md')}) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.")
     lines.append("")
     for group, items in items_by_group(model):
         page = group_page_name(group)
@@ -487,7 +492,7 @@ def render_module_page(module_name: str, items: list[dict], report: dict, page_p
     lines.append("")
     lines.append(f"`{len(items)}` APIs in this module.")
     lines.append("")
-    lines.append(f"[Back to API overview]({doc_link(page_path, 'index.md')}) | [Open review dashboard]({doc_link(page_path, Path('review') / 'index.md')})")
+    lines.append(f"[Back to API overview]({doc_link(page_path, 'index.md')}) | [Open review dashboard]({doc_link(page_path, 'review.md')})")
     lines.append("")
     lines.append('<div class="api-grid">')
     for item in sorted(items, key=lambda entry: entry["symbol"]):
@@ -558,7 +563,7 @@ def render_overlay_sections(overlay_text: str) -> list[str]:
 
 
 def render_review_page(model: dict) -> str:
-    current_page = Path("review") / "index.md"
+    current_page = Path("review.md")
     report = quality_report(model)
     decisions = load_review_decisions()
     lines = []
@@ -645,7 +650,7 @@ def render_review_item_page(item: dict, page_path: str | Path) -> str:
     lines = []
     lines.append(f"# Review: {item['id']}")
     lines.append("")
-    lines.append(f"[Back to dashboard]({doc_link(page_path, Path('review') / 'index.md')}) | [Open API page]({doc_link(page_path, page_name_for_item(item))})")
+    lines.append(f"[Back to dashboard]({doc_link(page_path, 'review.md')}) | [Open API page]({doc_link(page_path, page_name_for_item(item))})")
     lines.append("")
     lines.append("## Snapshot")
     lines.append("")
@@ -1392,17 +1397,12 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
 
     generated_pages = {
         "index.md",
-        str(Path("review") / "index.md"),
         "review.md",
     }
     generated_pages.update(module_page_name(module_name) for module_name in {item["module"] for item in model["items"]})
     generated_pages.update(group_page_name(group) for group, _ in items_by_group(model))
     generated_pages.update(page_name_for_item(item) for item in model["items"])
     generated_pages.update(review_page_name_for_item(item) for item in model["items"])
-    generated_pages.update(legacy_module_page_name(module_name) for module_name in {item["module"] for item in model["items"]})
-    generated_pages.update(legacy_group_page_name(group) for group, _ in items_by_group(model))
-    generated_pages.update(legacy_page_name_for_item(item) for item in model["items"])
-    generated_pages.update(legacy_review_page_name_for_item(item) for item in model["items"])
     for page_name in generated_pages:
         stale_page = docs_output / page_name
         if stale_page.exists():
@@ -1410,8 +1410,7 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
 
     index_path = docs_output / "index.md"
     index_path.write_text(render_api_index(model), encoding="utf-8")
-    review_path = docs_output / "review" / "index.md"
-    ensure_dir(review_path.parent)
+    review_path = docs_output / "review.md"
     review_path.write_text(render_review_page(model), encoding="utf-8")
 
     modules: dict[str, list[dict]] = {}

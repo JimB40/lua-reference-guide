@@ -59,6 +59,7 @@ nav:
       - Display LCD: api-reference/display-lcd.md
       - Display LVGL: api-reference/display-lvgl.md
       - Filesystem: api-reference/filesystem.md
+      - Inputs: api-reference/key-inputs.md
       - Lua Scripts: api-reference/lua-scripts.md
       - Model Functions: api-reference/model-functions.md
       - Radio Hardware: api-reference/radio-hardware.md
