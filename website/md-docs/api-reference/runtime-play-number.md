@@ -9,7 +9,7 @@ Play a numerical value (text to speech)
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `value` | yes | `integer` | number to play. Value is interpreted as integer. |
-| `unit` | yes | `integer` | unit identifier [Full list]((../appendix/units.html)) |
+| `unit` | yes | `integer` | unit identifier [Full list](../api-overview/constants/units.md) |
 | `attributes` | no | `integer` | possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)  * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23) |
 
 ## Returns

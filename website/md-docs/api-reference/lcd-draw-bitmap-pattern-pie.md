@@ -13,7 +13,7 @@ Displays a bitmap pattern pie at (x,y)
 | `y` | yes | `integer` | starting coordinates |
 | `startAngle` | yes | `integer` | Start angle |
 | `endAngle` | yes | `integer` | End angle |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

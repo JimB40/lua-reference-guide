@@ -13,7 +13,7 @@ Draw an arc
 | `r` | yes | `integer` | radius |
 | `start` | yes | `integer` | start and end of the arc |
 | `end` | yes | `integer` | start and end of the arc |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

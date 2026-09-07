@@ -46,7 +46,7 @@ function lcd.clear(color) end
 ---@param r2 integer radii of the inside and outside of the annulus
 ---@param start integer start and end of the annulus
 ---@param end integer start and end of the annulus
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawAnnulus(x, y, r1, r2, start, end, flags) end
 
 --- Draw an arc
@@ -56,7 +56,7 @@ function lcd.drawAnnulus(x, y, r1, r2, start, end, flags) end
 ---@param r integer radius
 ---@param start integer start and end of the arc
 ---@param end integer start and end of the arc
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawArc(x, y, r, start, end, flags) end
 
 --- Displays a bitmap at (x,y)
@@ -72,7 +72,7 @@ function lcd.drawBitmap(bitmap, x, y, scale) end
 ---@param bitmap pointer point to a bitmap previously opened with Bitmap.open()
 ---@param x integer starting coordinates
 ---@param y integer starting coordinates
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawBitmapPattern(bitmap, x, y, flags) end
 
 --- Displays a bitmap pattern pie at (x,y)
@@ -82,7 +82,7 @@ function lcd.drawBitmapPattern(bitmap, x, y, flags) end
 ---@param y integer starting coordinates
 ---@param startangle integer Start angle
 ---@param endangle integer End angle
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawBitmapPatternPie(bitmap, x, y, startangle, endangle, flags) end
 
 --- Display a telemetry value at (x,y)
@@ -90,7 +90,7 @@ function lcd.drawBitmapPatternPie(bitmap, x, y, startangle, endangle, flags) end
 ---@param x integer starting coordinate
 ---@param y integer starting coordinate
 ---@param source integer|string can be a source identifier (number) or a source name (string). See getValue()
----@param flags integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawChannel(x, y, source, flags) end
 
 --- Draw a circle at (x, y) of specified radius
@@ -98,7 +98,7 @@ function lcd.drawChannel(x, y, source, flags) end
 ---@param x integer center position
 ---@param y integer center position
 ---@param r integer radius in pixels
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawCircle(x, y, r, flags) end
 
 --- Draw a combo box
@@ -116,7 +116,7 @@ function lcd.drawCombobox(x, y, w, list, idx, flags) end
 ---@param x integer center position
 ---@param y integer center position
 ---@param r integer radius in pixels
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawFilledCircle(x, y, r, flags) end
 
 --- Draw a solid rectangle from top left corner (x,y) of specified width and height
@@ -125,7 +125,7 @@ function lcd.drawFilledCircle(x, y, r, flags) end
 ---@param y integer top left corner position
 ---@param w integer width in pixels
 ---@param h integer height in pixels
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 ---@param opacity? integer opacity defaults to 0 (only on radios with color display)
 function lcd.drawFilledRectangle(x, y, w, h, flags, opacity) end
 
@@ -137,7 +137,7 @@ function lcd.drawFilledRectangle(x, y, w, h, flags, opacity) end
 ---@param y2 integer coordinates of the three vertices
 ---@param x3 integer coordinates of the three vertices
 ---@param y3 integer coordinates of the three vertices
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawFilledTriangle(x1, y1, x2, y2, x3, y3, flags) end
 
 --- Draw a simple gauge that is filled based upon fill value
@@ -148,7 +148,7 @@ function lcd.drawFilledTriangle(x1, y1, x2, y2, x3, y3, flags) end
 ---@param h integer height in pixels
 ---@param fill integer amount of fill to apply
 ---@param maxfill integer total value of fill
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawGauge(x, y, w, h, fill, maxfill, flags) end
 
 --- Draw a rectangle in perspective
@@ -159,7 +159,7 @@ function lcd.drawGauge(x, y, w, h, fill, maxfill, flags) end
 ---@param xmax integer the limits of the rectangle
 ---@param ymin integer the limits of the rectangle
 ---@param ymax integer the limits of the rectangle
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawHudRectangle(pitch, roll, xmin, xmax, ymin, ymax, flags) end
 
 --- Draw a straight line on LCD
@@ -182,8 +182,8 @@ function lcd.drawLine(x1, y1, x2, y2, pattern, flags) end
 ---@param xmax integer the limits of the rectangle inside which the line is drawn
 ---@param ymin integer the limits of the rectangle inside which the line is drawn
 ---@param ymax integer the limits of the rectangle inside which the line is drawn
----@param pattern FORCE please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param pattern FORCE please see [Lcd functions overview](../../api-reference/display-lcd.md)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawLineWithClipping(x1, y1, x2, y2, xmin, xmax, ymin, ymax, pattern, flags) end
 
 --- Display a number at (x,y)
@@ -191,7 +191,7 @@ function lcd.drawLineWithClipping(x1, y1, x2, y2, xmin, xmax, ymin, ymax, patter
 ---@param x integer starting coordinate
 ---@param y integer starting coordinate
 ---@param value integer value to display
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 ---@param inverscolor? string overrides the inverse text color for INVERS
 function lcd.drawNumber(x, y, value, flags, inverscolor) end
 
@@ -202,7 +202,7 @@ function lcd.drawNumber(x, y, value, flags, inverscolor) end
 ---@param r integer radius
 ---@param start integer start and end of the pie slice
 ---@param end integer start and end of the pie slice
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawPie(x, y, r, start, end, flags) end
 
 --- Draw a bitmap at (x,y)
@@ -216,7 +216,7 @@ function lcd.drawPixmap(x, y, name) end
 --- @since 2.0.0
 ---@param x integer x position
 ---@param y integer y position
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawPoint(x, y, flags) end
 
 --- Draw a rectangle from top left corner (x,y) of specified width and height
@@ -225,7 +225,7 @@ function lcd.drawPoint(x, y, flags) end
 ---@param y integer top left corner position
 ---@param w integer width in pixels
 ---@param h integer height in pixels
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 ---@param t? integer thickness in pixels, defaults to 1 (only on radios with color display)
 ---@param opacity? integer opacity defaults to 0 (only on radios with color display)
 function lcd.drawRectangle(x, y, w, h, flags, t, opacity) end
@@ -242,7 +242,7 @@ function lcd.drawScreenTitle(title, page, pages) end
 ---@param x integer starting coordinate
 ---@param y integer starting coordinate
 ---@param source integer source index
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawSource(x, y, source, flags) end
 
 --- Draw a text representation of switch at (x,y)
@@ -250,7 +250,7 @@ function lcd.drawSource(x, y, source, flags) end
 ---@param x integer starting coordinate
 ---@param y integer starting coordinate
 ---@param switch integer number of switch to display, negative number displays negated switch
----@param flags integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html), only SMLSIZE, BLINK and INVERS.
+---@param flags integer please see [Lcd functions overview](../../api-reference/display-lcd.md), only SMLSIZE, BLINK and INVERS.
 function lcd.drawSwitch(x, y, switch, flags) end
 
 --- Draw a text beginning at (x,y)
@@ -258,7 +258,7 @@ function lcd.drawSwitch(x, y, switch, flags) end
 ---@param x integer starting coordinate
 ---@param y integer starting coordinate
 ---@param text string text to display
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set.
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md) for drawing flags and colors, and [Appendix](../../api-overview/fonts.md) for available characters in each font set.
 ---@param inverscolor? string overrides the inverse text color for INVERS
 function lcd.drawText(x, y, text, flags, inverscolor) end
 
@@ -269,7 +269,7 @@ function lcd.drawText(x, y, text, flags, inverscolor) end
 ---@param w integer width and height of bounding rectangle
 ---@param h integer width and height of bounding rectangle
 ---@param text string text to display
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented.
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md) for drawing flags and colors, and [Appendix](../../api-overview/fonts.md) for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented.
 ---@return integer x_y
 function lcd.drawTextLines(x, y, w, h, text, flags) end
 
@@ -278,7 +278,7 @@ function lcd.drawTextLines(x, y, w, h, text, flags) end
 ---@param x integer starting coordinate
 ---@param y integer starting coordinate
 ---@param value integer time in seconds
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 ---@param inverscolor? string overrides the inverse text color for INVERS
 function lcd.drawTimer(x, y, value, flags, inverscolor) end
 
@@ -290,7 +290,7 @@ function lcd.drawTimer(x, y, value, flags, inverscolor) end
 ---@param y2 integer coordinates of the three vertices
 ---@param x3 integer coordinates of the three vertices
 ---@param y3 integer coordinates of the three vertices
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawTriangle(x1, y1, x2, y2, x3, y3, flags) end
 
 --- Exit full screen widget mode.
@@ -299,7 +299,7 @@ function lcd.exitFullScreen() end
 
 --- Get the color value from flags
 --- @since 2.3.11
----@param flags integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 ---@return flag color
 function lcd.getColor(flags) end
 
@@ -324,7 +324,7 @@ function lcd.getLastRightPos() end
 ---@param y integer top left corner position
 ---@param w integer width in pixels
 ---@param h integer height in pixels
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.invertRect(x, y, w, h, flags) end
 
 --- Refresh the LCD screen
@@ -335,13 +335,13 @@ function lcd.refresh() end
 --- @since 2.3.6
 function lcd.resetBacklightTimeout() end
 
---- Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+--- Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../../api-overview/constants/color-constants.md#indexed-colors)
 --- @since 2.2.0
 function lcd.setColor() end
 
 --- Get the width and height of a text string drawn with flags
 --- @since 2.5.0
 ---@param text string 
----@param flags? integer please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 ---@return integer w_h
 function lcd.sizeText(text, flags) end

@@ -11,7 +11,7 @@ Display a telemetry value at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `source` | yes | `integer|string` | can be a source identifier (number) or a source name (string). See getValue() |
-| `flags` | yes | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | yes | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 

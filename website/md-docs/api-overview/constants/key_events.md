@@ -22,7 +22,7 @@ Couple of examples:
 * a longer pres on key would generate: `FIRST`, `LONG`, `BREAK`
 * even longer press: `FIRST`, `LONG`, `REPEAT,`REPEAT, ..., `BREAK`
 
-This normal key event sequence can be altered with the [killEvents(key)](../../api-reference/key-inputs/runtime-kill-events.md) function. Any time this function is called (after the `FIRST` event) all further key events for this key will be suppressed until the next key press of this key. Examples:
+This normal key event sequence can be altered with the [killEvents(key)](../../api-reference/runtime-kill-events.md) function. Any time this function is called (after the `FIRST` event) all further key events for this key will be suppressed until the next key press of this key. Examples:
 
 * kill immediately after the key press would generate: `FIRST`
 * kill after the long key press would generate: `FIRST`, `LONG`

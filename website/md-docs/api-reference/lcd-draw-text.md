@@ -11,7 +11,7 @@ Draw a text beginning at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `text` | yes | `string` | text to display |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set. |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) for drawing flags and colors, and [Appendix](../api-overview/fonts.md) for available characters in each font set. |
 | `inversColor` | no | `string` | overrides the inverse text color for INVERS |
 
 ## Returns

@@ -12,16 +12,16 @@ Since the flags are bits, you can add them up to combine, as long as you only ad
 
 RGB\_FLAG decides how the color value is encoded into the upper half (bits 17-32).
 
-If RGB\_FLAG = 0, then an index into a color table is stored. This color table holds a default color (index 0), the theme colors, and CUSTOM\_COLOR. The entries in the color table can be changed with the function [`lcd.setColor`](../../api-reference/display-lcd/lcd-set-color.md). The advantage of this system is that the color changes everywhere that this indexed color is used, and this is how different color themes are created. **Notice that changing the theme colors affects the entire user interface of your radio!!**
+If RGB\_FLAG = 0, then an index into a color table is stored. This color table holds a default color (index 0), the theme colors, and CUSTOM\_COLOR. The entries in the color table can be changed with the function [`lcd.setColor`](../../api-reference/lcd-set-color.md). The advantage of this system is that the color changes everywhere that this indexed color is used, and this is how different color themes are created. **Notice that changing the theme colors affects the entire user interface of your radio!!**
 
 If RGB\_FLAG = 1, then a 16-bit RGB565 color is stored. This is used directly by the system to draw a color on the screen.
 
 You should not change RGB\_FLAG explicitly; this is handled automatically by the various functions and Lua constants. But you should be aware of the following.
 
-* [`lcd.setColor`](../../api-reference/display-lcd/lcd-set-color.md) must have an [indexed color](../../api-overview/constants/color-constants.md#indexed-colors) as its first argument, because this will be the index of the color in the table being changed. Giving another color, e.g. ORANGE, as the first argument will result in nothing.
+* [`lcd.setColor`](../../api-reference/lcd-set-color.md) must have an [indexed color](../../api-overview/constants/color-constants.md#indexed-colors) as its first argument, because this will be the index of the color in the table being changed. Giving another color, e.g. ORANGE, as the first argument will result in nothing.
 * If no color is given to the flags with a drawing function, RGB\_FLAGS = 0 and the color index = 0. Therefore, the default color is stored in the color table under this index, and you can change the default color with `lcd.setColor(0, color)`.
-* [`lcd.getColor`](../../api-reference/display-lcd/lcd-get-color.md) always returns a RGB color. This can be used to "save" an indexed color before you change it.
-* [`lcd.RGB`](../../api-reference/display-lcd/lcd-rgb.md) obviously returns a RGB color.
+* [`lcd.getColor`](../../api-reference/lcd-get-color.md) always returns a RGB color. This can be used to "save" an indexed color before you change it.
+* [`lcd.RGB`](../../api-reference/lcd-rgb.md) obviously returns a RGB color.
 
 ### Colors in EdgeTX versus OpenTX
 

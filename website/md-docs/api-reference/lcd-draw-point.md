@@ -10,7 +10,7 @@ Draw a single pixel at (x,y) position
 | --- | --- | --- | --- |
 | `x` | yes | `integer` | x position |
 | `y` | yes | `integer` | y position |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](display-lcd.md) |
 
 ## Returns
 
