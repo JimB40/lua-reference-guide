@@ -1,12 +1,6 @@
 {
   "groups": [
     {
-      "name": "Constants",
-      "slug": "constants",
-      "description": "Shared constants and enum-like helpers used across the Lua API.",
-      "ids": []
-    },
-    {
       "name": "Display LCD",
       "slug": "display-lcd",
       "description": "Drawing, layout, color, and display helpers for LCD rendering.",

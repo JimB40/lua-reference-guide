@@ -1390,10 +1390,39 @@ def render_luals_module(module_name: str, items: list[dict], alias_lines: list[s
     return "\n".join(lines).rstrip() + "\n"
 
 
-def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_output: Path) -> None:
+def build_outputs(
+    model: dict,
+    overlay_dir: Path,
+    docs_output: Path,
+    luals_output: Path,
+    report_unowned: bool = False,
+) -> None:
     ensure_dir(docs_output)
     ensure_dir(luals_output)
     report = quality_report(model)
+
+    # A zero-item group's page is normally just the empty-group stub, safe to
+    # regenerate freely. But if a group has zero *currently extracted* items
+    # and its page already holds real, hand-authored content (e.g. LVGL,
+    # whose firmware has no luadoc annotations at all to extract from), never
+    # overwrite or delete it -- both here and in the stale-page cleanup below,
+    # which would otherwise unlink it before the per-group write loop ever
+    # gets a chance to check what's currently on disk.
+    preserved_group_pages: dict[str, str] = {}
+    for group, group_items in items_by_group(model):
+        if group_items:
+            continue
+        group_page = group_page_name(group)
+        group_path = docs_output / group_page
+        if not group_path.exists():
+            continue
+        existing = group_path.read_text(encoding="utf-8")
+        rendered = render_group_page(group, group_items, report, group_page)
+        if existing.strip() != rendered.strip():
+            preserved_group_pages[group_page] = (
+                f"group '{group['slug']}' has zero extracted items, but the page "
+                "already has real (non-stub) content"
+            )
 
     generated_pages = {
         "index.md",
@@ -1403,6 +1432,7 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
     generated_pages.update(group_page_name(group) for group, _ in items_by_group(model))
     generated_pages.update(page_name_for_item(item) for item in model["items"])
     generated_pages.update(review_page_name_for_item(item) for item in model["items"])
+    generated_pages -= preserved_group_pages.keys()
     for page_name in generated_pages:
         stale_page = docs_output / page_name
         if stale_page.exists():
@@ -1423,9 +1453,14 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
         module_path.write_text(render_module_page(module_name, module_items, report, module_page_name(module_name)), encoding="utf-8")
 
     for group, group_items in items_by_group(model):
-        group_path = docs_output / group_page_name(group)
+        group_page = group_page_name(group)
+        if group_page in preserved_group_pages:
+            print(f"Skipping {docs_output / group_page}: {preserved_group_pages[group_page]}. Not overwriting.")
+            continue
+        group_path = docs_output / group_page
+        rendered = render_group_page(group, group_items, report, group_page)
         ensure_dir(group_path.parent)
-        group_path.write_text(render_group_page(group, group_items, report, group_page_name(group)), encoding="utf-8")
+        group_path.write_text(rendered, encoding="utf-8")
 
     for item in model["items"]:
         overlay_text = None
@@ -1447,6 +1482,28 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
             render_luals_module(module_name, sorted(module_items, key=lambda entry: entry["symbol"]), alias_lines),
             encoding="utf-8",
         )
+
+    if report_unowned:
+        owned = set(generated_pages) | set(preserved_group_pages.keys())
+        unowned = []
+        for path in sorted(docs_output.rglob("*.md")):
+            rel = str(path.relative_to(docs_output))
+            if rel not in owned:
+                unowned.append(rel)
+        if unowned:
+            print(
+                f"\n{len(unowned)} .md file(s) under {docs_output} are not accounted "
+                "for by the current model (not an index/review/module/group page, "
+                "not an item page, not a preserved zero-item group page). This does "
+                "NOT delete anything -- some of these may be legitimate hand-authored "
+                "content with no model backing (e.g. LVGL pages); some may be genuine "
+                "orphans left over from a prior run under a different page-naming "
+                "scheme or group assignment. Review each one manually:"
+            )
+            for rel in unowned:
+                print(f"  {rel}")
+        else:
+            print(f"\nNo unowned .md files found under {docs_output}.")
 
 
 def parse_args() -> argparse.Namespace:
@@ -1471,6 +1528,20 @@ def parse_args() -> argparse.Namespace:
     build_parser.add_argument("--overlay-dir", required=True, type=Path)
     build_parser.add_argument("--docs-output", required=True, type=Path)
     build_parser.add_argument("--luals-output", required=True, type=Path)
+    build_parser.add_argument(
+        "--report-unowned",
+        action="store_true",
+        help=(
+            "After building, list every .md file under --docs-output that the "
+            "current model doesn't account for (not an index/review/module/group "
+            "page, not an item page, not a preserved zero-item group page). "
+            "Report-only -- never deletes anything. Some listed files may be "
+            "legitimate hand-authored content the pipeline has no model data "
+            "for (e.g. LVGL pages); some may be genuine orphans left over from "
+            "a prior run under a different page-naming scheme or group "
+            "assignment. Review each one manually before deleting."
+        ),
+    )
 
     return parser.parse_args()
 
@@ -1505,7 +1576,7 @@ def main() -> int:
 
         if args.command == "build":
             model = load_model(args.input)
-            build_outputs(model, args.overlay_dir, args.docs_output, args.luals_output)
+            build_outputs(model, args.overlay_dir, args.docs_output, args.luals_output, args.report_unowned)
             print(f"Built Markdown into {args.docs_output}")
             print(f"Built LuaLS into {args.luals_output}")
             return 0

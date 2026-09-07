@@ -4,11 +4,6 @@ This section is generated from the normalized API model and grouped with the sam
 
 Start with the [API Review Dashboard](review.md) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.
 
-## [Constants](constants.md)
-
-- `0` APIs
-- Shared constants and enum-like helpers used across the Lua API.
-
 ## [Display LCD](display-lcd.md)
 
 - `47` APIs
