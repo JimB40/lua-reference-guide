@@ -2,13 +2,23 @@ INHERIT: mkdocs.yml
 
 # Internal working config: un-excludes everything mkdocs.yml drops from the
 # public build (migration/ pipeline docs, the review workbench, and the
-# per-module dashboards) and restates nav with the Migration section added
-# back. MkDocs replaces (rather than merges) list-type keys on INHERIT, so
-# `nav` here has to be the full public nav plus the extra section, not a diff.
+# per-module dashboards), restates nav with the Migration section added
+# back, and restates extra_javascript with review-workbench.js added back
+# (it talks to a localhost-only decision server and has no reason to ship
+# in the public build; MkDocs replaces rather than merges list-type keys
+# on INHERIT, so both of these have to be full restatements, not diffs).
 #
 # Usage: mkdocs serve -f mkdocs.dev.yml (defaults to http://127.0.0.1:8014,
 # per HANDOFF.md's local-preview convention)
-exclude_docs: []
+exclude_docs: ""
+
+extra_javascript:
+  - javascripts/api-function-breadcrumb.js
+  - javascripts/mobile-nav-inline.js
+  - javascripts/review-workbench.js
+  - javascripts/version-switcher.js
+  - javascripts/legacy-version-banner.js
+  - javascripts/toc-visibility.js
 
 nav:
   - EdgeTX LuaDoc: index.md

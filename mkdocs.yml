@@ -8,6 +8,7 @@ exclude_docs: |
   api-reference/review.md
   api-reference/review-*.md
   api-reference/module-*.md
+  javascripts/review-workbench.js
 theme:
   name: material
   logo: assets/edgetx-logo.svg
@@ -22,7 +23,6 @@ extra_css:
 extra_javascript:
   - javascripts/api-function-breadcrumb.js
   - javascripts/mobile-nav-inline.js
-  - javascripts/review-workbench.js
   - javascripts/version-switcher.js
   - javascripts/legacy-version-banner.js
   - javascripts/toc-visibility.js
