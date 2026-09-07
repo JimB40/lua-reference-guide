@@ -14,7 +14,7 @@ Draw an arc
 | `r2` | yes | `integer` | radii of the inside and outside of the annulus |
 | `start` | yes | `integer` | start and end of the annulus |
 | `end` | yes | `integer` | start and end of the annulus |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

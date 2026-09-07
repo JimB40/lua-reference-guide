@@ -11,7 +11,7 @@ Displays the name of the corresponding input as defined by the source at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `source` | yes | `integer` | source index |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

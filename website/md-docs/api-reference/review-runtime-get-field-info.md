@@ -26,12 +26,12 @@
 <tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>information about requested field, table elements: * `id`   (number) field identifier
  * `name` (string) field name
  * `desc` (string) field description
- * `unit` (number) unit identifier [Full list](../appendix/units.html)</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
+ * `unit` (number) unit identifier, see the Units reference for the full list</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>the requested field was not found</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getFieldInfo&quot;, &quot;symbol&quot;: &quot;getFieldInfo&quot;, &quot;summary&quot;: &quot;Return detailed information about field (source)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;source&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;information about requested field, table elements: * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier [Full list](../appendix/units.html)&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;the requested field was not found&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.8&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getFieldInfo&quot;, &quot;symbol&quot;: &quot;getFieldInfo&quot;, &quot;summary&quot;: &quot;Return detailed information about field (source)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;source&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;information about requested field, table elements: * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier, see the Units reference for the full list&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;the requested field was not found&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.8&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -58,7 +58,7 @@ The list of valid sources is available:
  * `id`   (number) field identifier
  * `name` (string) field name
  * `desc` (string) field description
- * `unit` (number) unit identifier [Full list](../appendix/units.html)
+ * `unit` (number) unit identifier, see the Units reference for the full list
 
 @retval nil the requested field was not found
 
@@ -82,7 +82,7 @@ Return detailed information about field (source)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier  * `name` (string) field name  * `desc` (string) field description  * `unit` (number) unit identifier [Full list](../api-overview/constants/units.md) |
+| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier  * `name` (string) field name  * `desc` (string) field description  * `unit` (number) unit identifier, see the Units reference for the full list |
 | `-` | `nil` | the requested field was not found |
 
 #### Notes
@@ -106,7 +106,7 @@ Return detailed information about field (source)
 @retval (table) information about requested field, table elements: * `id`   (number) field identifier
  * `name` (string) field name
  * `desc` (string) field description
- * `unit` (number) unit identifier [Full list](../appendix/units.html)
+ * `unit` (number) unit identifier, see the Units reference for the full list
 
 @retval (nil) the requested field was not found
 

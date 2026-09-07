@@ -24,7 +24,7 @@
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>value</code></td><td>param</td><td><code>integer</code></td><td>number to play. Value is interpreted as integer.</td><td><select data-field-kind="param" data-field-name="value" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="value" data-custom-type="true" /></td></tr>
-<tr><td><code>unit</code></td><td>param</td><td><code>integer</code></td><td>unit identifier [Full list]((../appendix/units.html))</td><td><select data-field-kind="param" data-field-name="unit" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="unit" data-custom-type="true" /></td></tr>
+<tr><td><code>unit</code></td><td>param</td><td><code>integer</code></td><td>unit identifier, see the Units reference for the full list</td><td><select data-field-kind="param" data-field-name="unit" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="unit" data-custom-type="true" /></td></tr>
 <tr><td><code>attributes</code></td><td>param</td><td><code>integer</code></td><td>possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)
  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)
  * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)</td><td><select data-field-kind="param" data-field-name="attributes" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="attributes" data-custom-type="true" /></td></tr>
@@ -32,7 +32,7 @@
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playNumber&quot;, &quot;symbol&quot;: &quot;playNumber&quot;, &quot;summary&quot;: &quot;Play a numerical value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number to play. Value is interpreted as integer.&quot;}, {&quot;name&quot;: &quot;unit&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;unit identifier [Full list]((../appendix/units.html))&quot;}, {&quot;name&quot;: &quot;attributes&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playNumber&quot;, &quot;symbol&quot;: &quot;playNumber&quot;, &quot;summary&quot;: &quot;Play a numerical value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number to play. Value is interpreted as integer.&quot;}, {&quot;name&quot;: &quot;unit&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;unit identifier, see the Units reference for the full list&quot;}, {&quot;name&quot;: &quot;attributes&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -46,7 +46,7 @@ Play a numerical value (text to speech)
 
 @param value (number) number to play. Value is interpreted as integer.
 
-@param unit (number) unit identifier [Full list]((../appendix/units.html))
+@param unit (number) unit identifier, see the Units reference for the full list
 
 @param attributes (unsigned number) possible values:
  * `0 or not present` plays integral part of the number (for a number 123 it plays 123)
@@ -81,7 +81,7 @@ Play a numerical value (text to speech)
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `value` | yes | `integer` | number to play. Value is interpreted as integer. |
-| `unit` | yes | `integer` | unit identifier [Full list](../api-overview/constants/units.md) |
+| `unit` | yes | `integer` | unit identifier, see the Units reference for the full list |
 | `attributes` | no | `integer` | possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)  * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23) |
 
 #### Returns
@@ -108,7 +108,7 @@ Play a numerical value (text to speech)
 
 @param value (integer) number to play. Value is interpreted as integer.
 
-@param unit (integer) unit identifier [Full list]((../appendix/units.html))
+@param unit (integer) unit identifier, see the Units reference for the full list
 
 @param attributes (integer) possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)
  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)

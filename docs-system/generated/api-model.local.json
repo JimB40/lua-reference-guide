@@ -1,7 +1,7 @@
 {
   "docs_version": "2.12",
-  "upstream_ref": "2.12@0e3b4115c3",
-  "generated_at": "2026-09-07T04:51:33.506166Z",
+  "upstream_ref": "2.12@16713095a1",
+  "generated_at": "2026-09-07T05:54:47.196054Z",
   "items": [
     {
       "id": "Bitmap.getSize",
@@ -671,7 +671,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "information about requested field, table elements: * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier [Full list](../appendix/units.html)"
+          "description": "information about requested field, table elements: * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier, see the Units reference for the full list"
         },
         {
           "name": "",
@@ -687,7 +687,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function getFieldInfo(source)\n\nReturn detailed information about field (source)\n\nThe list of valid sources is available:\n\n| OpenTX Version | Radio |\n|----------------|-------|\n| 2.0 | [all](http://downloads-20.open-tx.org/firmware/lua_fields.txt) |\n| 2.1 | [X9D and X9D+](http://downloads-21.open-tx.org/firmware/lua_fields_taranis.txt), [X9E](http://downloads-21.open-tx.org/firmware/lua_fields_taranis_x9e.txt) |\n| 2.2 | [X9D and X9D+](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9e.txt), [Horus](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x12s.txt) |\n| 2.3 | [X9D and X9D+](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9e.txt), [X7](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x7.txt), [Horus](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x12s.txt) |\n\n@param source can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.\n\n@retval table information about requested field, table elements:\n * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier [Full list](../appendix/units.html)\n\n@retval nil the requested field was not found\n\n@status current Introduced in 2.0.8, 'unit' field added in 2.2.0, and argument also can be an index number as of 2.6.0",
+      "raw_luadoc": "@function getFieldInfo(source)\n\nReturn detailed information about field (source)\n\nThe list of valid sources is available:\n\n| OpenTX Version | Radio |\n|----------------|-------|\n| 2.0 | [all](http://downloads-20.open-tx.org/firmware/lua_fields.txt) |\n| 2.1 | [X9D and X9D+](http://downloads-21.open-tx.org/firmware/lua_fields_taranis.txt), [X9E](http://downloads-21.open-tx.org/firmware/lua_fields_taranis_x9e.txt) |\n| 2.2 | [X9D and X9D+](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9e.txt), [Horus](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x12s.txt) |\n| 2.3 | [X9D and X9D+](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9e.txt), [X7](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x7.txt), [Horus](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x12s.txt) |\n\n@param source can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.\n\n@retval table information about requested field, table elements:\n * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier, see the Units reference for the full list\n\n@retval nil the requested field was not found\n\n@status current Introduced in 2.0.8, 'unit' field added in 2.2.0, and argument also can be an index number as of 2.6.0",
       "source_line": 608
     },
     {
@@ -1837,7 +1837,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -1851,7 +1851,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawAnnulus(x, y, r1, r2, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r1,r2 (positive numbers) radii of the inside and outside of the annulus\n\n@param start,end (positive numbers) start and end of the annulus\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawAnnulus(x, y, r1, r2, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r1,r2 (positive numbers) radii of the inside and outside of the annulus\n\n@param start,end (positive numbers) start and end of the annulus\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1218
     },
     {
@@ -1899,7 +1899,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -1913,7 +1913,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawArc(x, y, r, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the arc\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawArc(x, y, r, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the arc\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1146
     },
     {
@@ -1999,7 +1999,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2013,7 +2013,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawBitmapPattern(bitmap, x, y [, flags])\n\nDisplays a bitmap pattern at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
+      "raw_luadoc": "@function lcd.drawBitmapPattern(bitmap, x, y [, flags])\n\nDisplays a bitmap pattern at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
       "source_line": 710
     },
     {
@@ -2061,7 +2061,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2075,7 +2075,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawBitmapPatternPie(bitmap, x, y, startAngle, endAngle [, flags])\n\nDisplays a bitmap pattern pie at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param startAngle Start angle\n\n@param endAngle End angle\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
+      "raw_luadoc": "@function lcd.drawBitmapPatternPie(bitmap, x, y, startAngle, endAngle [, flags])\n\nDisplays a bitmap pattern pie at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param startAngle Start angle\n\n@param endAngle End angle\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
       "source_line": 743
     },
     {
@@ -2111,7 +2111,7 @@
           "name": "flags",
           "type": "integer",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2124,7 +2124,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawChannel(x, y, source, flags)\n\nDisplay a telemetry value at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source can be a source identifier (number) or a source name (string).\nSee getValue()\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@status current Introduced in 2.0.6, changed in 2.1.0 (only telemetry sources are valid)",
+      "raw_luadoc": "@function lcd.drawChannel(x, y, source, flags)\n\nDisplay a telemetry value at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source can be a source identifier (number) or a source name (string).\nSee getValue()\n\n@param flags (optional) please see the Lcd functions overview\n\n@status current Introduced in 2.0.6, changed in 2.1.0 (only telemetry sources are valid)",
       "source_line": 390
     },
     {
@@ -2160,7 +2160,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2174,7 +2174,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawCircle(x, y, r [, flags])\n\nDraw a circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawCircle(x, y, r [, flags])\n\nDraw a circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1018
     },
     {
@@ -2272,7 +2272,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2286,7 +2286,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawFilledCircle(x, y, r [, flags])\n\nDraw a filled circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawFilledCircle(x, y, r [, flags])\n\nDraw a filled circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1049
     },
     {
@@ -2328,7 +2328,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "opacity",
@@ -2347,7 +2347,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawFilledRectangle(x, y, w, h [, flags [, opacity]])\n\nDraw a solid rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawFilledRectangle(x, y, w, h [, flags [, opacity]])\n\nDraw a solid rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0",
       "source_line": 820
     },
     {
@@ -2401,7 +2401,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2415,7 +2415,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawFilledTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a filled triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawFilledTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a filled triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1114
     },
     {
@@ -2469,7 +2469,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2482,7 +2482,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawGauge(x, y, w, h, fill, maxfill [, flags])\n\nDraw a simple gauge that is filled based upon fill value\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param fill (number) amount of fill to apply\n\n@param maxfill (number) total value of fill\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
+      "raw_luadoc": "@function lcd.drawGauge(x, y, w, h, fill, maxfill [, flags])\n\nDraw a simple gauge that is filled based upon fill value\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param fill (number) amount of fill to apply\n\n@param maxfill (number) total value of fill\n\n@param flags (optional) please see the Lcd functions overview\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
       "source_line": 892
     },
     {
@@ -2536,7 +2536,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2550,7 +2550,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawHudRectangle(pitch, roll, xmin, xmax, ymin, ymax [, flags])\n\nDraw a rectangle in perspective\n\n@param pitch,roll (positive numbers) pitch and roll to define the orientation of the rectangle\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawHudRectangle(pitch, roll, xmin, xmax, ymin, ymax [, flags])\n\nDraw a rectangle in perspective\n\n@param pitch,roll (positive numbers) pitch and roll to define the orientation of the rectangle\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1366
     },
     {
@@ -2679,13 +2679,13 @@
           "name": "pattern",
           "type": "FORCE",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2699,7 +2699,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawLineWithClipping(x1, y1, x2, y2, xmin, xmax, ymin, ymax, pattern [, flags])\n\nDraw a line only inside a rectangle\n\n@param x1,y1,x2,y1 (positive numbers) coordinates of the start and end of the unclipped line\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle inside which the line is drawn\n\n@param pattern (FORCE, ERASE, DOTTED) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawLineWithClipping(x1, y1, x2, y2, xmin, xmax, ymin, ymax, pattern [, flags])\n\nDraw a line only inside a rectangle\n\n@param x1,y1,x2,y1 (positive numbers) coordinates of the start and end of the unclipped line\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle inside which the line is drawn\n\n@param pattern (FORCE, ERASE, DOTTED) please see the Lcd functions overview\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1254
     },
     {
@@ -2735,7 +2735,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "inversColor",
@@ -2802,7 +2802,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2816,7 +2816,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawPie(x, y, r, start, end [, flags])\n\nDraw a pie slice\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the pie slice\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawPie(x, y, r, start, end [, flags])\n\nDraw a pie slice\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the pie slice\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1182
     },
     {
@@ -2890,7 +2890,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2905,7 +2905,7 @@
         "Taranis has an LCD display width of 212 pixels and height of 64 pixels.\nPosition (0,0) is at top left. Y axis is negative, top line is 0,\nbottom line is 63. Drawing on an existing black pixel produces white pixel (TODO check this!)"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawPoint(x, y, [flags])\n\nDraw a single pixel at (x,y) position\n\n@param x (positive number) x position\n\n@param y (positive number) y position\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Taranis has an LCD display width of 212 pixels and height of 64 pixels.\nPosition (0,0) is at top left. Y axis is negative, top line is 0,\nbottom line is 63. Drawing on an existing black pixel produces white pixel (TODO check this!)\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawPoint(x, y, [flags])\n\nDraw a single pixel at (x,y) position\n\n@param x (positive number) x position\n\n@param y (positive number) y position\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Taranis has an LCD display width of 212 pixels and height of 64 pixels.\nPosition (0,0) is at top left. Y axis is negative, top line is 0,\nbottom line is 63. Drawing on an existing black pixel produces white pixel (TODO check this!)\n\n@status current Introduced in 2.0.0",
       "source_line": 92
     },
     {
@@ -2947,7 +2947,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "t",
@@ -2972,7 +2972,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawRectangle(x, y, w, h [, flags [, t [, opacity]]])\n\nDraw a rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@param t (number) thickness in pixels, defaults to 1 (only on radios with color display)\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
+      "raw_luadoc": "@function lcd.drawRectangle(x, y, w, h [, flags [, t [, opacity]]])\n\nDraw a rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@param t (number) thickness in pixels, defaults to 1 (only on radios with color display)\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
       "source_line": 782
     },
     {
@@ -3052,7 +3052,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -3065,7 +3065,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawSource(x, y, source [, flags])\n\nDisplays the name of the corresponding input as defined by the source at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source (number) source index\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawSource(x, y, source [, flags])\n\nDisplays the name of the corresponding input as defined by the source at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source (number) source index\n\n@param flags (optional) please see the Lcd functions overview\n\n@status current Introduced in 2.0.0",
       "source_line": 460
     },
     {
@@ -3101,7 +3101,7 @@
           "name": "flags",
           "type": "integer",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html), only SMLSIZE, BLINK and INVERS."
+          "description": "please see the Lcd functions overview, only SMLSIZE, BLINK and INVERS."
         }
       ],
       "returns": [],
@@ -3114,7 +3114,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawSwitch(x, y, switch, flags)\n\nDraw a text representation of switch at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param switch (number) number of switch to display, negative number\ndisplays negated switch\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html), only SMLSIZE, BLINK and INVERS.\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawSwitch(x, y, switch, flags)\n\nDraw a text representation of switch at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param switch (number) number of switch to display, negative number\ndisplays negated switch\n\n@param flags (optional) please see the Lcd functions overview, only SMLSIZE, BLINK and INVERS.\n\n@status current Introduced in 2.0.0",
       "source_line": 431
     },
     {
@@ -3150,7 +3150,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set."
+          "description": "please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set."
         },
         {
           "name": "inversColor",
@@ -3217,7 +3217,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented."
+          "description": "please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented."
         }
       ],
       "returns": [
@@ -3237,7 +3237,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawTextLines(x, y, w, h, text [, flags])\n\nDraw text inside rectangle (x,y,w,h) with line breaks\n\n@param x,y (positive numbers) starting coordinate\n\n@param w,h (positive numbers) width and height of bounding rectangle\n\n@param text (string) text to display\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented.\n\n@retval x,y (integers) point where text drawing ended\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0, return x,y added in 2.11.0",
+      "raw_luadoc": "@function lcd.drawTextLines(x, y, w, h, text [, flags])\n\nDraw text inside rectangle (x,y,w,h) with line breaks\n\n@param x,y (positive numbers) starting coordinate\n\n@param w,h (positive numbers) width and height of bounding rectangle\n\n@param text (string) text to display\n\n@param flags (optional) please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented.\n\n@retval x,y (integers) point where text drawing ended\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0, return x,y added in 2.11.0",
       "source_line": 271
     },
     {
@@ -3273,7 +3273,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "inversColor",
@@ -3346,7 +3346,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -3360,7 +3360,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1080
     },
     {
@@ -3403,7 +3403,7 @@
           "name": "flags",
           "type": "integer",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [
@@ -3423,7 +3423,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.getColor(flags)\n\nGet the color value from flags\n\n@param flags (flags) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@retval color (flag) only the RGB565 color value of the input\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.3.11",
+      "raw_luadoc": "@function lcd.getColor(flags)\n\nGet the color value from flags\n\n@param flags (flags) please see the Lcd functions overview\n\n@retval color (flag) only the RGB565 color value of the input\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.3.11",
       "source_line": 955
     },
     {
@@ -3560,7 +3560,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -3574,7 +3574,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.invertRect(x, y, w, h [, flags])\n\nInvert a rectangle zone from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
+      "raw_luadoc": "@function lcd.invertRect(x, y, w, h [, flags])\n\nInvert a rectangle zone from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
       "source_line": 857
     },
     {
@@ -3636,7 +3636,7 @@
       "module": "lcd",
       "kind": "function",
       "syntax": "lcd.setColor(colorIndex, color)",
-      "summary": "Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)",
+      "summary": "Change an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants",
       "parameters": [],
       "returns": [],
       "availability": {
@@ -3649,7 +3649,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.setColor(colorIndex, color)\n\nChange an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)\n\nPlease notice that changing theme colors affects not only other Lua widgets, but the entire radio interface.\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.2.0",
+      "raw_luadoc": "@function lcd.setColor(colorIndex, color)\n\nChange an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants\n\nPlease notice that changing theme colors affects not only other Lua widgets, but the entire radio interface.\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.2.0",
       "source_line": 932
     },
     {
@@ -3673,7 +3673,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [
@@ -3693,7 +3693,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.sizeText(text [, flags])\n\nGet the width and height of a text string drawn with flags\n\n@param text (string)\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@retval w,h (integers) width and height of the text\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0",
+      "raw_luadoc": "@function lcd.sizeText(text [, flags])\n\nGet the width and height of a text string drawn with flags\n\n@param text (string)\n\n@param flags (optional) please see the Lcd functions overview\n\n@retval w,h (integers) width and height of the text\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0",
       "source_line": 247
     },
     {
@@ -5334,7 +5334,7 @@
           "name": "unit",
           "type": "integer",
           "required": true,
-          "description": "unit identifier [Full list]((../appendix/units.html))"
+          "description": "unit identifier, see the Units reference for the full list"
         },
         {
           "name": "attributes",
@@ -5358,7 +5358,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function playNumber(value, unit [, attributes [, volume]])\n\nPlay a numerical value (text to speech)\n\n@param value (number) number to play. Value is interpreted as integer.\n\n@param unit (number) unit identifier [Full list]((../appendix/units.html))\n\n@param attributes (unsigned number) possible values:\n * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)\n \n @param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none \n\n@status current Introduced in 2.0.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playNumber(123, 3, 0, 5) -- play number 123, unit mAh, use Wav volume 5\n// playNumber(123, 3, 0, 1) -- play number 123, unit mAh, use Wav volume 1\n// playNumber(123, 3, 0)    -- play number 123, unit mAh, use radio settings Wav volume",
+      "raw_luadoc": "@function playNumber(value, unit [, attributes [, volume]])\n\nPlay a numerical value (text to speech)\n\n@param value (number) number to play. Value is interpreted as integer.\n\n@param unit (number) unit identifier, see the Units reference for the full list\n\n@param attributes (unsigned number) possible values:\n * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)\n \n @param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none \n\n@status current Introduced in 2.0.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playNumber(123, 3, 0, 5) -- play number 123, unit mAh, use Wav volume 5\n// playNumber(123, 3, 0, 1) -- play number 123, unit mAh, use Wav volume 1\n// playNumber(123, 3, 0)    -- play number 123, unit mAh, use radio settings Wav volume",
       "source_line": 1501
     },
     {
@@ -6150,7 +6150,7 @@
           "name": "unit",
           "type": "unknown",
           "required": false,
-          "description": "unit of the sensor [Full list](../../appendix/units.html)"
+          "description": "unit of the sensor, see the Units reference for the full list"
         },
         {
           "name": "precision",
@@ -6182,7 +6182,7 @@
         "All three parameters `id`, `subID` and `instance` can't be zero at the same time. At least one of them\nmust be different from zero."
       ],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function setTelemetryValue(id, subID, instance, value [, unit [, precision [, name]]])\n\n@param id Id of the sensor, valid range is from 0 to 0xFFFF\n\n@param subID subID of the sensor, usually 0, valid range is from 0 to 7\n\n@param instance instance of the sensor (SensorID), valid range is from 0 to 0xFF\n\n@param value fed to the sensor\n\n@param unit unit of the sensor [Full list](../../appendix/units.html)\n\n@param precision the precision of the sensor\n * `0 or not present` no decimal precision.\n * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00.\n\n@param name (string) Name of the sensor if it does not yet exist (4 chars).\n * `not present` Name defaults to the Id.\n * `present` Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., \"Name\"\n\n@retval true, if the sensor was just added. In this case the value is ignored (subsequent call will set the value)\n\n@notice All three parameters `id`, `subID` and `instance` can't be zero at the same time. At least one of them\nmust be different from zero.\n\n@status current Introduced in 2.2.0",
+      "raw_luadoc": "@function setTelemetryValue(id, subID, instance, value [, unit [, precision [, name]]])\n\n@param id Id of the sensor, valid range is from 0 to 0xFFFF\n\n@param subID subID of the sensor, usually 0, valid range is from 0 to 7\n\n@param instance instance of the sensor (SensorID), valid range is from 0 to 0xFF\n\n@param value fed to the sensor\n\n@param unit unit of the sensor, see the Units reference for the full list\n\n@param precision the precision of the sensor\n * `0 or not present` no decimal precision.\n * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00.\n\n@param name (string) Name of the sensor if it does not yet exist (4 chars).\n * `not present` Name defaults to the Id.\n * `present` Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., \"Name\"\n\n@retval true, if the sensor was just added. In this case the value is ignored (subsequent call will set the value)\n\n@notice All three parameters `id`, `subID` and `instance` can't be zero at the same time. At least one of them\nmust be different from zero.\n\n@status current Introduced in 2.2.0",
       "source_line": 1980
     },
     {

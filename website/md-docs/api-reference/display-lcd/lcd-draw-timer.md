@@ -11,7 +11,7 @@ Display a value formatted as time at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `value` | yes | `integer` | time in seconds |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 | `inversColor` | no | `unknown` | overrides the inverse text color for INVERS |
 
 ## Returns

@@ -13,7 +13,7 @@ Draw an arc
 | `r` | yes | `integer` | radius |
 | `start` | yes | `integer` | start and end of the arc |
 | `end` | yes | `integer` | start and end of the arc |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

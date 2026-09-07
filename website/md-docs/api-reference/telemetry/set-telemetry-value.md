@@ -12,7 +12,7 @@
 | `subID` | yes | `unknown` | subID of the sensor, usually 0, valid range is from 0 to 7 |
 | `instance` | yes | `unknown` | instance of the sensor (SensorID), valid range is from 0 to 0xFF |
 | `value` | yes | `unknown` | fed to the sensor |
-| `unit` | no | `unknown` | unit of the sensor [Full list](../../api-overview/constants/units.md) |
+| `unit` | no | `unknown` | unit of the sensor, see the Units reference for the full list |
 | `precision` | no | `unknown` | the precision of the sensor * `0 or not present` no decimal precision.  * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00. |
 | `name` | no | `string` | Name of the sensor if it does not yet exist (4 chars). * `not present` Name defaults to the Id.  * `present` Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., "Name" |
 

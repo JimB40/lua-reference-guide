@@ -14,7 +14,7 @@ Return detailed information about field (source)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier  * `name` (string) field name  * `desc` (string) field description  * `unit` (number) unit identifier [Full list](../../api-overview/constants/units.md) |
+| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier  * `name` (string) field name  * `desc` (string) field description  * `unit` (number) unit identifier, see the Units reference for the full list |
 | `-` | `nil` | the requested field was not found |
 
 ## Availability

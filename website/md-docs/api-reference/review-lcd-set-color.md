@@ -26,7 +26,7 @@ No fields to edit.
 ~~~~text
 @function lcd.setColor(colorIndex, color)
 
-Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants
 
 Please notice that changing theme colors affects not only other Lua widgets, but the entire radio interface.
 
@@ -40,7 +40,7 @@ Please notice that changing theme colors affects not only other Lua widgets, but
 
 #### Summary
 
-Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../api-overview/constants/color-constants.md#indexed-colors)
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants
 
 #### Parameters
 
@@ -64,7 +64,7 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 ~~~~text
 @function lcd.setColor()
 
-Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants
 
 @notice Only available on radios with color display
 

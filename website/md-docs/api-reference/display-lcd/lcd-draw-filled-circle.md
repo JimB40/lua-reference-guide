@@ -11,7 +11,7 @@ Draw a filled circle at (x, y) of specified radius
 | `x` | yes | `integer` | center position |
 | `y` | yes | `integer` | center position |
 | `r` | yes | `integer` | radius in pixels |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

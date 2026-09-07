@@ -25,11 +25,11 @@
 <tr><td><code>bitmap</code></td><td>param</td><td><code>pointer</code></td><td>point to a bitmap previously opened with Bitmap.open()</td><td><select data-field-kind="param" data-field-name="bitmap" data-current-type="pointer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="bitmap" data-custom-type="true" /></td></tr>
 <tr><td><code>x</code></td><td>param</td><td><code>integer</code></td><td>starting coordinates</td><td><select data-field-kind="param" data-field-name="x" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="x" data-custom-type="true" /></td></tr>
 <tr><td><code>y</code></td><td>param</td><td><code>integer</code></td><td>starting coordinates</td><td><select data-field-kind="param" data-field-name="y" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="y" data-custom-type="true" /></td></tr>
-<tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
+<tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>please see the Lcd functions overview</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.drawBitmapPattern&quot;, &quot;symbol&quot;: &quot;lcd.drawBitmapPattern&quot;, &quot;summary&quot;: &quot;Displays a bitmap pattern at (x,y)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;bitmap&quot;, &quot;type&quot;: &quot;pointer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;point to a bitmap previously opened with Bitmap.open()&quot;}, {&quot;name&quot;: &quot;x&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;y&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.8.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.drawBitmapPattern&quot;, &quot;symbol&quot;: &quot;lcd.drawBitmapPattern&quot;, &quot;summary&quot;: &quot;Displays a bitmap pattern at (x,y)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;bitmap&quot;, &quot;type&quot;: &quot;pointer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;point to a bitmap previously opened with Bitmap.open()&quot;}, {&quot;name&quot;: &quot;x&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;y&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see the Lcd functions overview&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.8.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -45,7 +45,7 @@ Displays a bitmap pattern at (x,y)
 
 @param x,y (positive numbers) starting coordinates
 
-@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+@param flags (optional) please see the Lcd functions overview
 
 @notice Only available on radios with color display
 
@@ -66,7 +66,7 @@ Displays a bitmap pattern at (x,y)
 | `bitmap` | yes | `pointer` | point to a bitmap previously opened with Bitmap.open() |
 | `x` | yes | `integer` | starting coordinates |
 | `y` | yes | `integer` | starting coordinates |
-| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 #### Returns
 
@@ -94,7 +94,7 @@ Displays a bitmap pattern at (x,y)
 
 @param y (integer) starting coordinates
 
-@param flags (integer) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+@param flags (integer) please see the Lcd functions overview
 
 @notice Only available on radios with color display
 

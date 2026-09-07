@@ -10,7 +10,7 @@ Draw a single pixel at (x,y) position
 | --- | --- | --- | --- |
 | `x` | yes | `integer` | x position |
 | `y` | yes | `integer` | y position |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

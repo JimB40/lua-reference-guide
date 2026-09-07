@@ -8,7 +8,7 @@ Get the color value from flags
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `flags` | yes | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | yes | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

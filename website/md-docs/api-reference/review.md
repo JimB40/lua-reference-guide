@@ -5,8 +5,8 @@ This page is generated from the extracted API model and is meant to speed up rev
 ## Snapshot
 
 - Docs version: `2.12`
-- Upstream ref: `2.12@0e3b4115c3`
-- Generated at: `2026-09-07T04:51:33.506166Z`
+- Upstream ref: `2.12@16713095a1`
+- Generated at: `2026-09-07T05:54:47.196054Z`
 - Total items: `153`
 - Review backlog entries: `31`
 - Backlog items with saved decisions: `26`

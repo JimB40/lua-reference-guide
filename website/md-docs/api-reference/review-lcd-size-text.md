@@ -23,12 +23,12 @@
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>text</code></td><td>param</td><td><code>string</code></td><td></td><td><select data-field-kind="param" data-field-name="text" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="text" data-custom-type="true" /></td></tr>
-<tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
+<tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>please see the Lcd functions overview</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
 <tr><td><code>w,h</code></td><td>return</td><td><code>integer</code></td><td>width and height of the text</td><td><select data-field-kind="return" data-field-name="w,h" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="w,h" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.sizeText&quot;, &quot;symbol&quot;: &quot;lcd.sizeText&quot;, &quot;summary&quot;: &quot;Get the width and height of a text string drawn with flags&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;text&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;w,h&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;width and height of the text&quot;}], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.5.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.sizeText&quot;, &quot;symbol&quot;: &quot;lcd.sizeText&quot;, &quot;summary&quot;: &quot;Get the width and height of a text string drawn with flags&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;text&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see the Lcd functions overview&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;w,h&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;width and height of the text&quot;}], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.5.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -42,7 +42,7 @@ Get the width and height of a text string drawn with flags
 
 @param text (string)
 
-@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+@param flags (optional) please see the Lcd functions overview
 
 @retval w,h (integers) width and height of the text
 
@@ -63,7 +63,7 @@ Get the width and height of a text string drawn with flags
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `text` | yes | `string` |  |
-| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 #### Returns
 
@@ -89,7 +89,7 @@ Get the width and height of a text string drawn with flags
 
 @param text (string)
 
-@param flags (integer) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
+@param flags (integer) please see the Lcd functions overview
 
 @retval w,h (integer) width and height of the text
 

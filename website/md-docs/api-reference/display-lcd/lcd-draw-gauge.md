@@ -14,7 +14,7 @@ Draw a simple gauge that is filled based upon fill value
 | `h` | yes | `integer` | height in pixels |
 | `fill` | yes | `integer` | amount of fill to apply |
 | `maxfill` | yes | `integer` | total value of fill |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

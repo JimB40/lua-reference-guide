@@ -14,7 +14,7 @@ Draw a rectangle in perspective
 | `xmax` | yes | `integer` | the limits of the rectangle |
 | `ymin` | yes | `integer` | the limits of the rectangle |
 | `ymax` | yes | `integer` | the limits of the rectangle |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

@@ -9,7 +9,7 @@ Get the width and height of a text string drawn with flags
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `text` | yes | `string` |  |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

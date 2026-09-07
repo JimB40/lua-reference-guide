@@ -13,7 +13,7 @@ Draw text inside rectangle (x,y,w,h) with line breaks
 | `w` | yes | `integer` | width and height of bounding rectangle |
 | `h` | yes | `integer` | width and height of bounding rectangle |
 | `text` | yes | `string` | text to display |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) for drawing flags and colors, and [Appendix](../../api-overview/fonts.md) for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented. |
+| `flags` | no | `integer` | please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented. |
 
 ## Returns
 

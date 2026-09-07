@@ -2,7 +2,7 @@
 
 `lcd.setColor(colorIndex, color)`
 
-Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../../api-overview/constants/color-constants.md#indexed-colors)
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants
 
 ## Parameters
 

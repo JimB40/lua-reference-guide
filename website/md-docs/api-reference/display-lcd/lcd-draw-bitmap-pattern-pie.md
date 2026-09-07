@@ -13,7 +13,7 @@ Displays a bitmap pattern pie at (x,y)
 | `y` | yes | `integer` | starting coordinates |
 | `startAngle` | yes | `unknown` | Start angle |
 | `endAngle` | yes | `unknown` | End angle |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

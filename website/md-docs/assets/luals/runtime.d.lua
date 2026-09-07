@@ -329,7 +329,7 @@ function playHaptic(duration, pause, flags) end
 --- Play a numerical value (text to speech)
 --- @since 2.0.0
 ---@param value integer number to play. Value is interpreted as integer.
----@param unit integer unit identifier [Full list](../../api-overview/constants/units.md)
+---@param unit integer unit identifier, see the Units reference for the full list
 ---@param attributes? integer possible values: * 0 or not present plays integral part of the number (for a number 123 it plays 123) * PREC1 plays a number with one decimal place (for a number 123 it plays 12.3) * PREC2 plays a number with two decimal places (for a number 123 it plays 1.23)
 ---@return unknown none
 function playNumber(value, unit, attributes) end
@@ -466,7 +466,7 @@ function setStickySwitch(id, value) end
 ---@param subid unknown subID of the sensor, usually 0, valid range is from 0 to 7
 ---@param instance unknown instance of the sensor (SensorID), valid range is from 0 to 0xFF
 ---@param value unknown fed to the sensor
----@param unit? unknown unit of the sensor [Full list](../../api-overview/constants/units.md)
+---@param unit? unknown unit of the sensor, see the Units reference for the full list
 ---@param precision? unknown the precision of the sensor * 0 or not present no decimal precision. * != 0 value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00.
 ---@param name? string Name of the sensor if it does not yet exist (4 chars). * not present Name defaults to the Id. * present Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., "Name"
 ---@return unknown true

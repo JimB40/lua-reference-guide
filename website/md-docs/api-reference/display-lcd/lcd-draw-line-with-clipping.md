@@ -16,8 +16,8 @@ Draw a line only inside a rectangle
 | `xmax` | yes | `integer` | the limits of the rectangle inside which the line is drawn |
 | `ymin` | yes | `integer` | the limits of the rectangle inside which the line is drawn |
 | `ymax` | yes | `integer` | the limits of the rectangle inside which the line is drawn |
-| `pattern` | yes | `FORCE` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `pattern` | yes | `FORCE` | please see the Lcd functions overview |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

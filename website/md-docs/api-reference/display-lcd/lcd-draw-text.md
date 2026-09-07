@@ -11,7 +11,7 @@ Draw a text beginning at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `text` | yes | `string` | text to display |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) for drawing flags and colors, and [Appendix](../../api-overview/fonts.md) for available characters in each font set. |
+| `flags` | no | `integer` | please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set. |
 | `inversColor` | no | `unknown` | overrides the inverse text color for INVERS |
 
 ## Returns

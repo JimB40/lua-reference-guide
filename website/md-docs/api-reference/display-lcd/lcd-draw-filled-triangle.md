@@ -14,7 +14,7 @@ Draw a filled triangle
 | `y2` | yes | `integer` | coordinates of the three vertices |
 | `x3` | yes | `integer` | coordinates of the three vertices |
 | `y3` | yes | `integer` | coordinates of the three vertices |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 
 ## Returns
 

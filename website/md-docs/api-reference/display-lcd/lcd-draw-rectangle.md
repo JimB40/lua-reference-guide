@@ -12,7 +12,7 @@ Draw a rectangle from top left corner (x,y) of specified width and height
 | `y` | yes | `integer` | top left corner position |
 | `w` | yes | `integer` | width in pixels |
 | `h` | yes | `integer` | height in pixels |
-| `flags` | no | `integer` | please see [Lcd functions overview](../../programming/core-concepts/drawing-flags-and-colors.md) |
+| `flags` | no | `integer` | please see the Lcd functions overview |
 | `t` | no | `integer` | thickness in pixels, defaults to 1 (only on radios with color display) |
 | `opacity` | no | `integer` | opacity defaults to 0 (only on radios with color display) |
 
