@@ -1,13 +1,13 @@
 # Review: serialWrite
 
-[Back to dashboard](review.md) | [Open API page](runtime-serial-write.md)
+[Back to dashboard](review.md) | [Open API page](serial-ports/serial-write.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `serialWrite`
 - Doc id: `runtime.serial-write`
-- Source: `radio/src/lua/api_general.cpp:2322`
+- Source: `radio/src/lua/api_general.cpp:2318`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

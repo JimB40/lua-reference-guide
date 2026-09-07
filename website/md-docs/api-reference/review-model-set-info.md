@@ -1,6 +1,6 @@
 # Review: model.setInfo
 
-[Back to dashboard](review.md) | [Open API page](model-set-info.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-set-info.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `model.setInfo`
 - Doc id: `model.set-info`
 - Source: `radio/src/lua/api_model.cpp:83`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown param types: value
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown params to decide: `value`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -22,11 +23,11 @@
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>value</code></td><td>param</td><td><code>table</code></td><td>model information data, see model.getInfo()</td><td><select data-field-kind="param" data-field-name="value" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="value" data-custom-type="true" /></td></tr>
+<tr><td><code>value</code></td><td>param</td><td><code>unknown</code></td><td>model information data, see model.getInfo()</td><td><select data-field-kind="param" data-field-name="value" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="value" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.setInfo&quot;, &quot;symbol&quot;: &quot;model.setInfo&quot;, &quot;summary&quot;: &quot;Set the current Model information&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;table&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;model information data, see model.getInfo()&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;If a parameter is missing from the value, then\nthat parameter remains unchanged.&quot;], &quot;since&quot;: &quot;2.0.6&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.setInfo&quot;, &quot;symbol&quot;: &quot;model.setInfo&quot;, &quot;summary&quot;: &quot;Set the current Model information&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;model information data, see model.getInfo()&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;If a parameter is missing from the value, then\nthat parameter remains unchanged.&quot;], &quot;since&quot;: &quot;2.0.6&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -38,7 +39,7 @@
 
 Set the current Model information
 
-@param value (table) model information data, see model.getInfo()
+@param value model information data, see model.getInfo()
 
 @notice If a parameter is missing from the value, then
 that parameter remains unchanged.
@@ -57,7 +58,7 @@ Set the current Model information
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `value` | yes | `table` | model information data, see model.getInfo() |
+| `value` | yes | `unknown` | model information data, see model.getInfo() |
 
 #### Returns
 
@@ -80,7 +81,7 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Set the current Model information
 
-@param value (table) model information data, see model.getInfo()
+@param value (TODO) model information data, see model.getInfo()
 
 @notice If a parameter is missing from the value, then
 that parameter remains unchanged.

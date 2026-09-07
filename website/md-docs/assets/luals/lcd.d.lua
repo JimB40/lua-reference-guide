@@ -35,7 +35,7 @@ function lcd.RGB(r, g, b, rgb) end
 
 --- Clear the LCD screen
 --- @since 2.0.0
----@param color? lcd_color_RGB565 
+---@param color? unknown 
 function lcd.clear(color) end
 
 --- Draw an arc
@@ -80,8 +80,8 @@ function lcd.drawBitmapPattern(bitmap, x, y, flags) end
 ---@param bitmap pointer point to a bitmap previously opened with Bitmap.open()
 ---@param x integer starting coordinates
 ---@param y integer starting coordinates
----@param startangle integer Start angle
----@param endangle integer End angle
+---@param startangle unknown Start angle
+---@param endangle unknown End angle
 ---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
 function lcd.drawBitmapPatternPie(bitmap, x, y, startangle, endangle, flags) end
 
@@ -168,7 +168,7 @@ function lcd.drawHudRectangle(pitch, roll, xmin, xmax, ymin, ymax, flags) end
 ---@param y1 integer starting coordinate
 ---@param x2 integer end coordinate
 ---@param y2 integer end coordinate
----@param pattern pen_type SOLID or DOTTED
+---@param pattern unknown SOLID or DOTTED
 ---@param flags? integer lcdflags
 function lcd.drawLine(x1, y1, x2, y2, pattern, flags) end
 
@@ -192,7 +192,7 @@ function lcd.drawLineWithClipping(x1, y1, x2, y2, xmin, xmax, ymin, ymax, patter
 ---@param y integer starting coordinate
 ---@param value integer value to display
 ---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
----@param inverscolor? string overrides the inverse text color for INVERS
+---@param inverscolor? unknown overrides the inverse text color for INVERS
 function lcd.drawNumber(x, y, value, flags, inverscolor) end
 
 --- Draw a pie slice
@@ -259,7 +259,7 @@ function lcd.drawSwitch(x, y, switch, flags) end
 ---@param y integer starting coordinate
 ---@param text string text to display
 ---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md) for drawing flags and colors, and [Appendix](../../api-overview/fonts.md) for available characters in each font set.
----@param inverscolor? string overrides the inverse text color for INVERS
+---@param inverscolor? unknown overrides the inverse text color for INVERS
 function lcd.drawText(x, y, text, flags, inverscolor) end
 
 --- Draw text inside rectangle (x,y,w,h) with line breaks
@@ -279,7 +279,7 @@ function lcd.drawTextLines(x, y, w, h, text, flags) end
 ---@param y integer starting coordinate
 ---@param value integer time in seconds
 ---@param flags? integer please see [Lcd functions overview](../../api-reference/display-lcd.md)
----@param inverscolor? string overrides the inverse text color for INVERS
+---@param inverscolor? unknown overrides the inverse text color for INVERS
 function lcd.drawTimer(x, y, value, flags, inverscolor) end
 
 --- Draw a triangle

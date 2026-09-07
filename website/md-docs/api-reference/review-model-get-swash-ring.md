@@ -1,13 +1,13 @@
 # Review: model.getSwashRing
 
-[Back to dashboard](review.md) | [Open API page](model-get-swash-ring.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-swash-ring.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.getSwashRing`
 - Doc id: `model.get-swash-ring`
-- Source: `radio/src/lua/api_model.cpp:1881`
+- Source: `radio/src/lua/api_model.cpp:1798`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

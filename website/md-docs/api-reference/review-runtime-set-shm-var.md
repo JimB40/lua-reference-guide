@@ -1,13 +1,13 @@
 # Review: setShmVar
 
-[Back to dashboard](review.md) | [Open API page](runtime-set-shm-var.md)
+[Back to dashboard](review.md) | [Open API page](variables/set-shm-var.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `setShmVar`
 - Doc id: `runtime.set-shm-var`
-- Source: `radio/src/lua/api_general.cpp:2482`
+- Source: `radio/src/lua/api_general.cpp:2478`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,13 +1,13 @@
 # Review: model.setCurve
 
-[Back to dashboard](review.md) | [Open API page](model-set-curve.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-set-curve.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.setCurve`
 - Doc id: `model.set-curve`
-- Source: `radio/src/lua/api_model.cpp:1279`
+- Source: `radio/src/lua/api_model.cpp:1191`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

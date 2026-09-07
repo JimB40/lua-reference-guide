@@ -1,6 +1,6 @@
 # Review: Bitmap.toMask
 
-[Back to dashboard](review.md) | [Open API page](bitmap-to-mask.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/bitmap-to-mask.md)
 
 ## Snapshot
 

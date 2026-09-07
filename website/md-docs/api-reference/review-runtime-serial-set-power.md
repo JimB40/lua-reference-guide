@@ -1,13 +1,13 @@
 # Review: serialSetPower
 
-[Back to dashboard](review.md) | [Open API page](runtime-serial-set-power.md)
+[Back to dashboard](review.md) | [Open API page](serial-ports/serial-set-power.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `serialSetPower`
 - Doc id: `runtime.serial-set-power`
-- Source: `radio/src/lua/api_general.cpp:2435`
+- Source: `radio/src/lua/api_general.cpp:2431`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,6 +1,6 @@
 # Review: model.defaultInputs
 
-[Back to dashboard](review.md) | [Open API page](model-default-inputs.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-default-inputs.md)
 
 ## Snapshot
 

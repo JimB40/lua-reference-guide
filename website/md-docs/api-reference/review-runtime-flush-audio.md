@@ -1,13 +1,13 @@
 # Review: flushAudio
 
-[Back to dashboard](review.md) | [Open API page](runtime-flush-audio.md)
+[Back to dashboard](review.md) | [Open API page](audio-sound/flush-audio.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `flushAudio`
 - Doc id: `runtime.flush-audio`
-- Source: `radio/src/lua/api_general.cpp:2078`
+- Source: `radio/src/lua/api_general.cpp:2074`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

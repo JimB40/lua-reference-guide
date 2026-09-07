@@ -1,6 +1,6 @@
 # Review: playDuration
 
-[Back to dashboard](review.md) | [Open API page](runtime-play-duration.md)
+[Back to dashboard](review.md) | [Open API page](audio-sound/play-duration.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `playDuration`
 - Doc id: `runtime.play-duration`
 - Source: `radio/src/lua/api_general.cpp:1545`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown return types: none
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown returns to decide: `none`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -29,11 +30,11 @@
 @param volume (number):
  - (1..5) override radio settings Wav volume for the duration of file
  - omitting the parameter uses radio settings Wav volume</td><td><select data-field-kind="param" data-field-name="hourFormat" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="hourFormat" data-custom-type="true" /></td></tr>
-<tr><td><code>none</code></td><td>return</td><td><code>nil</code></td><td></td><td><select data-field-kind="return" data-field-name="none" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="none" data-custom-type="true" /></td></tr>
+<tr><td><code>none</code></td><td>return</td><td><code>unknown</code></td><td></td><td><select data-field-kind="return" data-field-name="none" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="none" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playDuration&quot;, &quot;symbol&quot;: &quot;playDuration&quot;, &quot;summary&quot;: &quot;Play a time value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number of seconds to play. Only integral part is used.&quot;}, {&quot;name&quot;: &quot;hourFormat&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: * `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n *\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.1.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playDuration&quot;, &quot;symbol&quot;: &quot;playDuration&quot;, &quot;summary&quot;: &quot;Play a time value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number of seconds to play. Only integral part is used.&quot;}, {&quot;name&quot;: &quot;hourFormat&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: * `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n *\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.1.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -55,7 +56,7 @@ Play a time value (text to speech)
  - (1..5) override radio settings Wav volume for the duration of file
  - omitting the parameter uses radio settings Wav volume
 
-@retval none (nil)
+@retval none 
 
 @status current Introduced in 2.1.0, changed in 2.10
 
@@ -85,7 +86,7 @@ Play a time value (text to speech)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `none` | `nil` |  |
+| `none` | `unknown` |  |
 
 #### Notes
 
@@ -112,7 +113,7 @@ Play a time value (text to speech)
  - (1..5) override radio settings Wav volume for the duration of file
  - omitting the parameter uses radio settings Wav volume
 
-@retval none (nil)
+@retval none (TODO)
 
 @status current Introduced in 2.1.0
 ~~~~

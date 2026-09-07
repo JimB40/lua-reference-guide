@@ -1,13 +1,13 @@
 # Review: model.getSensor
 
-[Back to dashboard](review.md) | [Open API page](model-get-sensor.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-sensor.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.getSensor`
 - Doc id: `model.get-sensor`
-- Source: `radio/src/lua/api_model.cpp:1814`
+- Source: `radio/src/lua/api_model.cpp:1731`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

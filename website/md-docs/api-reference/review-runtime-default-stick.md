@@ -1,13 +1,13 @@
 # Review: defaultStick
 
-[Back to dashboard](review.md) | [Open API page](runtime-default-stick.md)
+[Back to dashboard](review.md) | [Open API page](key-inputs/default-stick.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `defaultStick`
 - Doc id: `runtime.default-stick`
-- Source: `radio/src/lua/api_general.cpp:1966`
+- Source: `radio/src/lua/api_general.cpp:1962`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

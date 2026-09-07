@@ -1,6 +1,6 @@
 # Review: lcd.drawFilledCircle
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-filled-circle.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-filled-circle.md)
 
 ## Snapshot
 
@@ -66,7 +66,7 @@ Draw a filled circle at (x, y) of specified radius
 | `x` | yes | `integer` | center position |
 | `y` | yes | `integer` | center position |
 | `r` | yes | `integer` | radius in pixels |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

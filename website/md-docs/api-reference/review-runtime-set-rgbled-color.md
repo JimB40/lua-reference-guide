@@ -1,13 +1,13 @@
 # Review: setRGBLedColor
 
-[Back to dashboard](review.md) | [Open API page](runtime-set-rgbled-color.md)
+[Back to dashboard](review.md) | [Open API page](radio-hardware/set-rgbled-color.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `setRGBLedColor`
 - Doc id: `runtime.set-rgbled-color`
-- Source: `radio/src/lua/api_general.cpp:2903`
+- Source: `radio/src/lua/api_general.cpp:2899`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

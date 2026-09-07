@@ -1,13 +1,13 @@
 # Review: model.setSwashRing
 
-[Back to dashboard](review.md) | [Open API page](model-set-swash-ring.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-set-swash-ring.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.setSwashRing`
 - Doc id: `model.set-swash-ring`
-- Source: `radio/src/lua/api_model.cpp:1913`
+- Source: `radio/src/lua/api_model.cpp:1830`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,6 +1,6 @@
 # Review: crossfireTelemetryPush
 
-[Back to dashboard](review.md) | [Open API page](runtime-crossfire-telemetry-push.md)
+[Back to dashboard](review.md) | [Open API page](rf-module/crossfire-telemetry-push.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `crossfireTelemetryPush`
 - Doc id: `runtime.crossfire-telemetry-push`
 - Source: `radio/src/lua/api_general.cpp:1178`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown param types: command
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown params to decide: `command`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -22,14 +23,14 @@
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>command</code></td><td>param</td><td><code>integer</code></td><td>command</td><td><select data-field-kind="param" data-field-name="command" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="command" data-custom-type="true" /></td></tr>
+<tr><td><code>command</code></td><td>param</td><td><code>unknown</code></td><td>command</td><td><select data-field-kind="param" data-field-name="command" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="command" data-custom-type="true" /></td></tr>
 <tr><td><code>data</code></td><td>param</td><td><code>table</code></td><td>table of data bytes</td><td><select data-field-kind="param" data-field-name="data" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="data" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>boolean</code></td><td>data queued in output buffer or not.</td><td><select data-field-kind="return" data-field-name="-" data-current-type="boolean"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>incorrect telemetry protocol.</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;crossfireTelemetryPush&quot;, &quot;symbol&quot;: &quot;crossfireTelemetryPush&quot;, &quot;summary&quot;: &quot;This functions allows for sending telemetry data toward the TBS Crossfire link.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;command&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;command&quot;}, {&quot;name&quot;: &quot;data&quot;, &quot;type&quot;: &quot;table&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;table of data bytes&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;data queued in output buffer or not.&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;incorrect telemetry protocol.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;crossfireTelemetryPush&quot;, &quot;symbol&quot;: &quot;crossfireTelemetryPush&quot;, &quot;summary&quot;: &quot;This functions allows for sending telemetry data toward the TBS Crossfire link.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;command&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;command&quot;}, {&quot;name&quot;: &quot;data&quot;, &quot;type&quot;: &quot;table&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;table of data bytes&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;data queued in output buffer or not.&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;incorrect telemetry protocol.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -43,7 +44,7 @@ This functions allows for sending telemetry data toward the TBS Crossfire link.
 
 When called without parameters, it will only return the status of the output buffer without sending anything.
 
-@param command (integer) command
+@param command command
 
 @param data table of data bytes
 
@@ -65,7 +66,7 @@ This functions allows for sending telemetry data toward the TBS Crossfire link.
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `command` | yes | `integer` | command |
+| `command` | yes | `unknown` | command |
 | `data` | yes | `table` | table of data bytes |
 
 #### Returns
@@ -91,7 +92,7 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 This functions allows for sending telemetry data toward the TBS Crossfire link.
 
-@param command (integer) command
+@param command (TODO) command
 
 @param data (table) table of data bytes
 

@@ -1,6 +1,6 @@
 # Review: getFlightMode
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-flight-mode.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/get-flight-mode.md)
 
 ## Snapshot
 

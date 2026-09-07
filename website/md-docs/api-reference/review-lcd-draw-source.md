@@ -1,6 +1,6 @@
 # Review: lcd.drawSource
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-source.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-source.md)
 
 ## Snapshot
 
@@ -64,7 +64,7 @@ Displays the name of the corresponding input as defined by the source at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `source` | yes | `integer` | source index |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

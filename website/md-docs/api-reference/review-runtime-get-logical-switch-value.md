@@ -1,13 +1,13 @@
 # Review: getLogicalSwitchValue
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-logical-switch-value.md)
+[Back to dashboard](review.md) | [Open API page](switches/get-logical-switch-value.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getLogicalSwitchValue`
 - Doc id: `runtime.get-logical-switch-value`
-- Source: `radio/src/lua/api_general.cpp:2567`
+- Source: `radio/src/lua/api_general.cpp:2563`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

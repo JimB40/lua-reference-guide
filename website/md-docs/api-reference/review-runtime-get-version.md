@@ -1,6 +1,6 @@
 # Review: getVersion
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-version.md)
+[Back to dashboard](review.md) | [Open API page](system/get-version.md)
 
 ## Snapshot
 

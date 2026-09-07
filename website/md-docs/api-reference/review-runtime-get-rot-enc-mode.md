@@ -1,6 +1,6 @@
 # Review: getRotEncMode
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-rot-enc-mode.md)
+[Back to dashboard](review.md) | [Open API page](key-inputs/get-rot-enc-mode.md)
 
 ## Snapshot
 

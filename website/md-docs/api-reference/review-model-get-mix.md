@@ -1,6 +1,6 @@
 # Review: model.getMix
 
-[Back to dashboard](review.md) | [Open API page](model-get-mix.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-mix.md)
 
 ## Snapshot
 

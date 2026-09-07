@@ -1,6 +1,6 @@
 # Review: getValue
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-value.md)
+[Back to dashboard](review.md) | [Open API page](sources/get-value.md)
 
 ## Snapshot
 

@@ -1,13 +1,13 @@
 # Review: sources
 
-[Back to dashboard](review.md) | [Open API page](runtime-sources.md)
+[Back to dashboard](review.md) | [Open API page](sources/sources.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `sources`
 - Doc id: `runtime.sources`
-- Source: `radio/src/lua/api_general.cpp:2801`
+- Source: `radio/src/lua/api_general.cpp:2797`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

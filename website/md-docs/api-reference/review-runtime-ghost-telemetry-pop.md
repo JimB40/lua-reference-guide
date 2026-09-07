@@ -1,6 +1,6 @@
 # Review: ghostTelemetryPop
 
-[Back to dashboard](review.md) | [Open API page](runtime-ghost-telemetry-pop.md)
+[Back to dashboard](review.md) | [Open API page](telemetry/ghost-telemetry-pop.md)
 
 ## Snapshot
 

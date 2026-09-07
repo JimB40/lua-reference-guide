@@ -1,19 +1,20 @@
 # Review: setSerialBaudrate
 
-[Back to dashboard](review.md) | [Open API page](runtime-set-serial-baudrate.md)
+[Back to dashboard](review.md) | [Open API page](serial-ports/set-serial-baudrate.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `setSerialBaudrate`
 - Doc id: `runtime.set-serial-baudrate`
-- Source: `radio/src/lua/api_general.cpp:2303`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Source: `radio/src/lua/api_general.cpp:2299`
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown param types: baudrate
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown params to decide: `baudrate`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -22,11 +23,11 @@
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>baudrate</code></td><td>param</td><td><code>integer</code></td><td>Desired baurate</td><td><select data-field-kind="param" data-field-name="baudrate" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="baudrate" data-custom-type="true" /></td></tr>
+<tr><td><code>baudrate</code></td><td>param</td><td><code>unknown</code></td><td>Desired baurate</td><td><select data-field-kind="param" data-field-name="baudrate" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="baudrate" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;setSerialBaudrate&quot;, &quot;symbol&quot;: &quot;setSerialBaudrate&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;baudrate&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;Desired baurate&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.12&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;setSerialBaudrate&quot;, &quot;symbol&quot;: &quot;setSerialBaudrate&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;baudrate&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;Desired baurate&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.12&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -35,7 +36,7 @@
 
 ~~~~text
 @function setSerialBaudrate(baudrate)
-@param baudrate (integer) Desired baurate
+@param baudrate Desired baurate
 
 Set baudrate for serial port(s) affected to LUA
 
@@ -53,7 +54,7 @@ None.
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `baudrate` | yes | `integer` | Desired baurate |
+| `baudrate` | yes | `unknown` | Desired baurate |
 
 #### Returns
 
@@ -73,7 +74,7 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 ~~~~text
 @function setSerialBaudrate([baudrate])
 
-@param baudrate (integer) Desired baurate
+@param baudrate (TODO) Desired baurate
 
 @status current Introduced in 2.3.12
 ~~~~

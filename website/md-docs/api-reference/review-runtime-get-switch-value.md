@@ -1,13 +1,13 @@
 # Review: getSwitchValue
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-switch-value.md)
+[Back to dashboard](review.md) | [Open API page](switches/get-switch-value.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getSwitchValue`
 - Doc id: `runtime.get-switch-value`
-- Source: `radio/src/lua/api_general.cpp:2675`
+- Source: `radio/src/lua/api_general.cpp:2671`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

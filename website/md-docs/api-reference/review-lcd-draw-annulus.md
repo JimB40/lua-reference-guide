@@ -1,6 +1,6 @@
 # Review: lcd.drawAnnulus
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-annulus.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-annulus.md)
 
 ## Snapshot
 
@@ -74,7 +74,7 @@ Draw an arc
 | `r2` | yes | `integer` | radii of the inside and outside of the annulus |
 | `start` | yes | `integer` | start and end of the annulus |
 | `end` | yes | `integer` | start and end of the annulus |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

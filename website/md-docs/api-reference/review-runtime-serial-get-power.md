@@ -1,13 +1,13 @@
 # Review: serialGetPower
 
-[Back to dashboard](review.md) | [Open API page](runtime-serial-get-power.md)
+[Back to dashboard](review.md) | [Open API page](serial-ports/serial-get-power.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `serialGetPower`
 - Doc id: `runtime.serial-get-power`
-- Source: `radio/src/lua/api_general.cpp:2398`
+- Source: `radio/src/lua/api_general.cpp:2394`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,34 +1,34 @@
 # Switches
 
-Physical and logical switch lookup and current-state helpers exposed to scripts.
+Switch identification, value lookup, and sticky-switch helpers.
 
 <div class="api-grid">
-<a class="api-card" href="../runtime-get-logical-switch-value/">
+<a class="api-card" href="get-logical-switch-value/">
 <span class="api-card-title">getLogicalSwitchValue</span>
-<span class="api-card-summary">Return the current value of a logical switch.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-get-switch-index/">
+<a class="api-card" href="get-switch-index/">
 <span class="api-card-title">getSwitchIndex</span>
-<span class="api-card-summary">Return the internal index for a switch.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-get-switch-info/">
+<a class="api-card" href="get-switch-info/">
 <span class="api-card-title">getSwitchInfo</span>
-<span class="api-card-summary">Return details about a switch.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-get-switch-name/">
+<a class="api-card" href="get-switch-name/">
 <span class="api-card-title">getSwitchName</span>
-<span class="api-card-summary">Return the display name for a switch.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-get-switch-value/">
+<a class="api-card" href="get-switch-value/">
 <span class="api-card-title">getSwitchValue</span>
-<span class="api-card-summary">Return the current value of a switch.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-set-sticky-switch/">
+<a class="api-card" href="set-sticky-switch/">
 <span class="api-card-title">setStickySwitch</span>
-<span class="api-card-summary">Set the sticky state of a logical switch.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-switches/">
+<a class="api-card" href="switches/">
 <span class="api-card-title">switches</span>
-<span class="api-card-summary">Enumerate available switches.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
 </div>

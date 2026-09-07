@@ -1,13 +1,13 @@
 # Review: getGlobalTimer
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-global-timer.md)
+[Back to dashboard](review.md) | [Open API page](time/get-global-timer.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getGlobalTimer`
 - Doc id: `runtime.get-global-timer`
-- Source: `radio/src/lua/api_general.cpp:1779`
+- Source: `radio/src/lua/api_general.cpp:1775`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

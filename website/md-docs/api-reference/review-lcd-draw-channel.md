@@ -1,6 +1,6 @@
 # Review: lcd.drawChannel
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-channel.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-channel.md)
 
 ## Snapshot
 
@@ -65,7 +65,7 @@ Display a telemetry value at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `source` | yes | `integer|string` | can be a source identifier (number) or a source name (string). See getValue() |
-| `flags` | yes | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | yes | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

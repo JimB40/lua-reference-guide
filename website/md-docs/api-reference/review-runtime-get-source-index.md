@@ -1,13 +1,13 @@
 # Review: getSourceIndex
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-source-index.md)
+[Back to dashboard](review.md) | [Open API page](sources/get-source-index.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getSourceIndex`
 - Doc id: `runtime.get-source-index`
-- Source: `radio/src/lua/api_general.cpp:2750`
+- Source: `radio/src/lua/api_general.cpp:2746`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,13 +1,13 @@
 # Review: getStickMode
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-stick-mode.md)
+[Back to dashboard](review.md) | [Open API page](radio-hardware/get-stick-mode.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getStickMode`
 - Doc id: `runtime.get-stick-mode`
-- Source: `radio/src/lua/api_general.cpp:3025`
+- Source: `radio/src/lua/api_general.cpp:3023`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

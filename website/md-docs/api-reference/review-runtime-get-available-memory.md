@@ -1,13 +1,13 @@
 # Review: getAvailableMemory
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-available-memory.md)
+[Back to dashboard](review.md) | [Open API page](system/get-available-memory.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getAvailableMemory`
 - Doc id: `runtime.get-available-memory`
-- Source: `radio/src/lua/api_general.cpp:2217`
+- Source: `radio/src/lua/api_general.cpp:2213`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

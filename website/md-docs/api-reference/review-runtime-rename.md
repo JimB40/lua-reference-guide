@@ -1,6 +1,6 @@
 # Review: rename
 
-[Back to dashboard](review.md) | [Open API page](runtime-rename.md)
+[Back to dashboard](review.md) | [Open API page](filesystem/rename.md)
 
 ## Snapshot
 

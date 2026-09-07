@@ -1,6 +1,6 @@
 # Review: getRAS
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-ras.md)
+[Back to dashboard](review.md) | [Open API page](telemetry/get-ras.md)
 
 ## Snapshot
 

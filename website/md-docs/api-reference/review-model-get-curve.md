@@ -1,13 +1,13 @@
 # Review: model.getCurve
 
-[Back to dashboard](review.md) | [Open API page](model-get-curve.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-curve.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.getCurve`
 - Doc id: `model.get-curve`
-- Source: `radio/src/lua/api_model.cpp:1211`
+- Source: `radio/src/lua/api_model.cpp:1123`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

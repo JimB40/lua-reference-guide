@@ -1,6 +1,6 @@
 # Review: lcd.refresh
 
-[Back to dashboard](review.md) | [Open API page](lcd-refresh.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-refresh.md)
 
 ## Snapshot
 

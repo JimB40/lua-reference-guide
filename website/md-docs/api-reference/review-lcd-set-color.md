@@ -1,6 +1,6 @@
 # Review: lcd.setColor
 
-[Back to dashboard](review.md) | [Open API page](lcd-set-color.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-set-color.md)
 
 ## Snapshot
 
@@ -40,7 +40,7 @@ Please notice that changing theme colors affects not only other Lua widgets, but
 
 #### Summary
 
-Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)
+Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../api-overview/constants/color-constants.md#indexed-colors)
 
 #### Parameters
 

@@ -1,13 +1,13 @@
 # Review: multiBuffer
 
-[Back to dashboard](review.md) | [Open API page](runtime-multi-buffer.md)
+[Back to dashboard](review.md) | [Open API page](rf-module/multi-buffer.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `multiBuffer`
 - Doc id: `runtime.multi-buffer`
-- Source: `radio/src/lua/api_general.cpp:2269`
+- Source: `radio/src/lua/api_general.cpp:2265`
 - Recommended action: **Fix C++ annotation first**
 - Why: unknown param types: address
 

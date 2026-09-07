@@ -1,6 +1,6 @@
 # Review: crossfireTelemetryPop
 
-[Back to dashboard](review.md) | [Open API page](runtime-crossfire-telemetry-pop.md)
+[Back to dashboard](review.md) | [Open API page](telemetry/crossfire-telemetry-pop.md)
 
 ## Snapshot
 

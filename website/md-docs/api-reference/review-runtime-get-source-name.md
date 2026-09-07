@@ -1,13 +1,13 @@
 # Review: getSourceName
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-source-name.md)
+[Back to dashboard](review.md) | [Open API page](sources/get-source-name.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getSourceName`
 - Doc id: `runtime.get-source-name`
-- Source: `radio/src/lua/api_general.cpp:2776`
+- Source: `radio/src/lua/api_general.cpp:2772`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

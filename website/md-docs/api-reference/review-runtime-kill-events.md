@@ -1,13 +1,13 @@
 # Review: killEvents
 
-[Back to dashboard](review.md) | [Open API page](runtime-kill-events.md)
+[Back to dashboard](review.md) | [Open API page](key-inputs/kill-events.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `killEvents`
 - Doc id: `runtime.kill-events`
-- Source: `radio/src/lua/api_general.cpp:1688`
+- Source: `radio/src/lua/api_general.cpp:1684`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 
@@ -48,7 +48,7 @@ Stops key state machine. See [Key Events](../key_events.md) for the detailed des
 
 #### Summary
 
-Stops key state machine. See [Key Events](../key_events.md) for the detailed description.
+Stops key state machine. See [Key Events](../api-overview/constants/key-event-constants.md) for the detailed description.
 
 #### Parameters
 

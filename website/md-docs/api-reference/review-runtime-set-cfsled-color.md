@@ -1,13 +1,13 @@
 # Review: setCFSLedColor
 
-[Back to dashboard](review.md) | [Open API page](runtime-set-cfsled-color.md)
+[Back to dashboard](review.md) | [Open API page](radio-hardware/set-cfsled-color.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `setCFSLedColor`
 - Doc id: `runtime.set-cfsled-color`
-- Source: `radio/src/lua/api_general.cpp:2955`
+- Source: `radio/src/lua/api_general.cpp:2953`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

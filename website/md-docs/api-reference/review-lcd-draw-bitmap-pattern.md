@@ -1,6 +1,6 @@
 # Review: lcd.drawBitmapPattern
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-bitmap-pattern.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-bitmap-pattern.md)
 
 ## Snapshot
 
@@ -66,7 +66,7 @@ Displays a bitmap pattern at (x,y)
 | `bitmap` | yes | `pointer` | point to a bitmap previously opened with Bitmap.open() |
 | `x` | yes | `integer` | starting coordinates |
 | `y` | yes | `integer` | starting coordinates |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

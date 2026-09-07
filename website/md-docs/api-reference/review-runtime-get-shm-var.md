@@ -1,13 +1,13 @@
 # Review: getShmVar
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-shm-var.md)
+[Back to dashboard](review.md) | [Open API page](variables/get-shm-var.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getShmVar`
 - Doc id: `runtime.get-shm-var`
-- Source: `radio/src/lua/api_general.cpp:2507`
+- Source: `radio/src/lua/api_general.cpp:2503`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

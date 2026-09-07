@@ -1,6 +1,6 @@
 # Review: lcd.drawHudRectangle
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-hud-rectangle.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-hud-rectangle.md)
 
 ## Snapshot
 
@@ -72,7 +72,7 @@ Draw a rectangle in perspective
 | `xmax` | yes | `integer` | the limits of the rectangle |
 | `ymin` | yes | `integer` | the limits of the rectangle |
 | `ymax` | yes | `integer` | the limits of the rectangle |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

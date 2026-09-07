@@ -1,6 +1,6 @@
 # Review: lcd.getLastPos
 
-[Back to dashboard](review.md) | [Open API page](lcd-get-last-pos.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-get-last-pos.md)
 
 ## Snapshot
 

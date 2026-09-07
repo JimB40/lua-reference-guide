@@ -1,19 +1,20 @@
 # Review: serialRead
 
-[Back to dashboard](review.md) | [Open API page](runtime-serial-read.md)
+[Back to dashboard](review.md) | [Open API page](serial-ports/serial-read.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `serialRead`
 - Doc id: `runtime.serial-read`
-- Source: `radio/src/lua/api_general.cpp:2350`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Source: `radio/src/lua/api_general.cpp:2346`
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown return types: str
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown returns to decide: `str`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -25,11 +26,11 @@
 <tr><td><code>num</code></td><td>param</td><td><code>integer</code></td><td>: maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer.
                        If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.
                        Note that the returned string may not end in a newline if this character is not present in the buffer.</td><td><select data-field-kind="param" data-field-name="num" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="num" data-custom-type="true" /></td></tr>
-<tr><td><code>str</code></td><td>return</td><td><code>string</code></td><td>string. Empty if no new characters were available.</td><td><select data-field-kind="return" data-field-name="str" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="str" data-custom-type="true" /></td></tr>
+<tr><td><code>str</code></td><td>return</td><td><code>unknown</code></td><td>string. Empty if no new characters were available.</td><td><select data-field-kind="return" data-field-name="str" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="str" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;serialRead&quot;, &quot;symbol&quot;: &quot;serialRead&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;num&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer.\n                       If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.\n                       Note that the returned string may not end in a newline if this character is not present in the buffer.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;str&quot;, &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;string. Empty if no new characters were available.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.8&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;serialRead&quot;, &quot;symbol&quot;: &quot;serialRead&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;num&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer.\n                       If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.\n                       Note that the returned string may not end in a newline if this character is not present in the buffer.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;str&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;string. Empty if no new characters were available.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.8&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -43,7 +44,7 @@
                        If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.
                        Note that the returned string may not end in a newline if this character is not present in the buffer.
 
-@retval str (string) string. Empty if no new characters were available.
+@retval str string. Empty if no new characters were available.
 
 Reads characters from the serial port. The string is allowed to contain any character, including 0.
 
@@ -67,7 +68,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `str` | `string` | string. Empty if no new characters were available. |
+| `str` | `unknown` | string. Empty if no new characters were available. |
 
 #### Notes
 
@@ -87,7 +88,7 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
                        If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.
                        Note that the returned string may not end in a newline if this character is not present in the buffer.
 
-@retval str (string) string. Empty if no new characters were available.
+@retval str (TODO) string. Empty if no new characters were available.
 
 @status current Introduced in 2.3.8
 ~~~~

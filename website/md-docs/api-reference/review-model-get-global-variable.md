@@ -1,13 +1,13 @@
 # Review: model.getGlobalVariable
 
-[Back to dashboard](review.md) | [Open API page](model-get-global-variable.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-global-variable.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.getGlobalVariable`
 - Doc id: `model.get-global-variable`
-- Source: `radio/src/lua/api_model.cpp:1677`
+- Source: `radio/src/lua/api_model.cpp:1589`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

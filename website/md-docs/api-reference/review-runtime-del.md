@@ -1,6 +1,6 @@
 # Review: del
 
-[Back to dashboard](review.md) | [Open API page](runtime-del.md)
+[Back to dashboard](review.md) | [Open API page](filesystem/del.md)
 
 ## Snapshot
 

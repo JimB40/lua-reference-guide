@@ -1,6 +1,6 @@
 # Review: lcd.invertRect
 
-[Back to dashboard](review.md) | [Open API page](lcd-invert-rect.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-invert-rect.md)
 
 ## Snapshot
 
@@ -70,7 +70,7 @@ Invert a rectangle zone from top left corner (x,y) of specified width and height
 | `y` | yes | `integer` | top left corner position |
 | `w` | yes | `integer` | width in pixels |
 | `h` | yes | `integer` | height in pixels |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

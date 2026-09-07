@@ -1,13 +1,13 @@
 # Review: switches
 
-[Back to dashboard](review.md) | [Open API page](runtime-switches.md)
+[Back to dashboard](review.md) | [Open API page](switches/switches.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `switches`
 - Doc id: `runtime.switches`
-- Source: `radio/src/lua/api_general.cpp:2696`
+- Source: `radio/src/lua/api_general.cpp:2692`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

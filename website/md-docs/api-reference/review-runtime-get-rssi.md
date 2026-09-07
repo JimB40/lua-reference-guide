@@ -1,19 +1,20 @@
 # Review: getRSSI
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-rssi.md)
+[Back to dashboard](review.md) | [Open API page](telemetry/get-rssi.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getRSSI`
 - Doc id: `runtime.get-rssi`
-- Source: `radio/src/lua/api_general.cpp:2091`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Source: `radio/src/lua/api_general.cpp:2087`
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown return types: rssi, alarm_low, alarm_crit
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown returns to decide: `rssi, alarm_low, alarm_crit`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -22,13 +23,13 @@
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>rssi</code></td><td>return</td><td><code>integer</code></td><td>RSSI value (0 if no link)</td><td><select data-field-kind="return" data-field-name="rssi" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="rssi" data-custom-type="true" /></td></tr>
-<tr><td><code>alarm_low</code></td><td>return</td><td><code>integer</code></td><td>Configured low RSSI alarm level</td><td><select data-field-kind="return" data-field-name="alarm_low" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="alarm_low" data-custom-type="true" /></td></tr>
-<tr><td><code>alarm_crit</code></td><td>return</td><td><code>integer</code></td><td>Configured critical RSSI alarm level</td><td><select data-field-kind="return" data-field-name="alarm_crit" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="alarm_crit" data-custom-type="true" /></td></tr>
+<tr><td><code>rssi</code></td><td>return</td><td><code>unknown</code></td><td>RSSI value (0 if no link)</td><td><select data-field-kind="return" data-field-name="rssi" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="rssi" data-custom-type="true" /></td></tr>
+<tr><td><code>alarm_low</code></td><td>return</td><td><code>unknown</code></td><td>Configured low RSSI alarm level</td><td><select data-field-kind="return" data-field-name="alarm_low" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="alarm_low" data-custom-type="true" /></td></tr>
+<tr><td><code>alarm_crit</code></td><td>return</td><td><code>unknown</code></td><td>Configured critical RSSI alarm level</td><td><select data-field-kind="return" data-field-name="alarm_crit" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="alarm_crit" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getRSSI&quot;, &quot;symbol&quot;: &quot;getRSSI&quot;, &quot;summary&quot;: &quot;Get RSSI value as well as low and critical RSSI alarm levels (in dB)&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;rssi&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;RSSI value (0 if no link)&quot;}, {&quot;name&quot;: &quot;alarm_low&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;Configured low RSSI alarm level&quot;}, {&quot;name&quot;: &quot;alarm_crit&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;Configured critical RSSI alarm level&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getRSSI&quot;, &quot;symbol&quot;: &quot;getRSSI&quot;, &quot;summary&quot;: &quot;Get RSSI value as well as low and critical RSSI alarm levels (in dB)&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;rssi&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;RSSI value (0 if no link)&quot;}, {&quot;name&quot;: &quot;alarm_low&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;Configured low RSSI alarm level&quot;}, {&quot;name&quot;: &quot;alarm_crit&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;Configured critical RSSI alarm level&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -40,11 +41,11 @@
 
 Get RSSI value as well as low and critical RSSI alarm levels (in dB)
 
-@retval rssi (integer) RSSI value (0 if no link)
+@retval rssi RSSI value (0 if no link)
 
-@retval alarm_low (integer) Configured low RSSI alarm level
+@retval alarm_low Configured low RSSI alarm level
 
-@retval alarm_crit (integer) Configured critical RSSI alarm level
+@retval alarm_crit Configured critical RSSI alarm level
 
 @status current Introduced in 2.2.0
 ~~~~
@@ -64,9 +65,9 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `rssi` | `integer` | RSSI value (0 if no link) |
-| `alarm_low` | `integer` | Configured low RSSI alarm level |
-| `alarm_crit` | `integer` | Configured critical RSSI alarm level |
+| `rssi` | `unknown` | RSSI value (0 if no link) |
+| `alarm_low` | `unknown` | Configured low RSSI alarm level |
+| `alarm_crit` | `unknown` | Configured critical RSSI alarm level |
 
 #### Notes
 
@@ -84,11 +85,11 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Get RSSI value as well as low and critical RSSI alarm levels (in dB)
 
-@retval rssi (integer) RSSI value (0 if no link)
+@retval rssi (TODO) RSSI value (0 if no link)
 
-@retval alarm_low (integer) Configured low RSSI alarm level
+@retval alarm_low (TODO) Configured low RSSI alarm level
 
-@retval alarm_crit (integer) Configured critical RSSI alarm level
+@retval alarm_crit (TODO) Configured critical RSSI alarm level
 
 @status current Introduced in 2.2.0
 ~~~~

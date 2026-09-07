@@ -1,6 +1,6 @@
 # Review: model.deleteInputs
 
-[Back to dashboard](review.md) | [Open API page](model-delete-inputs.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-delete-inputs.md)
 
 ## Snapshot
 

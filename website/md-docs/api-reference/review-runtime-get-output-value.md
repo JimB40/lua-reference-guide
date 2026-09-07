@@ -1,13 +1,13 @@
 # Review: getOutputValue
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-output-value.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/get-output-value.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getOutputValue`
 - Doc id: `runtime.get-output-value`
-- Source: `radio/src/lua/api_general.cpp:2855`
+- Source: `radio/src/lua/api_general.cpp:2851`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

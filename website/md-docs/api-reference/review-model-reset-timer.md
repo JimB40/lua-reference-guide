@@ -1,6 +1,6 @@
 # Review: model.resetTimer
 
-[Back to dashboard](review.md) | [Open API page](model-reset-timer.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-reset-timer.md)
 
 ## Snapshot
 

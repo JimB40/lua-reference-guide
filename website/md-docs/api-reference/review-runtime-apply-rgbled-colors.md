@@ -1,13 +1,13 @@
 # Review: applyRGBLedColors
 
-[Back to dashboard](review.md) | [Open API page](runtime-apply-rgbled-colors.md)
+[Back to dashboard](review.md) | [Open API page](radio-hardware/apply-rgbled-colors.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `applyRGBLedColors`
 - Doc id: `runtime.apply-rgbled-colors`
-- Source: `radio/src/lua/api_general.cpp:3009`
+- Source: `radio/src/lua/api_general.cpp:3007`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

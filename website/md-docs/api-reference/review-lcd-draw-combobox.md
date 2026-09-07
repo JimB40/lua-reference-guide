@@ -1,6 +1,6 @@
 # Review: lcd.drawCombobox
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-combobox.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-combobox.md)
 
 ## Snapshot
 

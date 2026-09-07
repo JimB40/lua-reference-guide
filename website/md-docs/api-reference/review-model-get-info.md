@@ -1,6 +1,6 @@
 # Review: model.getInfo
 
-[Back to dashboard](review.md) | [Open API page](model-get-info.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-info.md)
 
 ## Snapshot
 

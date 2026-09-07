@@ -1,13 +1,13 @@
 # Review: setIMU_X
 
-[Back to dashboard](review.md) | [Open API page](runtime-set-imu-x.md)
+[Back to dashboard](review.md) | [Open API page](radio-hardware/set-imu-x.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `setIMU_X`
 - Doc id: `runtime.set-imu-x`
-- Source: `radio/src/lua/api_general.cpp:3039`
+- Source: `radio/src/lua/api_general.cpp:3037`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

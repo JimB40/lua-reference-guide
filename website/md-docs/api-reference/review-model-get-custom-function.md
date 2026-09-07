@@ -1,13 +1,13 @@
 # Review: model.getCustomFunction
 
-[Back to dashboard](review.md) | [Open API page](model-get-custom-function.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-custom-function.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.getCustomFunction`
 - Doc id: `model.get-custom-function`
-- Source: `radio/src/lua/api_model.cpp:1473`
+- Source: `radio/src/lua/api_model.cpp:1385`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

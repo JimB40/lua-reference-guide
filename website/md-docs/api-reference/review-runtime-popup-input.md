@@ -1,19 +1,20 @@
 # Review: popupInput
 
-[Back to dashboard](review.md) | [Open API page](runtime-popup-input.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/popup-input.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `popupInput`
 - Doc id: `runtime.popup-input`
-- Source: `radio/src/lua/api_general.cpp:1804`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Source: `radio/src/lua/api_general.cpp:1800`
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown return types: "OK", "CANCEL"
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown returns to decide: `"OK", "CANCEL"`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -28,12 +29,12 @@
 <tr><td><code>min</code></td><td>param</td><td><code>integer</code></td><td>min value that input can reach (by pressing the - key)</td><td><select data-field-kind="param" data-field-name="min" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="min" data-custom-type="true" /></td></tr>
 <tr><td><code>max</code></td><td>param</td><td><code>integer</code></td><td>max value that input can reach</td><td><select data-field-kind="param" data-field-name="max" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="max" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>integer</code></td><td>result of the input adjustment</td><td><select data-field-kind="return" data-field-name="-" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>&quot;OK&quot;</code></td><td>return</td><td><code>string</code></td><td>user pushed ENT key</td><td><select data-field-kind="return" data-field-name="&quot;OK&quot;" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="&quot;OK&quot;" data-custom-type="true" /></td></tr>
-<tr><td><code>&quot;CANCEL&quot;</code></td><td>return</td><td><code>string</code></td><td>user pushed EXIT key</td><td><select data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-custom-type="true" /></td></tr>
+<tr><td><code>&quot;OK&quot;</code></td><td>return</td><td><code>unknown</code></td><td>user pushed ENT key</td><td><select data-field-kind="return" data-field-name="&quot;OK&quot;" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="&quot;OK&quot;" data-custom-type="true" /></td></tr>
+<tr><td><code>&quot;CANCEL&quot;</code></td><td>return</td><td><code>unknown</code></td><td>user pushed EXIT key</td><td><select data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;popupInput&quot;, &quot;symbol&quot;: &quot;popupInput&quot;, &quot;summary&quot;: &quot;Raises a pop-up on screen that allows uses input&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;title&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;text to display&quot;}, {&quot;name&quot;: &quot;event&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;the event variable that is passed in from the Run function (key pressed)&quot;}, {&quot;name&quot;: &quot;input&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;value that can be adjusted by the +/- keys&quot;}, {&quot;name&quot;: &quot;min&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;min value that input can reach (by pressing the - key)&quot;}, {&quot;name&quot;: &quot;max&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;max value that input can reach&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;result of the input adjustment&quot;}, {&quot;name&quot;: &quot;\&quot;OK\&quot;&quot;, &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;user pushed ENT key&quot;}, {&quot;name&quot;: &quot;\&quot;CANCEL\&quot;&quot;, &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;user pushed EXIT key&quot;}], &quot;notes&quot;: [&quot;Use only from stand-alone and telemetry scripts.&quot;], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;popupInput&quot;, &quot;symbol&quot;: &quot;popupInput&quot;, &quot;summary&quot;: &quot;Raises a pop-up on screen that allows uses input&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;title&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;text to display&quot;}, {&quot;name&quot;: &quot;event&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;the event variable that is passed in from the Run function (key pressed)&quot;}, {&quot;name&quot;: &quot;input&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;value that can be adjusted by the +/- keys&quot;}, {&quot;name&quot;: &quot;min&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;min value that input can reach (by pressing the - key)&quot;}, {&quot;name&quot;: &quot;max&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;max value that input can reach&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;result of the input adjustment&quot;}, {&quot;name&quot;: &quot;\&quot;OK\&quot;&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;user pushed ENT key&quot;}, {&quot;name&quot;: &quot;\&quot;CANCEL\&quot;&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;user pushed EXIT key&quot;}], &quot;notes&quot;: [&quot;Use only from stand-alone and telemetry scripts.&quot;], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -58,9 +59,9 @@ Run function (key pressed)
 
 @retval number result of the input adjustment
 
-@retval "OK" (string) user pushed ENT key
+@retval "OK" user pushed ENT key
 
-@retval "CANCEL" (string) user pushed EXIT key
+@retval "CANCEL" user pushed EXIT key
 
 @notice Use only from stand-alone and telemetry scripts.
 
@@ -89,8 +90,8 @@ Raises a pop-up on screen that allows uses input
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `integer` | result of the input adjustment |
-| `"OK"` | `string` | user pushed ENT key |
-| `"CANCEL"` | `string` | user pushed EXIT key |
+| `"OK"` | `unknown` | user pushed ENT key |
+| `"CANCEL"` | `unknown` | user pushed EXIT key |
 
 #### Notes
 
@@ -120,9 +121,9 @@ Raises a pop-up on screen that allows uses input
 
 @retval (integer) result of the input adjustment
 
-@retval "OK" (string) user pushed ENT key
+@retval "OK" (TODO) user pushed ENT key
 
-@retval "CANCEL" (string) user pushed EXIT key
+@retval "CANCEL" (TODO) user pushed EXIT key
 
 @notice Use only from stand-alone and telemetry scripts.
 

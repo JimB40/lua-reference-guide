@@ -1,30 +1,31 @@
 # Sources
 
-Source lookup, naming, and current-value helpers exposed to scripts.
+Source identification and value lookup for telemetry and other data sources.
 
 <div class="api-grid">
-<a class="api-card" href="../runtime-get-field-info/">
+<a class="api-card" href="get-field-info/">
 <span class="api-card-title">getFieldInfo</span>
-<span class="api-card-summary">Return detailed information about a source.</span>
+<span class="api-card-summary">Return detailed information about field (source)</span>
 </a>
-<a class="api-card" href="../runtime-get-source-index/">
+<a class="api-card" href="get-source-index/">
 <span class="api-card-title">getSourceIndex</span>
-<span class="api-card-summary">Return the internal index for a source.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-get-source-name/">
+<a class="api-card" href="get-source-name/">
 <span class="api-card-title">getSourceName</span>
-<span class="api-card-summary">Return the display name for a source.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
-<a class="api-card" href="../runtime-get-source-value/">
+<a class="api-card" href="get-source-value/">
 <span class="api-card-title">getSourceValue</span>
-<span class="api-card-summary">Return the current value of a source.</span>
+<span class="api-card-summary">Returns the value of a source.</span>
+<span class="api-card-badge">unknown_return_type</span>
 </a>
-<a class="api-card" href="../runtime-get-value/">
+<a class="api-card" href="get-value/">
 <span class="api-card-title">getValue</span>
-<span class="api-card-summary">Return the current value of a source.</span>
+<span class="api-card-summary">Returns the value of a source.</span>
 </a>
-<a class="api-card" href="../runtime-sources/">
+<a class="api-card" href="sources/">
 <span class="api-card-title">sources</span>
-<span class="api-card-summary">Enumerate available sources.</span>
+<span class="api-card-summary">Needs summary review</span>
 </a>
 </div>

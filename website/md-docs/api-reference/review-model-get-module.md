@@ -1,6 +1,6 @@
 # Review: model.getModule
 
-[Back to dashboard](review.md) | [Open API page](model-get-module.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-module.md)
 
 ## Snapshot
 

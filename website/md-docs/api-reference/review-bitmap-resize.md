@@ -1,6 +1,6 @@
 # Review: Bitmap.resize
 
-[Back to dashboard](review.md) | [Open API page](bitmap-resize.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/bitmap-resize.md)
 
 ## Snapshot
 

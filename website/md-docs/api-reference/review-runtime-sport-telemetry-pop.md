@@ -1,6 +1,6 @@
 # Review: sportTelemetryPop
 
-[Back to dashboard](review.md) | [Open API page](runtime-sport-telemetry-pop.md)
+[Back to dashboard](review.md) | [Open API page](telemetry/sport-telemetry-pop.md)
 
 ## Snapshot
 

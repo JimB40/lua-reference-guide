@@ -1,6 +1,6 @@
 # Review: model.deleteMixes
 
-[Back to dashboard](review.md) | [Open API page](model-delete-mixes.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-delete-mixes.md)
 
 ## Snapshot
 

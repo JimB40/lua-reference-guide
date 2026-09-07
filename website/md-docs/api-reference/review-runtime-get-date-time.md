@@ -1,6 +1,6 @@
 # Review: getDateTime
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-date-time.md)
+[Back to dashboard](review.md) | [Open API page](time/get-date-time.md)
 
 ## Snapshot
 

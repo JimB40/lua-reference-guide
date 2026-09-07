@@ -1,13 +1,13 @@
 # Review: model.setCustomFunction
 
-[Back to dashboard](review.md) | [Open API page](model-set-custom-function.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-set-custom-function.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.setCustomFunction`
 - Doc id: `model.set-custom-function`
-- Source: `radio/src/lua/api_model.cpp:1519`
+- Source: `radio/src/lua/api_model.cpp:1431`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

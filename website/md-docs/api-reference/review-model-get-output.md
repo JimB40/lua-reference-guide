@@ -1,13 +1,13 @@
 # Review: model.getOutput
 
-[Back to dashboard](review.md) | [Open API page](model-get-output.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-output.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.getOutput`
 - Doc id: `model.get-output`
-- Source: `radio/src/lua/api_model.cpp:1575`
+- Source: `radio/src/lua/api_model.cpp:1487`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

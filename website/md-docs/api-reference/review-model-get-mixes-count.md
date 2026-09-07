@@ -1,6 +1,6 @@
 # Review: model.getMixesCount
 
-[Back to dashboard](review.md) | [Open API page](model-get-mixes-count.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-mixes-count.md)
 
 ## Snapshot
 

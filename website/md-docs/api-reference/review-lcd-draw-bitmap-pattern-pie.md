@@ -1,6 +1,6 @@
 # Review: lcd.drawBitmapPatternPie
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-bitmap-pattern-pie.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-bitmap-pattern-pie.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `lcd.drawBitmapPatternPie`
 - Doc id: `lcd.draw-bitmap-pattern-pie`
 - Source: `radio/src/lua/api_colorlcd.cpp:743`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown param types: startAngle, endAngle
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown params to decide: `startAngle, endAngle`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -25,13 +26,13 @@
 <tr><td><code>bitmap</code></td><td>param</td><td><code>pointer</code></td><td>point to a bitmap previously opened with Bitmap.open()</td><td><select data-field-kind="param" data-field-name="bitmap" data-current-type="pointer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="bitmap" data-custom-type="true" /></td></tr>
 <tr><td><code>x</code></td><td>param</td><td><code>integer</code></td><td>starting coordinates</td><td><select data-field-kind="param" data-field-name="x" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="x" data-custom-type="true" /></td></tr>
 <tr><td><code>y</code></td><td>param</td><td><code>integer</code></td><td>starting coordinates</td><td><select data-field-kind="param" data-field-name="y" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="y" data-custom-type="true" /></td></tr>
-<tr><td><code>startAngle</code></td><td>param</td><td><code>integer</code></td><td>Start angle</td><td><select data-field-kind="param" data-field-name="startAngle" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="startAngle" data-custom-type="true" /></td></tr>
-<tr><td><code>endAngle</code></td><td>param</td><td><code>integer</code></td><td>End angle</td><td><select data-field-kind="param" data-field-name="endAngle" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="endAngle" data-custom-type="true" /></td></tr>
+<tr><td><code>startAngle</code></td><td>param</td><td><code>unknown</code></td><td>Start angle</td><td><select data-field-kind="param" data-field-name="startAngle" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="startAngle" data-custom-type="true" /></td></tr>
+<tr><td><code>endAngle</code></td><td>param</td><td><code>unknown</code></td><td>End angle</td><td><select data-field-kind="param" data-field-name="endAngle" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="endAngle" data-custom-type="true" /></td></tr>
 <tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.drawBitmapPatternPie&quot;, &quot;symbol&quot;: &quot;lcd.drawBitmapPatternPie&quot;, &quot;summary&quot;: &quot;Displays a bitmap pattern pie at (x,y)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;bitmap&quot;, &quot;type&quot;: &quot;pointer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;point to a bitmap previously opened with Bitmap.open()&quot;}, {&quot;name&quot;: &quot;x&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;y&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;startAngle&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;Start angle&quot;}, {&quot;name&quot;: &quot;endAngle&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;End angle&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.8.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.drawBitmapPatternPie&quot;, &quot;symbol&quot;: &quot;lcd.drawBitmapPatternPie&quot;, &quot;summary&quot;: &quot;Displays a bitmap pattern pie at (x,y)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;bitmap&quot;, &quot;type&quot;: &quot;pointer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;point to a bitmap previously opened with Bitmap.open()&quot;}, {&quot;name&quot;: &quot;x&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;y&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinates&quot;}, {&quot;name&quot;: &quot;startAngle&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;Start angle&quot;}, {&quot;name&quot;: &quot;endAngle&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;End angle&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.8.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -47,9 +48,9 @@ Displays a bitmap pattern pie at (x,y)
 
 @param x,y (positive numbers) starting coordinates
 
-@param startAngle (number) Start angle
+@param startAngle Start angle
 
-@param endAngle (number) End angle
+@param endAngle End angle
 
 @param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
 
@@ -72,9 +73,9 @@ Displays a bitmap pattern pie at (x,y)
 | `bitmap` | yes | `pointer` | point to a bitmap previously opened with Bitmap.open() |
 | `x` | yes | `integer` | starting coordinates |
 | `y` | yes | `integer` | starting coordinates |
-| `startAngle` | yes | `integer` | Start angle |
-| `endAngle` | yes | `integer` | End angle |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `startAngle` | yes | `unknown` | Start angle |
+| `endAngle` | yes | `unknown` | End angle |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 
@@ -102,9 +103,9 @@ Displays a bitmap pattern pie at (x,y)
 
 @param y (integer) starting coordinates
 
-@param startAngle (integer) Start angle
+@param startAngle (TODO) Start angle
 
-@param endAngle (integer) End angle
+@param endAngle (TODO) End angle
 
 @param flags (integer) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
 

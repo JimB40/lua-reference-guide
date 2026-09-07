@@ -1,13 +1,13 @@
 # Review: model.setOutput
 
-[Back to dashboard](review.md) | [Open API page](model-set-output.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-set-output.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.setOutput`
 - Doc id: `model.set-output`
-- Source: `radio/src/lua/api_model.cpp:1620`
+- Source: `radio/src/lua/api_model.cpp:1532`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

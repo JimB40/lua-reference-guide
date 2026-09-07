@@ -1,6 +1,6 @@
 # Review: dir
 
-[Back to dashboard](review.md) | [Open API page](runtime-dir.md)
+[Back to dashboard](review.md) | [Open API page](filesystem/dir.md)
 
 ## Snapshot
 

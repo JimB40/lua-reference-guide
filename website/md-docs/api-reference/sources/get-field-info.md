@@ -1,0 +1,27 @@
+# getFieldInfo
+
+`getFieldInfo(source)`
+
+Return detailed information about field (source)
+
+## Parameters
+
+| Name | Req | Type | Description |
+| --- | --- | --- | --- |
+| `source` | yes | `string` | can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source. |
+
+## Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier  * `name` (string) field name  * `desc` (string) field description  * `unit` (number) unit identifier [Full list](../../api-overview/constants/units.md) |
+| `-` | `nil` | the requested field was not found |
+
+## Availability
+
+- Since: `2.0.8`
+- Radio support: `all`
+
+## Source
+
+`radio/src/lua/api_general.cpp`

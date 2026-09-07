@@ -1,6 +1,6 @@
 # Review: getTxGPS
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-tx-gps.md)
+[Back to dashboard](review.md) | [Open API page](radio-hardware/get-tx-gps.md)
 
 ## Snapshot
 

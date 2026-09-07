@@ -1,6 +1,6 @@
 # Review: chdir
 
-[Back to dashboard](review.md) | [Open API page](runtime-chdir.md)
+[Back to dashboard](review.md) | [Open API page](filesystem/chdir.md)
 
 ## Snapshot
 

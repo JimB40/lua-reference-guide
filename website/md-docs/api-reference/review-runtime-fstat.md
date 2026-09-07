@@ -1,6 +1,6 @@
 # Review: fstat
 
-[Back to dashboard](review.md) | [Open API page](runtime-fstat.md)
+[Back to dashboard](review.md) | [Open API page](filesystem/fstat.md)
 
 ## Snapshot
 

@@ -1,13 +1,13 @@
 # Review: loadScript
 
-[Back to dashboard](review.md) | [Open API page](runtime-load-script.md)
+[Back to dashboard](review.md) | [Open API page](lua-scripts/load-script.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `loadScript`
 - Doc id: `runtime.load-script`
-- Source: `radio/src/lua/api_general.cpp:2115`
+- Source: `radio/src/lua/api_general.cpp:2111`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,13 +1,13 @@
 # Review: model.resetSensor
 
-[Back to dashboard](review.md) | [Open API page](model-reset-sensor.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-reset-sensor.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.resetSensor`
 - Doc id: `model.reset-sensor`
-- Source: `radio/src/lua/api_model.cpp:1858`
+- Source: `radio/src/lua/api_model.cpp:1775`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,6 +1,6 @@
 # Review: Bitmap.getSize
 
-[Back to dashboard](review.md) | [Open API page](bitmap-get-size.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/bitmap-get-size.md)
 
 ## Snapshot
 

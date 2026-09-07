@@ -1,6 +1,6 @@
 # Review: playTone
 
-[Back to dashboard](review.md) | [Open API page](runtime-play-tone.md)
+[Back to dashboard](review.md) | [Open API page](audio-sound/play-tone.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `playTone`
 - Doc id: `runtime.play-tone`
 - Source: `radio/src/lua/api_general.cpp:1585`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown return types: none
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown returns to decide: `none`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -32,11 +33,11 @@
 The valid range is from -127 to 127.</td><td><select data-field-kind="param" data-field-name="freqIncr" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="freqIncr" data-custom-type="true" /></td></tr>
 <tr><td><code>volume</code></td><td>param</td><td><code>integer</code></td><td>: - (1..5) override radio settings Beep volume for the duration of file
  - omitting the parameter uses radio settings Beep volume</td><td><select data-field-kind="param" data-field-name="volume" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="volume" data-custom-type="true" /></td></tr>
-<tr><td><code>none</code></td><td>return</td><td><code>nil</code></td><td></td><td><select data-field-kind="return" data-field-name="none" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="none" data-custom-type="true" /></td></tr>
+<tr><td><code>none</code></td><td>return</td><td><code>unknown</code></td><td></td><td><select data-field-kind="return" data-field-name="none" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="none" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playTone&quot;, &quot;symbol&quot;: &quot;playTone&quot;, &quot;summary&quot;: &quot;Play a tone&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;frequency&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;tone frequency in Hz (from 150 to 15000)&quot;}, {&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the tone in milliseconds&quot;}, {&quot;name&quot;: &quot;pause&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the silence after the tone in milliseconds&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: * `0 or not present` play with normal priority.\n * `PLAY_BACKGROUND` play in background (built in vario function uses this context)\n * `PLAY_NOW` play immediately&quot;}, {&quot;name&quot;: &quot;freqIncr&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;positive number increases the tone pitch (frequency with time), negative number decreases it. The frequency changes every 10 milliseconds, the change is `freqIncr * 10Hz`.\nThe valid range is from -127 to 127.&quot;}, {&quot;name&quot;: &quot;volume&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: - (1..5) override radio settings Beep volume for the duration of file\n - omitting the parameter uses radio settings Beep volume&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.1.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playTone&quot;, &quot;symbol&quot;: &quot;playTone&quot;, &quot;summary&quot;: &quot;Play a tone&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;frequency&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;tone frequency in Hz (from 150 to 15000)&quot;}, {&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the tone in milliseconds&quot;}, {&quot;name&quot;: &quot;pause&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the silence after the tone in milliseconds&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: * `0 or not present` play with normal priority.\n * `PLAY_BACKGROUND` play in background (built in vario function uses this context)\n * `PLAY_NOW` play immediately&quot;}, {&quot;name&quot;: &quot;freqIncr&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;positive number increases the tone pitch (frequency with time), negative number decreases it. The frequency changes every 10 milliseconds, the change is `freqIncr * 10Hz`.\nThe valid range is from -127 to 127.&quot;}, {&quot;name&quot;: &quot;volume&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: - (1..5) override radio settings Beep volume for the duration of file\n - omitting the parameter uses radio settings Beep volume&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.1.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -67,7 +68,7 @@ The valid range is from -127 to 127.
  - (1..5) override radio settings Beep volume for the duration of file
  - omitting the parameter uses radio settings Beep volume
 
-@retval none (nil)
+@retval none 
 
 @status current Introduced in 2.1.0, changed in 2.10
 
@@ -101,7 +102,7 @@ Play a tone
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `none` | `nil` |  |
+| `none` | `unknown` |  |
 
 #### Notes
 
@@ -135,7 +136,7 @@ The valid range is from -127 to 127.
 @param volume (integer) : - (1..5) override radio settings Beep volume for the duration of file
  - omitting the parameter uses radio settings Beep volume
 
-@retval none (nil)
+@retval none (TODO)
 
 @status current Introduced in 2.1.0
 ~~~~

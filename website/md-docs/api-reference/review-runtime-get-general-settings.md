@@ -1,13 +1,13 @@
 # Review: getGeneralSettings
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-general-settings.md)
+[Back to dashboard](review.md) | [Open API page](system/get-general-settings.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getGeneralSettings`
 - Doc id: `runtime.get-general-settings`
-- Source: `radio/src/lua/api_general.cpp:1739`
+- Source: `radio/src/lua/api_general.cpp:1735`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

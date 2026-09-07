@@ -1,6 +1,6 @@
 # Review: Bitmap.open
 
-[Back to dashboard](review.md) | [Open API page](bitmap-open.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/bitmap-open.md)
 
 ## Snapshot
 

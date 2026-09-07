@@ -2,32 +2,26 @@
 
 Date, clock, and timer helpers.
 
-## Clock
-
 <div class="api-grid">
-<a class="api-card" href="../runtime-get-date-time/">
+<a class="api-card" href="get-date-time/">
 <span class="api-card-title">getDateTime</span>
 <span class="api-card-summary">Return current system date and time that is kept by the RTC unit</span>
 </a>
-<a class="api-card" href="../runtime-get-global-timer/">
+<a class="api-card" href="get-global-timer/">
 <span class="api-card-title">getGlobalTimer</span>
 <span class="api-card-summary">Returns radio timers</span>
 </a>
-<a class="api-card" href="../runtime-get-rtc-time/">
+<a class="api-card" href="get-rtc-time/">
 <span class="api-card-title">getRtcTime</span>
-<span class="api-card-summary">Return current RTC system date as unix timstamp (in seconds since 1. Jan 1970)</span>
+<span class="api-card-summary">Return current RTC system date as unix timstamp (in seconds since 1.</span>
 </a>
-<a class="api-card" href="../runtime-get-time/">
+<a class="api-card" href="get-time/">
 <span class="api-card-title">getTime</span>
 <span class="api-card-summary">Return the time since the radio was started in multiple of 10ms</span>
 </a>
-</div>
-
-## Timers
-
-<div class="api-grid">
-<a class="api-card" href="../runtime-reset-global-timer/">
+<a class="api-card" href="reset-global-timer/">
 <span class="api-card-title">resetGlobalTimer</span>
 <span class="api-card-summary">Resets the radio global timer to 0.</span>
+<span class="api-card-badge">unknown_param_type</span>
 </a>
 </div>

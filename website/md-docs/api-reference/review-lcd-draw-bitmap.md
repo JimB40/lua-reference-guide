@@ -1,6 +1,6 @@
 # Review: lcd.drawBitmap
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-bitmap.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-bitmap.md)
 
 ## Snapshot
 

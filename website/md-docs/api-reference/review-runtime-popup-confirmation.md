@@ -1,19 +1,20 @@
 # Review: popupConfirmation
 
-[Back to dashboard](review.md) | [Open API page](runtime-popup-confirmation.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/popup-confirmation.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `popupConfirmation`
 - Doc id: `runtime.popup-confirmation`
-- Source: `radio/src/lua/api_general.cpp:1903`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Source: `radio/src/lua/api_general.cpp:1899`
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown return types: "CANCEL"
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown returns to decide: `"CANCEL"`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -25,11 +26,11 @@
 <tr><td><code>title</code></td><td>param</td><td><code>string</code></td><td>title to display</td><td><select data-field-kind="param" data-field-name="title" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="title" data-custom-type="true" /></td></tr>
 <tr><td><code>message</code></td><td>param</td><td><code>string</code></td><td>text to display</td><td><select data-field-kind="param" data-field-name="message" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="message" data-custom-type="true" /></td></tr>
 <tr><td><code>event</code></td><td>param</td><td><code>integer</code></td><td>the event variable that is passed in from the Run function (key pressed)</td><td><select data-field-kind="param" data-field-name="event" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="event" data-custom-type="true" /></td></tr>
-<tr><td><code>&quot;CANCEL&quot;</code></td><td>return</td><td><code>string</code></td><td>user pushed EXIT key</td><td><select data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-custom-type="true" /></td></tr>
+<tr><td><code>&quot;CANCEL&quot;</code></td><td>return</td><td><code>unknown</code></td><td>user pushed EXIT key</td><td><select data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="&quot;CANCEL&quot;" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;popupConfirmation&quot;, &quot;symbol&quot;: &quot;popupConfirmation&quot;, &quot;summary&quot;: &quot;Raises a pop-up on screen that asks for confirmation&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;title&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;title to display&quot;}, {&quot;name&quot;: &quot;message&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;text to display&quot;}, {&quot;name&quot;: &quot;event&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;the event variable that is passed in from the Run function (key pressed)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;\&quot;CANCEL\&quot;&quot;, &quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;user pushed EXIT key&quot;}], &quot;notes&quot;: [&quot;Use only from stand-alone and telemetry scripts.&quot;], &quot;since&quot;: &quot;2.2.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;popupConfirmation&quot;, &quot;symbol&quot;: &quot;popupConfirmation&quot;, &quot;summary&quot;: &quot;Raises a pop-up on screen that asks for confirmation&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;title&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;title to display&quot;}, {&quot;name&quot;: &quot;message&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;text to display&quot;}, {&quot;name&quot;: &quot;event&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;the event variable that is passed in from the Run function (key pressed)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;\&quot;CANCEL\&quot;&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;user pushed EXIT key&quot;}], &quot;notes&quot;: [&quot;Use only from stand-alone and telemetry scripts.&quot;], &quot;since&quot;: &quot;2.2.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -49,7 +50,7 @@ Raises a pop-up on screen that asks for confirmation
 @param event (number) the event variable that is passed in from the
 Run function (key pressed)
 
-@retval "CANCEL" (string) user pushed EXIT key
+@retval "CANCEL" user pushed EXIT key
 
 @notice Use only from stand-alone and telemetry scripts.
 
@@ -75,7 +76,7 @@ Raises a pop-up on screen that asks for confirmation
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `"CANCEL"` | `string` | user pushed EXIT key |
+| `"CANCEL"` | `unknown` | user pushed EXIT key |
 
 #### Notes
 
@@ -99,7 +100,7 @@ Raises a pop-up on screen that asks for confirmation
 
 @param event (integer) the event variable that is passed in from the Run function (key pressed)
 
-@retval "CANCEL" (string) user pushed EXIT key
+@retval "CANCEL" (TODO) user pushed EXIT key
 
 @notice Use only from stand-alone and telemetry scripts.
 

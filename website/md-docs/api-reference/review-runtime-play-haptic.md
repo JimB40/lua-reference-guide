@@ -1,13 +1,13 @@
 # Review: playHaptic
 
-[Back to dashboard](review.md) | [Open API page](runtime-play-haptic.md)
+[Back to dashboard](review.md) | [Open API page](audio-sound/play-haptic.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `playHaptic`
 - Doc id: `runtime.play-haptic`
-- Source: `radio/src/lua/api_general.cpp:1660`
+- Source: `radio/src/lua/api_general.cpp:1656`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

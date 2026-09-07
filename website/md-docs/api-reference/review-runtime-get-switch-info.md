@@ -1,13 +1,13 @@
 # Review: getSwitchInfo
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-switch-info.md)
+[Back to dashboard](review.md) | [Open API page](switches/get-switch-info.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getSwitchInfo`
 - Doc id: `runtime.get-switch-info`
-- Source: `radio/src/lua/api_general.cpp:2591`
+- Source: `radio/src/lua/api_general.cpp:2587`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

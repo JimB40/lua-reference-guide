@@ -1,6 +1,6 @@
 # Review: getRtcTime
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-rtc-time.md)
+[Back to dashboard](review.md) | [Open API page](time/get-rtc-time.md)
 
 ## Snapshot
 

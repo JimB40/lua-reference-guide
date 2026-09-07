@@ -1,6 +1,6 @@
 # Review: getSourceValue
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-source-value.md)
+[Back to dashboard](review.md) | [Open API page](sources/get-source-value.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `getSourceValue`
 - Doc id: `runtime.get-source-value`
 - Source: `radio/src/lua/api_general.cpp:726`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown return types: isCurrent, isFresh
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown returns to decide: `isCurrent, isFresh`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -24,12 +25,12 @@
 <tbody>
 <tr><td><code>source</code></td><td>param</td><td><code>string</code></td><td>can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.</td><td><select data-field-kind="param" data-field-name="source" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="source" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>integer</code></td><td>current source value (number), or last known telemetry item value.</td><td><select data-field-kind="return" data-field-name="-" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>isCurrent</code></td><td>return</td><td><code>boolean</code></td><td>is true for telemetry sources that are within the &quot;Sensor Lost&quot; duration and telemetry is streaming . Always true for non-telemetry items.</td><td><select data-field-kind="return" data-field-name="isCurrent" data-current-type="boolean"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="isCurrent" data-custom-type="true" /></td></tr>
-<tr><td><code>isFresh</code></td><td>return</td><td><code>boolean</code></td><td>is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.</td><td><select data-field-kind="return" data-field-name="isFresh" data-current-type="boolean"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="isFresh" data-custom-type="true" /></td></tr>
+<tr><td><code>isCurrent</code></td><td>return</td><td><code>unknown</code></td><td>is true for telemetry sources that are within the &quot;Sensor Lost&quot; duration and telemetry is streaming . Always true for non-telemetry items.</td><td><select data-field-kind="return" data-field-name="isCurrent" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="isCurrent" data-custom-type="true" /></td></tr>
+<tr><td><code>isFresh</code></td><td>return</td><td><code>unknown</code></td><td>is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.</td><td><select data-field-kind="return" data-field-name="isFresh" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="isFresh" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getSourceValue&quot;, &quot;symbol&quot;: &quot;getSourceValue&quot;, &quot;summary&quot;: &quot;Returns the value of a source. Superseeds getValue.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;source&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;current source value (number), or last known telemetry item value.&quot;}, {&quot;name&quot;: &quot;isCurrent&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;is true for telemetry sources that are within the \&quot;Sensor Lost\&quot; duration and telemetry is streaming . Always true for non-telemetry items.&quot;}, {&quot;name&quot;: &quot;isFresh&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.&quot;}], &quot;notes&quot;: [&quot;Getting a value by its numerical identifier is much faster than by its name.\nWhile `Cels` sensor returns current values of all cells in a table, a `Cels+` or\n`Cels-` will return a single value - the maximum or minimum Cels value.&quot;], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getSourceValue&quot;, &quot;symbol&quot;: &quot;getSourceValue&quot;, &quot;summary&quot;: &quot;Returns the value of a source. Superseeds getValue.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;source&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;current source value (number), or last known telemetry item value.&quot;}, {&quot;name&quot;: &quot;isCurrent&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;is true for telemetry sources that are within the \&quot;Sensor Lost\&quot; duration and telemetry is streaming . Always true for non-telemetry items.&quot;}, {&quot;name&quot;: &quot;isFresh&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.&quot;}], &quot;notes&quot;: [&quot;Getting a value by its numerical identifier is much faster than by its name.\nWhile `Cels` sensor returns current values of all cells in a table, a `Cels+` or\n`Cels-` will return a single value - the maximum or minimum Cels value.&quot;], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -76,9 +77,9 @@ value is a table for battery cells(except where no cells were detected in which 
   * key (number) cell number (1 to number of cells)
   * value (number) current cell voltage
 
-@retval isCurrent (boolean) is true for telemetry sources that are within the "Sensor Lost" duration and telemetry is streaming . Always true for non-telemetry items.
+@retval isCurrent is true for telemetry sources that are within the "Sensor Lost" duration and telemetry is streaming . Always true for non-telemetry items.
 
-@retval isFresh (boolean) is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.
+@retval isFresh is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.
 
 @status current Introduced in 2.0.0, changed in 2.1.0, `Cels+` and `Cels-` added in 2.1.9
 
@@ -105,8 +106,8 @@ Returns the value of a source. Superseeds getValue.
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `integer` | current source value (number), or last known telemetry item value. |
-| `isCurrent` | `boolean` | is true for telemetry sources that are within the "Sensor Lost" duration and telemetry is streaming . Always true for non-telemetry items. |
-| `isFresh` | `boolean` | is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items. |
+| `isCurrent` | `unknown` | is true for telemetry sources that are within the "Sensor Lost" duration and telemetry is streaming . Always true for non-telemetry items. |
+| `isFresh` | `unknown` | is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items. |
 
 #### Notes
 
@@ -130,9 +131,9 @@ Returns the value of a source. Superseeds getValue.
 
 @retval (integer) current source value (number), or last known telemetry item value.
 
-@retval isCurrent (boolean) is true for telemetry sources that are within the "Sensor Lost" duration and telemetry is streaming . Always true for non-telemetry items.
+@retval isCurrent (TODO) is true for telemetry sources that are within the "Sensor Lost" duration and telemetry is streaming . Always true for non-telemetry items.
 
-@retval isFresh (boolean) is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.
+@retval isFresh (TODO) is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.
 
 @notice Getting a value by its numerical identifier is much faster than by its name.
 While `Cels` sensor returns current values of all cells in a table, a `Cels+` or

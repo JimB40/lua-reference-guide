@@ -1,13 +1,13 @@
 # Review: getSwitchName
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-switch-name.md)
+[Back to dashboard](review.md) | [Open API page](switches/get-switch-name.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getSwitchName`
 - Doc id: `runtime.get-switch-name`
-- Source: `radio/src/lua/api_general.cpp:2652`
+- Source: `radio/src/lua/api_general.cpp:2648`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

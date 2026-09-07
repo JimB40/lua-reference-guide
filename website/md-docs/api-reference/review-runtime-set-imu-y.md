@@ -1,13 +1,13 @@
 # Review: setIMU_Y
 
-[Back to dashboard](review.md) | [Open API page](runtime-set-imu-y.md)
+[Back to dashboard](review.md) | [Open API page](radio-hardware/set-imu-y.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `setIMU_Y`
 - Doc id: `runtime.set-imu-y`
-- Source: `radio/src/lua/api_general.cpp:3070`
+- Source: `radio/src/lua/api_general.cpp:3068`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

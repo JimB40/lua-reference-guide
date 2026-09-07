@@ -1,6 +1,6 @@
 # Review: lcd.drawGauge
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-gauge.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-gauge.md)
 
 ## Snapshot
 
@@ -76,7 +76,7 @@ Draw a simple gauge that is filled based upon fill value
 | `h` | yes | `integer` | height in pixels |
 | `fill` | yes | `integer` | amount of fill to apply |
 | `maxfill` | yes | `integer` | total value of fill |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

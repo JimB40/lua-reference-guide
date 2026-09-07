@@ -1,6 +1,6 @@
 # Review: model.insertMix
 
-[Back to dashboard](review.md) | [Open API page](model-insert-mix.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-insert-mix.md)
 
 ## Snapshot
 

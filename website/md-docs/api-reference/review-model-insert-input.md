@@ -1,6 +1,6 @@
 # Review: model.insertInput
 
-[Back to dashboard](review.md) | [Open API page](model-insert-input.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-insert-input.md)
 
 ## Snapshot
 

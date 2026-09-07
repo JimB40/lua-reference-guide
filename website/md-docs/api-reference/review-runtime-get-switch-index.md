@@ -1,13 +1,13 @@
 # Review: getSwitchIndex
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-switch-index.md)
+[Back to dashboard](review.md) | [Open API page](switches/get-switch-index.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getSwitchIndex`
 - Doc id: `runtime.get-switch-index`
-- Source: `radio/src/lua/api_general.cpp:2627`
+- Source: `radio/src/lua/api_general.cpp:2623`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

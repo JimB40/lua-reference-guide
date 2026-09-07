@@ -1,13 +1,13 @@
 # Review: defaultChannel
 
-[Back to dashboard](review.md) | [Open API page](runtime-default-channel.md)
+[Back to dashboard](review.md) | [Open API page](key-inputs/default-channel.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `defaultChannel`
 - Doc id: `runtime.default-channel`
-- Source: `radio/src/lua/api_general.cpp:2051`
+- Source: `radio/src/lua/api_general.cpp:2047`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

@@ -1,6 +1,6 @@
 # Review: lcd.drawNumber
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-number.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-number.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `lcd.drawNumber`
 - Doc id: `lcd.draw-number`
 - Source: `radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp:365`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown param types: inversColor
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown params to decide: `inversColor`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -26,11 +27,11 @@
 <tr><td><code>y</code></td><td>param</td><td><code>integer</code></td><td>starting coordinate</td><td><select data-field-kind="param" data-field-name="y" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="y" data-custom-type="true" /></td></tr>
 <tr><td><code>value</code></td><td>param</td><td><code>integer</code></td><td>value to display</td><td><select data-field-kind="param" data-field-name="value" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="value" data-custom-type="true" /></td></tr>
 <tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
-<tr><td><code>inversColor</code></td><td>param</td><td><code>string</code></td><td>overrides the inverse text color for INVERS</td><td><select data-field-kind="param" data-field-name="inversColor" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="inversColor" data-custom-type="true" /></td></tr>
+<tr><td><code>inversColor</code></td><td>param</td><td><code>unknown</code></td><td>overrides the inverse text color for INVERS</td><td><select data-field-kind="param" data-field-name="inversColor" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="inversColor" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.drawNumber&quot;, &quot;symbol&quot;: &quot;lcd.drawNumber&quot;, &quot;summary&quot;: &quot;Display a number at (x,y)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;x&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinate&quot;}, {&quot;name&quot;: &quot;y&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinate&quot;}, {&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;value to display&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)&quot;}, {&quot;name&quot;: &quot;inversColor&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;overrides the inverse text color for INVERS&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.drawNumber&quot;, &quot;symbol&quot;: &quot;lcd.drawNumber&quot;, &quot;summary&quot;: &quot;Display a number at (x,y)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;x&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinate&quot;}, {&quot;name&quot;: &quot;y&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;starting coordinate&quot;}, {&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;value to display&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)&quot;}, {&quot;name&quot;: &quot;inversColor&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;overrides the inverse text color for INVERS&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -70,8 +71,8 @@ Display a number at (x,y)
 | `x` | yes | `integer` | starting coordinate |
 | `y` | yes | `integer` | starting coordinate |
 | `value` | yes | `integer` | value to display |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
-| `inversColor` | no | `string` | overrides the inverse text color for INVERS |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
+| `inversColor` | no | `unknown` | overrides the inverse text color for INVERS |
 
 #### Returns
 
@@ -101,7 +102,7 @@ Display a number at (x,y)
 
 @param flags (integer) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)
 
-@param inversColor (string) overrides the inverse text color for INVERS
+@param inversColor (TODO) overrides the inverse text color for INVERS
 
 @status current Introduced in 2.0.0
 ~~~~

@@ -1,13 +1,13 @@
 # Review: setStickySwitch
 
-[Back to dashboard](review.md) | [Open API page](runtime-set-sticky-switch.md)
+[Back to dashboard](review.md) | [Open API page](switches/set-sticky-switch.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `setStickySwitch`
 - Doc id: `runtime.set-sticky-switch`
-- Source: `radio/src/lua/api_general.cpp:2534`
+- Source: `radio/src/lua/api_general.cpp:2530`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

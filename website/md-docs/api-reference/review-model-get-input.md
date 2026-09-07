@@ -1,6 +1,6 @@
 # Review: model.getInput
 
-[Back to dashboard](review.md) | [Open API page](model-get-input.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-input.md)
 
 ## Snapshot
 

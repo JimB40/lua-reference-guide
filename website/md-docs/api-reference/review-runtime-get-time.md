@@ -1,6 +1,6 @@
 # Review: getTime
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-time.md)
+[Back to dashboard](review.md) | [Open API page](time/get-time.md)
 
 ## Snapshot
 

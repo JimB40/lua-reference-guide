@@ -1,13 +1,13 @@
 # Review: getUsage
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-usage.md)
+[Back to dashboard](review.md) | [Open API page](system/get-usage.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getUsage`
 - Doc id: `runtime.get-usage`
-- Source: `radio/src/lua/api_general.cpp:2194`
+- Source: `radio/src/lua/api_general.cpp:2190`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

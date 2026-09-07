@@ -1,6 +1,6 @@
 # Review: lcd.drawScreenTitle
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-screen-title.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-screen-title.md)
 
 ## Snapshot
 

@@ -1,6 +1,6 @@
 # Review: lcd.RGB
 
-[Back to dashboard](review.md) | [Open API page](lcd-rgb.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-rgb.md)
 
 ## Snapshot
 

@@ -1,6 +1,6 @@
 # Review: model.getInputsCount
 
-[Back to dashboard](review.md) | [Open API page](model-get-inputs-count.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-inputs-count.md)
 
 ## Snapshot
 

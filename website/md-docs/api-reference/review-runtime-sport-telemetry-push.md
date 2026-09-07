@@ -1,6 +1,6 @@
 # Review: sportTelemetryPush
 
-[Back to dashboard](review.md) | [Open API page](runtime-sport-telemetry-push.md)
+[Back to dashboard](review.md) | [Open API page](rf-module/sport-telemetry-push.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `sportTelemetryPush`
 - Doc id: `runtime.sport-telemetry-push`
 - Source: `radio/src/lua/api_general.cpp:960`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown param types: sensorId, frameId, dataId, value
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown params to decide: `sensorId, frameId, dataId, value`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -22,16 +23,16 @@
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>sensorId</code></td><td>param</td><td><code>integer</code></td><td>physical sensor ID</td><td><select data-field-kind="param" data-field-name="sensorId" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="sensorId" data-custom-type="true" /></td></tr>
-<tr><td><code>frameId</code></td><td>param</td><td><code>integer</code></td><td>frame ID</td><td><select data-field-kind="param" data-field-name="frameId" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="frameId" data-custom-type="true" /></td></tr>
-<tr><td><code>dataId</code></td><td>param</td><td><code>integer</code></td><td>data ID</td><td><select data-field-kind="param" data-field-name="dataId" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="dataId" data-custom-type="true" /></td></tr>
-<tr><td><code>value</code></td><td>param</td><td><code>integer</code></td><td>value</td><td><select data-field-kind="param" data-field-name="value" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="value" data-custom-type="true" /></td></tr>
+<tr><td><code>sensorId</code></td><td>param</td><td><code>unknown</code></td><td>physical sensor ID</td><td><select data-field-kind="param" data-field-name="sensorId" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="sensorId" data-custom-type="true" /></td></tr>
+<tr><td><code>frameId</code></td><td>param</td><td><code>unknown</code></td><td>frame ID</td><td><select data-field-kind="param" data-field-name="frameId" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="frameId" data-custom-type="true" /></td></tr>
+<tr><td><code>dataId</code></td><td>param</td><td><code>unknown</code></td><td>data ID</td><td><select data-field-kind="param" data-field-name="dataId" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="dataId" data-custom-type="true" /></td></tr>
+<tr><td><code>value</code></td><td>param</td><td><code>unknown</code></td><td>value</td><td><select data-field-kind="param" data-field-name="value" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="value" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>boolean</code></td><td>data queued in output buffer or not.</td><td><select data-field-kind="return" data-field-name="-" data-current-type="boolean"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>incorrect telemetry protocol.</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;sportTelemetryPush&quot;, &quot;symbol&quot;: &quot;sportTelemetryPush&quot;, &quot;summary&quot;: &quot;This functions allows for sending SPORT telemetry data toward the receiver,\nand more generally, to anything connected SPORT bus on the receiver or transmitter.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;sensorId&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;physical sensor ID&quot;}, {&quot;name&quot;: &quot;frameId&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;frame ID&quot;}, {&quot;name&quot;: &quot;dataId&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;data ID&quot;}, {&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;value&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;data queued in output buffer or not.&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;incorrect telemetry protocol.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;sportTelemetryPush&quot;, &quot;symbol&quot;: &quot;sportTelemetryPush&quot;, &quot;summary&quot;: &quot;This functions allows for sending SPORT telemetry data toward the receiver,\nand more generally, to anything connected SPORT bus on the receiver or transmitter.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;sensorId&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;physical sensor ID&quot;}, {&quot;name&quot;: &quot;frameId&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;frame ID&quot;}, {&quot;name&quot;: &quot;dataId&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;data ID&quot;}, {&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;value&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;description&quot;: &quot;data queued in output buffer or not.&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;incorrect telemetry protocol.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -46,13 +47,13 @@ and more generally, to anything connected SPORT bus on the receiver or transmitt
 
 When called without parameters, it will only return the status of the output buffer without sending anything.
 
-@param sensorId  (integer) physical sensor ID
+@param sensorId  physical sensor ID
 
-@param frameId   (integer) frame ID
+@param frameId   frame ID
 
-@param dataId    (integer) data ID
+@param dataId    data ID
 
-@param value     (integer) value
+@param value     value
 
 @retval boolean  data queued in output buffer or not.
 
@@ -73,10 +74,10 @@ and more generally, to anything connected SPORT bus on the receiver or transmitt
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `sensorId` | yes | `integer` | physical sensor ID |
-| `frameId` | yes | `integer` | frame ID |
-| `dataId` | yes | `integer` | data ID |
-| `value` | yes | `integer` | value |
+| `sensorId` | yes | `unknown` | physical sensor ID |
+| `frameId` | yes | `unknown` | frame ID |
+| `dataId` | yes | `unknown` | data ID |
+| `value` | yes | `unknown` | value |
 
 #### Returns
 
@@ -102,13 +103,13 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 This functions allows for sending SPORT telemetry data toward the receiver,
 and more generally, to anything connected SPORT bus on the receiver or transmitter.
 
-@param sensorId (integer) physical sensor ID
+@param sensorId (TODO) physical sensor ID
 
-@param frameId (integer) frame ID
+@param frameId (TODO) frame ID
 
-@param dataId (integer) data ID
+@param dataId (TODO) data ID
 
-@param value (integer) value
+@param value (TODO) value
 
 @retval (boolean) data queued in output buffer or not.
 

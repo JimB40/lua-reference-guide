@@ -2,43 +2,29 @@
 
 File and directory access for scripts.
 
-## General
-
 <div class="api-grid">
-<a class="api-card" href="../runtime-fstat/">
-<span class="api-card-title">fstat</span>
-<span class="api-card-summary">Checks the existence of file or directory.
- If not exist, return nil.
- If exist, return the object information.</span>
-</a>
-</div>
-
-## Directories
-
-<div class="api-grid">
-<a class="api-card" href="../runtime-chdir/">
+<a class="api-card" href="chdir/">
 <span class="api-card-title">chdir</span>
 <span class="api-card-summary">Change the working directory</span>
 </a>
-<a class="api-card" href="../runtime-dir/">
+<a class="api-card" href="del/">
+<span class="api-card-title">del</span>
+<span class="api-card-summary">Returns FRESULT (e.g.</span>
+</a>
+<a class="api-card" href="dir/">
 <span class="api-card-title">dir</span>
 <span class="api-card-summary">Return an iterator listing all the files and directories name in a directory</span>
 </a>
-<a class="api-card" href="../runtime-mkdir/">
+<a class="api-card" href="fstat/">
+<span class="api-card-title">fstat</span>
+<span class="api-card-summary">Checks the existence of file or directory.</span>
+</a>
+<a class="api-card" href="mkdir/">
 <span class="api-card-title">mkdir</span>
 <span class="api-card-summary">Create a directory</span>
 </a>
-</div>
-
-## File Management
-
-<div class="api-grid">
-<a class="api-card" href="../runtime-del/">
-<span class="api-card-title">del</span>
-<span class="api-card-summary">Returns FRESULT (e.g. 0=OK, 4=File not found, 5=Path not found, 6=Path invalid)</span>
-</a>
-<a class="api-card" href="../runtime-rename/">
+<a class="api-card" href="rename/">
 <span class="api-card-title">rename</span>
-<span class="api-card-summary">Rename a file or directory.</span>
+<span class="api-card-summary">Rename a file or directory If the file or directory is being moved to a new parent directory, then the new parent...</span>
 </a>
 </div>

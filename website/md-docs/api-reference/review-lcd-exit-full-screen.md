@@ -1,6 +1,6 @@
 # Review: lcd.exitFullScreen
 
-[Back to dashboard](review.md) | [Open API page](lcd-exit-full-screen.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-exit-full-screen.md)
 
 ## Snapshot
 

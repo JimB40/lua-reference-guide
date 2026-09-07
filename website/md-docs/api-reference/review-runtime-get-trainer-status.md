@@ -1,13 +1,13 @@
 # Review: getTrainerStatus
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-trainer-status.md)
+[Back to dashboard](review.md) | [Open API page](telemetry/get-trainer-status.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `getTrainerStatus`
 - Doc id: `runtime.get-trainer-status`
-- Source: `radio/src/lua/api_general.cpp:2876`
+- Source: `radio/src/lua/api_general.cpp:2872`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

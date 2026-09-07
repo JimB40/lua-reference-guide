@@ -1,6 +1,6 @@
 # Review: model.getTimer
 
-[Back to dashboard](review.md) | [Open API page](model-get-timer.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-get-timer.md)
 
 ## Snapshot
 

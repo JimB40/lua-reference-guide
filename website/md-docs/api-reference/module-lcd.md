@@ -2,162 +2,168 @@
 
 `39` APIs in this module.
 
-[Back to API Reference](index.md) | [Open API review dashboard](review.md)
+[Back to API overview](index.md) | [Open review dashboard](review.md)
 
 <div class="api-grid">
-<a class="api-card" href="../lcd-rgb/">
+<a class="api-card" href="../display-lcd/lcd-rgb/">
 <span class="api-card-title">lcd.RGB</span>
 <span class="api-card-summary">Returns a drawing flag with RGB color code</span>
 </a>
-<a class="api-card" href="../lcd-clear/">
+<a class="api-card" href="../display-lcd/lcd-clear/">
 <span class="api-card-title">lcd.clear</span>
 <span class="api-card-summary">Clear the LCD screen</span>
+<span class="api-card-badge">unknown_param_type</span>
 </a>
-<a class="api-card" href="../lcd-draw-annulus/">
+<a class="api-card" href="../display-lcd/lcd-draw-annulus/">
 <span class="api-card-title">lcd.drawAnnulus</span>
 <span class="api-card-summary">Draw an arc</span>
 </a>
-<a class="api-card" href="../lcd-draw-arc/">
+<a class="api-card" href="../display-lcd/lcd-draw-arc/">
 <span class="api-card-title">lcd.drawArc</span>
 <span class="api-card-summary">Draw an arc</span>
 </a>
-<a class="api-card" href="../lcd-draw-bitmap/">
+<a class="api-card" href="../display-lcd/lcd-draw-bitmap/">
 <span class="api-card-title">lcd.drawBitmap</span>
 <span class="api-card-summary">Displays a bitmap at (x,y)</span>
 </a>
-<a class="api-card" href="../lcd-draw-bitmap-pattern/">
+<a class="api-card" href="../display-lcd/lcd-draw-bitmap-pattern/">
 <span class="api-card-title">lcd.drawBitmapPattern</span>
 <span class="api-card-summary">Displays a bitmap pattern at (x,y)</span>
 </a>
-<a class="api-card" href="../lcd-draw-bitmap-pattern-pie/">
+<a class="api-card" href="../display-lcd/lcd-draw-bitmap-pattern-pie/">
 <span class="api-card-title">lcd.drawBitmapPatternPie</span>
 <span class="api-card-summary">Displays a bitmap pattern pie at (x,y)</span>
+<span class="api-card-badge">unknown_param_type</span>
 </a>
-<a class="api-card" href="../lcd-draw-channel/">
+<a class="api-card" href="../display-lcd/lcd-draw-channel/">
 <span class="api-card-title">lcd.drawChannel</span>
 <span class="api-card-summary">Display a telemetry value at (x,y)</span>
 </a>
-<a class="api-card" href="../lcd-draw-circle/">
+<a class="api-card" href="../display-lcd/lcd-draw-circle/">
 <span class="api-card-title">lcd.drawCircle</span>
 <span class="api-card-summary">Draw a circle at (x, y) of specified radius</span>
 </a>
-<a class="api-card" href="../lcd-draw-combobox/">
+<a class="api-card" href="../display-lcd/lcd-draw-combobox/">
 <span class="api-card-title">lcd.drawCombobox</span>
 <span class="api-card-summary">Draw a combo box</span>
 </a>
-<a class="api-card" href="../lcd-draw-filled-circle/">
+<a class="api-card" href="../display-lcd/lcd-draw-filled-circle/">
 <span class="api-card-title">lcd.drawFilledCircle</span>
 <span class="api-card-summary">Draw a filled circle at (x, y) of specified radius</span>
 </a>
-<a class="api-card" href="../lcd-draw-filled-rectangle/">
+<a class="api-card" href="../display-lcd/lcd-draw-filled-rectangle/">
 <span class="api-card-title">lcd.drawFilledRectangle</span>
 <span class="api-card-summary">Draw a solid rectangle from top left corner (x,y) of specified width and height</span>
 </a>
-<a class="api-card" href="../lcd-draw-filled-triangle/">
+<a class="api-card" href="../display-lcd/lcd-draw-filled-triangle/">
 <span class="api-card-title">lcd.drawFilledTriangle</span>
 <span class="api-card-summary">Draw a filled triangle</span>
 </a>
-<a class="api-card" href="../lcd-draw-gauge/">
+<a class="api-card" href="../display-lcd/lcd-draw-gauge/">
 <span class="api-card-title">lcd.drawGauge</span>
 <span class="api-card-summary">Draw a simple gauge that is filled based upon fill value</span>
 </a>
-<a class="api-card" href="../lcd-draw-hud-rectangle/">
+<a class="api-card" href="../display-lcd/lcd-draw-hud-rectangle/">
 <span class="api-card-title">lcd.drawHudRectangle</span>
 <span class="api-card-summary">Draw a rectangle in perspective</span>
 </a>
-<a class="api-card" href="../lcd-draw-line/">
+<a class="api-card" href="../display-lcd/lcd-draw-line/">
 <span class="api-card-title">lcd.drawLine</span>
 <span class="api-card-summary">Draw a straight line on LCD</span>
+<span class="api-card-badge">unknown_param_type</span>
 </a>
-<a class="api-card" href="../lcd-draw-line-with-clipping/">
+<a class="api-card" href="../display-lcd/lcd-draw-line-with-clipping/">
 <span class="api-card-title">lcd.drawLineWithClipping</span>
 <span class="api-card-summary">Draw a line only inside a rectangle</span>
 </a>
-<a class="api-card" href="../lcd-draw-number/">
+<a class="api-card" href="../display-lcd/lcd-draw-number/">
 <span class="api-card-title">lcd.drawNumber</span>
 <span class="api-card-summary">Display a number at (x,y)</span>
+<span class="api-card-badge">unknown_param_type</span>
 </a>
-<a class="api-card" href="../lcd-draw-pie/">
+<a class="api-card" href="../display-lcd/lcd-draw-pie/">
 <span class="api-card-title">lcd.drawPie</span>
 <span class="api-card-summary">Draw a pie slice</span>
 </a>
-<a class="api-card" href="../lcd-draw-pixmap/">
+<a class="api-card" href="../display-lcd/lcd-draw-pixmap/">
 <span class="api-card-title">lcd.drawPixmap</span>
 <span class="api-card-summary">Draw a bitmap at (x,y)</span>
 </a>
-<a class="api-card" href="../lcd-draw-point/">
+<a class="api-card" href="../display-lcd/lcd-draw-point/">
 <span class="api-card-title">lcd.drawPoint</span>
 <span class="api-card-summary">Draw a single pixel at (x,y) position</span>
 </a>
-<a class="api-card" href="../lcd-draw-rectangle/">
+<a class="api-card" href="../display-lcd/lcd-draw-rectangle/">
 <span class="api-card-title">lcd.drawRectangle</span>
 <span class="api-card-summary">Draw a rectangle from top left corner (x,y) of specified width and height</span>
 </a>
-<a class="api-card" href="../lcd-draw-screen-title/">
+<a class="api-card" href="../display-lcd/lcd-draw-screen-title/">
 <span class="api-card-title">lcd.drawScreenTitle</span>
 <span class="api-card-summary">Draw a title bar</span>
 </a>
-<a class="api-card" href="../lcd-draw-source/">
+<a class="api-card" href="../display-lcd/lcd-draw-source/">
 <span class="api-card-title">lcd.drawSource</span>
 <span class="api-card-summary">Displays the name of the corresponding input as defined by the source at (x,y)</span>
 </a>
-<a class="api-card" href="../lcd-draw-switch/">
+<a class="api-card" href="../display-lcd/lcd-draw-switch/">
 <span class="api-card-title">lcd.drawSwitch</span>
 <span class="api-card-summary">Draw a text representation of switch at (x,y)</span>
 </a>
-<a class="api-card" href="../lcd-draw-text/">
+<a class="api-card" href="../display-lcd/lcd-draw-text/">
 <span class="api-card-title">lcd.drawText</span>
 <span class="api-card-summary">Draw a text beginning at (x,y)</span>
+<span class="api-card-badge">unknown_param_type</span>
 </a>
-<a class="api-card" href="../lcd-draw-text-lines/">
+<a class="api-card" href="../display-lcd/lcd-draw-text-lines/">
 <span class="api-card-title">lcd.drawTextLines</span>
 <span class="api-card-summary">Draw text inside rectangle (x,y,w,h) with line breaks</span>
 </a>
-<a class="api-card" href="../lcd-draw-timer/">
+<a class="api-card" href="../display-lcd/lcd-draw-timer/">
 <span class="api-card-title">lcd.drawTimer</span>
 <span class="api-card-summary">Display a value formatted as time at (x,y)</span>
+<span class="api-card-badge">unknown_param_type</span>
 </a>
-<a class="api-card" href="../lcd-draw-triangle/">
+<a class="api-card" href="../display-lcd/lcd-draw-triangle/">
 <span class="api-card-title">lcd.drawTriangle</span>
 <span class="api-card-summary">Draw a triangle</span>
 </a>
-<a class="api-card" href="../lcd-exit-full-screen/">
+<a class="api-card" href="../display-lcd/lcd-exit-full-screen/">
 <span class="api-card-title">lcd.exitFullScreen</span>
 <span class="api-card-summary">Exit full screen widget mode.</span>
 </a>
-<a class="api-card" href="../lcd-get-color/">
+<a class="api-card" href="../display-lcd/lcd-get-color/">
 <span class="api-card-title">lcd.getColor</span>
 <span class="api-card-summary">Get the color value from flags</span>
 </a>
-<a class="api-card" href="../lcd-get-last-left-pos/">
+<a class="api-card" href="../display-lcd/lcd-get-last-left-pos/">
 <span class="api-card-title">lcd.getLastLeftPos</span>
 <span class="api-card-summary">Returns the leftmost x position from previous drawtext or drawNumber output</span>
 </a>
-<a class="api-card" href="../lcd-get-last-pos/">
+<a class="api-card" href="../display-lcd/lcd-get-last-pos/">
 <span class="api-card-title">lcd.getLastPos</span>
 <span class="api-card-summary">Returns the rightmost x position from previous output</span>
 </a>
-<a class="api-card" href="../lcd-get-last-right-pos/">
+<a class="api-card" href="../display-lcd/lcd-get-last-right-pos/">
 <span class="api-card-title">lcd.getLastRightPos</span>
 <span class="api-card-summary">Returns the rightest x position from previous drawtext or drawNumber output</span>
 </a>
-<a class="api-card" href="../lcd-invert-rect/">
+<a class="api-card" href="../display-lcd/lcd-invert-rect/">
 <span class="api-card-title">lcd.invertRect</span>
 <span class="api-card-summary">Invert a rectangle zone from top left corner (x,y) of specified width and height</span>
 </a>
-<a class="api-card" href="../lcd-refresh/">
+<a class="api-card" href="../display-lcd/lcd-refresh/">
 <span class="api-card-title">lcd.refresh</span>
 <span class="api-card-summary">Refresh the LCD screen</span>
 </a>
-<a class="api-card" href="../lcd-reset-backlight-timeout/">
+<a class="api-card" href="../display-lcd/lcd-reset-backlight-timeout/">
 <span class="api-card-title">lcd.resetBacklightTimeout</span>
 <span class="api-card-summary">Reset the backlight timeout</span>
 </a>
-<a class="api-card" href="../lcd-set-color/">
+<a class="api-card" href="../display-lcd/lcd-set-color/">
 <span class="api-card-title">lcd.setColor</span>
-<span class="api-card-summary">Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)</span>
+<span class="api-card-summary">Change an indexed color (theme colors and CUSTOM_COLOR).</span>
 </a>
-<a class="api-card" href="../lcd-size-text/">
+<a class="api-card" href="../display-lcd/lcd-size-text/">
 <span class="api-card-title">lcd.sizeText</span>
 <span class="api-card-summary">Get the width and height of a text string drawn with flags</span>
 </a>

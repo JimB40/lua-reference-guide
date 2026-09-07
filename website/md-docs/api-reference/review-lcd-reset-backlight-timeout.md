@@ -1,6 +1,6 @@
 # Review: lcd.resetBacklightTimeout
 
-[Back to dashboard](review.md) | [Open API page](lcd-reset-backlight-timeout.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-reset-backlight-timeout.md)
 
 ## Snapshot
 

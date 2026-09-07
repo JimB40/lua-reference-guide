@@ -1,13 +1,13 @@
 # Review: GREY
 
-[Back to dashboard](review.md) | [Open API page](runtime-grey.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/grey.md)
 
 ## Snapshot
 
 - Module: `runtime`
 - Current symbol: `GREY`
 - Doc id: `runtime.grey`
-- Source: `radio/src/lua/api_general.cpp:1720`
+- Source: `radio/src/lua/api_general.cpp:1716`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 

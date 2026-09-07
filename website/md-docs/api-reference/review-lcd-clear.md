@@ -1,6 +1,6 @@
 # Review: lcd.clear
 
-[Back to dashboard](review.md) | [Open API page](lcd-clear.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-clear.md)
 
 ## Snapshot
 
@@ -8,12 +8,13 @@
 - Current symbol: `lcd.clear`
 - Doc id: `lcd.clear`
 - Source: `radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp:57`
-- Recommended action: **No action needed**
-- Why: Parsed output looks structurally healthy.
+- Recommended action: **Fix C++ annotation first**
+- Why: unknown param types: color
 
 ## Decide
 
-- This one looks structurally complete, but you can still change any param or return type below if you want to override it.
+- Unknown params to decide: `color`
+- Use the selector table below. Your choices are saved into `docs-system/generated/review-decisions.json`, which I can read later to patch the C++ `luadoc` block.
 
 ### Decision Controls
 
@@ -22,11 +23,11 @@
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>color</code></td><td>param</td><td><code>lcd_color_RGB565</code></td><td></td><td><select data-field-kind="param" data-field-name="color" data-current-type="lcd_color_RGB565"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="color" data-custom-type="true" /></td></tr>
+<tr><td><code>color</code></td><td>param</td><td><code>unknown</code></td><td></td><td><select data-field-kind="param" data-field-name="color" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="color" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.clear&quot;, &quot;symbol&quot;: &quot;lcd.clear&quot;, &quot;summary&quot;: &quot;Clear the LCD screen&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;color&quot;, &quot;type&quot;: &quot;lcd_color_RGB565&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;This function only works in stand-alone and telemetry scripts.&quot;], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.clear&quot;, &quot;symbol&quot;: &quot;lcd.clear&quot;, &quot;summary&quot;: &quot;Clear the LCD screen&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;color&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [&quot;This function only works in stand-alone and telemetry scripts.&quot;], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -38,7 +39,7 @@
 
 Clear the LCD screen
 
-@param color (lcd_color_RGB565, optional, only on color screens)
+@param color (optional, only on color screens)
 
 @status current Introduced in 2.0.0, `color` parameter introduced in 2.2.0 RC12
 
@@ -56,7 +57,7 @@ Clear the LCD screen
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `color` | no | `lcd_color_RGB565` |  |
+| `color` | no | `unknown` |  |
 
 #### Returns
 
@@ -78,7 +79,7 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Clear the LCD screen
 
-@param color (lcd_color_RGB565)
+@param color (TODO)
 
 @notice This function only works in stand-alone and telemetry scripts.
 

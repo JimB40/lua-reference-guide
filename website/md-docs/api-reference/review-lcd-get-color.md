@@ -1,6 +1,6 @@
 # Review: lcd.getColor
 
-[Back to dashboard](review.md) | [Open API page](lcd-get-color.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-get-color.md)
 
 ## Snapshot
 
@@ -59,7 +59,7 @@ Get the color value from flags
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `flags` | yes | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | yes | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

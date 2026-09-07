@@ -1,6 +1,6 @@
 # Review: getRotEncSpeed
 
-[Back to dashboard](review.md) | [Open API page](runtime-get-rot-enc-speed.md)
+[Back to dashboard](review.md) | [Open API page](key-inputs/get-rot-enc-speed.md)
 
 ## Snapshot
 

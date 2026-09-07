@@ -1,6 +1,6 @@
 # Review: mkdir
 
-[Back to dashboard](review.md) | [Open API page](runtime-mkdir.md)
+[Back to dashboard](review.md) | [Open API page](filesystem/mkdir.md)
 
 ## Snapshot
 

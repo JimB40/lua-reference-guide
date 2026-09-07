@@ -1,6 +1,6 @@
 # Review: lcd.drawPie
 
-[Back to dashboard](review.md) | [Open API page](lcd-draw-pie.md)
+[Back to dashboard](review.md) | [Open API page](display-lcd/lcd-draw-pie.md)
 
 ## Snapshot
 
@@ -72,7 +72,7 @@ Draw a pie slice
 | `r` | yes | `integer` | radius |
 | `start` | yes | `integer` | start and end of the pie slice |
 | `end` | yes | `integer` | start and end of the pie slice |
-| `flags` | no | `integer` | please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) |
+| `flags` | no | `integer` | please see [Lcd functions overview](../programming/core-concepts/drawing-flags-and-colors.md) |
 
 #### Returns
 

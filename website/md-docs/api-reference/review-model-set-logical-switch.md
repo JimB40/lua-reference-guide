@@ -1,13 +1,13 @@
 # Review: model.setLogicalSwitch
 
-[Back to dashboard](review.md) | [Open API page](model-set-logical-switch.md)
+[Back to dashboard](review.md) | [Open API page](model-functions/model-set-logical-switch.md)
 
 ## Snapshot
 
 - Module: `model`
 - Current symbol: `model.setLogicalSwitch`
 - Doc id: `model.set-logical-switch`
-- Source: `radio/src/lua/api_model.cpp:1150`
+- Source: `radio/src/lua/api_model.cpp:1062`
 - Recommended action: **No action needed**
 - Why: Parsed output looks structurally healthy.
 
