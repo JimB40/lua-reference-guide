@@ -11,8 +11,6 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 This section is generated from the normalized API model and grouped with the same user-facing topic names used in the 2.11 docs.
 
-Start with the [API Review Dashboard](review.md) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.
-
 ## [Display LCD](display-lcd.md)
 
 - `47` APIs
@@ -92,12 +90,3 @@ Start with the [API Review Dashboard](review.md) if you want to review gaps, sus
 
 - `2` APIs
 - Shared-memory variables exposed to scripts.
-
-## Source Modules
-
-The original extraction still exists by source module when you want to inspect the raw split from firmware files.
-
-- [Bitmap](module-Bitmap.md)
-- [lcd](module-lcd.md)
-- [model](module-model.md)
-- [runtime](module-runtime.md)

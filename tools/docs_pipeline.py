@@ -475,8 +475,6 @@ def render_api_index(model: dict) -> str:
     lines.append("")
     lines.append("This section is generated from the normalized API model and grouped with the same user-facing topic names used in the 2.11 docs.")
     lines.append("")
-    lines.append(f"Start with the [API Review Dashboard]({doc_link(current_page, 'review.md')}) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.")
-    lines.append("")
     for group, items in items_by_group(model):
         page = group_page_name(group)
         lines.append(f"## [{group['name']}]({doc_link(current_page, page)})")
@@ -484,16 +482,6 @@ def render_api_index(model: dict) -> str:
         lines.append(f"- `{len(items)}` APIs")
         lines.append(f"- {group.get('description', 'User-facing topic grouping for this API area.')}")
         lines.append("")
-
-    lines.append("## Source Modules")
-    lines.append("")
-    lines.append("The original extraction still exists by source module when you want to inspect the raw split from firmware files.")
-    lines.append("")
-    modules: dict[str, list[dict]] = {}
-    for item in model["items"]:
-        modules.setdefault(item["module"], []).append(item)
-    for module_name in sorted(modules):
-        lines.append(f"- [{module_name}]({doc_link(current_page, module_page_name(module_name))})")
 
     return "\n".join(lines)
 
