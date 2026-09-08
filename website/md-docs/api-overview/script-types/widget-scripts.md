@@ -17,7 +17,7 @@ Each model can have up to nine Main Views, with up to 8 widgets per screen, depe
 All widget scripts on the SD card are loaded into memory when the model is selected, even widgets that are not used. This has the side effect that any global functions defined in a widget script will always be available to other widget scripts. It also means that any Widget Script placed in the proper location on the SD card will consume part of the radio's memory - even if it is not being used.
 
 !!! warning
-    It is important to either keep Widget Scripts small, or to use Lua's [loadScript()](../../api-reference/runtime-load-script.md) function to load code dynamically
+    It is important to either keep Widget Scripts small, or to use Lua's [loadScript()](../../api-reference/lua-scripts/load-script.md) function to load code dynamically
 
 Script executes until:
 

@@ -6,7 +6,7 @@ description: >-
 
 # Loading Code Modules Dynamically
 
-The [`loadScript(<file>)`](../../api-reference/runtime-load-script.md) function will load a script from a the file and return a function that is the body of the script, as described in the previous section. So you could have the following Lua script file saved on the SD card:
+The [`loadScript(<file>)`](../../api-reference/lua-scripts/load-script.md) function will load a script from a the file and return a function that is the body of the script, as described in the previous section. So you could have the following Lua script file saved on the SD card:
 
 ```lua
 -- /SCRIPTS/TestScript.lua

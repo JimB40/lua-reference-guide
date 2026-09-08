@@ -2,7 +2,7 @@
 
 ## Faster getValue()
 
-Normally one uses [getValue()](../../api-reference/runtime-get-value.md) function with the source/filed name like so:
+Normally one uses [getValue()](../../api-reference/sources/get-value.md) function with the source/filed name like so:
 
 ```lua
 local foo = getValue("bar")
@@ -18,7 +18,7 @@ local function run_a_lot()
 end
 ```
 
-Why is this method faster? With the function [getFieldInfo(name)](../../api-reference/runtime-get-field-info.md) we get the `numerical id` of the wanted filed. The function has to find the requested value by its name in the table of all available sources. That search takes some time.
+Why is this method faster? With the function [getFieldInfo(name)](../../api-reference/sources/get-field-info.md) we get the `numerical id` of the wanted filed. The function has to find the requested value by its name in the table of all available sources. That search takes some time.
 
 When we use this syntax the search is only done once. In comparison in the first example the search must be performed every time `getValue("bar")` is called.
 
