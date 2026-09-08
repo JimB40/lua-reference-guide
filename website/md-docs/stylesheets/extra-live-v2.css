@@ -826,6 +826,19 @@
   transition: background-color 140ms ease, color 140ms ease;
 }
 
+/* navigation.indexes wraps a section's own link and its expand/collapse
+   label together in a shared <div class="md-nav__link md-nav__container">
+   instead of the label being a direct child of the <li>. The rule above
+   already styles that wrapping div (it also carries .md-nav__link), so
+   without this its two children would each additionally get their own
+   nested copy of the same padding/margin, and each independently show
+   its own hover highlight as the mouse crosses between them -- reset
+   them so the container alone defines the row's box and hover state. */
+.md-sidebar--primary .md-nav--primary .md-nav__container > .md-nav__link {
+  margin: 0;
+  padding: 0;
+}
+
 .md-sidebar--primary .md-nav--primary .md-nav__link:hover,
 .md-sidebar--primary .md-nav--primary .md-nav__link:focus,
 .md-sidebar--primary .md-nav--primary label.md-nav__link:hover,
@@ -834,16 +847,25 @@
   color: #095f9e;
 }
 
+.md-sidebar--primary .md-nav--primary .md-nav__container > .md-nav__link:hover,
+.md-sidebar--primary .md-nav--primary .md-nav__container > .md-nav__link:focus {
+  background: transparent;
+  color: inherit;
+}
+
 .md-sidebar--primary .md-nav--primary .md-nav__link--active,
 .md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav__link,
 .md-sidebar--primary .md-nav--primary .md-nav__item--active > label.md-nav__link,
-.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > label.md-nav__link {
+.md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav__container > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > .md-nav__container > label.md-nav__link {
   background: rgba(12, 123, 205, 0.14);
   color: #084c7f;
   font-weight: 700;
 }
 
-.md-sidebar--primary .md-nav--primary .md-nav__item--nested > label.md-nav__link .md-nav__icon {
+.md-sidebar--primary .md-nav--primary .md-nav__item--nested > label.md-nav__link .md-nav__icon,
+.md-sidebar--primary .md-nav--primary .md-nav__item--nested > .md-nav__container > label.md-nav__link .md-nav__icon {
   color: rgba(12, 123, 205, 0.72);
 }
 
