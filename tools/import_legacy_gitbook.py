@@ -457,7 +457,6 @@ def build_config(
         "extra_javascript": [
             "javascripts/api-function-breadcrumb.js",
             "javascripts/mobile-nav-inline.js",
-            "javascripts/version-switcher.js",
             "javascripts/legacy-version-banner.js",
             "javascripts/toc-visibility.js",
         ],

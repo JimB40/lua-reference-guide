@@ -16,7 +16,6 @@ extra_javascript:
   - javascripts/api-function-breadcrumb.js
   - javascripts/mobile-nav-inline.js
   - javascripts/review-workbench.js
-  - javascripts/version-switcher.js
   - javascripts/legacy-version-banner.js
 
 nav:

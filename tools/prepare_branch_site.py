@@ -174,7 +174,6 @@ def build_config_text(site_name: str, docs_dir: Path, site_dir: Path, nav: list[
         "  - stylesheets/extra.css",
         "extra_javascript:",
         "  - javascripts/review-workbench.js",
-        "  - javascripts/version-switcher.js",
         "  - javascripts/legacy-version-banner.js",
         "extra:",
         "  version:",

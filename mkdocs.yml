@@ -26,7 +26,6 @@ extra_css:
 extra_javascript:
   - javascripts/api-function-breadcrumb.js
   - javascripts/mobile-nav-inline.js
-  - javascripts/version-switcher.js
   - javascripts/legacy-version-banner.js
 extra:
   version:
