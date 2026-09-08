@@ -2,1258 +2,1258 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/fonts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/lua-basics/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/color-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/flags-and-pattern-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/key-event-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/key_events/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/logical-switch-function-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/lvgl-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/screen-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/special-character-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/special-function-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/touch-event-constants/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/units/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/constants/widget-options/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/internal-indexes/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/internal-indexes/source-list/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/internal-indexes/switch-positions-id/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/script-types/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/script-types/function-scripts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/script-types/mixes-scripts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/script-types/one-time-scripts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/script-types/telemetry-scripts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/script-types/widget-scripts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/version-libraries/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-overview/version-libraries/io-library/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/audio-sound/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/bitmap-get-size/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/bitmap-open/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/bitmap-resize/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/bitmap-to-mask/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/display-lcd/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/display-lvgl/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/filesystem/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-clear/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-annulus/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-arc/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-bitmap-pattern-pie/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-bitmap-pattern/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-bitmap/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-channel/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-circle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-combobox/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-filled-circle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-filled-rectangle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-filled-triangle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-gauge/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-hud-rectangle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-line-with-clipping/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-line/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-number/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-pie/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-pixmap/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-point/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-rectangle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-screen-title/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-source/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-switch/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-text-lines/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-text/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-timer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-draw-triangle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-exit-full-screen/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-get-color/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-get-last-left-pos/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-get-last-pos/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-get-last-right-pos/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-invert-rect/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-refresh/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-reset-backlight-timeout/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-rgb/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-set-color/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lcd-size-text/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lua-scripts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-align/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-arc/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-box/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-build/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-button/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-choice/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-circle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-clear/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-close/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-color/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-confirm/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-dialog/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-disable/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-enable/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-exit-full-screen/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-file/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-font/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-get-context/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-get-scroll-pos/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-hide/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-hline/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-image/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-is-app-mode/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-is-full-screen/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-label/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-line/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-menu/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-message/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-momentary-button/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-number-edit/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-page/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-qrcode/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-rectangle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-set/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-setting/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-show/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-slider/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-source/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-switch/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-text-edit/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-timer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-toggle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-triangle/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-vertical-slider/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/lvgl-vline/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-default-inputs/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-delete-flight-modes/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-delete-input/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-delete-inputs/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-delete-mix/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-delete-mixes/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-functions/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-curve/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-custom-function/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-flight-mode/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-global-variable/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-info/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-input/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-inputs-count/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-logical-switch/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-mix/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-mixes-count/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-module/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-output/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-sensor/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-swash-ring/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-switch-warning/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-get-timer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-insert-input/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-insert-mix/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-reset-sensor/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-reset-timer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-curve/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-custom-function/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-flight-mode/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-global-variable/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-info/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-logical-switch/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-module/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-output/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-swash-ring/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-switch-warning/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/model-set-timer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/radio-hardware/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/rf-module/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-access-telemetry-push/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-apply-rgbled-colors/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-chdir/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-crossfire-telemetry-pop/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-crossfire-telemetry-push/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-default-channel/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-default-stick/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-del/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-dir/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-flush-audio/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-fstat/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-available-memory/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-date-time/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-field-info/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-flight-mode/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-general-settings/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-global-timer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-logical-switch-value/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-output-value/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-ras/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-rot-enc-mode/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-rot-enc-speed/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-rssi/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-rtc-time/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-shm-var/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-source-index/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-source-name/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-source-value/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-stick-mode/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-switch-index/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-switch-info/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-switch-name/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-switch-value/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-time/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-trainer-status/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-tx-gps/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-usage/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-value/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-get-version/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-ghost-telemetry-pop/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-ghost-telemetry-push/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-grey/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-kill-events/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-load-script/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-mkdir/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-multi-buffer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-play-duration/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-play-file/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-play-haptic/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-play-number/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-play-tone/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-popup-confirmation/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-popup-input/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-popup-warning/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-rename/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-reset-global-timer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-serial-get-power/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-serial-read/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-serial-set-power/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-serial-write/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-cfsled-color/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-imu-x/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-imu-y/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-rgbled-color/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-serial-baudrate/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-shm-var/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-sticky-switch/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-set-telemetry-value/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-sources/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-sport-telemetry-pop/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-sport-telemetry-push/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/runtime-switches/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/serial-ports/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/sources/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/switches/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/system/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/telemetry/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/time/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/api-reference/variables/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/advanced-topics/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/advanced-topics/debugging-techniques/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/advanced-topics/lua-data-sharing-across-scripts/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/advanced-topics/optimization-tricks/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/editor/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/files-and-organization/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/memory/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/naming/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/performance/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/practicing/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/testing/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/basics/troubleshooting/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/core-concepts/data-exchange-with-the-edgetx-model-setup/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/core-concepts/drawing-flags-and-colors/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/core-concepts/loading-code-modules-dynamically/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/core-concepts/lvgl-for-lua/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/core-concepts/saving-memory/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/programming/core-concepts/using-key-and-touch-events/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/betafpv/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/betafpv/betafpv-literadio3-pro/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/fatfish/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/fatfish/fatfish-f16/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/flysky-el18/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/flysky-nb4-plus/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/flysky-nv14/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/flysky-pa01/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/flysky-pl18-pl18ev/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/flysky-pl18u/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/flysky/flysky-st16/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-qx7-qx7s/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-x-lite-x-lite-s-x-lite-pro/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-x10express/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-x12s-x12s-irsm/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-x9-lite-x9-lite-s/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-x9d-x9d-plus-x9d-plus-se/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-x9dp2019/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/frsky/frsky-x9e-x9e-hall/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/helloradiosky/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/helloradiosky/helloradiosky-v12/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/helloradiosky/helloradiosky-v14/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/helloradiosky/helloradiosky-v16/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/iflight/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/iflight/iflight-commando14/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/iflight/iflight-commando8/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-bumblebee/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t-lite-t-lite-v2/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t-pro/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t12-t12-plus-t12-pro-hall/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t14/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t15-pro/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t15/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t16-t16-plus-t16-pro-hall/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t18-t18-lite-t18-pro/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t20-v2/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/jumper/jumper-t20/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-boxer/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-gx12/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-mt12/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-pocket/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-t8-pro/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-tx12-mark-ii/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-tx12/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-tx15/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-tx16s/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-tx16smk3/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/radiomaster/radiomaster-zorro/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/edgetx-v2.12/radios/tbs/</loc>
-         <lastmod>2026-09-07</lastmod>
+         <lastmod>2026-09-08</lastmod>
     </url>
 </urlset>
