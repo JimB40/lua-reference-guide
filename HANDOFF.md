@@ -66,31 +66,47 @@ There is still polish work left, but it is mostly refinement instead of major st
 - continue wording cleanup toward consistent user-facing language
 - verify a few remaining edge-case function placements as they come up
 
-## Known Branch Divergence — Nested API Reference URLs
+## Resolved: Nested API Reference URLs
 
-`edgetx_2.12` currently has two commits (`0988101a`, `67ba1431`) that fixed
-broken links by hand-editing already-generated `api-reference/*.md` files
-directly, because the real generator fix wasn't available on this branch at
-the time. That is exactly the kind of hand-edit the new generated-file
-marker (see `docs-system/README.md`) exists to make visible going forward.
+`api-reference/` is now nested by topic group (e.g.
+`api-reference/display-lcd/lcd-draw-annulus.md`) instead of flat
+(`api-reference/lcd-draw-annulus.md`). This replaces the two hand-patch
+commits (`0988101a`, `67ba1431`) that fixed broken links by editing
+already-generated files directly — the underlying page-path generation bug
+in `tools/docs_pipeline.py` (`page_name_for_item`, `group_page_name`,
+`module_page_name`, `page_href`, plus a new `nested_item_slug`/
+`scoped_symbol_parts` pair) is fixed at the source instead.
 
-The real fix already exists, unmerged, on `origin/docs/migrate-nested-topic-urls`
-(diverged from `7c3989a4`; commits `32f747e8`, `7538adb6`, `4ce760cd`,
-`9931ac73`, `af867548`). It restructures the entire API reference from flat
-paths (`api-reference/lcd-draw-annulus.md`) to nested-by-topic paths
-(`api-reference/display-lcd/lcd-draw-annulus.md`) and re-extracts against a
-corrected 2.12 firmware ref — 333 files changed. That's a URL-scheme
-migration with real link/SEO implications, not a drop-in fix, so it has not
-been merged or built on as part of the generated-file guardrail work.
+This was ported and reworked directly onto `edgetx_2.12` from the
+now-superseded `origin/docs/migrate-nested-topic-urls` branch (which had
+stalled before the generated-file marker and dual-LuaLS-output work
+landed) rather than merged — that branch is deleted. Along with the path
+fix: `docs-system/api-groups.json`'s taxonomy was reconciled to match the
+live nav (`hardware` → `radio-hardware`, the old merged `Variables` group
+split into `Sources`/`Switches`/`Variables` to match the already-split live
+pages), and a new `Inputs` nav entry was added for the previously-unwired
+`key-inputs` group. `docs-system/generated/luals/` and
+`website/md-docs/assets/luals/` are now both written by the same `build`
+run (`--luals-output` takes multiple directories) and stay in sync.
 
-This is a decision for whoever picks it up next: merge the nested-URL
-restructure (and update anything that links to the current flat paths), or
-abandon it and re-derive a smaller link-only fix against the current flat
-layout. Either way, `docs-system/generated/luals/` and
-`website/md-docs/assets/luals/` (kept in sync by `build` as of the pipeline
-fix above) won't fully reconcile their *content* — only their write
-mechanism is fixed — until a real extract+build cycle runs against whichever
-firmware ref gets decided on here.
+Extracted fresh from `EdgeTX/edgetx` branch `2.12` at `16713095a1` — same
+153 items as the old stalled branch found, confirmed as still the current
+`2.12` tip. `display-lvgl.md` and its 44 `lvgl-*.md` pages are **not**
+backed by the real extraction model at all (LVGL has no upstream `/*luadoc
+*/` annotations yet — this is a separate, still-open gap, see "Next Major
+Step" below) and were deliberately preserved rather than regenerated;
+`build`'s zero-item-group guard protects them on future runs as long as
+they stay on disk, but a manual `git checkout <prior-commit> --
+website/md-docs/api-reference/display-lvgl.md website/md-docs/api-reference/lvgl-*.md`
+was needed this time since the whole directory was wiped clean before
+rebuilding — don't do a blanket wipe again without restoring those first.
+
+**Follow-up before this site is public**: no redirect plugin exists
+(`mkdocs-redirects` or otherwise). Skipped for this rework since the site
+isn't live yet, but it does emit a real `sitemap.xml` against
+`site_url: https://luadoc.edgetx.org/` — add old-flat-path →
+new-nested-path redirects before treating this as the live site, or any
+external links/bookmarks/search results made before that point will break.
 
 ## Next Major Step
 
