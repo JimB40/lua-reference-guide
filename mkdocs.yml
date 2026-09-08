@@ -17,6 +17,7 @@ theme:
     primary: custom
     accent: custom
   features:
+    - navigation.indexes
     - navigation.path
     - toc.integrate
     - toc.follow
