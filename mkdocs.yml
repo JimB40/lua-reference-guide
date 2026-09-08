@@ -28,7 +28,6 @@ extra_javascript:
   - javascripts/mobile-nav-inline.js
   - javascripts/version-switcher.js
   - javascripts/legacy-version-banner.js
-  - javascripts/toc-visibility.js
 extra:
   version:
     provider: mike

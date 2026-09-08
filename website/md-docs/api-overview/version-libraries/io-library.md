@@ -1,8 +1,8 @@
 # io Library
 
-Standard LUA [**io**](https://www.lua.org/manual/5.2/manual.html#6.8) library has been simplified and only a subset of functions and their functionality is available.
+The standard Lua [**io**](https://www.lua.org/manual/5.2/manual.html#6.8) library has been simplified and only a subset of functions and their functionality is available.
 
-## Available functions:
+## Available functions
 
 * io.open()
 * io.close()

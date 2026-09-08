@@ -18,7 +18,6 @@ extra_javascript:
   - javascripts/review-workbench.js
   - javascripts/version-switcher.js
   - javascripts/legacy-version-banner.js
-  - javascripts/toc-visibility.js
 
 nav:
   - EdgeTX LuaDoc: index.md
