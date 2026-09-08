@@ -27,14 +27,14 @@ uv run python3 tools/docs_pipeline.py build \
   --input /tmp/api-model.2.12.json \
   --overlay-dir docs-system/overlays \
   --docs-output website/md-docs/api-reference \
-  --luals-output docs-system/generated/luals
+  --luals-output docs-system/generated/luals website/md-docs/assets/luals
 
 uv run python3 tools/docs_pipeline.py validate docs-system/examples/api-model.sample.json
 uv run python3 tools/docs_pipeline.py build \
   --input docs-system/examples/api-model.sample.json \
   --overlay-dir docs-system/overlays \
   --docs-output website/md-docs/api-reference \
-  --luals-output docs-system/generated/luals
+  --luals-output docs-system/generated/luals website/md-docs/assets/luals
 
 uv run python3 tools/review_decision_server.py
 uv run mkdocs build
@@ -61,6 +61,10 @@ The normalized model also supports a docs-owned stable `doc_id` plus alias metad
 Semantic review types live in `docs-system/type-definitions.json`. The generated LuaLS output emits `---@alias` lines from that registry so docs-oriented types such as `lcd_color_RGB565` remain LuaLS-compatible.
 
 The repo now includes a minimal `pyproject.toml` and `uv.lock` for the docs toolchain. `uv run ...` is the preferred way to execute both the pipeline and MkDocs locally.
+
+`--luals-output` accepts one or more directories and writes the same generated `.d.lua` files to each. Always pass both `docs-system/generated/luals` (the pipeline's own tracked output) and `website/md-docs/assets/luals` (the copy the site actually links to from `programming/basics/editor.md`) so the two never drift apart again.
+
+Every generated Markdown and `.d.lua` file starts with a `GENERATED FILE — do not hand-edit` marker. If a generated page is wrong, fix the upstream `/*luadoc */` comment (for API facts) or the matching `docs-system/overlays/<doc_id>.md` (for narrative content), then rebuild — never edit the generated file directly, since the next `build` run overwrites it silently.
 
 The `report` command is focused on the current golden modules:
 
