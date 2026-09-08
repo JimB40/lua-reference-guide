@@ -18,6 +18,8 @@ theme:
     accent: custom
   features:
     - navigation.path
+    - toc.integrate
+    - toc.follow
 extra_css:
   - stylesheets/extra-live-v2.css
 extra_javascript:

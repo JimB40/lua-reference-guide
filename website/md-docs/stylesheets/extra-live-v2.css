@@ -915,10 +915,6 @@
   overflow: visible;
 }
 
-.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__item {
-  position: relative;
-}
-
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item::before {
   display: none;
 }
@@ -946,6 +942,6 @@
   }
 
   .md-main__inner {
-    grid-template-columns: 13.6rem minmax(0, 1fr) 12.1rem;
+    grid-template-columns: 13.6rem minmax(0, 1fr);
   }
 }
