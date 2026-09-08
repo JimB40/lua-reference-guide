@@ -27,7 +27,6 @@ Source identification and value lookup for telemetry and other data sources.
 <a class="api-card" href="get-source-value/">
 <span class="api-card-title">getSourceValue</span>
 <span class="api-card-summary">Returns the value of a source.</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 <a class="api-card" href="get-value/">
 <span class="api-card-title">getValue</span>

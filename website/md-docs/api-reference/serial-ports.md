@@ -19,7 +19,6 @@ Serial transport configuration and I/O.
 <a class="api-card" href="serial-read/">
 <span class="api-card-title">serialRead</span>
 <span class="api-card-summary">Needs summary review</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 <a class="api-card" href="serial-set-power/">
 <span class="api-card-title">serialSetPower</span>
@@ -32,6 +31,5 @@ Serial transport configuration and I/O.
 <a class="api-card" href="set-serial-baudrate/">
 <span class="api-card-title">setSerialBaudrate</span>
 <span class="api-card-summary">Needs summary review</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 </div>

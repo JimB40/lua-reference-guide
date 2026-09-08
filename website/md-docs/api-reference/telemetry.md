@@ -23,7 +23,6 @@ Telemetry value access, injection, and protocol helpers.
 <a class="api-card" href="get-rssi/">
 <span class="api-card-title">getRSSI</span>
 <span class="api-card-summary">Get RSSI value as well as low and critical RSSI alarm levels (in dB)</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 <a class="api-card" href="get-trainer-status/">
 <span class="api-card-title">getTrainerStatus</span>
@@ -36,7 +35,6 @@ Telemetry value access, injection, and protocol helpers.
 <a class="api-card" href="set-telemetry-value/">
 <span class="api-card-title">setTelemetryValue</span>
 <span class="api-card-summary">Needs summary review</span>
-<span class="api-card-badge">unknown_return_type / unknown_param_type</span>
 </a>
 <a class="api-card" href="sport-telemetry-pop/">
 <span class="api-card-title">sportTelemetryPop</span>

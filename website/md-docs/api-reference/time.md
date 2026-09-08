@@ -31,6 +31,5 @@ Date, clock, and timer helpers.
 <a class="api-card" href="reset-global-timer/">
 <span class="api-card-title">resetGlobalTimer</span>
 <span class="api-card-summary">Resets the radio global timer to 0.</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 </div>

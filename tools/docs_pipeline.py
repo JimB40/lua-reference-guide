@@ -529,12 +529,7 @@ def render_module_page(module_name: str, items: list[dict], report: dict, page_p
     return "\n".join(lines)
 
 
-def render_group_page(group: dict, items: list[dict], report: dict, page_path: str | Path) -> str:
-    suspicious_by_id = {}
-    for module_name, data in report["modules"].items():
-        for suspicious in data.get("suspicious_items", []):
-            suspicious_by_id[suspicious["id"]] = suspicious["issues"]
-
+def render_group_page(group: dict, items: list[dict], page_path: str | Path) -> str:
     lines = []
     lines.append(f"# {group['name']}")
     lines.append("")
@@ -546,16 +541,10 @@ def render_group_page(group: dict, items: list[dict], report: dict, page_path: s
         return "\n".join(lines)
     lines.append('<div class="api-grid">')
     for item in sorted(items, key=lambda entry: entry["symbol"]):
-        issues = suspicious_by_id.get(item["id"], [])
-        badge = ""
-        if issues:
-            badge = f'<span class="api-card-badge">{" / ".join(issues)}</span>'
         summary = card_summary_text(item["summary"])
         lines.append('<a class="api-card" href="{href}">'.format(href=page_href(page_path, page_name_for_item(item))))
         lines.append(f'<span class="api-card-title">{item["symbol"]}</span>')
         lines.append(f'<span class="api-card-summary">{summary}</span>')
-        if badge:
-            lines.append(badge)
         lines.append("</a>")
     lines.append("</div>")
     lines.append("")
@@ -1539,7 +1528,7 @@ def build_outputs(
         if not group_path.exists():
             continue
         existing = group_path.read_text(encoding="utf-8")
-        rendered = render_group_page(group, group_items, report, group_page)
+        rendered = render_group_page(group, group_items, group_page)
         if existing.strip() != rendered.strip():
             preserved_group_pages[group_page] = (
                 f"group '{group['slug']}' has zero extracted items, but the page "
@@ -1580,7 +1569,7 @@ def build_outputs(
             print(f"Skipping {docs_output / group_page}: {preserved_group_pages[group_page]}. Not overwriting.")
             continue
         group_path = docs_output / group_page
-        rendered = render_group_page(group, group_items, report, group_page)
+        rendered = render_group_page(group, group_items, group_page)
         ensure_dir(group_path.parent)
         write_generated_markdown(group_path, rendered)
 

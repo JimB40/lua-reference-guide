@@ -39,7 +39,6 @@ Drawing, layout, color, and display helpers for LCD rendering.
 <a class="api-card" href="lcd-clear/">
 <span class="api-card-title">lcd.clear</span>
 <span class="api-card-summary">Clear the LCD screen</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="lcd-draw-annulus/">
 <span class="api-card-title">lcd.drawAnnulus</span>
@@ -60,7 +59,6 @@ Drawing, layout, color, and display helpers for LCD rendering.
 <a class="api-card" href="lcd-draw-bitmap-pattern-pie/">
 <span class="api-card-title">lcd.drawBitmapPatternPie</span>
 <span class="api-card-summary">Displays a bitmap pattern pie at (x,y)</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="lcd-draw-channel/">
 <span class="api-card-title">lcd.drawChannel</span>
@@ -97,7 +95,6 @@ Drawing, layout, color, and display helpers for LCD rendering.
 <a class="api-card" href="lcd-draw-line/">
 <span class="api-card-title">lcd.drawLine</span>
 <span class="api-card-summary">Draw a straight line on LCD</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="lcd-draw-line-with-clipping/">
 <span class="api-card-title">lcd.drawLineWithClipping</span>
@@ -106,7 +103,6 @@ Drawing, layout, color, and display helpers for LCD rendering.
 <a class="api-card" href="lcd-draw-number/">
 <span class="api-card-title">lcd.drawNumber</span>
 <span class="api-card-summary">Display a number at (x,y)</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="lcd-draw-pie/">
 <span class="api-card-title">lcd.drawPie</span>
@@ -139,7 +135,6 @@ Drawing, layout, color, and display helpers for LCD rendering.
 <a class="api-card" href="lcd-draw-text/">
 <span class="api-card-title">lcd.drawText</span>
 <span class="api-card-summary">Draw a text beginning at (x,y)</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="lcd-draw-text-lines/">
 <span class="api-card-title">lcd.drawTextLines</span>
@@ -148,7 +143,6 @@ Drawing, layout, color, and display helpers for LCD rendering.
 <a class="api-card" href="lcd-draw-timer/">
 <span class="api-card-title">lcd.drawTimer</span>
 <span class="api-card-summary">Display a value formatted as time at (x,y)</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="lcd-draw-triangle/">
 <span class="api-card-title">lcd.drawTriangle</span>
@@ -197,16 +191,13 @@ Drawing, layout, color, and display helpers for LCD rendering.
 <a class="api-card" href="popup-confirmation/">
 <span class="api-card-title">popupConfirmation</span>
 <span class="api-card-summary">Raises a pop-up on screen that asks for confirmation</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 <a class="api-card" href="popup-input/">
 <span class="api-card-title">popupInput</span>
 <span class="api-card-summary">Raises a pop-up on screen that allows uses input</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 <a class="api-card" href="popup-warning/">
 <span class="api-card-title">popupWarning</span>
 <span class="api-card-summary">Raises a pop-up on screen that shows a warning</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 </div>

@@ -31,6 +31,5 @@ General runtime, device, and system-level helpers.
 <a class="api-card" href="screenshot/">
 <span class="api-card-title">screenshot</span>
 <span class="api-card-summary">Takes a screenshot, which is saved to the SCREENSHOTS folder on the radio SD card.</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 </div>

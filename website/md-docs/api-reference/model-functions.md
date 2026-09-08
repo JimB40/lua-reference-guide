@@ -135,22 +135,18 @@ Model data access and editing APIs.
 <a class="api-card" href="model-set-flight-mode/">
 <span class="api-card-title">model.setFlightMode</span>
 <span class="api-card-summary">Set Flight mode parameters</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="model-set-global-variable/">
 <span class="api-card-title">model.setGlobalVariable</span>
 <span class="api-card-summary">Sets current global variable value.</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="model-set-global-variable-details/">
 <span class="api-card-title">model.setGlobalVariableDetails</span>
 <span class="api-card-summary">Sets details about a Global Variable, but not values</span>
-<span class="api-card-badge">unknown_return_type</span>
 </a>
 <a class="api-card" href="model-set-info/">
 <span class="api-card-title">model.setInfo</span>
 <span class="api-card-summary">Set the current Model information</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="model-set-logical-switch/">
 <span class="api-card-title">model.setLogicalSwitch</span>
@@ -159,7 +155,6 @@ Model data access and editing APIs.
 <a class="api-card" href="model-set-module/">
 <span class="api-card-title">model.setModule</span>
 <span class="api-card-summary">Set RF module parameters</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 <a class="api-card" href="model-set-output/">
 <span class="api-card-title">model.setOutput</span>
@@ -172,6 +167,5 @@ Model data access and editing APIs.
 <a class="api-card" href="model-set-timer/">
 <span class="api-card-title">model.setTimer</span>
 <span class="api-card-summary">Set model timer parameters</span>
-<span class="api-card-badge">unknown_param_type</span>
 </a>
 </div>
