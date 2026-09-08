@@ -68,14 +68,6 @@
   outline: none;
 }
 
-.md-nav__item--section-link > label.md-nav__link {
-  cursor: pointer;
-}
-
-.md-nav__item--section-link-target {
-  display: none;
-}
-
 .api-function-breadcrumb {
   align-items: center;
   color: var(--md-default-fg-color--light);

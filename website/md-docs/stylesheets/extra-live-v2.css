@@ -106,7 +106,7 @@
   color: #1f2937;
 }
 
-@media screen and (max-width: 76.2344em) {
+@media screen and (max-width: 76.234375em) {
   .header-version-switcher__select {
     font-size: 0.76rem;
     max-width: 6rem;
@@ -130,14 +130,6 @@
     min-width: 4.6rem;
     padding: 0.38rem 1.85rem 0.38rem 0.55rem;
   }
-}
-
-.md-nav__item--section-link > label.md-nav__link {
-  cursor: pointer;
-}
-
-.md-nav__item--section-link-target {
-  display: none;
 }
 
 .api-function-breadcrumb {
@@ -831,10 +823,22 @@
    instead of the label being a direct child of the <li>. The rule above
    already styles that wrapping div (it also carries .md-nav__link), so
    without this its two children would each additionally get their own
-   nested copy of the same padding/margin, and each independently show
-   its own hover highlight as the mouse crosses between them -- reset
-   them so the container alone defines the row's box and hover state. */
-.md-sidebar--primary .md-nav--primary .md-nav__container > .md-nav__link {
+   nested copy of the same padding/margin/background/color -- on top of
+   showing through the container's own copy of the same styling, two
+   overlapping semi-transparent backgrounds of the same color render
+   darker than either alone, so a state (hover, active, section-active)
+   applied to both container and child shows as a visibly different
+   shade right where the child sits, not one flat row color. Unconditionally
+   neutralize the children instead of chasing this per state -- the
+   container alone should ever paint a background or set its own color;
+   letting a state's rule also match a container child (as opposed to
+   just the container itself) is exactly what caused this. Specificity
+   is bumped one class above the plain-link hover rule below (via the
+   redundant-but-real .md-nav__list ancestor qualifier) so this wins
+   outright rather than relying on source order against a tie. */
+.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__container > .md-nav__link {
+  background: transparent;
+  color: inherit;
   margin: 0;
   padding: 0;
 }
@@ -847,18 +851,11 @@
   color: #095f9e;
 }
 
-.md-sidebar--primary .md-nav--primary .md-nav__container > .md-nav__link:hover,
-.md-sidebar--primary .md-nav--primary .md-nav__container > .md-nav__link:focus {
-  background: transparent;
-  color: inherit;
-}
-
 .md-sidebar--primary .md-nav--primary .md-nav__link--active,
 .md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav__link,
 .md-sidebar--primary .md-nav--primary .md-nav__item--active > label.md-nav__link,
-.md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav__container > label.md-nav__link,
 .md-sidebar--primary .md-nav--primary .md-nav__item--section-active > label.md-nav__link,
-.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > .md-nav__container > label.md-nav__link {
+.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > .md-nav__container {
   background: rgba(12, 123, 205, 0.14);
   color: #084c7f;
   font-weight: 700;
@@ -928,10 +925,6 @@
 .md-sidebar--primary .md-nav--primary .md-nav__list,
 .md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__list {
   overflow: visible;
-}
-
-.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item::before {
-  display: none;
 }
 
 @media screen and (min-width: 76.25em) {
