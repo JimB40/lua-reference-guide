@@ -748,11 +748,13 @@ def render_review_item_page(item: dict, page_path: str | Path) -> str:
 
 LUADOC_BLOCK_RE = re.compile(r"/\*luadoc(.*?)\*/", re.DOTALL)
 FUNCTION_RE = re.compile(r"^@function\s+(.+)$", re.MULTILINE)
-PARAM_RE = re.compile(r"^@param\s+(.+?)(?:\n\s*\n|\Z)", re.MULTILINE | re.DOTALL)
-RETVAL_RE = re.compile(r"^@retval\s+(.+?)(?:\n\s*\n|\Z)", re.MULTILINE | re.DOTALL)
-NOTICE_RE = re.compile(r"^@notice\s+(.+?)(?:\n\s*\n|\Z)", re.MULTILINE | re.DOTALL)
-STATUS_RE = re.compile(r"^@status\s+(.+)$", re.MULTILINE)
+PARAM_RE = re.compile(r"^[ \t]*@param\s+(.+?)(?:\n\s*\n|\Z)", re.MULTILINE | re.DOTALL)
+RETVAL_RE = re.compile(r"^[ \t]*@retval\s+(.+?)(?:\n\s*\n|\Z)", re.MULTILINE | re.DOTALL)
+NOTICE_RE = re.compile(r"^[ \t]*@notice\s+(.+?)(?:\n\s*\n|\Z)", re.MULTILINE | re.DOTALL)
+STATUS_RE = re.compile(r"^[ \t]*@status\s+(.+)$", re.MULTILINE)
 TAG_START_RE = re.compile(r"^@(param|retval|notice|status)\b")
+COMMON_BLOCK_RE = re.compile(r"^@common\s+(\S+)\s*\n(.*)\Z", re.DOTALL)
+COMMONPARAMS_REF_RE = re.compile(r"^[ \t]*@commonparams\s+(\S+)\s*$", re.MULTILINE)
 MARKDOWN_TABLE_RE = re.compile(r"^\|.*\|$")
 LIST_LINE_RE = re.compile(r"^\s*[*-]\s+")
 CODE_FENCE_RE = re.compile(r"^\s*```")
@@ -1332,16 +1334,85 @@ def quality_report(model: dict) -> dict:
     return {"modules": modules, "backlog": backlog[:40]}
 
 
+def parse_common_block(block: str) -> tuple[str, str] | None:
+    """Recognize a `@common <name>` block (a reusable, non-callable chunk of
+    luadoc body text) and return its (name, body). Returns None for any
+    block that isn't a `@common` block (e.g. a normal `@function` block)."""
+    match = COMMON_BLOCK_RE.match(block.strip())
+    if not match:
+        return None
+    return match.group(1).strip(), match.group(2)
+
+
+def expand_common_params(
+    block: str,
+    common_blocks: dict[str, str],
+    used: set[str],
+    relative_path: str,
+    line: int | None,
+) -> str:
+    """Replace every `@commonparams <name>` reference in `block` with the
+    body text of the matching `@common <name>` block, textually, before the
+    normal @param/@retval/etc. parsing runs. Raises if a reference points at
+    an undefined @common block."""
+
+    def replace(match: re.Match) -> str:
+        name = match.group(1).strip()
+        if name not in common_blocks:
+            location = f"{relative_path}:{line}" if line else relative_path
+            raise ValueError(
+                f"@commonparams references undefined @common block '{name}' at {location}"
+            )
+        used.add(name)
+        return common_blocks[name].strip("\n")
+
+    return COMMONPARAMS_REF_RE.sub(replace, block)
+
+
 def extract_model(source_dir: Path, docs_version: str, upstream_ref: str) -> dict:
-    items_by_id = {}
+    all_blocks: list[tuple[str, str, int | None]] = []
     for path in sorted(source_dir.glob("*.cpp")):
         text = path.read_text(encoding="utf-8")
         relative_path = str(path.relative_to(source_dir.parent.parent.parent))
         for block in extract_blocks(text):
-            item = parse_block(block["text"], relative_path, block["line"])
-            if item:
-                existing = items_by_id.get(item["id"])
-                items_by_id[item["id"]] = merge_item(existing, item) if existing else item
+            all_blocks.append((block["text"], relative_path, block["line"]))
+
+    # Pass 1: collect @common block definitions. These are reusable chunks of
+    # luadoc body text (e.g. a parameter set shared by many @function blocks)
+    # and are never themselves a callable API item.
+    common_blocks: dict[str, str] = {}
+    common_used: set[str] = set()
+    for block_text, relative_path, line in all_blocks:
+        parsed_common = parse_common_block(block_text)
+        if parsed_common is None:
+            continue
+        name, body = parsed_common
+        if name in common_blocks:
+            location = f"{relative_path}:{line}" if line else relative_path
+            raise ValueError(f"duplicate @common block '{name}' at {location}")
+        common_blocks[name] = body
+
+    # Pass 2: expand @commonparams references against the collected @common
+    # blocks, then parse @function blocks as normal. @common blocks are
+    # skipped here -- they have no @function tag, so parse_block already
+    # returns None for them, but we skip explicitly for clarity.
+    items_by_id = {}
+    for block_text, relative_path, line in all_blocks:
+        if parse_common_block(block_text) is not None:
+            continue
+        expanded_text = expand_common_params(block_text, common_blocks, common_used, relative_path, line)
+        item = parse_block(expanded_text, relative_path, line)
+        if item:
+            existing = items_by_id.get(item["id"])
+            items_by_id[item["id"]] = merge_item(existing, item) if existing else item
+
+    unused_common = set(common_blocks) - common_used
+    if unused_common:
+        print(
+            f"WARNING: @common block(s) defined but never referenced by any @commonparams: "
+            f"{', '.join(sorted(unused_common))}",
+            file=sys.stderr,
+        )
 
     model = {
         "docs_version": docs_version,

@@ -337,8 +337,9 @@ function playHaptic(duration, pause, flags) end
 ---@param value integer number to play. Value is interpreted as integer.
 ---@param unit integer unit identifier, see the Units reference for the full list
 ---@param attributes? integer possible values: * 0 or not present plays integral part of the number (for a number 123 it plays 123) * PREC1 plays a number with one decimal place (for a number 123 it plays 12.3) * PREC2 plays a number with two decimal places (for a number 123 it plays 1.23)
+---@param volume? integer : - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
 ---@return unknown none
-function playNumber(value, unit, attributes) end
+function playNumber(value, unit, attributes, volume) end
 
 --- Play a tone
 --- @since 2.1.0

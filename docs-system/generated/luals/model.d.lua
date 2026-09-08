@@ -155,7 +155,7 @@ function model.getOutput(index) end
 function model.getSensor(sensor) end
 
 --- Get heli swash parameters
---- @since unknown
+--- @since 2.8.0
 ---@return table
 function model.getSwashRing() end
 

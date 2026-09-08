@@ -37,11 +37,13 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tr><td><code>attributes</code></td><td>param</td><td><code>integer</code></td><td>possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)
  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)
  * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)</td><td><select data-field-kind="param" data-field-name="attributes" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="attributes" data-custom-type="true" /></td></tr>
+<tr><td><code>volume</code></td><td>param</td><td><code>integer</code></td><td>: - (1..5) override radio settings Wav volume for the duration of file
+ - omitting the parameter uses radio settings Wav volume</td><td><select data-field-kind="param" data-field-name="volume" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="volume" data-custom-type="true" /></td></tr>
 <tr><td><code>none</code></td><td>return</td><td><code>unknown</code></td><td></td><td><select data-field-kind="return" data-field-name="none" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="none" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playNumber&quot;, &quot;symbol&quot;: &quot;playNumber&quot;, &quot;summary&quot;: &quot;Play a numerical value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number to play. Value is interpreted as integer.&quot;}, {&quot;name&quot;: &quot;unit&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;unit identifier, see the Units reference for the full list&quot;}, {&quot;name&quot;: &quot;attributes&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playNumber&quot;, &quot;symbol&quot;: &quot;playNumber&quot;, &quot;summary&quot;: &quot;Play a numerical value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number to play. Value is interpreted as integer.&quot;}, {&quot;name&quot;: &quot;unit&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;unit identifier, see the Units reference for the full list&quot;}, {&quot;name&quot;: &quot;attributes&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)&quot;}, {&quot;name&quot;: &quot;volume&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -92,6 +94,7 @@ Play a numerical value (text to speech)
 | `value` | yes | `integer` | number to play. Value is interpreted as integer. |
 | `unit` | yes | `integer` | unit identifier, see the Units reference for the full list |
 | `attributes` | no | `integer` | possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)  * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23) |
+| `volume` | no | `integer` | : - (1..5) override radio settings Wav volume for the duration of file  - omitting the parameter uses radio settings Wav volume |
 
 #### Returns
 
@@ -111,7 +114,7 @@ None.
 Use this as a starting point when the issue is in the C++ annotation. `TODO` means you still need to choose the real type.
 
 ~~~~text
-@function playNumber([value, unit, attributes])
+@function playNumber([value, unit, attributes, volume])
 
 Play a numerical value (text to speech)
 
@@ -122,6 +125,9 @@ Play a numerical value (text to speech)
 @param attributes (integer) possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)
  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)
  * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)
+
+@param volume (integer) : - (1..5) override radio settings Wav volume for the duration of file
+ - omitting the parameter uses radio settings Wav volume
 
 @retval none (TODO)
 

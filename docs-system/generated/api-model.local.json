@@ -1,7 +1,7 @@
 {
   "docs_version": "2.12",
   "upstream_ref": "2.12@16713095a1",
-  "generated_at": "2026-09-08T13:16:46.620221Z",
+  "generated_at": "2026-09-08T21:06:36.314063Z",
   "items": [
     {
       "id": "Bitmap.getSize",
@@ -4531,7 +4531,7 @@
         }
       ],
       "availability": {
-        "since": "unknown",
+        "since": "2.8.0",
         "radios": [
           "all"
         ]
@@ -5341,6 +5341,12 @@
           "type": "integer",
           "required": false,
           "description": "possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)"
+        },
+        {
+          "name": "volume",
+          "type": "integer",
+          "required": false,
+          "description": ": - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume"
         }
       ],
       "returns": [

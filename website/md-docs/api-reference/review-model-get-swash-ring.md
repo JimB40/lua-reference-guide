@@ -42,7 +42,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getSwashRing&quot;, &quot;symbol&quot;: &quot;model.getSwashRing&quot;, &quot;summary&quot;: &quot;Get heli swash parameters&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* &#x27;collectiveSource&#x27; (number) source index\n* &#x27;aileronSource&#x27; (number) source index\n* &#x27;elevatorSource&#x27; (number) source index\n* &#x27;collectiveWeight&#x27;(value) -100 to 100\n* &#x27;aileronWeight&#x27; (value) -100 to 100\n* &#x27;elevatorWeight&#x27; (value) -100 to 100&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;unknown&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getSwashRing&quot;, &quot;symbol&quot;: &quot;model.getSwashRing&quot;, &quot;summary&quot;: &quot;Get heli swash parameters&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* &#x27;collectiveSource&#x27; (number) source index\n* &#x27;aileronSource&#x27; (number) source index\n* &#x27;elevatorSource&#x27; (number) source index\n* &#x27;collectiveWeight&#x27;(value) -100 to 100\n* &#x27;aileronWeight&#x27; (value) -100 to 100\n* &#x27;elevatorWeight&#x27; (value) -100 to 100&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.8.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -109,5 +109,5 @@ Get heli swash parameters
 * 'aileronWeight' (value) -100 to 100
 * 'elevatorWeight' (value) -100 to 100
 
-@status current Introduced in unknown
+@status current Introduced in 2.8.0
 ~~~~

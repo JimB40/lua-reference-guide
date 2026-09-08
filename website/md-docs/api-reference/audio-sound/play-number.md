@@ -20,6 +20,7 @@ Play a numerical value (text to speech)
 | `value` | yes | `integer` | number to play. Value is interpreted as integer. |
 | `unit` | yes | `integer` | unit identifier, see the Units reference for the full list |
 | `attributes` | no | `integer` | possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)  * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)  * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23) |
+| `volume` | no | `integer` | : - (1..5) override radio settings Wav volume for the duration of file  - omitting the parameter uses radio settings Wav volume |
 
 ## Returns
 

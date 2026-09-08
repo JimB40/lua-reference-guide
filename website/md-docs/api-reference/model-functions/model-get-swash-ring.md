@@ -25,7 +25,7 @@ None.
 
 ## Availability
 
-- Since: `unknown`
+- Since: `2.8.0`
 - Radio support: `all`
 
 ## Source
