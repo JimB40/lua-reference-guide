@@ -66,6 +66,32 @@ There is still polish work left, but it is mostly refinement instead of major st
 - continue wording cleanup toward consistent user-facing language
 - verify a few remaining edge-case function placements as they come up
 
+## Known Branch Divergence — Nested API Reference URLs
+
+`edgetx_2.12` currently has two commits (`0988101a`, `67ba1431`) that fixed
+broken links by hand-editing already-generated `api-reference/*.md` files
+directly, because the real generator fix wasn't available on this branch at
+the time. That is exactly the kind of hand-edit the new generated-file
+marker (see `docs-system/README.md`) exists to make visible going forward.
+
+The real fix already exists, unmerged, on `origin/docs/migrate-nested-topic-urls`
+(diverged from `7c3989a4`; commits `32f747e8`, `7538adb6`, `4ce760cd`,
+`9931ac73`, `af867548`). It restructures the entire API reference from flat
+paths (`api-reference/lcd-draw-annulus.md`) to nested-by-topic paths
+(`api-reference/display-lcd/lcd-draw-annulus.md`) and re-extracts against a
+corrected 2.12 firmware ref — 333 files changed. That's a URL-scheme
+migration with real link/SEO implications, not a drop-in fix, so it has not
+been merged or built on as part of the generated-file guardrail work.
+
+This is a decision for whoever picks it up next: merge the nested-URL
+restructure (and update anything that links to the current flat paths), or
+abandon it and re-derive a smaller link-only fix against the current flat
+layout. Either way, `docs-system/generated/luals/` and
+`website/md-docs/assets/luals/` (kept in sync by `build` as of the pipeline
+fix above) won't fully reconcile their *content* — only their write
+mechanism is fixed — until a real extract+build cycle runs against whichever
+firmware ref gets decided on here.
+
 ## Next Major Step
 
 The next major work item should be `Display LVGL`.
