@@ -15,8 +15,7 @@ Particular Source List ID is a integer number from 1 to whatever last source ent
 
 ## Source List Name
 
-Source List name can also change due to firmware changes during development or user configuration (ie. assigning custom name to input). In current version of EdgeTX firmware Source List Name also may contain special visual symbols to indicate type source (see [Special Charactes Constants](../constants/special-character-constants.md)). \
-&#x20;  &#x20;
+Source List name can also change due to firmware changes during development or user configuration (ie. assigning custom name to input). In current version of EdgeTX firmware Source List Name also may contain special visual symbols to indicate type source (see [Special Charactes Constants](../constants/special-character-constants.md)).
 
 !!! info
     To avoid confusion wherever there is reference to Source List Name short-name **sourceListName** is used.

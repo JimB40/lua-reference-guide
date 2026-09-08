@@ -1,11 +1,11 @@
 # Mixes Scripts
 
 !!! danger
-    <mark style="color:red;">**Don't use Lua Mixes Scripts for controlling any aspect of your model that could cause a crash if the script stops executing!**</mark>
+    **Don't use Lua Mixes Scripts for controlling any aspect of your model that could cause a crash if the script stops executing!**
 
 ## Purpose
 
-Mixes Scripts take one or more values as inputs, do some processing in Lua code, and output one or more values. Each model can have several Mixes Scripts associated with it, and these scripts are run periodically. They behave similarly to standard EdgeTX mixers, but at the same time they provide a much more flexible and powerful tool.&#x20;
+Mixes Scripts take one or more values as inputs, do some processing in Lua code, and output one or more values. Each model can have several Mixes Scripts associated with it, and these scripts are run periodically. They behave similarly to standard EdgeTX mixers, but at the same time they provide a much more flexible and powerful tool.
 
 Typical use cases:
 
@@ -30,7 +30,7 @@ Script executes until
     * custom scripts are run with less priority than built-in mixes. Their execution period is around 30ms and is not guaranteed!
 
 !!! warning
-    If the script output is used as a `mixer source` , and the <mark style="color:red;">**script is killed**</mark> for whatever reason, then _the_ <mark style="color:red;">**whole mixer line is disabled**</mark>!&#x20;
+    If the script output is used as a `mixer source` , and the **script is killed** for whatever reason, then _the_ **whole mixer line is disabled**!
 
 !!! info
     Mixes Scripts should be as short as possible, to avoid delays. It is also important to keep in mind that other loaded Telemetry and Function scripts can add to the response time, or worse: hang the system!
@@ -83,7 +83,7 @@ none\
 | ---------- | ----- | -------- |
 | **input**  | table | yes      |
 
-The input table defines what values are available as input(s) to custom scripts.&#x20;
+The input table defines what values are available as input(s) to custom scripts.
 
 There are two forms of input table entries
 
@@ -93,7 +93,7 @@ There are two forms of input table entries
 { "<name>", SOURCE }
 ```
 
-SOURCE inputs provide the current value of a selected OpenTX variable. The source must be selected by the user when the script is configured. Source can be any value that EdgeTX knows about (inputs, channels, telemetry values, switches, custom functions etc.).\
+SOURCE inputs provide the current value of a selected EdgeTX variable. The source must be selected by the user when the script is configured. Source can be any value that EdgeTX knows about (inputs, channels, telemetry values, switches, custom functions etc.).\
 **Note:** the typical input range is -1024 thru +1024. Simply divide the input value by 10.24 to convert to a percentage from -100% to +100%.
 
 **VALUE**
@@ -129,7 +129,7 @@ The output table defines only name(s), as the actual values are returned by the 
 
 ### Examples
 
-Example of <mark style="color:purple;">\<decribe what it does>.</mark>
+Example of a Mixes Script using a SOURCE input and a VALUE input together.
 
 ```lua
 local my_input =

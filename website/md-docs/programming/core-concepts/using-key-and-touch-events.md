@@ -131,7 +131,7 @@ It cannot trap the events `EVT_VIRTUAL_PREV`, `EVT_VIRTUAL_NEXT` as these events
 
 This function can be used to show a modal prompt window, or trap events (alternative to `setEventHandler`). `guiPrompt` is a `GUI` or another Lua table with a function `run(event, touchState`).
 
-When it is set, the main GUI will first be drawn, and then it will call `guiPrompt.run(event, touchState)` instead of its own `onEvent` function.&#x20;
+When it is set, the main GUI will first be drawn, and then it will call `guiPrompt.run(event, touchState)` instead of its own `onEvent` function.
 
 #### GUI.dismissPrompt()
 
@@ -189,7 +189,7 @@ The label does not respond to any events, but its `title` and `flags` can be cha
 
 #### GUI.menu(x, y, w, h, items, callBack \[, flags])
 
-Add a scrollable menu to the GUI.&#x20;
+Add a scrollable menu to the GUI.
 
 `items` is a table with the menu item texts.
 
@@ -219,7 +219,7 @@ The same as the above, just vertical.
 
 #### gui.custom(self, x, y, w, h)
 
-This can be used to create your own custom GUI elements. `self` is a table containing the element. You must define the functions `self.draw(focused)` and `self.onEvent(event, touchState)`. There is a function `self.drawFocus(color)` defined that can draw a border around the element (use if focused == true).&#x20;
+This can be used to create your own custom GUI elements. `self` is a table containing the element. You must define the functions `self.draw(focused)` and `self.onEvent(event, touchState)`. There is a function `self.drawFocus(color)` defined that can draw a border around the element (use if focused == true).
 
 #### gui.gui(x, y, w, h)
 

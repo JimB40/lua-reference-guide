@@ -178,3 +178,4 @@ markdown_extensions:
   - tables
   - admonition
   - fenced_code
+  - pymdownx.tilde

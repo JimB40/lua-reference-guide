@@ -23,14 +23,14 @@ Script executes until
 
 ## File Location
 
-Function scripts are located on the SD card in the folder /SCRIPTS/FUNCTIONS/&#x20;
+Function scripts are located on the SD card in the folder /SCRIPTS/FUNCTIONS/
 
 !!! warning
     File name length (without extension) **must be 6 characters or less**
 
 ## Interface
 
-Every Function script must include a `return` statement at the end, defining its interface to EdgeTX.&#x20;
+Every Function script must include a `return` statement at the end, defining its interface to EdgeTX.
 
 This statement returns a table with the following fields:
 

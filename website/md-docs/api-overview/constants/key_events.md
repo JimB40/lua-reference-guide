@@ -62,7 +62,7 @@ Radios with rotary encoder (X7 and Horus) have also:
 
 ## Virtual events
 
-Given the large number of radios supported by OpenTX, and the large difference in keys available on those, a set of VIRTUAL KEYS has been defined and are mapped to best fit available hardware
+Given the large number of radios supported by EdgeTX, and the large difference in keys available on those, a set of VIRTUAL KEYS has been defined and are mapped to best fit available hardware
 
 |   Virtual Key Event Name  |        Comments       |
 | :-----------------------: | :-------------------: |

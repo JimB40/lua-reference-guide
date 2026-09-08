@@ -2,7 +2,7 @@
 
 ## Overview:
 
-OpenTX considers all function, mix, and telemetry scripts to be 'permanent' scripts that share the same runtime environment. They are typically loaded at power up or when a new model is selected. However, they are also reinitialized when a script is added or removed during model editing.
+EdgeTX considers all function, mix, and telemetry scripts to be 'permanent' scripts that share the same runtime environment. They are typically loaded at power up or when a new model is selected. However, they are also reinitialized when a script is added or removed during model editing.
 
 ## Lua scoping rules:
 
@@ -24,22 +24,16 @@ This example consists of three scripts
     * suggested switch = "SA"
     * suggested mins = 3
     * suggested sw\_high = 0
-  * screen image:
-
-    ![count-dn.lua mix script](https://github.com/opentx/opentx-2-3-lua-reference-guide/tree/0d355d19f1961b689994cf78b84005864d33f9b5/count-dn.png)
+  * on screen, this script shows a countdown (and, once it reaches zero, a count-up) timer next to output values `ctup` and `ctdn`
 * count-up.lua
   * copy to /SCRIPTS/FUNCTIONS
   * configure on the transmitter SPECIAL FUNCTIONS page
     * suggested switch SA\(down\)
-  * screen image:
-
-    ![count-up.lua function script](https://github.com/opentx/opentx-2-3-lua-reference-guide/tree/0d355d19f1961b689994cf78b84005864d33f9b5/count-up.png)
+  * on screen, this script announces each count-up milestone as `gCountUp` reaches it
 * shocount.lua
   * copy to /SCRIPTS/TELEMETRY
   * configure on the transmitter TELEMETRY page
-  * screen image:
-
-    ![shocount.lua function script](https://github.com/opentx/opentx-2-3-lua-reference-guide/tree/0d355d19f1961b689994cf78b84005864d33f9b5/shocount.png)
+  * on screen, this script shows the current `gCountUp` and `gCountDown` values as plain text
 
 ## Script sources:
 
@@ -173,7 +167,7 @@ gCountDown = 0
 
 local function run(e)
   lcd.clear()
-  lcd.drawText(1,1,"OpenTx Lua Data Sharing",0)
+  lcd.drawText(1,1,"EdgeTX Lua Data Sharing",0)
 
   lcd.drawText(1,11,"gCountUp:", 0)
   lcd.drawText(lcd.getLastPos()+2,11,gCountUp,0)

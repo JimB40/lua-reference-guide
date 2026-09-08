@@ -30,7 +30,7 @@ You can use `id` with the function [`getValue(id)`](../../api-reference/runtime-
 For switches, [`getLogicalSwitchValue(index)`](../../api-reference/runtime-get-logical-switch-value.md) uses a direct index to read this specific type of switch sources, again using the `index` 0 for LS1 etc. But there are also several types of switch sources, such as:
 
 * Logical switches
-* Switch positions, testing if a physical switch is in a particular position, e.g. `SA↑`.&#x20;
+* Switch positions, testing if a physical switch is in a particular position, e.g. `SA↑`.
 * Trim buttons
 * Transmitter and telemetry activity
 
@@ -38,7 +38,7 @@ You can find the meta-index of a particular switch source with [`getSwitchIndex(
 
 You can read the current value of a switch source with [`getSwitchValue(index)`](../../api-reference/runtime-get-switch-value.md) as a `true`/`false` value.
 
-It can be very confusing that some source can be read both as a value and as a switch. As an example, elevator trim can be read as the current value of the _trim_:&#x20;
+It can be very confusing that some source can be read both as a value and as a switch. As an example, elevator trim can be read as the current value of the _trim_:
 
 ```lua
 local id = getFieldInfo("trim-ele")
@@ -78,7 +78,7 @@ You can also send data the other way: from Lua to the EdgeTX model setup.
 
 To send a _value_, use a global variable: `model.setGlobalVariable(index, fm, value)`. If you use the default GV setting, where all other flight modes use the value of FM0, then you can use 0 for `fm`.
 
-To send a _switch_, setup a `STICKY` type logical switch, and then use `setStickySwitch(index, true/false)`.&#x20;
+To send a _switch_, setup a `STICKY` type logical switch, and then use `setStickySwitch(index, true/false)`.
 
 The following table gives an overview of the Lua API functions that can be used to exchange data with the EdgeTX model setup.
 

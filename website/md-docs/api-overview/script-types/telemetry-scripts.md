@@ -6,7 +6,7 @@ Although they are named "Telemetry scripts" in fact they can be used to perform 
 
 !!! warning
     Telemetry scripts are only available on radios with B&W LCD screens, such as e.g. FrSky Taranis models (including Xlite), Radiomaster TX12, Zorro, Boxer or Jumper T12.\
-    Read more about <mark style="color:red;">\<radios></mark>.
+    Read more about [supported radios](../../radios/README.md).
 
 ## Execution & Lifetime
 
@@ -19,10 +19,10 @@ Script executes until:
 
 ## File Location
 
-Telemetry scripts are located on the SD card in the folder /SCRIPTS/TELEMETRY/.&#x20;
+Telemetry scripts are located on the SD card in the folder /SCRIPTS/TELEMETRY/.
 
 !!! warning
-    Telemetry script file name length (without extension) **must be 6 characters or less**&#x20;
+    Telemetry script file name length (without extension) **must be 6 characters or less**
 
 ## Interface
 

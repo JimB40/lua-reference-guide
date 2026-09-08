@@ -14,7 +14,7 @@ If you open a LUA file, you will already have some markup in your screen, indica
 
 The editor will have an "execute code" option, that will try to run the code on it's own interpreter \(code processing engine\). If there are any syntax errors, it will not be able to execute the code, and inform you about the errors. A common error in LUA is using a single equal sign \(=\) in a condition in an 'if' statement, whereas in LUA that should be a double equal sign \(==\). The interpreter will inform you about such an error ocurring, and mention the line where you made the error.
 
-Since the OpenTX LUA environment has some own functions, like lcd.drawText\(\), the interpreter will 'complain' it cannot call an unspecified function, but it will check the entire syntax nonetheless.
+Since the EdgeTX Lua environment has some own functions, like lcd.drawText\(\), the interpreter will 'complain' it cannot call an unspecified function, but it will check the entire syntax nonetheless.
 
 ### Ready to run the code
 
