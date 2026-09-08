@@ -91,15 +91,21 @@ run (`--luals-output` takes multiple directories) and stay in sync.
 
 Extracted fresh from `EdgeTX/edgetx` branch `2.12` at `16713095a1` — same
 153 items as the old stalled branch found, confirmed as still the current
-`2.12` tip. `display-lvgl.md` and its 44 `lvgl-*.md` pages are **not**
-backed by the real extraction model at all (LVGL has no upstream `/*luadoc
-*/` annotations yet — this is a separate, still-open gap, see "Next Major
-Step" below) and were deliberately preserved rather than regenerated;
-`build`'s zero-item-group guard protects them on future runs as long as
-they stay on disk, but a manual `git checkout <prior-commit> --
+`2.12` tip. At the time, `display-lvgl.md` and its 44 `lvgl-*.md` pages were
+**not** backed by the real extraction model at all (LVGL had no upstream
+`/*luadoc */` annotations yet) and were deliberately preserved rather than
+regenerated; `build`'s zero-item-group guard protects hand-preserved
+zero-item-group pages like that on future runs as long as they stay on
+disk — but a manual `git checkout <prior-commit> --
 website/md-docs/api-reference/display-lvgl.md website/md-docs/api-reference/lvgl-*.md`
-was needed this time since the whole directory was wiped clean before
-rebuilding — don't do a blanket wipe again without restoring those first.
+was needed that first time since the whole directory was wiped clean before
+rebuilding. See "Display LVGL: Resolved" below for how this gap actually
+closed a short time later.
+
+Don't do a blanket wipe of `api-reference/` again without checking first
+whether any group is still relying on the zero-item preservation guard for
+real hand-authored content — a wipe removes the on-disk copy `build` needs
+to compare against, so the guard can't do its job on the very next run.
 
 **Follow-up before this site is public**: no redirect plugin exists
 (`mkdocs-redirects` or otherwise). Skipped for this rework since the site
@@ -108,37 +114,41 @@ isn't live yet, but it does emit a real `sitemap.xml` against
 new-nested-path redirects before treating this as the live site, or any
 external links/bookmarks/search results made before that point will break.
 
-## Next Major Step
+## Display LVGL: Resolved
 
-The next major work item should be `Display LVGL`.
+`EdgeTX/edgetx#7771` ("docs(lua): add luadoc annotations for the LVGL Lua
+API") landed real `/*luadoc */` annotations for all 45 `lvgl.*` functions,
+merged (squash) into `2.12` as commit `8718d2473a`. `Display LVGL` is now
+generated from the real extraction model exactly like every other group,
+no longer a hand-preserved exception:
 
-Current issue:
+- extraction went from 153 to 198 items (`lvgl`: 45), all 44 `lvgl-*.md`
+  flat pages replaced with nested `display-lvgl/<item>.md` pages, the old
+  flat files deleted (`git rm`, not left as orphans)
+- two other pipeline bugs were found and fixed along the way, both
+  independent of LVGL and improving already-live non-LVGL content too:
+  `FUNCTION_RE`/`PARAM_RE`/`RETVAL_RE`/`NOTICE_RE`/`STATUS_RE` were
+  anchored at true column 0 and silently dropped any indented tag line
+  (LVGL's annotations are indented inside their `LROT_BEGIN` table; this
+  also fixed `model.getSwashRing`'s missing availability and
+  `playNumber`'s missing `volume` param on the existing 2.12 baseline);
+  and multi-line bulleted parameter descriptions were being flattened into
+  unreadable run-on paragraphs in the rendered table cells (fixed to
+  render as real `<ul><li>` lists)
+- a new `@common`/`@commonparams` luadoc tag pair (ported from
+  `JimB40/lua-reference-guide#7`) lets the shared "common object
+  properties" bullet list used by ~30 LVGL widget constructors be defined
+  once and referenced, instead of repeated verbatim in every function's
+  comment
+- the previous hand-preserved content had real, systematic inaccuracies
+  worth knowing about if something looks different now: every function
+  showed a fabricated `Since: 3.0.0` (real values are `2.11.0`/`2.11.1`/
+  `2.11.2`), and 32 of 44 were missing the optional `parent` argument from
+  their signature entirely
 
-- the `Display LVGL` material was created in GitHub docs only
-- the relevant syntax and API facts are not properly represented in EdgeTX C++ source comments
-- that means the generated pipeline does not yet have a strong source-of-truth base for LVGL APIs
-
-So the next step should be done in two connected parts:
-
-1. bring `Display LVGL` content into the new docs structure properly
-2. update the relevant EdgeTX C++ source files so the syntax comments exist in code and can feed generation cleanly
-
-Practical expectation:
-
-- do not treat GitHub-only LVGL docs as the final source of truth
-- use them as input material to reconstruct proper upstream comments
-- add or improve C++ annotation comments first where possible
-- then regenerate or reshape the MkDocs output from that stronger source
-
-## Recommended Next Actions
-
-When work resumes, start here:
-
-1. inventory the current `Display LVGL` docs pages and identify which parts are GitHub-only narrative versus real API syntax
-2. find the corresponding EdgeTX C++ implementation files for the LVGL Lua bindings
-3. add or normalize upstream-style syntax comments in those C++ files
-4. decide how `Display LVGL` should be grouped internally in the docs page
-5. regenerate or manually align the MkDocs `Display LVGL` section from the improved source data
+`JimB40/lua-reference-guide#5` (the manual port that produced the old
+hand-preserved content) and `#7` (the `@common`/`@commonparams` PR this
+was ported from) are both closed as superseded.
 
 ## Notes For Resume
 

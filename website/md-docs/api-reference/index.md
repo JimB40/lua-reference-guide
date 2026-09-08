@@ -18,7 +18,7 @@ This section is generated from the normalized API model and grouped with the sam
 
 ## [Display LVGL](display-lvgl.md)
 
-- `0` APIs
+- `45` APIs
 - LVGL bindings and UI helpers for display-oriented Lua scripts.
 
 ## [Model Functions](model-functions.md)

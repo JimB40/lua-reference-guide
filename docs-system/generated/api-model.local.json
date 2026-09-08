@@ -1,7 +1,7 @@
 {
   "docs_version": "2.12",
-  "upstream_ref": "2.12@16713095a1",
-  "generated_at": "2026-09-08T21:14:58.670767Z",
+  "upstream_ref": "2.12@8718d2473a",
+  "generated_at": "2026-09-08T21:42:10.893096Z",
   "items": [
     {
       "id": "Bitmap.getSize",
@@ -3750,6 +3750,1836 @@
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function loadScript(file [, mode], [,env])\n\nLoad a Lua script file. This is similar to Lua's own [loadfile()](https://www.lua.org/manual/5.2/manual.html#pdf-loadfile)\nAPI method, but it uses OpenTx's optional pre-compilation feature to save memory and time during load.\n\nReturn values are same as from Lua API loadfile() method: If the script was loaded w/out errors\nthen the loaded script (or \"chunk\") is returned as a function. Otherwise, returns nil plus the error message.\n\n@param file (string) Full path and file name of script. The file extension is optional and ignored (see `mode` param to control\n  which extension will be used). However, if an extension is specified, it should be \".lua\" (or \".luac\"), otherwise it is treated\n  as part of the file name and the .lua/.luac will be appended to that.\n\n@param mode (string) (optional) Controls whether to force loading the text (.lua) or pre-compiled binary (.luac)\n  version of the script. By default ETX will load the newest version and compile a new binary if necessary (overwriting any\n  existing .luac version of the same script, and stripping some debug info like line numbers).\n  You can use `mode` to control the loading behavior more specifically. Possible values are:\n   * `b` only binary.\n   * `t` only text.\n   * `T` (default on simulator) prefer text but load binary if that is the only version available.\n   * `bt` (default on radio) either binary or text, whichever is newer (binary preferred when timestamps are equal).\n   * Add `x` to avoid automatic compilation of source file to .luac version.\n       Eg: \"tx\", \"bx\", or \"btx\".\n   * Add `c` to force compilation of source file to .luac version (even if existing version is newer than source file).\n       Eg: \"tc\" or \"btc\" (forces \"t\", overrides \"x\").\n   * Add `d` to keep extra debug info in the compiled binary.\n       Eg: \"td\", \"btd\", or \"tcd\" (no effect with just \"b\" or with \"x\").\n\n@notice\n  Note that you will get an error if you specify `mode` as \"b\" or \"t\" and that specific version of the file does not exist (eg. no .luac file when \"b\" is used).\n  Also note that `mode` is NOT passed on to Lua's loader function, so unlike with loadfile() the actual file content is not checked (as if no mode or \"bt\" were passed to loadfile()).\n\n@param env (integer) See documentation for Lua function loadfile().\n\n@retval function The loaded script, or `nil` if there was an error (e.g. file not found or syntax error).\n\n@retval string Error message(s), if any. Blank if no error occurred.\n\n@status current Introduced in 2.2.0\n\n### Example\n\n```lua\n  fun, err = loadScript(\"/SCRIPTS/FUNCTIONS/print.lua\")\n  if (fun ~= nil) then\n     fun(\"Hello from loadScript()\")\n  else\n     print(err)\n  end\n```",
       "source_line": 2111
+    },
+    {
+      "id": "lvgl.align",
+      "doc_id": "lvgl.align",
+      "symbol": "lvgl.align",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.align([parent, ]params)",
+      "summary": "Display a button showing a text alignment name. Tapping it opens a popup menu to choose an alignment from, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected alignment, defaults to nil\n   * `set` (function) called when the user taps an alignment in the popup; passed the selected alignment value, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.align([parent, ]params)\n\n  Display a button showing a text alignment name. Tapping it opens a popup menu to choose an alignment from, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected alignment, defaults to nil\n   * `set` (function) called when the user taps an alignment in the popup; passed the selected alignment value, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1048
+    },
+    {
+      "id": "lvgl.arc",
+      "doc_id": "lvgl.arc",
+      "symbol": "lvgl.arc",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.arc([parent, ]params)",
+      "summary": "Display an arc.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `thickness` (number) width of the arc's line, defaults to 1\n   * `radius` (number or function) radius of the arc, defaults to 0\n   * `startAngle` (number or function) starting angle in degrees (0-360), 0 is 3 o'clock, defaults to 0\n   * `endAngle` (number or function) ending angle in degrees, defaults to 360\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `rounded` (boolean) if true the ends of the arc are rounded, defaults to false\n   * `bgColor` (color or function) color of the background arc, not used by default\n   * `bgOpacity` (number or function) opacity of the background arc, defaults to 0 (not visible)\n   * `bgStartAngle` (number or function) starting angle of the background arc in degrees, defaults to 0\n   * `bgEndAngle` (number or function) ending angle of the background arc in degrees, defaults to 360"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Arc objects have two elements, a foreground arc and a background arc. By default the background arc is not shown -- to show it, set both `bgColor` and `bgOpacity`.\n  @notice If `opacity` or `bgOpacity` is less than 255 and `rounded` is true, the ends of the arc will not draw correctly. This is an LVGL limitation."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.arc([parent, ]params)\n\n  Display an arc.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `w`, `h`, and `size` should not be used with `lvgl.arc` -- use `radius` instead.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `thickness` (number) width of the arc's line, defaults to 1\n   * `radius` (number or function) radius of the arc, defaults to 0\n   * `startAngle` (number or function) starting angle in degrees (0-360), 0 is 3 o'clock, defaults to 0\n   * `endAngle` (number or function) ending angle in degrees, defaults to 360\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `rounded` (boolean) if true the ends of the arc are rounded, defaults to false\n   * `bgColor` (color or function) color of the background arc, not used by default\n   * `bgOpacity` (number or function) opacity of the background arc, defaults to 0 (not visible)\n   * `bgStartAngle` (number or function) starting angle of the background arc in degrees, defaults to 0\n   * `bgEndAngle` (number or function) ending angle of the background arc in degrees, defaults to 360\n\n  @retval table LVGL object\n\n  @notice Arc objects have two elements, a foreground arc and a background arc. By default the background arc is not shown -- to show it, set both `bgColor` and `bgOpacity`.\n  @notice If `opacity` or `bgOpacity` is less than 255 and `rounded` is true, the ends of the arc will not draw correctly. This is an LVGL limitation.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 765
+    },
+    {
+      "id": "lvgl.box",
+      "doc_id": "lvgl.box",
+      "symbol": "lvgl.box",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.box([parent, ]params)",
+      "summary": "Create a container for managing object layout.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `flexFlow` (lvgl.FLOW_COLUMN or lvgl.FLOW_ROW) enables flex layout for this box, not used by default\n   * `flexPad` (number) padding between rows/columns when flex layout is used; recommend using `lvgl.PAD_xxx` values, defaults to `PAD_OUTLINE`\n   * `scrollBar` (boolean) enables/disables scroll bars, defaults to true\n   * `scrollDir` (lvgl.SCROLL_xx) allowed scroll directions when child objects extend past the box bounds (stand alone scripts only), defaults to `lvgl.SCROLL_ALL`\n   * `scrolled` (function) called when the box content is scrolled; passed `x`, `y` of the current scroll position, defaults to nil\n   * `scrollTo` (function) overrides the box scroll position; must return `x`, `y` to scroll to, defaults to nil\n   * `align` (alignment type (LEFT, RIGHT, CENTER, VTOP, VBOTTOM, VCENTER)) alignment used with flex layouts (added in 2.11.4); avoid combining an alignment with a scrollbar on the same axis, defaults to `CENTER | VTOP`\n   * `borderPad` (number or table) border padding around the container edges; a single number applies to all sides, or a table `{left=?, right=?, top=?, bottom=?}` (added in 2.11.5), defaults to `PAD_OUTLINE` if `flexFlow` is set, otherwise 0"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "The box is a helper for managing screen layouts.\n  @notice When adding controls such as button/toggle/textEdit, leave enough space around them for the focus outline.\n  @notice In a stand alone tool script, the box automatically adds scroll bars if child objects fall outside its boundaries; for widgets, out-of-bounds children are clipped instead.\n  @notice `scrollBar`, `scrollDir`, `scrolled`, and `scrollTo` were added in 2.11.2."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.box([parent, ]params)\n\n  Create a container for managing object layout.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `flexFlow` (lvgl.FLOW_COLUMN or lvgl.FLOW_ROW) enables flex layout for this box, not used by default\n   * `flexPad` (number) padding between rows/columns when flex layout is used; recommend using `lvgl.PAD_xxx` values, defaults to `PAD_OUTLINE`\n   * `scrollBar` (boolean) enables/disables scroll bars, defaults to true\n   * `scrollDir` (lvgl.SCROLL_xx) allowed scroll directions when child objects extend past the box bounds (stand alone scripts only), defaults to `lvgl.SCROLL_ALL`\n   * `scrolled` (function) called when the box content is scrolled; passed `x`, `y` of the current scroll position, defaults to nil\n   * `scrollTo` (function) overrides the box scroll position; must return `x`, `y` to scroll to, defaults to nil\n   * `align` (alignment type (LEFT, RIGHT, CENTER, VTOP, VBOTTOM, VCENTER)) alignment used with flex layouts (added in 2.11.4); avoid combining an alignment with a scrollbar on the same axis, defaults to `CENTER | VTOP`\n   * `borderPad` (number or table) border padding around the container edges; a single number applies to all sides, or a table `{left=?, right=?, top=?, bottom=?}` (added in 2.11.5), defaults to `PAD_OUTLINE` if `flexFlow` is set, otherwise 0\n\n  @retval table LVGL object\n\n  @notice The box is a helper for managing screen layouts.\n  @notice When adding controls such as button/toggle/textEdit, leave enough space around them for the focus outline.\n  @notice In a stand alone tool script, the box automatically adds scroll bars if child objects fall outside its boundaries; for widgets, out-of-bounds children are clipped instead.\n  @notice `scrollBar`, `scrollDir`, `scrolled`, and `scrollTo` were added in 2.11.2.\n\n  @status current Introduced in 2.11.0, align added in 2.11.4, borderPad added in 2.11.5, floating added in 2.11.6, scrollBar/scrollDir/scrolled/scrollTo added in 2.11.2",
+      "source_line": 1185
+    },
+    {
+      "id": "lvgl.build",
+      "doc_id": "lvgl.build",
+      "symbol": "lvgl.build",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.build([parent, ]params)",
+      "summary": "Build a complex UI in a single operation from a table of object definitions.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the built objects to; if omitted they attach to the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "a table of tables, each defining one LVGL object: * `type` (string or type constant) mandatory, selects the kind of object to create, e.g. `\"rectangle\"` or `lvgl.RECTANGLE`; named type constants (e.g. `lvgl.RECTANGLE`) added in 2.11.4, string names work in all versions\n * `name` (string) optional name used to look up this object in the returned table, defaults to an empty string\n * `children` (table) optional nested table of the same shape, to create child objects\n * any other key accepted by the constructor function for the chosen `type`"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "named LVGL objects (only entries whose definition included a `name` are included)"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Objects can be nested via `children`, another table of tables using the same shape as the top-level `params`.\n@notice Very large or deeply nested tables may fail to compile to `.luac` -- if a script works from `.lua` but fails from `.luac`, split the call into multiple smaller `lvgl.build()` calls."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.build([parent, ]params)\n\nBuild a complex UI in a single operation from a table of object definitions.\n\n@param parent (object) optional LVGL object to attach the built objects to; if omitted they attach to the top-level script window\n\n@param params (table) a table of tables, each defining one LVGL object:\n * `type` (string or type constant) mandatory, selects the kind of object to create, e.g. `\"rectangle\"` or `lvgl.RECTANGLE`; named type constants (e.g. `lvgl.RECTANGLE`) added in 2.11.4, string names work in all versions\n * `name` (string) optional name used to look up this object in the returned table, defaults to an empty string\n * `children` (table) optional nested table of the same shape, to create child objects\n * any other key accepted by the constructor function for the chosen `type`\n\n@retval table named LVGL objects (only entries whose definition included a `name` are included)\n\n@notice Objects can be nested via `children`, another table of tables using the same shape as the top-level `params`.\n@notice Very large or deeply nested tables may fail to compile to `.luac` -- if a script works from `.lua` but fails from `.luac`, split the call into multiple smaller `lvgl.build()` calls.\n\n@status current Introduced in 2.11.0, named type constants added in 2.11.4",
+      "source_line": 453
+    },
+    {
+      "id": "lvgl.button",
+      "doc_id": "lvgl.button",
+      "symbol": "lvgl.button",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.button([parent, ]params)",
+      "summary": "Add a text button using the EdgeTX style.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `text` (string or function) text displayed in the button, defaults to an empty string\n   * `press` (function) called when the user taps the button, after releasing ENTER or the screen; may optionally return a non-zero integer to display the button in the checked state, defaults to nil\n   * `longpress` (function) called on a long tap; may optionally return a non-zero integer to display the button in the checked state, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `checked` (boolean) sets the initial checked state; can be updated with `lvgl.set()`, defaults to false\n   * `color` (color or function) background color, defaults to the EdgeTX button style PRIMARY2 theme color\n   * `textColor` (color or function) text color, defaults to the EdgeTX button style SECONDARY1 theme color\n   * `cornerRadius` (number) radius for the button's corners, defaults to the EdgeTX button style radius\n   * `font` (font value or function) sets the font size, e.g. `MIDSIZE`, `DBLSIZE`; defaults to `STDSIZE`"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.button([parent, ]params)\n\n  Add a text button using the EdgeTX style.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `text` (string or function) text displayed in the button, defaults to an empty string\n   * `press` (function) called when the user taps the button, after releasing ENTER or the screen; may optionally return a non-zero integer to display the button in the checked state, defaults to nil\n   * `longpress` (function) called on a long tap; may optionally return a non-zero integer to display the button in the checked state, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `checked` (boolean) sets the initial checked state; can be updated with `lvgl.set()`, defaults to false\n   * `color` (color or function) background color, defaults to the EdgeTX button style PRIMARY2 theme color\n   * `textColor` (color or function) text color, defaults to the EdgeTX button style SECONDARY1 theme color\n   * `cornerRadius` (number) radius for the button's corners, defaults to the EdgeTX button style radius\n   * `font` (font value or function) sets the font size, e.g. `MIDSIZE`, `DBLSIZE`; defaults to `STDSIZE`\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 834
+    },
+    {
+      "id": "lvgl.choice",
+      "doc_id": "lvgl.choice",
+      "symbol": "lvgl.choice",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.choice([parent, ]params)",
+      "summary": "Display a button showing an option value. Tapping it opens a popup menu of options to choose from, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `title` (string) text displayed in the popup menu's header, defaults to an empty string\n   * `values` (table) simple table of option strings shown in the popup; can be changed via `lvgl.set()` since 2.11.6, defaults to an empty list\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the index of the currently selected option (1..number of values), defaults to nil\n   * `set` (function) called when the user taps a menu item; passed the selected item's index (1..number of values), defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `filter` (function) called for each option when the popup opens, passed the option's index; return true to show it, false to hide it, defaults to nil\n   * `popupWidth` (number) width of the popup window, defaults to 0 (use default width)"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.choice([parent, ]params)\n\n  Display a button showing an option value. Tapping it opens a popup menu of options to choose from, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `title` (string) text displayed in the popup menu's header, defaults to an empty string\n   * `values` (table) simple table of option strings shown in the popup; can be changed via `lvgl.set()` since 2.11.6, defaults to an empty list\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the index of the currently selected option (1..number of values), defaults to nil\n   * `set` (function) called when the user taps a menu item; passed the selected item's index (1..number of values), defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `filter` (function) called for each option when the popup opens, passed the option's index; return true to show it, false to hide it, defaults to nil\n   * `popupWidth` (number) width of the popup window, defaults to 0 (use default width)\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, values updatable via lvgl.set() added in 2.11.6, floating added in 2.11.6",
+      "source_line": 952
+    },
+    {
+      "id": "lvgl.circle",
+      "doc_id": "lvgl.circle",
+      "symbol": "lvgl.circle",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.circle([parent, ]params)",
+      "summary": "Display a solid or outlined circle.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `thickness` (number) width of the border line, defaults to 1\n   * `filled` (boolean) if true the circle is filled with `color`, defaults to false\n   * `radius` (number or function) radius of the circle, defaults to 0\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.circle([parent, ]params)\n\n  Display a solid or outlined circle.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `w`, `h`, and `size` should not be used with `lvgl.circle` -- use `radius` instead.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `thickness` (number) width of the border line, defaults to 1\n   * `filled` (boolean) if true the circle is filled with `color`, defaults to false\n   * `radius` (number or function) radius of the circle, defaults to 0\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n\n  @retval table LVGL object\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 744
+    },
+    {
+      "id": "lvgl.clear",
+      "doc_id": "lvgl.clear",
+      "symbol": "lvgl.clear",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.clear([parent])",
+      "summary": "Delete LVGL objects.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object whose children should be deleted; if omitted, the entire script UI is deleted"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "If `parent` is not set, the entire script UI is deleted -- use this when the UI changes dramatically (e.g. widget size changes).\n@notice If `parent` is set, only its child LVGL objects are deleted -- use this to remove and replace a specific set of objects."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.clear([parent])\n\nDelete LVGL objects.\n\n@param parent (object) optional LVGL object whose children should be deleted; if omitted, the entire script UI is deleted\n\n@retval none\n\n@notice If `parent` is not set, the entire script UI is deleted -- use this when the UI changes dramatically (e.g. widget size changes).\n@notice If `parent` is set, only its child LVGL objects are deleted -- use this to remove and replace a specific set of objects.\n\n@status current Introduced in 2.11.0",
+      "source_line": 138
+    },
+    {
+      "id": "lvgl.close",
+      "doc_id": "lvgl.close",
+      "symbol": "lvgl.close",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.close(obj)",
+      "summary": "Close an LVGL object that represents a closable container or dialog.",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "object",
+          "required": true,
+          "description": "LVGL object previously created by the `lvgl` library"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.close(obj)\n\nClose an LVGL object that represents a closable container or dialog.\n\n@param obj (object) LVGL object previously created by the `lvgl` library\n\n@retval none\n\n@status current Introduced in 2.11.0",
+      "source_line": 252
+    },
+    {
+      "id": "lvgl.color",
+      "doc_id": "lvgl.color",
+      "symbol": "lvgl.color",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.color([parent, ]params)",
+      "summary": "Display a button showing a color swatch. Tapping it opens the color picker dialog, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called once when the object is created, to get the initial color, defaults to nil\n   * `set` (function) called when the user picks a color; passed the selected color value, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects a color.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.color([parent, ]params)\n\n  Display a button showing a color swatch. Tapping it opens the color picker dialog, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called once when the object is created, to get the initial color, defaults to nil\n   * `set` (function) called when the user picks a color; passed the selected color value, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects a color.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1069
+    },
+    {
+      "id": "lvgl.confirm",
+      "doc_id": "lvgl.confirm",
+      "symbol": "lvgl.confirm",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.confirm(params)",
+      "summary": "Display a Yes/No confirmation dialog box.",
+      "parameters": [
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `title` (string) text displayed in the dialog's header, defaults to an empty string\n   * `message` (string) text displayed in the dialog's body, defaults to an empty string\n   * `confirm` (function) called when the user taps Yes, defaults to nil\n   * `cancel` (function) called when the user taps No, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.confirm` -- only the settings listed above apply."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.confirm(params)\n\n  Display a Yes/No confirmation dialog box.\n\n  @param params (table):\n   * `title` (string) text displayed in the dialog's header, defaults to an empty string\n   * `message` (string) text displayed in the dialog's body, defaults to an empty string\n   * `confirm` (function) called when the user taps Yes, defaults to nil\n   * `cancel` (function) called when the user taps No, defaults to nil\n\n  @retval none\n\n  @notice The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.confirm` -- only the settings listed above apply.\n\n  @status current Introduced in 2.11.0",
+      "source_line": 1285
+    },
+    {
+      "id": "lvgl.dialog",
+      "doc_id": "lvgl.dialog",
+      "symbol": "lvgl.dialog",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.dialog(params)",
+      "summary": "Display a dialog box.",
+      "parameters": [
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `title` (string) text displayed in the dialog's header, defaults to an empty string\n   * `close` (function) called when the dialog is closed, defaults to nil\n   * `flexFlow` (lvgl.FLOW_COLUMN or lvgl.FLOW_ROW) enables flex layout for this box, not used by default\n   * `flexPad` (number) padding between rows/columns when flex layout is used, defaults to `PAD_OUTLINE`"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.dialog` -- only the settings listed above apply."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.dialog(params)\n\n  Display a dialog box.\n\n  @param params (table):\n   * `title` (string) text displayed in the dialog's header, defaults to an empty string\n   * `close` (function) called when the dialog is closed, defaults to nil\n   * `flexFlow` (lvgl.FLOW_COLUMN or lvgl.FLOW_ROW) enables flex layout for this box, not used by default\n   * `flexPad` (number) padding between rows/columns when flex layout is used, defaults to `PAD_OUTLINE`\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.dialog` -- only the settings listed above apply.\n\n  @status current Introduced in 2.11.0",
+      "source_line": 1265
+    },
+    {
+      "id": "lvgl.disable",
+      "doc_id": "lvgl.disable",
+      "symbol": "lvgl.disable",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.disable(obj)",
+      "summary": "Disable interaction for an LVGL control object.",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "object",
+          "required": true,
+          "description": "LVGL object previously created by the `lvgl` library"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.disable(obj)\n\nDisable interaction for an LVGL control object.\n\n@param obj (object) LVGL object previously created by the `lvgl` library\n\n@retval none\n\n@status current Introduced in 2.11.0",
+      "source_line": 232
+    },
+    {
+      "id": "lvgl.enable",
+      "doc_id": "lvgl.enable",
+      "symbol": "lvgl.enable",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.enable(obj)",
+      "summary": "Enable interaction for an LVGL control object.",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "object",
+          "required": true,
+          "description": "LVGL object previously created by the `lvgl` library"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.enable(obj)\n\nEnable interaction for an LVGL control object.\n\n@param obj (object) LVGL object previously created by the `lvgl` library\n\n@retval none\n\n@status current Introduced in 2.11.0",
+      "source_line": 212
+    },
+    {
+      "id": "lvgl.exitFullScreen",
+      "doc_id": "lvgl.exit-full-screen",
+      "symbol": "lvgl.exitFullScreen",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.exitFullScreen()",
+      "summary": "If the script is running in full screen mode, return it to normal mode.",
+      "parameters": [],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.exitFullScreen()\n\nIf the script is running in full screen mode, return it to normal mode.\n\n@retval none\n\n@status current Introduced in 2.11.0",
+      "source_line": 538
+    },
+    {
+      "id": "lvgl.file",
+      "doc_id": "lvgl.file",
+      "symbol": "lvgl.file",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.file([parent, ]params)",
+      "summary": "Display a button showing a filename. Tapping it opens a popup file picker, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `title` (string) text displayed in the popup's header, defaults to an empty string\n   * `get` (function) called when the popup is opened, and after the selection changes, to get the currently selected filename; must return a string, defaults to nil\n   * `set` (function) called when the user picks a file; passed the selected filename (without path), defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `folder` (string) SD card folder to browse for files, defaults to nil\n   * `extension` (string) extension filter, e.g. `.png` or concatenated `.png.bmp` to match multiple, defaults to nil (no filter)\n   * `hideExtension` (boolean) if true, the extension is stripped before `set` is called and hidden in the picker list, defaults to false\n   * `maxLen` (number) maximum filename length (measured after `hideExtension` stripping, if set); files with longer names are not shown in the picker list, defaults to 255"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user picks a file.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.file([parent, ]params)\n\n  Display a button showing a filename. Tapping it opens a popup file picker, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `title` (string) text displayed in the popup's header, defaults to an empty string\n   * `get` (function) called when the popup is opened, and after the selection changes, to get the currently selected filename; must return a string, defaults to nil\n   * `set` (function) called when the user picks a file; passed the selected filename (without path), defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `folder` (string) SD card folder to browse for files, defaults to nil\n   * `extension` (string) extension filter, e.g. `.png` or concatenated `.png.bmp` to match multiple, defaults to nil (no filter)\n   * `hideExtension` (boolean) if true, the extension is stripped before `set` is called and hidden in the picker list, defaults to false\n   * `maxLen` (number) maximum filename length (measured after `hideExtension` stripping, if set); files with longer names are not shown in the picker list, defaults to 255\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user picks a file.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1157
+    },
+    {
+      "id": "lvgl.font",
+      "doc_id": "lvgl.font",
+      "symbol": "lvgl.font",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.font([parent, ]params)",
+      "summary": "Display a button showing a font name. Tapping it opens a popup menu to choose a font from, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected font, defaults to nil\n   * `set` (function) called when the user taps a font in the popup; passed the selected font value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.font([parent, ]params)\n\n  Display a button showing a font name. Tapping it opens a popup menu to choose a font from, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected font, defaults to nil\n   * `set` (function) called when the user taps a font in the popup; passed the selected font value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1026
+    },
+    {
+      "id": "lvgl.getContext",
+      "doc_id": "lvgl.get-context",
+      "symbol": "lvgl.getContext",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.getContext()",
+      "summary": "For a widget script, returns the local instance table created by (and returned from) the script's `create()` function.",
+      "parameters": [],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "the widget instance's local data table, or nil for stand alone tool scripts"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.getContext()\n\nFor a widget script, returns the local instance table created by (and returned from) the script's `create()` function.\n\n@retval table the widget instance's local data table, or nil for stand alone tool scripts\n\n@status current Introduced in 2.11.0",
+      "source_line": 554
+    },
+    {
+      "id": "lvgl.getScrollPos",
+      "doc_id": "lvgl.get-scroll-pos",
+      "symbol": "lvgl.getScrollPos",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.getScrollPos(parent)",
+      "summary": "Get the current scroll position of a container object.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": true,
+          "description": "LVGL container object (e.g. `box`, `rectangle`, or `page`)"
+        }
+      ],
+      "returns": [
+        {
+          "name": "number,",
+          "type": "unknown",
+          "description": "number the X and Y scroll position of the container's top-left corner"
+        }
+      ],
+      "availability": {
+        "since": "2.11.2",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only applies to container objects such as `box`, `rectangle`, and `page`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.getScrollPos(parent)\n\nGet the current scroll position of a container object.\n\n@param parent (object) LVGL container object (e.g. `box`, `rectangle`, or `page`)\n\n@retval number, number the X and Y scroll position of the container's top-left corner\n\n@notice Only applies to container objects such as `box`, `rectangle`, and `page`.\n\n@status current Introduced in 2.11.2",
+      "source_line": 574
+    },
+    {
+      "id": "lvgl.hide",
+      "doc_id": "lvgl.hide",
+      "symbol": "lvgl.hide",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.hide(parent)",
+      "summary": "Hide an LVGL object.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": true,
+          "description": "LVGL object to hide"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "The `visible` setting function can also be used to dynamically show and hide objects."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.hide(parent)\n\nHide an LVGL object.\n\n@param parent (object) LVGL object to hide\n\n@retval none\n\n@notice The `visible` setting function can also be used to dynamically show and hide objects.\n\n@status current Introduced in 2.11.0",
+      "source_line": 190
+    },
+    {
+      "id": "lvgl.hline",
+      "doc_id": "lvgl.hline",
+      "symbol": "lvgl.hline",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.hline([parent, ]params)",
+      "summary": "Display a horizontal line.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `rounded` (boolean) if true the line's end caps are rounded, defaults to false\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `dashGap` (number) gap size for dashed lines, defaults to 0\n   * `dashWidth` (number) dash size for dashed lines, defaults to 0; both `dashGap` and `dashWidth` must be > 0 to draw dashed lines"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.hline([parent, ]params)\n\n  Display a horizontal line.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `w` sets the length of the line; `h` sets its thickness.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `rounded` (boolean) if true the line's end caps are rounded, defaults to false\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `dashGap` (number) gap size for dashed lines, defaults to 0\n   * `dashWidth` (number) dash size for dashed lines, defaults to 0; both `dashGap` and `dashWidth` must be > 0 to draw dashed lines\n\n  @retval table LVGL object\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 660
+    },
+    {
+      "id": "lvgl.image",
+      "doc_id": "lvgl.image",
+      "symbol": "lvgl.image",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.image([parent, ]params)",
+      "summary": "Display an image, centered in the frame `(x, y, w, h)`. Images can be scaled to fit entirely within the frame or to fill it completely.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `file` (string) full path to the image file on the SD card, defaults to an empty string\n   * `fill` (boolean) if true the image is scaled to completely fill the frame (may be cropped); if false it is scaled to fit entirely within the frame (may have empty borders), defaults to false"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "`w` and `h` are required."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.image([parent, ]params)\n\n  Display an image, centered in the frame `(x, y, w, h)`. Images can be scaled to fit entirely within the frame or to fill it completely.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `file` (string) full path to the image file on the SD card, defaults to an empty string\n   * `fill` (boolean) if true the image is scaled to completely fill the frame (may be cropped); if false it is scaled to fit entirely within the frame (may have empty borders), defaults to false\n\n  @retval table LVGL object\n\n  @notice `w` and `h` are required.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 795
+    },
+    {
+      "id": "lvgl.isAppMode",
+      "doc_id": "lvgl.is-app-mode",
+      "symbol": "lvgl.isAppMode",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.isAppMode()",
+      "summary": "Test if the script is running in App Mode.",
+      "parameters": [],
+      "returns": [
+        {
+          "name": "",
+          "type": "boolean",
+          "description": "true if running in App Mode, false otherwise"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.isAppMode()\n\nTest if the script is running in App Mode.\n\n@retval boolean true if running in App Mode, false otherwise\n\n@status current Introduced in 2.11.0",
+      "source_line": 498
+    },
+    {
+      "id": "lvgl.isFullScreen",
+      "doc_id": "lvgl.is-full-screen",
+      "symbol": "lvgl.isFullScreen",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.isFullScreen()",
+      "summary": "Test if the script is running in full screen mode.",
+      "parameters": [],
+      "returns": [
+        {
+          "name": "",
+          "type": "boolean",
+          "description": "true if running in full screen mode, false otherwise"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Always returns true for stand alone tool scripts."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.isFullScreen()\n\nTest if the script is running in full screen mode.\n\n@retval boolean true if running in full screen mode, false otherwise\n\n@notice Always returns true for stand alone tool scripts.\n\n@status current Introduced in 2.11.0",
+      "source_line": 517
+    },
+    {
+      "id": "lvgl.label",
+      "doc_id": "lvgl.label",
+      "symbol": "lvgl.label",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.label([parent, ]params)",
+      "summary": "Display a text label.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `text` (string or function) text to display, defaults to an empty string\n   * `font` (font value or function) sets the font size, e.g. `MIDSIZE`, `DBLSIZE`; defaults to `STDSIZE`\n   * `align` (text alignment value or function) sets the text justification, e.g. `RIGHT`, `VCENTER`; defaults to `LEFT`. `RIGHT`/`CENTER` require `w` to be set. `LEFT`/`RIGHT`/`CENTER` align text horizontally within the label's bounding box `(x,y,w,h)`; `VCENTER`/`VTOP`/`VBOTTOM` align the label's bounding box vertically within the parent object"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.label([parent, ]params)\n\n  Display a text label.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `text` (string or function) text to display, defaults to an empty string\n   * `font` (font value or function) sets the font size, e.g. `MIDSIZE`, `DBLSIZE`; defaults to `STDSIZE`\n   * `align` (text alignment value or function) sets the text justification, e.g. `RIGHT`, `VCENTER`; defaults to `LEFT`. `RIGHT`/`CENTER` require `w` to be set. `LEFT`/`RIGHT`/`CENTER` align text horizontally within the label's bounding box `(x,y,w,h)`; `VCENTER`/`VTOP`/`VBOTTOM` align the label's bounding box vertically within the parent object\n\n  @retval table LVGL object\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 621
+    },
+    {
+      "id": "lvgl.line",
+      "doc_id": "lvgl.line",
+      "symbol": "lvgl.line",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.line([parent, ]params)",
+      "summary": "Display one or more connected line segments.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `rounded` (boolean) if true the line's end caps are rounded, defaults to false\n   * `thickness` (number) thickness of each line segment, defaults to 1\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `pts` (table or function) table of points, each a `{x, y}` pair; at least two points are required, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.line([parent, ]params)\n\n  Display one or more connected line segments.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `x`, `y`, `w`, and `h` are not used.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `rounded` (boolean) if true the line's end caps are rounded, defaults to false\n   * `thickness` (number) thickness of each line segment, defaults to 1\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `pts` (table or function) table of points, each a `{x, y}` pair; at least two points are required, defaults to nil\n\n  @retval table LVGL object\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 702
+    },
+    {
+      "id": "lvgl.menu",
+      "doc_id": "lvgl.menu",
+      "symbol": "lvgl.menu",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.menu(params)",
+      "summary": "Open a popup menu with multiple options to choose from, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `title` (string) text displayed in the popup's header, defaults to an empty string\n   * `values` (table) simple table of option strings shown in the popup, defaults to an empty list\n   * `get` (function) called when the popup is opened, to get the index of the currently selected option (1..number of values), defaults to nil\n   * `set` (function) called when the user taps a menu item; passed the selected item's index (1..number of values), defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.1",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.menu` -- only the settings listed above apply.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.menu(params)\n\n  Open a popup menu with multiple options to choose from, using EdgeTX styling.\n\n  @param params (table):\n   * `title` (string) text displayed in the popup's header, defaults to an empty string\n   * `values` (table) simple table of option strings shown in the popup, defaults to an empty list\n   * `get` (function) called when the popup is opened, to get the index of the currently selected option (1..number of values), defaults to nil\n   * `set` (function) called when the user taps a menu item; passed the selected item's index (1..number of values), defaults to nil\n\n  @retval none\n\n  @notice The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.menu` -- only the settings listed above apply.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.1",
+      "source_line": 1320
+    },
+    {
+      "id": "lvgl.message",
+      "doc_id": "lvgl.message",
+      "symbol": "lvgl.message",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.message(params)",
+      "summary": "Display a message dialog box.",
+      "parameters": [
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `title` (string) text displayed in the dialog's header, defaults to an empty string\n   * `message` (string) text displayed in the dialog's body, defaults to an empty string\n   * `details` (string) additional text displayed in the dialog's body, defaults to an empty string"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.message` -- only the settings listed above apply."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.message(params)\n\n  Display a message dialog box.\n\n  @param params (table):\n   * `title` (string) text displayed in the dialog's header, defaults to an empty string\n   * `message` (string) text displayed in the dialog's body, defaults to an empty string\n   * `details` (string) additional text displayed in the dialog's body, defaults to an empty string\n\n  @retval none\n\n  @notice The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.message` -- only the settings listed above apply.\n\n  @status current Introduced in 2.11.0",
+      "source_line": 1303
+    },
+    {
+      "id": "lvgl.momentaryButton",
+      "doc_id": "lvgl.momentary-button",
+      "symbol": "lvgl.momentaryButton",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.momentaryButton([parent, ]params)",
+      "summary": "Add a momentary text button using the EdgeTX style.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `text` (string or function) text displayed in the button, defaults to an empty string\n   * `press` (function) called immediately when the user first taps the button or presses ENTER, defaults to nil\n   * `release` (function) called when the user releases ENTER or stops touching the screen, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `color` (color or function) background color, defaults to the EdgeTX button style PRIMARY2 theme color\n   * `textColor` (color or function) text color, defaults to the EdgeTX button style SECONDARY1 theme color\n   * `cornerRadius` (number) radius for the button's corners, defaults to the EdgeTX button style radius\n   * `font` (font value or function) sets the font size, e.g. `MIDSIZE`, `DBLSIZE`; defaults to `STDSIZE`"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice Unlike `lvgl.button`, `press` fires immediately on tap/press rather than on release. The button shows the checked state until ENTER is released or the screen is no longer touched."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.momentaryButton([parent, ]params)\n\n  Add a momentary text button using the EdgeTX style.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `text` (string or function) text displayed in the button, defaults to an empty string\n   * `press` (function) called immediately when the user first taps the button or presses ENTER, defaults to nil\n   * `release` (function) called when the user releases ENTER or stops touching the screen, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `color` (color or function) background color, defaults to the EdgeTX button style PRIMARY2 theme color\n   * `textColor` (color or function) text color, defaults to the EdgeTX button style SECONDARY1 theme color\n   * `cornerRadius` (number) radius for the button's corners, defaults to the EdgeTX button style radius\n   * `font` (font value or function) sets the font size, e.g. `MIDSIZE`, `DBLSIZE`; defaults to `STDSIZE`\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice Unlike `lvgl.button`, `press` fires immediately on tap/press rather than on release. The button shows the checked state until ENTER is released or the screen is no longer touched.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 860
+    },
+    {
+      "id": "lvgl.numberEdit",
+      "doc_id": "lvgl.number-edit",
+      "symbol": "lvgl.numberEdit",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.numberEdit([parent, ]params)",
+      "summary": "Add a number edit box using the EdgeTX style.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called to get the current value to display, defaults to nil\n   * `set` (function) called for every change to the number while editing; passed the new value, defaults to nil\n   * `edited` (function) called after the user finishes editing; passed the final value (added in 2.11.5), defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `min` (number) minimum allowed value, defaults to -1024\n   * `max` (number) maximum allowed value, defaults to 1024\n   * `display` (function) overrides how the value is displayed; passed the current value, must return a string, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice Use `set` to react to every change during editing, or `edited` to only react to the final value once editing is complete."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.numberEdit([parent, ]params)\n\n  Add a number edit box using the EdgeTX style.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called to get the current value to display, defaults to nil\n   * `set` (function) called for every change to the number while editing; passed the new value, defaults to nil\n   * `edited` (function) called after the user finishes editing; passed the final value (added in 2.11.5), defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `min` (number) minimum allowed value, defaults to -1024\n   * `max` (number) maximum allowed value, defaults to 1024\n   * `display` (function) overrides how the value is displayed; passed the current value, must return a string, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice Use `set` to react to every change during editing, or `edited` to only react to the final value once editing is complete.\n\n  @status current Introduced in 2.11.0, edited added in 2.11.5, floating added in 2.11.6",
+      "source_line": 927
+    },
+    {
+      "id": "lvgl.page",
+      "doc_id": "lvgl.page",
+      "symbol": "lvgl.page",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.page(params)",
+      "summary": "Create a page layout for a One-Time script using EdgeTX styling: a header with title/sub-title lines and a back button in the top-left corner. Should be created as the top-level LVGL object, with all other objects added as its children.",
+      "parameters": [
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `title` (string or function) title text in the header; function support added in 2.11.4, defaults to an empty string\n   * `subtitle` (string or function) sub-title text in the header; function support added in 2.11.4, defaults to an empty string\n   * `icon` (string) full path to a 30x30 grey-scale mask image for the back button icon (white = transparent, black = opaque); defaults to the EdgeTX logo icon\n   * `back` (function) called when RTN is pressed, or when the back button is tapped -- the top-left header button if `backButton` is not set, otherwise a second button on the top-right, defaults to nil\n   * `menu` (function) called when the top-left header button is tapped, but only if `backButton` is set to true -- in that case `back` moves to a second button on the top-right, defaults to nil\n   * `prevButton` (table) adds a prev navigation button; table has a `press` function and optional `active` function (added in 2.11.4), defaults to nil\n   * `nextButton` (table) adds a next navigation button; table has a `press` function and optional `active` function (added in 2.11.4), defaults to nil\n   * `flexFlow` (lvgl.FLOW_COLUMN or lvgl.FLOW_ROW) enables flex layout for this page, not used by default\n   * `flexPad` (number) padding between rows/columns when flex layout is used, defaults to `PAD_OUTLINE`\n   * `scrollBar` (boolean) enables/disables scroll bars, defaults to true\n   * `scrollDir` (lvgl.SCROLL_xx) allowed scroll directions when child objects extend past the page bounds (stand alone scripts only), defaults to `lvgl.SCROLL_ALL`\n   * `scrolled` (function) called when the page content is scrolled; passed `x`, `y` of the current scroll position, defaults to nil\n   * `scrollTo` (function) overrides the page scroll position; must return `x`, `y` to scroll to, defaults to nil\n   * `align` (alignment type (LEFT, RIGHT, CENTER, VTOP, VBOTTOM, VCENTER)) alignment used with flex layouts (added in 2.11.4), defaults to `CENTER | VTOP`\n   * `backButton` (boolean) if true, adds a second header button on the top-right calling `back`, and repurposes the top-left button to call `menu` instead (added in 2.11.4), defaults to false\n   * `borderPad` (number or table) border padding around the container edges; a single number applies to all sides, or a table `{left=?, right=?, top=?, bottom=?}` (added in 2.11.5), defaults to `PAD_OUTLINE` if `flexFlow` is set, otherwise 0"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.page` -- only the settings listed above apply.\n  @notice The page automatically adds scroll bars if child objects fall outside its boundaries.\n  @notice `scrollBar`, `scrollDir`, `scrolled`, and `scrollTo` were added in 2.11.2.\n  @notice The PAGE keys are not automatically mapped to `prevButton`/`nextButton` -- the script's `run` function must detect and handle them itself."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.page(params)\n\n  Create a page layout for a One-Time script using EdgeTX styling: a header with title/sub-title lines and a back button in the top-left corner. Should be created as the top-level LVGL object, with all other objects added as its children.\n\n  @param params (table):\n   * `title` (string or function) title text in the header; function support added in 2.11.4, defaults to an empty string\n   * `subtitle` (string or function) sub-title text in the header; function support added in 2.11.4, defaults to an empty string\n   * `icon` (string) full path to a 30x30 grey-scale mask image for the back button icon (white = transparent, black = opaque); defaults to the EdgeTX logo icon\n   * `back` (function) called when RTN is pressed, or when the back button is tapped -- the top-left header button if `backButton` is not set, otherwise a second button on the top-right, defaults to nil\n   * `menu` (function) called when the top-left header button is tapped, but only if `backButton` is set to true -- in that case `back` moves to a second button on the top-right, defaults to nil\n   * `prevButton` (table) adds a prev navigation button; table has a `press` function and optional `active` function (added in 2.11.4), defaults to nil\n   * `nextButton` (table) adds a next navigation button; table has a `press` function and optional `active` function (added in 2.11.4), defaults to nil\n   * `flexFlow` (lvgl.FLOW_COLUMN or lvgl.FLOW_ROW) enables flex layout for this page, not used by default\n   * `flexPad` (number) padding between rows/columns when flex layout is used, defaults to `PAD_OUTLINE`\n   * `scrollBar` (boolean) enables/disables scroll bars, defaults to true\n   * `scrollDir` (lvgl.SCROLL_xx) allowed scroll directions when child objects extend past the page bounds (stand alone scripts only), defaults to `lvgl.SCROLL_ALL`\n   * `scrolled` (function) called when the page content is scrolled; passed `x`, `y` of the current scroll position, defaults to nil\n   * `scrollTo` (function) overrides the page scroll position; must return `x`, `y` to scroll to, defaults to nil\n   * `align` (alignment type (LEFT, RIGHT, CENTER, VTOP, VBOTTOM, VCENTER)) alignment used with flex layouts (added in 2.11.4), defaults to `CENTER | VTOP`\n   * `backButton` (boolean) if true, adds a second header button on the top-right calling `back`, and repurposes the top-left button to call `menu` instead (added in 2.11.4), defaults to false\n   * `borderPad` (number or table) border padding around the container edges; a single number applies to all sides, or a table `{left=?, right=?, top=?, bottom=?}` (added in 2.11.5), defaults to `PAD_OUTLINE` if `flexFlow` is set, otherwise 0\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The common object settings (x, y, w, h, color, etc.) are not used by `lvgl.page` -- only the settings listed above apply.\n  @notice The page automatically adds scroll bars if child objects fall outside its boundaries.\n  @notice `scrollBar`, `scrollDir`, `scrolled`, and `scrollTo` were added in 2.11.2.\n  @notice The PAGE keys are not automatically mapped to `prevButton`/`nextButton` -- the script's `run` function must detect and handle them itself.\n\n  @status current Introduced in 2.11.0, title/subtitle function support, menu, prevButton, nextButton, align, and backButton added in 2.11.4, borderPad added in 2.11.5, scrollBar/scrollDir/scrolled/scrollTo added in 2.11.2",
+      "source_line": 1231
+    },
+    {
+      "id": "lvgl.qrcode",
+      "doc_id": "lvgl.qrcode",
+      "symbol": "lvgl.qrcode",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.qrcode([parent, ]params)",
+      "summary": "Display a QR code.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `data` (string) URL or other content to encode, defaults to an empty string\n   * `bgColor` (color) background color for the QR code image, defaults to `COLOR_THEME_SECONDARY3`"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.qrcode([parent, ]params)\n\n  Display a QR code.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `w` and `h` should be set to the same value for a QR code.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `data` (string) URL or other content to encode, defaults to an empty string\n   * `bgColor` (color) background color for the QR code image, defaults to `COLOR_THEME_SECONDARY3`\n\n  @retval table LVGL object\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 814
+    },
+    {
+      "id": "lvgl.rectangle",
+      "doc_id": "lvgl.rectangle",
+      "symbol": "lvgl.rectangle",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.rectangle([parent, ]params)",
+      "summary": "Display a rectangle. Based on `lvgl.box`, so all `lvgl.box` settings also apply.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `thickness` (number) width of the border line, defaults to 1\n   * `filled` (boolean or function) if true the rectangle is filled with `color`, defaults to false (function support added in 2.11.4)\n   * `rounded` (number) if greater than 0, rounds the corners with this radius; must be >= `thickness` if set, defaults to 0\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "When used in a stand alone tool script, the rectangle automatically adds scroll bars if any child objects are placed outside its boundaries. For widgets, child objects outside the bounds are clipped instead."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.rectangle([parent, ]params)\n\n  Display a rectangle. Based on `lvgl.box`, so all `lvgl.box` settings also apply.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `thickness` (number) width of the border line, defaults to 1\n   * `filled` (boolean or function) if true the rectangle is filled with `color`, defaults to false (function support added in 2.11.4)\n   * `rounded` (number) if greater than 0, rounds the corners with this radius; must be >= `thickness` if set, defaults to 0\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n\n  @retval table LVGL object\n\n  @notice When used in a stand alone tool script, the rectangle automatically adds scroll bars if any child objects are placed outside its boundaries. For widgets, child objects outside the bounds are clipped instead.\n\n  @status current Introduced in 2.11.0, filled function support added in 2.11.4, floating added in 2.11.6",
+      "source_line": 639
+    },
+    {
+      "id": "lvgl.set",
+      "doc_id": "lvgl.set",
+      "symbol": "lvgl.set",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.set(parent, params)",
+      "summary": "Update the settings of an existing LVGL object. Can also be used to change settings that have no dedicated update function (e.g. rectangle thickness). Can also be called as `parent:set(params)`.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": true,
+          "description": "LVGL object to update; unlike the constructor functions, this parameter is required, not optional"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "settings to update; use the same keys documented for the object's constructor function"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.set(parent, params)\n\nUpdate the settings of an existing LVGL object. Can also be used to change settings that have no dedicated update function (e.g. rectangle thickness). Can also be called as `parent:set(params)`.\n\n@param parent (object) LVGL object to update; unlike the constructor functions, this parameter is required, not optional\n\n@param params (table) settings to update; use the same keys documented for the object's constructor function\n\n@retval none\n\n@status current Introduced in 2.11.0",
+      "source_line": 116
+    },
+    {
+      "id": "lvgl.setting",
+      "doc_id": "lvgl.setting",
+      "symbol": "lvgl.setting",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.setting([parent, ]params)",
+      "summary": "Create a container for a single row of a settings page, automatically padded for controls such as toggle/textEdit/button.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `title` (string or function) text displayed on the left; function support added in 2.11.6, defaults to an empty string"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.setting([parent, ]params)\n\n  Create a container for a single row of a settings page, automatically padded for controls such as toggle/textEdit/button.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `title` (string or function) text displayed on the left; function support added in 2.11.6, defaults to an empty string\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n\n  @status current Introduced in 2.11.0, title function support added in 2.11.6, floating added in 2.11.6",
+      "source_line": 1213
+    },
+    {
+      "id": "lvgl.show",
+      "doc_id": "lvgl.show",
+      "symbol": "lvgl.show",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.show(parent)",
+      "summary": "Show an LVGL object.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": true,
+          "description": "LVGL object to show"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "The `visible` setting function can also be used to dynamically show and hide objects."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.show(parent)\n\nShow an LVGL object.\n\n@param parent (object) LVGL object to show\n\n@retval none\n\n@notice The `visible` setting function can also be used to dynamically show and hide objects.\n\n@status current Introduced in 2.11.0",
+      "source_line": 168
+    },
+    {
+      "id": "lvgl.slider",
+      "doc_id": "lvgl.slider",
+      "symbol": "lvgl.slider",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.slider([parent, ]params)",
+      "summary": "Add a horizontal slider using the EdgeTX style.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `min` (number) minimum value at the left end of the range, defaults to 0\n   * `max` (number) maximum value at the right end of the range, defaults to 100\n   * `get` (function) called to get the current knob value; should return a value between `min` and `max` inclusive, defaults to nil\n   * `set` (function) called when the user moves the knob; passed the new value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.slider([parent, ]params)\n\n  Add a horizontal slider using the EdgeTX style.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `w` sets the size of the slider; `h` is not used.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `min` (number) minimum value at the left end of the range, defaults to 0\n   * `max` (number) maximum value at the right end of the range, defaults to 100\n   * `get` (function) called to get the current knob value; should return a value between `min` and `max` inclusive, defaults to nil\n   * `set` (function) called when the user moves the knob; passed the new value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 978
+    },
+    {
+      "id": "lvgl.source",
+      "doc_id": "lvgl.source",
+      "symbol": "lvgl.source",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.source([parent, ]params)",
+      "summary": "Display a button showing a source name. Tapping it opens the source-select popup, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected source, defaults to nil\n   * `set` (function) called when the user picks a source; passed the selected source value, defaults to nil\n   * `filter` (number) controls which source types the user can pick; combine `lvgl.SRC_xxx` constants to build a custom filter, defaults to `lvgl.SRC_ALL`"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.source([parent, ]params)\n\n  Display a button showing a source name. Tapping it opens the source-select popup, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected source, defaults to nil\n   * `set` (function) called when the user picks a source; passed the selected source value, defaults to nil\n   * `filter` (number) controls which source types the user can pick; combine `lvgl.SRC_xxx` constants to build a custom filter, defaults to `lvgl.SRC_ALL`\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1135
+    },
+    {
+      "id": "lvgl.switch",
+      "doc_id": "lvgl.switch",
+      "symbol": "lvgl.switch",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.switch([parent, ]params)",
+      "summary": "Display a button showing a switch name. Tapping it opens the switch-select popup, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected switch, defaults to nil\n   * `set` (function) called when the user picks a switch; passed the selected switch value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `filter` (number) controls which switch types the user can pick; combine `lvgl.SW_xxx` constants to build a custom filter, defaults to `lvgl.SW_ALL`"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.switch([parent, ]params)\n\n  Display a button showing a switch name. Tapping it opens the switch-select popup, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected switch, defaults to nil\n   * `set` (function) called when the user picks a switch; passed the selected switch value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n   * `filter` (number) controls which switch types the user can pick; combine `lvgl.SW_xxx` constants to build a custom filter, defaults to `lvgl.SW_ALL`\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1112
+    },
+    {
+      "id": "lvgl.textEdit",
+      "doc_id": "lvgl.text-edit",
+      "symbol": "lvgl.textEdit",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.textEdit([parent, ]params)",
+      "summary": "Add a text edit box using the EdgeTX style.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `value` (string or function) text to edit; if a function, the text can be changed by both script and user, defaults to an empty string\n   * `length` (number) maximum editable text length, 1 to 128, defaults to 32\n   * `set` (function) called when the user edits the text; passed the new string content, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.textEdit([parent, ]params)\n\n  Add a text edit box using the EdgeTX style.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `value` (string or function) text to edit; if a function, the text can be changed by both script and user, defaults to an empty string\n   * `length` (number) maximum editable text length, 1 to 128, defaults to 32\n   * `set` (function) called when the user edits the text; passed the new string content, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 906
+    },
+    {
+      "id": "lvgl.timer",
+      "doc_id": "lvgl.timer",
+      "symbol": "lvgl.timer",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.timer([parent, ]params)",
+      "summary": "Display a button showing a timer name. Tapping it opens a popup menu to choose a timer from, using EdgeTX styling.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected timer, defaults to nil\n   * `set` (function) called when the user taps a timer in the popup; passed the selected timer value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.timer([parent, ]params)\n\n  Display a button showing a timer name. Tapping it opens a popup menu to choose a timer from, using EdgeTX styling.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called on every refresh cycle to keep the displayed value in sync, to get the currently selected timer, defaults to nil\n   * `set` (function) called when the user taps a timer in the popup; passed the selected timer value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n  @notice The popup closes and `set` is called when the user selects an item.\n  @notice If the user taps outside the popup or presses RTN, the popup closes without calling `set`.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1090
+    },
+    {
+      "id": "lvgl.toggle",
+      "doc_id": "lvgl.toggle",
+      "symbol": "lvgl.toggle",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.toggle([parent, ]params)",
+      "summary": "Add a toggle switch using the EdgeTX style.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called to get the current state; must return a boolean or number (0/false = off, 1/true = on), defaults to nil\n   * `set` (function) called when the user interacts with the switch; passed a single number, 0 = off, 1 = on, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.toggle([parent, ]params)\n\n  Add a toggle switch using the EdgeTX style.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `get` (function) called to get the current state; must return a boolean or number (0/false = off, 1/true = on), defaults to nil\n   * `set` (function) called when the user interacts with the switch; passed a single number, 0 = off, 1 = on, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 886
+    },
+    {
+      "id": "lvgl.triangle",
+      "doc_id": "lvgl.triangle",
+      "symbol": "lvgl.triangle",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.triangle([parent, ]params)",
+      "summary": "Display a filled triangle.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `pts` (table or function) table of exactly three points, each a `{x, y}` pair, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Unlike the line-drawing objects, LVGL has no built-in triangle primitive. The drawing method used is simple and does not anti-alias."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.triangle([parent, ]params)\n\n  Display a filled triangle.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `x`, `y`, `w`, and `h` are not used.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `pts` (table or function) table of exactly three points, each a `{x, y}` pair, defaults to nil\n\n  @retval table LVGL object\n\n  @notice Unlike the line-drawing objects, LVGL has no built-in triangle primitive. The drawing method used is simple and does not anti-alias.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 723
+    },
+    {
+      "id": "lvgl.verticalSlider",
+      "doc_id": "lvgl.vertical-slider",
+      "symbol": "lvgl.verticalSlider",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.verticalSlider([parent, ]params)",
+      "summary": "Add a vertical slider using the EdgeTX style.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `min` (number) minimum value at the bottom end of the range, defaults to 0\n   * `max` (number) maximum value at the top end of the range, defaults to 100\n   * `get` (function) called to get the current knob value; should return a value between `min` and `max` inclusive, defaults to nil\n   * `set` (function) called when the user moves the knob; passed the new value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object, or nil if not running as a One-Time script or fullscreen widget"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [
+        "Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise."
+      ],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.verticalSlider([parent, ]params)\n\n  Add a vertical slider using the EdgeTX style.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `h` sets the size of the slider; `w` is not used.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `min` (number) minimum value at the bottom end of the range, defaults to 0\n   * `max` (number) maximum value at the top end of the range, defaults to 100\n   * `get` (function) called to get the current knob value; should return a value between `min` and `max` inclusive, defaults to nil\n   * `set` (function) called when the user moves the knob; passed the new value, defaults to nil\n   * `active` (function) sets the enabled/disabled state; must return a boolean, true to enable, defaults to nil\n\n  @retval table LVGL object, or nil if not running as a One-Time script or fullscreen widget\n\n  @notice Only available for One-Time scripts and widgets running in full screen mode -- returns nil otherwise.\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 1002
+    },
+    {
+      "id": "lvgl.vline",
+      "doc_id": "lvgl.vline",
+      "symbol": "lvgl.vline",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "lvgl",
+      "kind": "function",
+      "syntax": "lvgl.vline([parent, ]params)",
+      "summary": "Display a vertical line.",
+      "parameters": [
+        {
+          "name": "parent",
+          "type": "object",
+          "required": false,
+          "description": "optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "* `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `rounded` (boolean) if true the line's end caps are rounded, defaults to false\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `dashGap` (number) gap size for dashed lines, defaults to 0\n   * `dashWidth` (number) dash size for dashed lines, defaults to 0; both `dashGap` and `dashWidth` must be > 0 to draw dashed lines"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "LVGL object"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "color-lcd"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_colorlcd_lvgl.cpp",
+      "raw_luadoc": "@function lvgl.vline([parent, ]params)\n\n  Display a vertical line.\n\n  @param parent (object) optional LVGL object to attach the new object to; if omitted the object is created in the top-level script window\n\n  `h` sets the length of the line; `w` sets its thickness.\n\n  @param params (table):\n   * `x` (number) position relative to the top-left of the parent\n   * `y` (number) position relative to the top-left of the parent\n   * `w` (number) width\n   * `h` (number) height\n   * `color` (color or function) primary color for the object\n   * `pos` (function) dynamic position callback returning `x, y`\n   * `size` (function) dynamic size callback returning `w, h`\n   * `visible` (function) dynamic visibility callback\n   * `floating` (boolean) keep the object fixed inside a scrollable container, added in 2.11.6, defaults to false\n   * `rounded` (boolean) if true the line's end caps are rounded, defaults to false\n   * `opacity` (number or function) opacity from 0 (transparent) to 255 (opaque), defaults to 255\n   * `dashGap` (number) gap size for dashed lines, defaults to 0\n   * `dashWidth` (number) dash size for dashed lines, defaults to 0; both `dashGap` and `dashWidth` must be > 0 to draw dashed lines\n\n  @retval table LVGL object\n\n  @status current Introduced in 2.11.0, floating added in 2.11.6",
+      "source_line": 681
     },
     {
       "id": "mkdir",

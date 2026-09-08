@@ -7,17 +7,18 @@ This note captures the first extraction run against a real local EdgeTX checkout
 - EdgeTX source: `/Users/pfeerick/repos/EdgeTX/edgetx`
 - Lua source dir: `radio/src/lua`
 - Extracted from branch `2.12`
-- Extracted from commit `16713095a1`
+- Extracted from commit `8718d2473a` (EdgeTX/edgetx#7771 merged: adds `/*luadoc */` annotations for the LVGL Lua API)
 - Docs version used for the local run: `2.12`
 
 ## Current Results
 
-- Extracted API items: `153`
+- Extracted API items: `198`
 - Modules discovered:
   - `runtime`: `73`
   - `lcd`: `39`
   - `model`: `37`
   - `Bitmap`: `4`
+  - `lvgl`: `45`
 
 Generated artifacts:
 
