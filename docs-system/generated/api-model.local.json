@@ -1,7 +1,7 @@
 {
-  "docs_version": "local-dev",
-  "upstream_ref": "reviewed-changes",
-  "generated_at": "2026-03-23T11:01:38.488857Z",
+  "docs_version": "2.12",
+  "upstream_ref": "2.12@16713095a1",
+  "generated_at": "2026-09-08T13:16:46.620221Z",
   "items": [
     {
       "id": "Bitmap.getSize",
@@ -195,7 +195,7 @@
       ],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function GREY()\n\nReturns gray value which can be used in LCD functions\n\n@retval (number) a value that represents amount of *greyness* (from 0 to 15)\n\n@notice Only available on Taranis\n\n@status current Introduced in 2.0.13",
-      "source_line": 1720
+      "source_line": 1716
     },
     {
       "id": "accessTelemetryPush",
@@ -222,25 +222,25 @@
         },
         {
           "name": "sensorId",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "physical sensor ID"
         },
         {
           "name": "frameId",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "frame ID"
         },
         {
           "name": "dataId",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "data ID"
         },
         {
           "name": "value",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "value"
         }
@@ -260,7 +260,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function accessTelemetryPush()\n\nThis functions allows for sending SPORT / ACCESS telemetry data toward the receiver,\nand more generally, to anything connected SPORT bus on the receiver or transmitter.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param module    module index (0 = internal, 1 = external)\n\n@param rxUid     receiver index\n\n@param sensorId  (integer) physical sensor ID\n\n@param frameId   (integer) frame ID\n\n@param dataId    (integer) data ID\n\n@param value     (integer) value\n\n@retval boolean  data queued in output buffer or not.\n\n@status current Introduced in 2.3",
+      "raw_luadoc": "@function accessTelemetryPush()\n\nThis functions allows for sending SPORT / ACCESS telemetry data toward the receiver,\nand more generally, to anything connected SPORT bus on the receiver or transmitter.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param module    module index (0 = internal, 1 = external)\n\n@param rxUid     receiver index\n\n@param sensorId  physical sensor ID\n\n@param frameId   frame ID\n\n@param dataId    data ID\n\n@param value     value\n\n@retval boolean  data queued in output buffer or not.\n\n@status current Introduced in 2.3",
       "source_line": 1062
     },
     {
@@ -284,7 +284,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function applyRGBLedColors()\n\n Apply RGB led colors previously defined by setRGBLedColor\n\n@status current Introduced in 2.10",
-      "source_line": 3009
+      "source_line": 3007
     },
     {
       "id": "chdir",
@@ -368,7 +368,7 @@
       "parameters": [
         {
           "name": "command",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "command"
         },
@@ -399,7 +399,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function crossfireTelemetryPush()\n\nThis functions allows for sending telemetry data toward the TBS Crossfire link.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param command (integer) command\n\n@param data table of data bytes\n\n@retval boolean  data queued in output buffer or not.\n\n@retval nil      incorrect telemetry protocol.\n\n@status current Introduced in 2.2.0, retval nil added in 2.3.4",
+      "raw_luadoc": "@function crossfireTelemetryPush()\n\nThis functions allows for sending telemetry data toward the TBS Crossfire link.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param command command\n\n@param data table of data bytes\n\n@retval boolean  data queued in output buffer or not.\n\n@retval nil      incorrect telemetry protocol.\n\n@status current Introduced in 2.2.0, retval nil added in 2.3.4",
       "source_line": 1178
     },
     {
@@ -441,7 +441,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function defaultChannel(stick)\n\nGet channel assigned to stick. See Default Channel Order in General Settings\n\n@param stick (number) stick number (from 0 to 3)\n\n@retval number channel assigned to this stick (from 0 to 3)\n\n@retval nil stick not found\n\n@status current Introduced in 2.0.0",
-      "source_line": 2051
+      "source_line": 2047
     },
     {
       "id": "defaultStick",
@@ -477,7 +477,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function defaultStick(channel)\n\nGet stick that is assigned to a channel. See Default Channel Order in General Settings.\n\n@param channel (number) channel number (0 means CH1)\n\n@retval number Stick assigned to this channel (from 0 to 3)\n\n@status current Introduced in 2.0.0",
-      "source_line": 1966
+      "source_line": 1962
     },
     {
       "id": "del",
@@ -553,7 +553,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function flushAudio()\n\nflushes audio queue\n\n@status experimental",
-      "source_line": 2078
+      "source_line": 2074
     },
     {
       "id": "fstat",
@@ -618,7 +618,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getAvailableMemory()\n\nGet available memory remaining in the Heap for Lua.\n\n@retval usage (number) a value returned in b",
-      "source_line": 2217
+      "source_line": 2213
     },
     {
       "id": "getDateTime",
@@ -671,7 +671,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "information about requested field, table elements: * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier [Full list](../appendix/units.html)"
+          "description": "information about requested field, table elements: * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier, see the Units reference for the full list"
         },
         {
           "name": "",
@@ -687,7 +687,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function getFieldInfo(source)\n\nReturn detailed information about field (source)\n\nThe list of valid sources is available:\n\n| OpenTX Version | Radio |\n|----------------|-------|\n| 2.0 | [all](http://downloads-20.open-tx.org/firmware/lua_fields.txt) |\n| 2.1 | [X9D and X9D+](http://downloads-21.open-tx.org/firmware/lua_fields_taranis.txt), [X9E](http://downloads-21.open-tx.org/firmware/lua_fields_taranis_x9e.txt) |\n| 2.2 | [X9D and X9D+](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9e.txt), [Horus](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x12s.txt) |\n| 2.3 | [X9D and X9D+](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9e.txt), [X7](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x7.txt), [Horus](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x12s.txt) |\n\n@param source can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.\n\n@retval table information about requested field, table elements:\n * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier [Full list](../appendix/units.html)\n\n@retval nil the requested field was not found\n\n@status current Introduced in 2.0.8, 'unit' field added in 2.2.0, and argument also can be an index number as of 2.6.0",
+      "raw_luadoc": "@function getFieldInfo(source)\n\nReturn detailed information about field (source)\n\nThe list of valid sources is available:\n\n| OpenTX Version | Radio |\n|----------------|-------|\n| 2.0 | [all](http://downloads-20.open-tx.org/firmware/lua_fields.txt) |\n| 2.1 | [X9D and X9D+](http://downloads-21.open-tx.org/firmware/lua_fields_taranis.txt), [X9E](http://downloads-21.open-tx.org/firmware/lua_fields_taranis_x9e.txt) |\n| 2.2 | [X9D and X9D+](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9e.txt), [Horus](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x12s.txt) |\n| 2.3 | [X9D and X9D+](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9e.txt), [X7](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x7.txt), [Horus](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x12s.txt) |\n\n@param source can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.\n\n@retval table information about requested field, table elements:\n * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier, see the Units reference for the full list\n\n@retval nil the requested field was not found\n\n@status current Introduced in 2.0.8, 'unit' field added in 2.2.0, and argument also can be an index number as of 2.6.0",
       "source_line": 608
     },
     {
@@ -758,7 +758,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getGeneralSettings()\n\nReturns (some of) the general radio settings\n\n@retval table with elements:\n * `battWarn` (number) radio battery range - warning value\n * `battMin` (number) radio battery range - minimum value\n * `battMax` (number) radio battery range - maximum value\n * `imperial` (number) set to a value different from 0 if the radio is set to the\n IMPERIAL units\n * `language` (string) radio language (used for menus)\n * `voice` (string) voice language (used for speech)\n * `gtimer` (number) radio global timer in seconds (does not include current session)\n\n@status current Introduced in 2.0.6, `imperial` added in TODO,\n`language` and `voice` added in 2.2.0, gtimer added in 2.2.2.",
-      "source_line": 1739
+      "source_line": 1735
     },
     {
       "id": "getGlobalTimer",
@@ -787,7 +787,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getGlobalTimer()\n\nReturns radio timers\n\n@retval table with elements:\n* `gtimer` (number) radio global timer in seconds\n* `session` (number) radio session in seconds\n* `ttimer` (number) radio throttle timer in seconds\n* `tptimer` (number) radio throttle percent timer in seconds\n\n@status current Introduced added in 2.3.0.",
-      "source_line": 1779
+      "source_line": 1775
     },
     {
       "id": "getLogicalSwitchValue",
@@ -823,7 +823,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getLogicalSwitchValue(id)\n\n@param id: integer identifying the logical switch (zero for LS1 etc.).\n\n@retval value: true/false.\n\nReads the value of a logical switch.\n\n@status current Introduced in 2.6",
-      "source_line": 2567
+      "source_line": 2563
     },
     {
       "id": "getOutputValue",
@@ -859,7 +859,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getOutputValue(outputIndex)\n\n@param outputIndex: integer identifying the output channel number 0 for CH1, up to MAX_OUTPUT_CHANNELS - 1.\n\n@retval value current output value (number). Zero is returned for:\n * non-existing outputs\n\n@status current Introduced in 2.8.0",
-      "source_line": 2855
+      "source_line": 2851
     },
     {
       "id": "getRAS",
@@ -906,17 +906,17 @@
       "returns": [
         {
           "name": "rssi",
-          "type": "integer",
+          "type": "unknown",
           "description": "RSSI value (0 if no link)"
         },
         {
           "name": "alarm_low",
-          "type": "integer",
+          "type": "unknown",
           "description": "Configured low RSSI alarm level"
         },
         {
           "name": "alarm_crit",
-          "type": "integer",
+          "type": "unknown",
           "description": "Configured critical RSSI alarm level"
         }
       ],
@@ -928,8 +928,8 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function getRSSI()\n\nGet RSSI value as well as low and critical RSSI alarm levels (in dB)\n\n@retval rssi (integer) RSSI value (0 if no link)\n\n@retval alarm_low (integer) Configured low RSSI alarm level\n\n@retval alarm_crit (integer) Configured critical RSSI alarm level\n\n@status current Introduced in 2.2.0",
-      "source_line": 2091
+      "raw_luadoc": "@function getRSSI()\n\nGet RSSI value as well as low and critical RSSI alarm levels (in dB)\n\n@retval rssi RSSI value (0 if no link)\n\n@retval alarm_low Configured low RSSI alarm level\n\n@retval alarm_crit Configured critical RSSI alarm level\n\n@status current Introduced in 2.2.0",
+      "source_line": 2087
     },
     {
       "id": "getRotEncMode",
@@ -1054,7 +1054,7 @@
       ],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getShmVar(id)\n\n@param id: integer between 1 and 16 identifying the shared memory variable.\n\n@retval value: integer. The value of the shared memory variable.\n\nGets the value of a shared memory variable that can be used for passing data between Lua widgets and other Lua scripts.\n\n@status current Introduced in 2.6\n\n@notice Only available on radios with color display",
-      "source_line": 2507
+      "source_line": 2503
     },
     {
       "id": "getSourceIndex",
@@ -1092,7 +1092,7 @@
       ],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getSourceIndex(sourceName)\n\n@param sourceName: string naming a value source as it is shown on radio menus where you can select it. Notice that many names have special characters in them.\n\n@retval sourceIndex: integer. The source index, which can be used as input for `getSourceName(sourceIndex)`, `getValue(sourceIndex)`, and `getFieldInfo(sourceIndex)`.\n\n@notice the source names shown on the screen are not the same as the names used by `getFieldInfo` and `getValue`. But the indices are the same, so `getValue(index)` will work with the indices obtained here.\nThis function is rather time consuming, and should not be used repeatedly in a script, if it can be avoided.\n\n@status current Introduced in 2.6",
-      "source_line": 2750
+      "source_line": 2746
     },
     {
       "id": "getSourceName",
@@ -1130,7 +1130,7 @@
       ],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getSourceName(sourceIndex)\n\n@param sourceIndex: integer identifying a value source as returned by `getSourceIndex(sourceName)` or the `id` field in the table returned by `getFieldInfo`.\n\n@retval sourceName: string naming the value source as it is shown on radio menus where a source can be chosen.\n\n@notice the source names shown on the screen are not the same as the names used by `getFieldInfo` and `getValue`. But the indices are the same, so `getValue(index)` will work with the indices used here.\n\n@status current Introduced in 2.6",
-      "source_line": 2776
+      "source_line": 2772
     },
     {
       "id": "getSourceValue",
@@ -1158,12 +1158,12 @@
         },
         {
           "name": "isCurrent",
-          "type": "boolean",
+          "type": "unknown",
           "description": "is true for telemetry sources that are within the \"Sensor Lost\" duration and telemetry is streaming . Always true for non-telemetry items."
         },
         {
           "name": "isFresh",
-          "type": "boolean",
+          "type": "unknown",
           "description": "is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items."
         }
       ],
@@ -1177,7 +1177,7 @@
         "Getting a value by its numerical identifier is much faster than by its name.\nWhile `Cels` sensor returns current values of all cells in a table, a `Cels+` or\n`Cels-` will return a single value - the maximum or minimum Cels value."
       ],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function getSourceValue(source)\n\nReturns the value of a source. Superseeds getValue.\n\nThe list of fixed sources:\n\n| OpenTX Version | Radio |\n|----------------|-------|\n| 2.0 | [all](http://downloads-20.open-tx.org/firmware/lua_fields.txt) |\n| 2.1 | [X9D and X9D+](http://downloads-21.open-tx.org/firmware/lua_fields_taranis.txt), [X9E](http://downloads-21.open-tx.org/firmware/lua_fields_taranis_x9e.txt) |\n| 2.2 | [X9D and X9D+](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9e.txt), [Horus](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x12s.txt) |\n| 2.3 | [X9D and X9D+](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9e.txt), [X7](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x7.txt), [Horus](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x12s.txt) |\n\nIn OpenTX 2.1.x the telemetry sources no longer have a predefined name.\nTo get a telemetry value simply use it's sensor name. For example:\n * Altitude sensor has a name \"Alt\"\n * to get the current altitude use the source \"Alt\"\n * to get the minimum altitude use the source \"Alt-\", to get the maximum use \"Alt+\"\n\n@param source can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.\n\n@retval value current source value (number), or last known telemetry item value.\n\nvalue is nil for non-existing sources. all non-allowed sensors while FAI MODE is active, or if a telemetry item value has never been received\n\nvalue is a table for GPS position:\n\n * `lat` (number) latitude, positive is North\n * `lon` (number) longitude, positive is East\n * `pilot-lat` (number) pilot latitude, positive is North\n * `pilot-lon` (number) pilot longitude, positive is East\n\nvalue is a table for date/time, see getDateTime()\n\nvalue is a table for battery cells(except where no cells were detected in which case the returned value is 0):\n * table has one item for each detected cell:\n  * key (number) cell number (1 to number of cells)\n  * value (number) current cell voltage\n\n@retval isCurrent (boolean) is true for telemetry sources that are within the \"Sensor Lost\" duration and telemetry is streaming . Always true for non-telemetry items.\n\n@retval isFresh (boolean) is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.\n\n@status current Introduced in 2.0.0, changed in 2.1.0, `Cels+` and `Cels-` added in 2.1.9\n\n@notice Getting a value by its numerical identifier is much faster than by its name.\nWhile `Cels` sensor returns current values of all cells in a table, a `Cels+` or\n`Cels-` will return a single value - the maximum or minimum Cels value.",
+      "raw_luadoc": "@function getSourceValue(source)\n\nReturns the value of a source. Superseeds getValue.\n\nThe list of fixed sources:\n\n| OpenTX Version | Radio |\n|----------------|-------|\n| 2.0 | [all](http://downloads-20.open-tx.org/firmware/lua_fields.txt) |\n| 2.1 | [X9D and X9D+](http://downloads-21.open-tx.org/firmware/lua_fields_taranis.txt), [X9E](http://downloads-21.open-tx.org/firmware/lua_fields_taranis_x9e.txt) |\n| 2.2 | [X9D and X9D+](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x9e.txt), [Horus](http://downloads.open-tx.org/2.2/release/firmware/lua_fields_x12s.txt) |\n| 2.3 | [X9D and X9D+](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9d.txt), [X9E](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x9e.txt), [X7](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x7.txt), [Horus](http://downloads.open-tx.org/2.3/release/firmware/lua_fields_x12s.txt) |\n\nIn OpenTX 2.1.x the telemetry sources no longer have a predefined name.\nTo get a telemetry value simply use it's sensor name. For example:\n * Altitude sensor has a name \"Alt\"\n * to get the current altitude use the source \"Alt\"\n * to get the minimum altitude use the source \"Alt-\", to get the maximum use \"Alt+\"\n\n@param source can be an index (number) (which was obtained by `getFieldInfo` or `getSourceIndex`) or a name (string) of the source.\n\n@retval value current source value (number), or last known telemetry item value.\n\nvalue is nil for non-existing sources. all non-allowed sensors while FAI MODE is active, or if a telemetry item value has never been received\n\nvalue is a table for GPS position:\n\n * `lat` (number) latitude, positive is North\n * `lon` (number) longitude, positive is East\n * `pilot-lat` (number) pilot latitude, positive is North\n * `pilot-lon` (number) pilot longitude, positive is East\n\nvalue is a table for date/time, see getDateTime()\n\nvalue is a table for battery cells(except where no cells were detected in which case the returned value is 0):\n * table has one item for each detected cell:\n  * key (number) cell number (1 to number of cells)\n  * value (number) current cell voltage\n\n@retval isCurrent is true for telemetry sources that are within the \"Sensor Lost\" duration and telemetry is streaming . Always true for non-telemetry items.\n\n@retval isFresh is true for telemetry sources which have been recently updated and telemetry is streaming. Always true for non-telemetry items.\n\n@status current Introduced in 2.0.0, changed in 2.1.0, `Cels+` and `Cels-` added in 2.1.9\n\n@notice Getting a value by its numerical identifier is much faster than by its name.\nWhile `Cels` sensor returns current values of all cells in a table, a `Cels+` or\n`Cels-` will return a single value - the maximum or minimum Cels value.",
       "source_line": 726
     },
     {
@@ -1207,7 +1207,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getStickMode()\n\n@retval : integer, a 1 to 4 value corresponding to radio stick mode\n\n@status current Introduced in 3.0",
-      "source_line": 3025
+      "source_line": 3023
     },
     {
       "id": "getSwitchIndex",
@@ -1243,7 +1243,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getSwitchIndex(positionName)\n\n@param positionName: string naming a switch position as it is shown on radio menus where you can select a switch. Notice that many names have\nspecial characters in them like arrow up/down etc.\n\n@retval value: integer. The switchIndex, which can be used as input for `getSwitchName(switchIndex)` and `getSwitchValue(switchIndex)`. Also corresponds\nto the fields in the table returned by `model.getLogicalSwitch(switch)` identifying switches.\n\n@status current Introduced in 2.6",
-      "source_line": 2627
+      "source_line": 2623
     },
     {
       "id": "getSwitchInfo",
@@ -1279,7 +1279,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getSwitchInfo(sourceIndex)\n\n@param sourceIndex: integer identifying a value source as returned by `getSourceIndex(sourceName)` or the `id` field in the table returned by `getFieldInfo`.\n\n@retval table information about requested field, table elements:\n* `type`   (number) field identifier\n0 = SWITCH_NONE\n1 = SWITCH_TOGGLE\n2 = SWITCH_2POS\n3 = SWITCH_3POS\n\n* `isCustomisableSwitch`   (boolean) field identifier\nreturn true if switch is a customisable switch\n\n* `name` (string) switch name\n\n@status current Introduced in 2.12",
-      "source_line": 2591
+      "source_line": 2587
     },
     {
       "id": "getSwitchName",
@@ -1315,7 +1315,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getSwitchName(switchIndex)\n\n@param switchIndex: integer identifying a switch as returned by `getSwitchIndex(positionName)` or fields in the table returned by\n`model.getLogicalSwitch(switch)` identifying switches.\n\n@retval value: string naming the switch position as it is shown on radio menus where a switch can be chosen.\n\n@status current Introduced in 2.6",
-      "source_line": 2652
+      "source_line": 2648
     },
     {
       "id": "getSwitchValue",
@@ -1351,7 +1351,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getSwitchValue(switchIndex)\n\n@param switchIndex: integer identifying a switch as returned by `getSwitchIndex(positionName)` or fields in the table returned by\n`model.getLogicalSwitch(switch)` identifying switches.\n\n@retval value: true/false. The value of the switch.\n\n@status current Introduced in 2.6",
-      "source_line": 2675
+      "source_line": 2671
     },
     {
       "id": "getTime",
@@ -1409,7 +1409,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getTrainerStatus()\n\n@retval value current output value (number).\n 0 - Not Connected\n 1 - Connected\n 2 - Disconnected\n 3 - Reconnected\n\n@status current Introduced in 2.9.0",
-      "source_line": 2876
+      "source_line": 2872
     },
     {
       "id": "getTxGPS",
@@ -1467,7 +1467,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function getUsage()\n\nGet percent of already used Lua instructions in current script execution cycle.\n\n@retval usage (number) a value from 0 to 100 (percent)\n\n@status current Introduced in 2.2.1",
-      "source_line": 2194
+      "source_line": 2190
     },
     {
       "id": "getValue",
@@ -1633,7 +1633,7 @@
       "parameters": [
         {
           "name": "command",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "command"
         },
@@ -1664,7 +1664,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function ghostTelemetryPush()\n\nThis functions allows for sending telemetry data toward the Ghost link.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param command (integer) command\n\n@param data table of data bytes\n\n@retval boolean  data queued in output buffer or not.\n\n@retval nil      incorrect telemetry protocol.\n\n@status current Introduced in 2.7.0",
+      "raw_luadoc": "@function ghostTelemetryPush()\n\nThis functions allows for sending telemetry data toward the Ghost link.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param command command\n\n@param data table of data bytes\n\n@retval boolean  data queued in output buffer or not.\n\n@retval nil      incorrect telemetry protocol.\n\n@status current Introduced in 2.7.0",
       "source_line": 1299
     },
     {
@@ -1695,7 +1695,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function killEvents(key)\n\nStops key state machine. See [Key Events](../key_events.md) for the detailed description.\n\n@param key (number) key to be killed, can also include event type (only the key part is used)\n\n@status current Introduced in 2.0.0",
-      "source_line": 1688
+      "source_line": 1684
     },
     {
       "id": "lcd.RGB",
@@ -1766,7 +1766,7 @@
       "parameters": [
         {
           "name": "color",
-          "type": "lcd_color_RGB565",
+          "type": "unknown",
           "required": false,
           "description": ""
         }
@@ -1783,7 +1783,7 @@
         "This function only works in stand-alone and telemetry scripts."
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.clear([color])\n\nClear the LCD screen\n\n@param color (lcd_color_RGB565, optional, only on color screens)\n\n@status current Introduced in 2.0.0, `color` parameter introduced in 2.2.0 RC12\n\n@notice This function only works in stand-alone and telemetry scripts.",
+      "raw_luadoc": "@function lcd.clear([color])\n\nClear the LCD screen\n\n@param color (optional, only on color screens)\n\n@status current Introduced in 2.0.0, `color` parameter introduced in 2.2.0 RC12\n\n@notice This function only works in stand-alone and telemetry scripts.",
       "source_line": 57
     },
     {
@@ -1837,7 +1837,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -1851,7 +1851,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawAnnulus(x, y, r1, r2, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r1,r2 (positive numbers) radii of the inside and outside of the annulus\n\n@param start,end (positive numbers) start and end of the annulus\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawAnnulus(x, y, r1, r2, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r1,r2 (positive numbers) radii of the inside and outside of the annulus\n\n@param start,end (positive numbers) start and end of the annulus\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1218
     },
     {
@@ -1899,7 +1899,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -1913,7 +1913,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawArc(x, y, r, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the arc\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawArc(x, y, r, start, end [, flags])\n\nDraw an arc\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the arc\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1146
     },
     {
@@ -1999,7 +1999,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2013,7 +2013,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawBitmapPattern(bitmap, x, y [, flags])\n\nDisplays a bitmap pattern at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
+      "raw_luadoc": "@function lcd.drawBitmapPattern(bitmap, x, y [, flags])\n\nDisplays a bitmap pattern at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
       "source_line": 710
     },
     {
@@ -2047,13 +2047,13 @@
         },
         {
           "name": "startAngle",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "Start angle"
         },
         {
           "name": "endAngle",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "End angle"
         },
@@ -2061,7 +2061,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2075,7 +2075,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawBitmapPatternPie(bitmap, x, y, startAngle, endAngle [, flags])\n\nDisplays a bitmap pattern pie at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param startAngle (number) Start angle\n\n@param endAngle (number) End angle\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
+      "raw_luadoc": "@function lcd.drawBitmapPatternPie(bitmap, x, y, startAngle, endAngle [, flags])\n\nDisplays a bitmap pattern pie at (x,y)\n\n@param bitmap (pointer) point to a bitmap previously opened with Bitmap.open()\n\n@param x,y (positive numbers) starting coordinates\n\n@param startAngle Start angle\n\n@param endAngle End angle\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
       "source_line": 743
     },
     {
@@ -2111,7 +2111,7 @@
           "name": "flags",
           "type": "integer",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2124,7 +2124,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawChannel(x, y, source, flags)\n\nDisplay a telemetry value at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source can be a source identifier (number) or a source name (string).\nSee getValue()\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@status current Introduced in 2.0.6, changed in 2.1.0 (only telemetry sources are valid)",
+      "raw_luadoc": "@function lcd.drawChannel(x, y, source, flags)\n\nDisplay a telemetry value at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source can be a source identifier (number) or a source name (string).\nSee getValue()\n\n@param flags (optional) please see the Lcd functions overview\n\n@status current Introduced in 2.0.6, changed in 2.1.0 (only telemetry sources are valid)",
       "source_line": 390
     },
     {
@@ -2160,7 +2160,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2174,7 +2174,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawCircle(x, y, r [, flags])\n\nDraw a circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawCircle(x, y, r [, flags])\n\nDraw a circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1018
     },
     {
@@ -2272,7 +2272,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2286,7 +2286,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawFilledCircle(x, y, r [, flags])\n\nDraw a filled circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawFilledCircle(x, y, r [, flags])\n\nDraw a filled circle at (x, y) of specified radius\n\n@param x,y (positive numbers) center position\n\n@param r (number) radius in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1049
     },
     {
@@ -2328,7 +2328,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "opacity",
@@ -2347,7 +2347,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawFilledRectangle(x, y, w, h [, flags [, opacity]])\n\nDraw a solid rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawFilledRectangle(x, y, w, h [, flags [, opacity]])\n\nDraw a solid rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0",
       "source_line": 820
     },
     {
@@ -2401,7 +2401,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2415,7 +2415,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawFilledTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a filled triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawFilledTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a filled triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1114
     },
     {
@@ -2469,7 +2469,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2482,7 +2482,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawGauge(x, y, w, h, fill, maxfill [, flags])\n\nDraw a simple gauge that is filled based upon fill value\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param fill (number) amount of fill to apply\n\n@param maxfill (number) total value of fill\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
+      "raw_luadoc": "@function lcd.drawGauge(x, y, w, h, fill, maxfill [, flags])\n\nDraw a simple gauge that is filled based upon fill value\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param fill (number) amount of fill to apply\n\n@param maxfill (number) total value of fill\n\n@param flags (optional) please see the Lcd functions overview\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
       "source_line": 892
     },
     {
@@ -2536,7 +2536,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2550,7 +2550,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawHudRectangle(pitch, roll, xmin, xmax, ymin, ymax [, flags])\n\nDraw a rectangle in perspective\n\n@param pitch,roll (positive numbers) pitch and roll to define the orientation of the rectangle\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawHudRectangle(pitch, roll, xmin, xmax, ymin, ymax [, flags])\n\nDraw a rectangle in perspective\n\n@param pitch,roll (positive numbers) pitch and roll to define the orientation of the rectangle\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1366
     },
     {
@@ -2590,7 +2590,7 @@
         },
         {
           "name": "pattern",
-          "type": "pen_type",
+          "type": "unknown",
           "required": true,
           "description": "SOLID or DOTTED"
         },
@@ -2613,7 +2613,7 @@
         "If the start or the end of the line is outside the LCD dimensions, then the\nwhole line will not be drawn (starting from OpenTX 2.1.5)"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawLine(x1, y1, x2, y2, pattern, [flags])\n\nDraw a straight line on LCD\n\n@param x1,y1 (positive numbers) starting coordinate\n\n@param x2,y2 (positive numbers) end coordinate\n\n@param pattern (pen_type) SOLID or DOTTED\n\n@param flags (optional) lcdflags\n\n@notice If the start or the end of the line is outside the LCD dimensions, then the\nwhole line will not be drawn (starting from OpenTX 2.1.5)\n\n@status current Introduced in 2.0.0, flags introduced in 2.3.6",
+      "raw_luadoc": "@function lcd.drawLine(x1, y1, x2, y2, pattern, [flags])\n\nDraw a straight line on LCD\n\n@param x1,y1 (positive numbers) starting coordinate\n\n@param x2,y2 (positive numbers) end coordinate\n\n@param pattern SOLID or DOTTED\n\n@param flags (optional) lcdflags\n\n@notice If the start or the end of the line is outside the LCD dimensions, then the\nwhole line will not be drawn (starting from OpenTX 2.1.5)\n\n@status current Introduced in 2.0.0, flags introduced in 2.3.6",
       "source_line": 125
     },
     {
@@ -2679,13 +2679,13 @@
           "name": "pattern",
           "type": "FORCE",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2699,7 +2699,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawLineWithClipping(x1, y1, x2, y2, xmin, xmax, ymin, ymax, pattern [, flags])\n\nDraw a line only inside a rectangle\n\n@param x1,y1,x2,y1 (positive numbers) coordinates of the start and end of the unclipped line\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle inside which the line is drawn\n\n@param pattern (FORCE, ERASE, DOTTED) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawLineWithClipping(x1, y1, x2, y2, xmin, xmax, ymin, ymax, pattern [, flags])\n\nDraw a line only inside a rectangle\n\n@param x1,y1,x2,y1 (positive numbers) coordinates of the start and end of the unclipped line\n\n@param xmin,xmax,ymin,ymax (positive numbers) the limits of the rectangle inside which the line is drawn\n\n@param pattern (FORCE, ERASE, DOTTED) please see the Lcd functions overview\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1254
     },
     {
@@ -2735,11 +2735,11 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "inversColor",
-          "type": "string",
+          "type": "unknown",
           "required": false,
           "description": "overrides the inverse text color for INVERS"
         }
@@ -2802,7 +2802,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2816,7 +2816,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawPie(x, y, r, start, end [, flags])\n\nDraw a pie slice\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the pie slice\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawPie(x, y, r, start, end [, flags])\n\nDraw a pie slice\n\n@param x,y (positive numbers) coordinates of the center\n\n@param r (positive number) radius\n\n@param start,end (positive numbers) start and end of the pie slice\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1182
     },
     {
@@ -2890,7 +2890,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -2905,7 +2905,7 @@
         "Taranis has an LCD display width of 212 pixels and height of 64 pixels.\nPosition (0,0) is at top left. Y axis is negative, top line is 0,\nbottom line is 63. Drawing on an existing black pixel produces white pixel (TODO check this!)"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawPoint(x, y, [flags])\n\nDraw a single pixel at (x,y) position\n\n@param x (positive number) x position\n\n@param y (positive number) y position\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Taranis has an LCD display width of 212 pixels and height of 64 pixels.\nPosition (0,0) is at top left. Y axis is negative, top line is 0,\nbottom line is 63. Drawing on an existing black pixel produces white pixel (TODO check this!)\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawPoint(x, y, [flags])\n\nDraw a single pixel at (x,y) position\n\n@param x (positive number) x position\n\n@param y (positive number) y position\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Taranis has an LCD display width of 212 pixels and height of 64 pixels.\nPosition (0,0) is at top left. Y axis is negative, top line is 0,\nbottom line is 63. Drawing on an existing black pixel produces white pixel (TODO check this!)\n\n@status current Introduced in 2.0.0",
       "source_line": 92
     },
     {
@@ -2947,7 +2947,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "t",
@@ -2972,7 +2972,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawRectangle(x, y, w, h [, flags [, t [, opacity]]])\n\nDraw a rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@param t (number) thickness in pixels, defaults to 1 (only on radios with color display)\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
+      "raw_luadoc": "@function lcd.drawRectangle(x, y, w, h [, flags [, t [, opacity]]])\n\nDraw a rectangle from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@param t (number) thickness in pixels, defaults to 1 (only on radios with color display)\n\n@param opacity (number) opacity defaults to 0 (only on radios with color display)\n\n@status current Introduced in 2.0.0, changed in 2.2.0",
       "source_line": 782
     },
     {
@@ -3052,7 +3052,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -3065,7 +3065,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawSource(x, y, source [, flags])\n\nDisplays the name of the corresponding input as defined by the source at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source (number) source index\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawSource(x, y, source [, flags])\n\nDisplays the name of the corresponding input as defined by the source at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param source (number) source index\n\n@param flags (optional) please see the Lcd functions overview\n\n@status current Introduced in 2.0.0",
       "source_line": 460
     },
     {
@@ -3101,7 +3101,7 @@
           "name": "flags",
           "type": "integer",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html), only SMLSIZE, BLINK and INVERS."
+          "description": "please see the Lcd functions overview, only SMLSIZE, BLINK and INVERS."
         }
       ],
       "returns": [],
@@ -3114,7 +3114,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawSwitch(x, y, switch, flags)\n\nDraw a text representation of switch at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param switch (number) number of switch to display, negative number\ndisplays negated switch\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html), only SMLSIZE, BLINK and INVERS.\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawSwitch(x, y, switch, flags)\n\nDraw a text representation of switch at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param switch (number) number of switch to display, negative number\ndisplays negated switch\n\n@param flags (optional) please see the Lcd functions overview, only SMLSIZE, BLINK and INVERS.\n\n@status current Introduced in 2.0.0",
       "source_line": 431
     },
     {
@@ -3150,11 +3150,11 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set."
+          "description": "please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set."
         },
         {
           "name": "inversColor",
-          "type": "string",
+          "type": "unknown",
           "required": false,
           "description": "overrides the inverse text color for INVERS"
         }
@@ -3217,7 +3217,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented."
+          "description": "please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented."
         }
       ],
       "returns": [
@@ -3237,7 +3237,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawTextLines(x, y, w, h, text [, flags])\n\nDraw text inside rectangle (x,y,w,h) with line breaks\n\n@param x,y (positive numbers) starting coordinate\n\n@param w,h (positive numbers) width and height of bounding rectangle\n\n@param text (string) text to display\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html) for drawing flags and colors, and [Appendix](../../part_vii_-_appendix/fonts.md) for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented.\n\n@retval x,y (integers) point where text drawing ended\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0, return x,y added in 2.11.0",
+      "raw_luadoc": "@function lcd.drawTextLines(x, y, w, h, text [, flags])\n\nDraw text inside rectangle (x,y,w,h) with line breaks\n\n@param x,y (positive numbers) starting coordinate\n\n@param w,h (positive numbers) width and height of bounding rectangle\n\n@param text (string) text to display\n\n@param flags (optional) please see the Lcd functions overview for drawing flags and colors, and the Appendix for available characters in each font set. RIGHT, CENTER and VCENTER are not implemented.\n\n@retval x,y (integers) point where text drawing ended\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0, return x,y added in 2.11.0",
       "source_line": 271
     },
     {
@@ -3273,11 +3273,11 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         },
         {
           "name": "inversColor",
-          "type": "string",
+          "type": "unknown",
           "required": false,
           "description": "overrides the inverse text color for INVERS"
         }
@@ -3292,7 +3292,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_colorlcd.cpp; radio/src/lua/api_stdlcd.cpp",
-      "raw_luadoc": "@function lcd.drawTimer(x, y, value [, flags [, inversColor]])\n\nDisplay a value formatted as time at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param value (number) time in seconds\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@param inversColor (lcd_text_flags, optional with INVERS flag) overrides the inverse text color for INVERS\n\n@status current Introduced in 2.0.0",
+      "raw_luadoc": "@function lcd.drawTimer(x, y, value [, flags])\n\nDisplay a value formatted as time at (x,y)\n\n@param x,y (positive numbers) starting coordinate\n\n@param value (number) time in seconds\n\n@param flags (unsigned number) drawing flags:\n * `0 or not specified` normal representation (minutes and seconds)\n * `TIMEHOUR` display hours\n * other general LCD flag also apply\n * `SHADOWED` Horus only, apply a shadow effect\n\n@status current Introduced in 2.0.0,  `SHADOWED` introduced in 2.2.1",
       "source_line": 338
     },
     {
@@ -3346,7 +3346,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -3360,7 +3360,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.drawTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
+      "raw_luadoc": "@function lcd.drawTriangle(x1, y1, x2, y2, x3, y3 [, flags])\n\nDraw a triangle\n\n@param x1,y1,x2,y2,x3,y3 (positive numbers) coordinates of the three vertices\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.4.0",
       "source_line": 1080
     },
     {
@@ -3403,7 +3403,7 @@
           "name": "flags",
           "type": "integer",
           "required": true,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [
@@ -3423,7 +3423,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.getColor(flags)\n\nGet the color value from flags\n\n@param flags (flags) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@retval color (flag) only the RGB565 color value of the input\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.3.11",
+      "raw_luadoc": "@function lcd.getColor(flags)\n\nGet the color value from flags\n\n@param flags (flags) please see the Lcd functions overview\n\n@retval color (flag) only the RGB565 color value of the input\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.3.11",
       "source_line": 955
     },
     {
@@ -3560,7 +3560,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [],
@@ -3574,7 +3574,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.invertRect(x, y, w, h [, flags])\n\nInvert a rectangle zone from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
+      "raw_luadoc": "@function lcd.invertRect(x, y, w, h [, flags])\n\nInvert a rectangle zone from top left corner (x,y) of specified width and height\n\n@param x,y (positive numbers) top left corner position\n\n@param w (number) width in pixels\n\n@param h (number) height in pixels\n\n@param flags (optional) please see the Lcd functions overview\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.8.0",
       "source_line": 857
     },
     {
@@ -3636,7 +3636,7 @@
       "module": "lcd",
       "kind": "function",
       "syntax": "lcd.setColor(colorIndex, color)",
-      "summary": "Change an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)",
+      "summary": "Change an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants",
       "parameters": [],
       "returns": [],
       "availability": {
@@ -3649,7 +3649,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.setColor(colorIndex, color)\n\nChange an indexed color (theme colors and CUSTOM_COLOR). Please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html#color-constants)\n\nPlease notice that changing theme colors affects not only other Lua widgets, but the entire radio interface.\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.2.0",
+      "raw_luadoc": "@function lcd.setColor(colorIndex, color)\n\nChange an indexed color (theme colors and CUSTOM_COLOR). Please see the Lcd functions overview for indexed color constants\n\nPlease notice that changing theme colors affects not only other Lua widgets, but the entire radio interface.\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.2.0",
       "source_line": 932
     },
     {
@@ -3673,7 +3673,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)"
+          "description": "please see the Lcd functions overview"
         }
       ],
       "returns": [
@@ -3693,7 +3693,7 @@
         "Only available on radios with color display"
       ],
       "source_location": "radio/src/lua/api_colorlcd.cpp",
-      "raw_luadoc": "@function lcd.sizeText(text [, flags])\n\nGet the width and height of a text string drawn with flags\n\n@param text (string)\n\n@param flags (optional) please see [Lcd functions overview](../lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd_functions-overview.html)\n\n@retval w,h (integers) width and height of the text\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0",
+      "raw_luadoc": "@function lcd.sizeText(text [, flags])\n\nGet the width and height of a text string drawn with flags\n\n@param text (string)\n\n@param flags (optional) please see the Lcd functions overview\n\n@retval w,h (integers) width and height of the text\n\n@notice Only available on radios with color display\n\n@status current Introduced in 2.5.0",
       "source_line": 247
     },
     {
@@ -3749,7 +3749,7 @@
       ],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function loadScript(file [, mode], [,env])\n\nLoad a Lua script file. This is similar to Lua's own [loadfile()](https://www.lua.org/manual/5.2/manual.html#pdf-loadfile)\nAPI method, but it uses OpenTx's optional pre-compilation feature to save memory and time during load.\n\nReturn values are same as from Lua API loadfile() method: If the script was loaded w/out errors\nthen the loaded script (or \"chunk\") is returned as a function. Otherwise, returns nil plus the error message.\n\n@param file (string) Full path and file name of script. The file extension is optional and ignored (see `mode` param to control\n  which extension will be used). However, if an extension is specified, it should be \".lua\" (or \".luac\"), otherwise it is treated\n  as part of the file name and the .lua/.luac will be appended to that.\n\n@param mode (string) (optional) Controls whether to force loading the text (.lua) or pre-compiled binary (.luac)\n  version of the script. By default ETX will load the newest version and compile a new binary if necessary (overwriting any\n  existing .luac version of the same script, and stripping some debug info like line numbers).\n  You can use `mode` to control the loading behavior more specifically. Possible values are:\n   * `b` only binary.\n   * `t` only text.\n   * `T` (default on simulator) prefer text but load binary if that is the only version available.\n   * `bt` (default on radio) either binary or text, whichever is newer (binary preferred when timestamps are equal).\n   * Add `x` to avoid automatic compilation of source file to .luac version.\n       Eg: \"tx\", \"bx\", or \"btx\".\n   * Add `c` to force compilation of source file to .luac version (even if existing version is newer than source file).\n       Eg: \"tc\" or \"btc\" (forces \"t\", overrides \"x\").\n   * Add `d` to keep extra debug info in the compiled binary.\n       Eg: \"td\", \"btd\", or \"tcd\" (no effect with just \"b\" or with \"x\").\n\n@notice\n  Note that you will get an error if you specify `mode` as \"b\" or \"t\" and that specific version of the file does not exist (eg. no .luac file when \"b\" is used).\n  Also note that `mode` is NOT passed on to Lua's loader function, so unlike with loadfile() the actual file content is not checked (as if no mode or \"bt\" were passed to loadfile()).\n\n@param env (integer) See documentation for Lua function loadfile().\n\n@retval function The loaded script, or `nil` if there was an error (e.g. file not found or syntax error).\n\n@retval string Error message(s), if any. Blank if no error occurred.\n\n@status current Introduced in 2.2.0\n\n### Example\n\n```lua\n  fun, err = loadScript(\"/SCRIPTS/FUNCTIONS/print.lua\")\n  if (fun ~= nil) then\n     fun(\"Hello from loadScript()\")\n  else\n     print(err)\n  end\n```",
-      "source_line": 2115
+      "source_line": 2111
     },
     {
       "id": "mkdir",
@@ -3984,7 +3984,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.getCurve(curve)\n\nGet Curve parameters\n\n@param curve (unsigned number) curve number (use 0 for Curve1)\n\n@retval nil requested curve does not exist\n\n@retval table curve data:\n * `name` (string) name\n * `type` (number) type\n * `smooth` (boolean) smooth\n * `points` (number) number of points\n * `y` (table) table of Y values:\n   * `key` is point number (zero based)\n   * `value` is y value\n * `x` (table) **only included for custom curve type**:\n   * `key` is point number (zero based)\n   * `value` is x value\n\n Note that functions returns the tables starting with index 0 contrary to LUA's\n usual index starting with 1\n\n@status current Introduced in 2.0.12",
-      "source_line": 1211
+      "source_line": 1123
     },
     {
       "id": "model.getCustomFunction",
@@ -4025,7 +4025,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.getCustomFunction(function)\n\nGet Custom Function parameters\n\n@param function (unsigned number) custom function number (use 0 for CF1)\n\n@retval nil requested custom function does not exist\n\n@retval table custom function data:\n * `switch` (number) switch index\n * `func` (number) function index\n * `name` (string)  Name of track to play (only returned only returned if action is play track, sound or script)\n * `value` (number) value (only returned only returned if action is **not** play track, sound or script)\n * `mode` (number) mode (only returned only returned if action is **not** play track, sound or script)\n * `param` (number) parameter (only returned only returned if action is **not** play track, sound or script)\n * `active` (number) 0 = disabled, 1 = enabled\n * `repetition` (number) -1 to 60, range and meaning depend on function\n\n@status current Introduced in 2.0.0, TODO rename function",
-      "source_line": 1473
+      "source_line": 1385
     },
     {
       "id": "model.getFlightMode",
@@ -4115,7 +4115,43 @@
       ],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.getGlobalVariable(index, flight_mode)\n\nReturn current global variable value\n\n@notice a simple warning or notice\n\n@param index  zero based global variable index, use 0 for GV1, 8 for GV9\n\n@param flight_mode  Flight mode number (0 = FM0, 8 = FM8)\n\n@retval nil   requested global variable does not exist\n\n@retval number current value of global variable\n\nExample:\n\n```lua\n  -- get GV3 (index = 2) from Flight mode 0 (FM0)\n  val = model.getGlobalVariable(2, 0)\n```",
-      "source_line": 1677
+      "source_line": 1589
+    },
+    {
+      "id": "model.getGlobalVariableDetails",
+      "doc_id": "model.get-global-variable-details",
+      "symbol": "model.getGlobalVariableDetails",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "model",
+      "kind": "function",
+      "syntax": "model.getGlobalVariableDetails(index)",
+      "summary": "Returns details about a Global Variable, but not values",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "integer",
+          "required": true,
+          "description": "zero based global variable index, use 0 for GV1, 8 for GV9"
+        }
+      ],
+      "returns": [
+        {
+          "name": "",
+          "type": "table",
+          "description": "details of the global variable: * `name` (string) global variable name\n * `min` (number) minimum value\n * `max` (number) maximum value\n * `prec` (number) precision\n * `unit` (number) unit\n * `popup` (boolean) show popup - if exists"
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "all"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_model.cpp",
+      "raw_luadoc": "@function model.getGlobalVariableDetails(index)\n\nReturns details about a Global Variable, but not values\n\n@param index (number) zero based global variable index, use 0 for GV1, 8 for GV9\n\n@retval table details of the global variable:\n * `name` (string) global variable name\n * `min` (number) minimum value\n * `max` (number) maximum value\n * `prec` (number) precision\n * `unit` (number) unit\n * `popup` (boolean) show popup - if exists\n\n@status current Introduced in 2.11.0",
+      "source_line": 1650
     },
     {
       "id": "model.getInfo",
@@ -4268,7 +4304,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.getLogicalSwitch(switch)\n\nGet Logical Switch parameters\n\n@param switch (unsigned number) logical switch number (use 0 for LS1)\n\n@retval nil requested logical switch does not exist\n\n@retval table logical switch data:\n * `func` (number) function index\n * `v1` (number) V1 value (index)\n * `v2` (number) V2 value (index or value)\n * `v3` (number) V3 value (index or value)\n * `and` (number) AND switch index\n * `delay` (number) delay (time in 1/10 s)\n * `duration` (number) duration (time in 1/10 s)\n * `state` (boolean) current state of the logical switch\n * `persistent` (boolean) if true then the state is persistent across reboot of the radio\n\n@status current Introduced in 2.0.0, state and persistent added in 2.11.2",
-      "source_line": 1106
+      "source_line": 1018
     },
     {
       "id": "model.getMix",
@@ -4433,7 +4469,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.getOutput(index)\n\nGet servo parameters\n\n@param index (unsigned number) output number (use 0 for CH1)\n\n@retval nil requested output does not exist\n\n@retval table output parameters:\n * `name` (string) name\n * `min` (number) Minimum % * 10\n * `max` (number) Maximum % * 10\n * `offset` (number) Subtrim * 10\n * `ppmCenter` (number) offset from PPM Center. 0 = 1500\n * `symetrical` (number) linear Subtrim 0 = Off, 1 = On\n * `revert` (number) irection 0 = \u00ad\u00ad\u00ad---, 1 = INV\n * `curve`\n   * (number) Curve number (0 for Curve1)\n   * or `nil` if no curve set\n\n@status current Introduced in 2.0.0",
-      "source_line": 1575
+      "source_line": 1487
     },
     {
       "id": "model.getSensor",
@@ -4474,7 +4510,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.getSensor(sensor)\n\nGet Telemetry Sensor parameters\n\n@param sensor (unsigned number) sensor number (use 0 for sensor 1)\n\n@retval nil requested sensor does not exist\n\n@retval table with sensor data:\n * `type` (number) 0 = custom, 1 = calculated\n * `name` (string) Name\n * `unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide\n * `prec` (number) Number of decimals\n * `id`   (number) Only custom sensors\n * `instance` (number) Only custom sensors\n * `formula` (number) Only calculated sensors. 0 = Add etc. see list of formula choices in Companion popup\n\n@status current Introduced in 2.3.0",
-      "source_line": 1814
+      "source_line": 1731
     },
     {
       "id": "model.getSwashRing",
@@ -4503,43 +4539,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.getSwashRing()\n\nGet heli swash parameters\n\n@retval table with heli swash parameters:\n* `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* 'collectiveSource' (number) source index\n* 'aileronSource' (number) source index\n* 'elevatorSource' (number) source index\n* 'collectiveWeight'(value) -100 to 100\n* 'aileronWeight' (value) -100 to 100\n* 'elevatorWeight' (value) -100 to 100\n\n @status current Introduced in 2.8.0",
-      "source_line": 1881
-    },
-    {
-      "id": "model.getSwitchWarning",
-      "doc_id": "model.get-switch-warning",
-      "symbol": "model.getSwitchWarning",
-      "aliases": [],
-      "deprecated_aliases": [],
-      "module": "model",
-      "kind": "function",
-      "syntax": "model.getSwitchWarning(switch)",
-      "summary": "Get warning state for a switch",
-      "parameters": [
-        {
-          "name": "switch",
-          "type": "integer",
-          "required": true,
-          "description": "switch number (use 0 for SA) @param switch (string) switch name"
-        }
-      ],
-      "returns": [
-        {
-          "name": "",
-          "type": "nil",
-          "description": "when switch is a toggle or does not exist @retval number\n0 = no warning\n1 = switch up\n2 = switch middle\n3 = switch down"
-        }
-      ],
-      "availability": {
-        "since": "3.0.0",
-        "radios": [
-          "all"
-        ]
-      },
-      "notes": [],
-      "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.getSwitchWarning(switch)\n\nGet warning state for a switch\n\n@param switch (unsigned number) switch number (use 0 for SA)\n@param switch (string) switch name\n\n@retval nil when switch is a toggle or does not exist\n@retval number\n0 = no warning\n1 = switch up\n2 = switch middle\n3 = switch down\n\n@status current Introduced in 3.0.0",
-      "source_line": 1018
+      "source_line": 1798
     },
     {
       "id": "model.getTimer",
@@ -4700,7 +4700,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.resetSensor(sensor)\n\nReset Telemetry Sensor parameters\n\n@param sensor (unsigned number) sensor number (use 0 for sensor 1)\n\n@retval nil\n\n@status current Introduced in 2.3.11",
-      "source_line": 1858
+      "source_line": 1775
     },
     {
       "id": "model.resetTimer",
@@ -4772,7 +4772,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.setCurve(curve, params)\n\nSet Curve parameters\n\n@param curve (unsigned number) curve number (use 0 for Curve1)\n\n@param params see model.getCurve return format for table format. setCurve uses standard\n lua array indexing and arrays start at index 1\n\nThe first and last x value must -100 and 100 and x values must be monotonically increasing\n\n@retval  0 - Everything okay\n         1 - Wrong number of points\n         2 - Invalid Curve number\n         3 - Cuve does not fit anymore\n         4 - point of out of index\n         5 - x value not monotonically increasing\n         6 - y value not in range [-100;100]\n         7 - extra values for y are set\n         8 - extra values for x are set\n\n@status current Introduced in 2.2.0\n\nExample setting a 4-point custom curve:\n```lua\n  params = {}\n  params[\"x\"] =  {-100, -34, 77, 100}\n  params[\"y\"] = {-70, 20, -89, -100}\n  params[\"smooth\"] = true\n  params[\"type\"] = 1\n  val =  model.setCurve(2, params)\n ```\nsetting a 6-point standard smoothed curve\n ```lua\n val = model.setCurve(3, {smooth=true, y={-100, -50, 0, 50, 100, 80}})\n ```",
-      "source_line": 1279
+      "source_line": 1191
     },
     {
       "id": "model.setCustomFunction",
@@ -4810,7 +4810,7 @@
       ],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.setCustomFunction(function, value)\n\nSet Custom Function parameters\n\n@param function (unsigned number) custom function number (use 0 for CF1)\n\n@param value (table) custom function parameters, see model.getCustomFunction() for table format\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.0.0, TODO rename function",
-      "source_line": 1519
+      "source_line": 1431
     },
     {
       "id": "model.setFlightMode",
@@ -4831,7 +4831,7 @@
         },
         {
           "name": "params",
-          "type": "table|nil",
+          "type": "unknown",
           "required": true,
           "description": "see model.getFlightMode return format for table format."
         }
@@ -4845,7 +4845,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.setFlightMode(index, params)\n\nSet Flight mode parameters\n\n@param index (unsigned number) flight mode number (use 0 for FM0)\n\n@param params (table|nil) see model.getFlightMode return format for table format.\n\n@status current Introduced in 2.3.10",
+      "raw_luadoc": "@function model.setFlightMode(index, params)\n\nSet Flight mode parameters\n\n@param index (unsigned number) flight mode number (use 0 for FM0)\n\n@param params see model.getFlightMode return format for table format.\n\n@status current Introduced in 2.3.10",
       "source_line": 526
     },
     {
@@ -4873,7 +4873,7 @@
         },
         {
           "name": "value",
-          "type": "source_range_1024",
+          "type": "unknown",
           "required": true,
           "description": "new value for global variable. Permitted range is from -1024 to 1024."
         }
@@ -4889,8 +4889,50 @@
         "Global variable can only store integer values,\nany floating point value is converted into integer value\nby truncating everything behind a floating point."
       ],
       "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.setGlobalVariable(index, flight_mode, value)\n\nSets current global variable value. See also model.getGlobalVariable()\n\n@param index  zero based global variable index, use 0 for GV1, 8 for GV9\n\n@param flight_mode  Flight mode number (0 = FM0, 8 = FM8)\n\n@param value (source_range_1024) new value for global variable. Permitted range is\nfrom -1024 to 1024.\n\n@notice Global variable can only store integer values,\nany floating point value is converted into integer value\nby truncating everything behind a floating point.",
-      "source_line": 1710
+      "raw_luadoc": "@function model.setGlobalVariable(index, flight_mode, value)\n\nSets current global variable value. See also model.getGlobalVariable()\n\n@param index  zero based global variable index, use 0 for GV1, 8 for GV9\n\n@param flight_mode  Flight mode number (0 = FM0, 8 = FM8)\n\n@param value  new value for global variable. Permitted range is\nfrom -1024 to 1024.\n\n@notice Global variable can only store integer values,\nany floating point value is converted into integer value\nby truncating everything behind a floating point.",
+      "source_line": 1622
+    },
+    {
+      "id": "model.setGlobalVariableDetails",
+      "doc_id": "model.set-global-variable-details",
+      "symbol": "model.setGlobalVariableDetails",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "model",
+      "kind": "function",
+      "syntax": "model.setGlobalVariableDetails(index, params)",
+      "summary": "Sets details about a Global Variable, but not values",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "integer",
+          "required": true,
+          "description": "zero based global variable index, use 0 for GV1, 8 for GV9"
+        },
+        {
+          "name": "params",
+          "type": "table",
+          "required": true,
+          "description": "see model.getGlobalVariableDetails(index) return format for table format"
+        }
+      ],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11.0",
+        "radios": [
+          "all"
+        ]
+      },
+      "notes": [],
+      "source_location": "radio/src/lua/api_model.cpp",
+      "raw_luadoc": "@function model.setGlobalVariableDetails(index, params)\n\nSets details about a Global Variable, but not values\n\n@param index (number) zero based global variable index, use 0 for GV1, 8 for GV9\n\n@param params (table) see model.getGlobalVariableDetails(index) return format for table format\n\n@retval none\n\n@status current Introduced in 2.11.0",
+      "source_line": 1684
     },
     {
       "id": "model.setInfo",
@@ -4905,7 +4947,7 @@
       "parameters": [
         {
           "name": "value",
-          "type": "table",
+          "type": "unknown",
           "required": true,
           "description": "model information data, see model.getInfo()"
         }
@@ -4921,7 +4963,7 @@
         "If a parameter is missing from the value, then\nthat parameter remains unchanged."
       ],
       "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.setInfo(value)\n\nSet the current Model information\n\n@param value (table) model information data, see model.getInfo()\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.0.6, extendedLimits and jitterFilter added in 2.8.0",
+      "raw_luadoc": "@function model.setInfo(value)\n\nSet the current Model information\n\n@param value model information data, see model.getInfo()\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.0.6, extendedLimits and jitterFilter added in 2.8.0",
       "source_line": 83
     },
     {
@@ -4961,7 +5003,7 @@
       ],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.setLogicalSwitch(switch, value)\n\nSet Logical Switch parameters\n\n@param switch (unsigned number) logical switch number (use 0 for LS1)\n\n@param value (table) see model.getLogicalSwitch() for table format\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@notice To set the `and` member (which is Lua keyword)\nuse the following syntax: `model.setLogicalSwitch(30, {func=4,v1=1,v2=-99, [\"and\"]=24})`\n\n@status current Introduced in 2.0.0, state and persistent added in 2.11.2",
-      "source_line": 1150
+      "source_line": 1062
     },
     {
       "id": "model.setModule",
@@ -4982,7 +5024,7 @@
         },
         {
           "name": "value",
-          "type": "table",
+          "type": "unknown",
           "required": true,
           "description": "module parameters, see model.getModule()"
         }
@@ -4998,7 +5040,7 @@
         "If a parameter is missing from the value, then\nthat parameter remains unchanged."
       ],
       "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.setModule(index, value)\n\nSet RF module parameters\n\n@param index (number) module index (0 for internal, 1 for external)\n\n@param value (table) module parameters, see model.getModule()\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.2.0, modified in 2.3.12 (proto/subproto)",
+      "raw_luadoc": "@function model.setModule(index, value)\n\nSet RF module parameters\n\n@param index (number) module index (0 for internal, 1 for external)\n\n@param value module parameters, see model.getModule()\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.2.0, modified in 2.3.12 (proto/subproto)",
       "source_line": 219
     },
     {
@@ -5037,7 +5079,7 @@
       ],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.setOutput(index, value)\n\nSet servo parameters\n\n@param index (unsigned number) channel number (use 0 for CH1)\n\n@param value (table) servo parameters, see model.getOutput() for table format\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.0.0",
-      "source_line": 1620
+      "source_line": 1532
     },
     {
       "id": "model.setSwashRing",
@@ -5069,49 +5111,7 @@
       ],
       "source_location": "radio/src/lua/api_model.cpp",
       "raw_luadoc": "@function model.setSwashRing(params)\n\nSet heli swash parameters\n\n@param value (table) swash ring parameters, see model.getSwashRing() for table format\n\n@notice If a parameter is missing, then that parameter remains unchanged.\n\n@status current Introduced in 2.8.0",
-      "source_line": 1913
-    },
-    {
-      "id": "model.setSwitchWarning",
-      "doc_id": "model.set-switch-warning",
-      "symbol": "model.setSwitchWarning",
-      "aliases": [],
-      "deprecated_aliases": [],
-      "module": "model",
-      "kind": "function",
-      "syntax": "model.setSwitchWarning(switch, state)",
-      "summary": "Set warning state for a switch",
-      "parameters": [
-        {
-          "name": "switch",
-          "type": "integer",
-          "required": true,
-          "description": "switch number (use 0 for SA) @param switch (string) switch name"
-        },
-        {
-          "name": "state",
-          "type": "integer",
-          "required": true,
-          "description": "state 0 = no warning\n1 = switch up\n2 = switch middle\n3 = switch down"
-        }
-      ],
-      "returns": [
-        {
-          "name": "",
-          "type": "nil",
-          "description": "when switch is a toggle or does not exist"
-        }
-      ],
-      "availability": {
-        "since": "3.0.0",
-        "radios": [
-          "all"
-        ]
-      },
-      "notes": [],
-      "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.setSwitchWarning(switch, state)\n\nSet warning state for a switch\n\n@param switch (unsigned number) switch number (use 0 for SA)\n@param switch (string) switch name\n\n@param state (number) state\n0 = no warning\n1 = switch up\n2 = switch middle\n3 = switch down\n\n@retval nil when switch is a toggle or does not exist\n\n@status current Introduced in 3.0.0",
-      "source_line": 1061
+      "source_line": 1830
     },
     {
       "id": "model.setTimer",
@@ -5132,7 +5132,7 @@
         },
         {
           "name": "value",
-          "type": "table",
+          "type": "unknown",
           "required": true,
           "description": "timer parameters, see model.getTimer()"
         }
@@ -5148,7 +5148,7 @@
         "If a parameter is missing from the value, then\nthat parameter remains unchanged."
       ],
       "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.setTimer(timer, value)\n\nSet model timer parameters\n\n@param timer (number) timer index (0 for Timer 1)\n\n@param value (table) timer parameters, see model.getTimer()\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.0.0, name added in 2.3.6, showElapsed added in 2.8.0",
+      "raw_luadoc": "@function model.setTimer(timer, value)\n\nSet model timer parameters\n\n@param timer (number) timer index (0 for Timer 1)\n\n@param value timer parameters, see model.getTimer()\n\n@notice If a parameter is missing from the value, then\nthat parameter remains unchanged.\n\n@status current Introduced in 2.0.0, name added in 2.3.6, showElapsed added in 2.8.0",
       "source_line": 329
     },
     {
@@ -5185,7 +5185,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function multiBuffer(address[,value])\n\nThis function reads/writes the Multi protocol buffer to interact with a protocol.\n\n@param address to read/write in the buffer\n@param (optional): value to write in the buffer\n\n@retval buffer value (number)\n\n@status current Introduced in 2.3.2",
-      "source_line": 2269
+      "source_line": 2265
     },
     {
       "id": "playDuration",
@@ -5214,7 +5214,7 @@
       "returns": [
         {
           "name": "none",
-          "type": "nil",
+          "type": "unknown",
           "description": ""
         }
       ],
@@ -5226,7 +5226,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function playDuration(duration [, hourFormat [, volume]])\n\nPlay a time value (text to speech)\n\n@param duration (number) number of seconds to play. Only integral part is used.\n\n@param hourFormat (number):\n * `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n * \n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none (nil)\n\n@status current Introduced in 2.1.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playDuration(101, 0, 5) -- play duration 101s, seconds format, use Wav volume 5\n// playDuration(101, 0, 1) -- play duration 101s, seconds format, use Wav volume 1\n// playDuration(101, 1)    -- play duration 101s, hour format, use radio settings Wav volume",
+      "raw_luadoc": "@function playDuration(duration [, hourFormat [, volume]])\n\nPlay a time value (text to speech)\n\n@param duration (number) number of seconds to play. Only integral part is used.\n\n@param hourFormat (number):\n * `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n * \n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none \n\n@status current Introduced in 2.1.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playDuration(101, 0, 5) -- play duration 101s, seconds format, use Wav volume 5\n// playDuration(101, 0, 1) -- play duration 101s, seconds format, use Wav volume 1\n// playDuration(101, 1)    -- play duration 101s, hour format, use radio settings Wav volume",
       "source_line": 1545
     },
     {
@@ -5256,7 +5256,7 @@
       "returns": [
         {
           "name": "none",
-          "type": "nil",
+          "type": "unknown",
           "description": ""
         }
       ],
@@ -5268,7 +5268,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function playFile(filename [, volume])\n\nPlay a file from the SD card\n\n@param filename (string) full path to wav file (i.e. \"/SOUNDS/en/system/tada.wav\")\nIntroduced in 2.1.0: If you use a relative path, the current language is appended\nto the path (example: for English language: `/SOUNDS/en` is appended)\n\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none (nil)\n\n@status current Introduced in 2.0.0, changed in 2.1.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playFile(\"armed.wav\", 5) -- play file armed.wav, use Wav volume 2\n// playFile(\"armed.wav\", 1) -- play file armed.wav, use Wav volume 1\n// playFile(\"armed.wav\")\t\t-- play file armed.wav, use radio settings Wav volume",
+      "raw_luadoc": "@function playFile(filename [, volume])\n\nPlay a file from the SD card\n\n@param filename (string) full path to wav file (i.e. \"/SOUNDS/en/system/tada.wav\")\nIntroduced in 2.1.0: If you use a relative path, the current language is appended\nto the path (example: for English language: `/SOUNDS/en` is appended)\n\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none \n\n@status current Introduced in 2.0.0, changed in 2.1.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playFile(\"armed.wav\", 5) -- play file armed.wav, use Wav volume 2\n// playFile(\"armed.wav\", 1) -- play file armed.wav, use Wav volume 1\n// playFile(\"armed.wav\")\t\t-- play file armed.wav, use radio settings Wav volume",
       "source_line": 1455
     },
     {
@@ -5311,7 +5311,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function playHaptic(duration, pause [, flags])\n\nGenerate haptic feedback\n\n@param duration (number) length of the haptic feedback in milliseconds\n\n@param pause (number) length of the silence after haptic feedback in milliseconds\n\n@param flags (number):\n * `0 or not present` play with normal priority\n * `PLAY_NOW` play immediately\n\n@status current Introduced in 2.2.0",
-      "source_line": 1660
+      "source_line": 1656
     },
     {
       "id": "playNumber",
@@ -5334,7 +5334,7 @@
           "name": "unit",
           "type": "integer",
           "required": true,
-          "description": "unit identifier [Full list]((../appendix/units.html))"
+          "description": "unit identifier, see the Units reference for the full list"
         },
         {
           "name": "attributes",
@@ -5346,7 +5346,7 @@
       "returns": [
         {
           "name": "none",
-          "type": "nil",
+          "type": "unknown",
           "description": ""
         }
       ],
@@ -5358,7 +5358,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function playNumber(value, unit [, attributes [, volume]])\n\nPlay a numerical value (text to speech)\n\n@param value (number) number to play. Value is interpreted as integer.\n\n@param unit (number) unit identifier [Full list]((../appendix/units.html))\n\n@param attributes (unsigned number) possible values:\n * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)\n \n @param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none (nil)\n\n@status current Introduced in 2.0.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playNumber(123, 3, 0, 5) -- play number 123, unit mAh, use Wav volume 5\n// playNumber(123, 3, 0, 1) -- play number 123, unit mAh, use Wav volume 1\n// playNumber(123, 3, 0)    -- play number 123, unit mAh, use radio settings Wav volume",
+      "raw_luadoc": "@function playNumber(value, unit [, attributes [, volume]])\n\nPlay a numerical value (text to speech)\n\n@param value (number) number to play. Value is interpreted as integer.\n\n@param unit (number) unit identifier, see the Units reference for the full list\n\n@param attributes (unsigned number) possible values:\n * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)\n \n @param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume\n\n@retval none \n\n@status current Introduced in 2.0.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playNumber(123, 3, 0, 5) -- play number 123, unit mAh, use Wav volume 5\n// playNumber(123, 3, 0, 1) -- play number 123, unit mAh, use Wav volume 1\n// playNumber(123, 3, 0)    -- play number 123, unit mAh, use radio settings Wav volume",
       "source_line": 1501
     },
     {
@@ -5412,7 +5412,7 @@
       "returns": [
         {
           "name": "none",
-          "type": "nil",
+          "type": "unknown",
           "description": ""
         }
       ],
@@ -5424,7 +5424,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function playTone(frequency, duration, pause [, flags [, freqIncr [, volume]]])\n\nPlay a tone\n\n@param frequency (number) tone frequency in Hz (from 150 to 15000)\n\n@param duration (number) length of the tone in milliseconds\n\n@param pause (number) length of the silence after the tone in milliseconds\n\n@param flags (number):\n * `0 or not present` play with normal priority.\n * `PLAY_BACKGROUND` play in background (built in vario function uses this context)\n * `PLAY_NOW` play immediately\n\n@param freqIncr (number) positive number increases the tone pitch (frequency with time),\nnegative number decreases it. The frequency changes every 10 milliseconds, the change is `freqIncr * 10Hz`.\nThe valid range is from -127 to 127.\n\n@param volume (number):\n - (1..5) override radio settings Beep volume for the duration of file\n - omitting the parameter uses radio settings Beep volume\n\n@retval none (nil)\n\n@status current Introduced in 2.1.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playTone(2550, 160, 20, 3, -10, 5) -- play tone, use Beep volume 5\n// playTone(2550, 160, 20, 3, -10, 1) -- play tone, use Beep volume 1\n// playTone(2550, 160, 20, 3, -10)\t\t-- play tone, use radio settings Beep volume",
+      "raw_luadoc": "@function playTone(frequency, duration, pause [, flags [, freqIncr [, volume]]])\n\nPlay a tone\n\n@param frequency (number) tone frequency in Hz (from 150 to 15000)\n\n@param duration (number) length of the tone in milliseconds\n\n@param pause (number) length of the silence after the tone in milliseconds\n\n@param flags (number):\n * `0 or not present` play with normal priority.\n * `PLAY_BACKGROUND` play in background (built in vario function uses this context)\n * `PLAY_NOW` play immediately\n\n@param freqIncr (number) positive number increases the tone pitch (frequency with time),\nnegative number decreases it. The frequency changes every 10 milliseconds, the change is `freqIncr * 10Hz`.\nThe valid range is from -127 to 127.\n\n@param volume (number):\n - (1..5) override radio settings Beep volume for the duration of file\n - omitting the parameter uses radio settings Beep volume\n\n@retval none \n\n@status current Introduced in 2.1.0, changed in 2.10\n\n// targets: BW, COLOR\n//\n// EXAMPLES:\n// playTone(2550, 160, 20, 3, -10, 5) -- play tone, use Beep volume 5\n// playTone(2550, 160, 20, 3, -10, 1) -- play tone, use Beep volume 1\n// playTone(2550, 160, 20, 3, -10)\t\t-- play tone, use radio settings Beep volume",
       "source_line": 1585
     },
     {
@@ -5460,7 +5460,7 @@
       "returns": [
         {
           "name": "\"CANCEL\"",
-          "type": "string",
+          "type": "unknown",
           "description": "user pushed EXIT key"
         }
       ],
@@ -5474,8 +5474,8 @@
         "Use only from stand-alone and telemetry scripts."
       ],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function popupConfirmation(title, event) deprecated, please replace by\n@function popupConfirmation(title, message, event)\n\nRaises a pop-up on screen that asks for confirmation\n\n@param title (string) title to display\n\n@param message (string) text to display\n\n@param event (number) the event variable that is passed in from the\nRun function (key pressed)\n\n@retval \"CANCEL\" (string) user pushed EXIT key\n\n@notice Use only from stand-alone and telemetry scripts.\n\n@status current Introduced in 2.2.0, changed to (title, message, event) in 2.3.8",
-      "source_line": 1903
+      "raw_luadoc": "@function popupConfirmation(title, event) deprecated, please replace by\n@function popupConfirmation(title, message, event)\n\nRaises a pop-up on screen that asks for confirmation\n\n@param title (string) title to display\n\n@param message (string) text to display\n\n@param event (number) the event variable that is passed in from the\nRun function (key pressed)\n\n@retval \"CANCEL\" user pushed EXIT key\n\n@notice Use only from stand-alone and telemetry scripts.\n\n@status current Introduced in 2.2.0, changed to (title, message, event) in 2.3.8",
+      "source_line": 1899
     },
     {
       "id": "popupInput",
@@ -5527,12 +5527,12 @@
         },
         {
           "name": "\"OK\"",
-          "type": "string",
+          "type": "unknown",
           "description": "user pushed ENT key"
         },
         {
           "name": "\"CANCEL\"",
-          "type": "string",
+          "type": "unknown",
           "description": "user pushed EXIT key"
         }
       ],
@@ -5546,8 +5546,8 @@
         "Use only from stand-alone and telemetry scripts."
       ],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function popupInput(title, event, input, min, max)\n\nRaises a pop-up on screen that allows uses input\n\n@param title (string) text to display\n\n@param event (number) the event variable that is passed in from the\nRun function (key pressed)\n\n@param input (number) value that can be adjusted by the +/- keys\n\n@param min  (number) min value that input can reach (by pressing the - key)\n\n@param max  (number) max value that input can reach\n\n@retval number result of the input adjustment\n\n@retval \"OK\" (string) user pushed ENT key\n\n@retval \"CANCEL\" (string) user pushed EXIT key\n\n@notice Use only from stand-alone and telemetry scripts.\n\n@status current Introduced in 2.0.0",
-      "source_line": 1804
+      "raw_luadoc": "@function popupInput(title, event, input, min, max)\n\nRaises a pop-up on screen that allows uses input\n\n@param title (string) text to display\n\n@param event (number) the event variable that is passed in from the\nRun function (key pressed)\n\n@param input (number) value that can be adjusted by the +/- keys\n\n@param min  (number) min value that input can reach (by pressing the - key)\n\n@param max  (number) max value that input can reach\n\n@retval number result of the input adjustment\n\n@retval \"OK\" user pushed ENT key\n\n@retval \"CANCEL\" user pushed EXIT key\n\n@notice Use only from stand-alone and telemetry scripts.\n\n@status current Introduced in 2.0.0",
+      "source_line": 1800
     },
     {
       "id": "popupWarning",
@@ -5576,7 +5576,7 @@
       "returns": [
         {
           "name": "\"CANCEL\"",
-          "type": "string",
+          "type": "unknown",
           "description": "user pushed EXIT key"
         }
       ],
@@ -5590,8 +5590,8 @@
         "Use only from stand-alone and telemetry scripts."
       ],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function popupWarning(title, event)\n\nRaises a pop-up on screen that shows a warning\n\n@param title (string) text to display\n\n@param event (number) the event variable that is passed in from the\nRun function (key pressed)\n\n@retval \"CANCEL\" (string) user pushed EXIT key\n\n@notice Use only from stand-alone and telemetry scripts.\n\n@status current Introduced in 2.2.0",
-      "source_line": 1856
+      "raw_luadoc": "@function popupWarning(title, event)\n\nRaises a pop-up on screen that shows a warning\n\n@param title (string) text to display\n\n@param event (number) the event variable that is passed in from the\nRun function (key pressed)\n\n@retval \"CANCEL\" user pushed EXIT key\n\n@notice Use only from stand-alone and telemetry scripts.\n\n@status current Introduced in 2.2.0",
+      "source_line": 1852
     },
     {
       "id": "rename",
@@ -5636,9 +5636,9 @@
       "parameters": [
         {
           "name": "type",
-          "type": "timer_type",
+          "type": "unknown",
           "required": false,
-          "description": "if set to 'all', throttle ,throttle percent and session timers are reset too if set to 'session', radio session timer is reset too\n                    if set to 'ttimer', radio throttle timer is reset too\n                    if set to  'tptimer', radio throttle percent timer is reset too"
+          "description": ": if set to 'all', throttle ,throttle percent and session timers are reset too if set to 'session', radio session timer is reset too\n                    if set to 'ttimer', radio throttle timer is reset too\n                    if set to  'tptimer', radio throttle percent timer is reset too"
         }
       ],
       "returns": [],
@@ -5650,8 +5650,39 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function resetGlobalTimer([type])\n\n Resets the radio global timer to 0.\n\n@param type (timer_type, optional) if set to 'all', throttle ,throttle percent and session timers are reset too\n                    if set to 'session', radio session timer is reset too\n                    if set to 'ttimer', radio throttle timer is reset too\n                    if set to  'tptimer', radio throttle percent timer is reset too\n\n@status current Introduced in 2.2.2, param added in 2.3",
-      "source_line": 2230
+      "raw_luadoc": "@function resetGlobalTimer([type])\n\n Resets the radio global timer to 0.\n\n@param (optional) : if set to 'all', throttle ,throttle percent and session timers are reset too\n                    if set to 'session', radio session timer is reset too\n                    if set to 'ttimer', radio throttle timer is reset too\n                    if set to  'tptimer', radio throttle percent timer is reset too\n\n@status current Introduced in 2.2.2, param added in 2.3",
+      "source_line": 2226
+    },
+    {
+      "id": "screenshot",
+      "doc_id": "runtime.screenshot",
+      "symbol": "screenshot",
+      "aliases": [],
+      "deprecated_aliases": [],
+      "module": "runtime",
+      "kind": "function",
+      "syntax": "screenshot()",
+      "summary": "Takes a screenshot, which is saved to the SCREENSHOTS folder on the radio SD card.",
+      "parameters": [],
+      "returns": [
+        {
+          "name": "none",
+          "type": "unknown",
+          "description": ""
+        }
+      ],
+      "availability": {
+        "since": "2.11",
+        "radios": [
+          "all"
+        ]
+      },
+      "notes": [
+        "This command is currently not rate limited, so repeated frequent calls will slow down the UI and can even freeze the entire radio, so should be used with care."
+      ],
+      "source_location": "radio/src/lua/api_general.cpp",
+      "raw_luadoc": "@function screenshot()\n\nTakes a screenshot, which is saved to the SCREENSHOTS folder on the radio SD card.\n\n@retval none\n\n@notice This command is currently not rate limited, so repeated frequent calls will slow down the UI and can even freeze the entire radio, so should be used with care.\n\n@status current Introduced in 2.11\n\n// targets: BW, GS, COLOR",
+      "source_line": 1636
     },
     {
       "id": "serialGetPower",
@@ -5692,7 +5723,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function serialGetPower(port_nr)\n\n@param port_nr: valid values are only 0 and 1 on radios that have SWSERIALPOWER defined\n                0 - first serial port, e.g. on TX16S AUX1\n                1 - second serial port, e.g. on TX16S AUX2\n\n@retval value: true for power enabled, false for power disabled.\n\n@retval nil the serial port power control not available on this radio\n\n@status current Introduced in 2.9.0",
-      "source_line": 2398
+      "source_line": 2394
     },
     {
       "id": "serialRead",
@@ -5715,7 +5746,7 @@
       "returns": [
         {
           "name": "str",
-          "type": "string",
+          "type": "unknown",
           "description": "string. Empty if no new characters were available."
         }
       ],
@@ -5727,8 +5758,8 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function serialRead([num])\n@param num (optional): maximum number of bytes to read.\n                       If non-zero, serialRead will read up to num characters from the buffer.\n                       If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.\n                       Note that the returned string may not end in a newline if this character is not present in the buffer.\n\n@retval str (string) string. Empty if no new characters were available.\n\nReads characters from the serial port. The string is allowed to contain any character, including 0.\n\n@status current Introduced in 2.3.8",
-      "source_line": 2350
+      "raw_luadoc": "@function serialRead([num])\n@param num (optional): maximum number of bytes to read.\n                       If non-zero, serialRead will read up to num characters from the buffer.\n                       If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.\n                       Note that the returned string may not end in a newline if this character is not present in the buffer.\n\n@retval str string. Empty if no new characters were available.\n\nReads characters from the serial port. The string is allowed to contain any character, including 0.\n\n@status current Introduced in 2.3.8",
+      "source_line": 2346
     },
     {
       "id": "serialSetPower",
@@ -5770,7 +5801,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function serialSetPower(port_nr, value)\n\n@param port_nr: valid values are only 0 and 1 on radios that have SWSERIALPOWER defined\n                0 - first serial port, e.g. on TX16S AUX1\n                1 - second serial port, e.g. on TX16S AUX2\n\n@param value: 0 - disable power\n              1 - enable power\n\n@retval success: true/false.\n\n@status current Introduced in 2.9.0",
-      "source_line": 2435
+      "source_line": 2431
     },
     {
       "id": "serialWrite",
@@ -5800,7 +5831,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function serialWrite(str)\n@param str (string) String to be written to the serial port.\n\nWrites a string to the serial port. The string is allowed to contain any character, including 0.\n\n@status current Introduced in 2.3.10",
-      "source_line": 2322
+      "source_line": 2318
     },
     {
       "id": "setCFSLedColor",
@@ -5848,7 +5879,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function setCFSLedColor(id, rvalue, bvalue, cvalue)\n\nOverrides the LED color for a custom function switch\n  - if passed 4 arguments (id, r, g, b) then sets override color\n  - if passed 1 argument (id) then cancels override color\n\n@param id: string identifying a custom function switch name\n\n@param rvalue: interger, value of red channel\n\n@param gvalue: interger, value of green channel\n\n@param bvalue: interger, value of blue channel\n\n@retval: true if LED index is valid, false otherwise\n\n@status current. Introduced in 3.0.0",
-      "source_line": 2955
+      "source_line": 2953
     },
     {
       "id": "setIMU_X",
@@ -5884,7 +5915,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function setIMU_X(offset, range)\n\n@param offset: integer, offset in angular degree. -1 to offset to current X position\n\n@param range: integer, range in angular degree. 180\u00b0 max.90 means min/max value will be reached at 45\u00b0 from offset position\n\n@status current Introduced in 3.0",
-      "source_line": 3039
+      "source_line": 3037
     },
     {
       "id": "setIMU_Y",
@@ -5920,7 +5951,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function setIMU_Y(offset, range)\n\n@param offset: integer, offset in angular degree. -1 to offset to current Y position\n\n@param range: integer, range in angular degree, 180\u00b0 max. 90 means min/max value will be reached at 45\u00b0 from offset position\n\n@status current Introduced in 3.0",
-      "source_line": 3070
+      "source_line": 3068
     },
     {
       "id": "setRGBLedColor",
@@ -5968,7 +5999,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function setRGBLedColor(id, rvalue, bvalue, cvalue)\n\n@param id: integer identifying a led in the led chain\n\n@param rvalue: interger, value of red channel\n\n@param gvalue: interger, value of green channel\n\n@param bvalue: interger, value of blue channel\n\n@retval: true if LED index is valid, false otherwise\n\n@status current Introduced in 2.10",
-      "source_line": 2903
+      "source_line": 2899
     },
     {
       "id": "setSerialBaudrate",
@@ -5983,7 +6014,7 @@
       "parameters": [
         {
           "name": "baudrate",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "Desired baurate"
         }
@@ -5997,8 +6028,8 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function setSerialBaudrate(baudrate)\n@param baudrate (integer) Desired baurate\n\nSet baudrate for serial port(s) affected to LUA\n\n@status current Introduced in 2.3.12",
-      "source_line": 2303
+      "raw_luadoc": "@function setSerialBaudrate(baudrate)\n@param baudrate Desired baurate\n\nSet baudrate for serial port(s) affected to LUA\n\n@status current Introduced in 2.3.12",
+      "source_line": 2299
     },
     {
       "id": "setShmVar",
@@ -6036,7 +6067,7 @@
       ],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function setShmVar(id, value)\n\n@param id: integer between 1 and 16 identifying the shared memory variable.\n\n@param value: integer. The value of the shared memory variable.\n\nSets the value of a shared memory variable that can be used for passing data between Lua widgets and other Lua scripts.\n\n@status current Introduced in 2.6\n\n@notice Only available on radios with color display",
-      "source_line": 2482
+      "source_line": 2478
     },
     {
       "id": "setStickySwitch",
@@ -6078,7 +6109,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function setStickySwitch(id, value)\n\n@param id: integer identifying the sticky logical switch (zero for LS1 etc.).\n\n@param value: true/false. The new value of the sticky logical switch.\n\n@retval bufferFull: true/false. This function sends a message from Lua to the logical switch processor\nvia a buffer with eight slots that are read 10 times per second. If the buffer is full, then a true value\nis returned and no messages was sent (i.e. the switch was not changed).\n\nSets the value of a sticky logical switch.\n\n@status current Introduced in 2.6",
-      "source_line": 2534
+      "source_line": 2530
     },
     {
       "id": "setTelemetryValue",
@@ -6093,37 +6124,37 @@
       "parameters": [
         {
           "name": "id",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "Id of the sensor, valid range is from 0 to 0xFFFF"
         },
         {
           "name": "subID",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "subID of the sensor, usually 0, valid range is from 0 to 7"
         },
         {
           "name": "instance",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "instance of the sensor (SensorID), valid range is from 0 to 0xFF"
         },
         {
           "name": "value",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "fed to the sensor"
         },
         {
           "name": "unit",
-          "type": "unit_type",
+          "type": "unknown",
           "required": false,
-          "description": "unit of the sensor [Full list](../../appendix/units.html)"
+          "description": "unit of the sensor, see the Units reference for the full list"
         },
         {
           "name": "precision",
-          "type": "prec_type",
+          "type": "unknown",
           "required": false,
           "description": "the precision of the sensor * `0 or not present` no decimal precision.\n * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00."
         },
@@ -6137,7 +6168,7 @@
       "returns": [
         {
           "name": "true,",
-          "type": "boolean",
+          "type": "unknown",
           "description": "if the sensor was just added. In this case the value is ignored (subsequent call will set the value)"
         }
       ],
@@ -6151,8 +6182,8 @@
         "All three parameters `id`, `subID` and `instance` can't be zero at the same time. At least one of them\nmust be different from zero."
       ],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function setTelemetryValue(id, subID, instance, value [, unit [, precision [, name]]])\n\n@param id (integer) Id of the sensor, valid range is from 0 to 0xFFFF\n\n@param subID (integer) subID of the sensor, usually 0, valid range is from 0 to 7\n\n@param instance (number) instance of the sensor (SensorID), valid range is from 0 to 0xFF\n\n@param value (number) fed to the sensor\n\n@param unit (unit_type) unit of the sensor [Full list](../../appendix/units.html)\n\n@param precision (prec_type) the precision of the sensor\n * `0 or not present` no decimal precision.\n * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00.\n\n@param name (string) Name of the sensor if it does not yet exist (4 chars).\n * `not present` Name defaults to the Id.\n * `present` Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., \"Name\"\n\n@retval true, (boolean) if the sensor was just added. In this case the value is ignored (subsequent call will set the value)\n\n@notice All three parameters `id`, `subID` and `instance` can't be zero at the same time. At least one of them\nmust be different from zero.\n\n@status current Introduced in 2.2.0",
-      "source_line": 1984
+      "raw_luadoc": "@function setTelemetryValue(id, subID, instance, value [, unit [, precision [, name]]])\n\n@param id Id of the sensor, valid range is from 0 to 0xFFFF\n\n@param subID subID of the sensor, usually 0, valid range is from 0 to 7\n\n@param instance instance of the sensor (SensorID), valid range is from 0 to 0xFF\n\n@param value fed to the sensor\n\n@param unit unit of the sensor, see the Units reference for the full list\n\n@param precision the precision of the sensor\n * `0 or not present` no decimal precision.\n * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00.\n\n@param name (string) Name of the sensor if it does not yet exist (4 chars).\n * `not present` Name defaults to the Id.\n * `present` Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., \"Name\"\n\n@retval true, if the sensor was just added. In this case the value is ignored (subsequent call will set the value)\n\n@notice All three parameters `id`, `subID` and `instance` can't be zero at the same time. At least one of them\nmust be different from zero.\n\n@status current Introduced in 2.2.0",
+      "source_line": 1980
     },
     {
       "id": "sources",
@@ -6188,7 +6219,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function sources([first[, last]])\n\n@param first: the first source index. If `nil` or omitted, the first available source is used.\n\n@param last: the last soure index. If `nil` or omitted, the last available source is used.\n\nThis is an iterator function over value sources. `for sourceIndex, sourceName in sources() do ...` will iterate over all available value sources.\n\n@status current Introduced in 2.6",
-      "source_line": 2801
+      "source_line": 2797
     },
     {
       "id": "sportTelemetryPop",
@@ -6252,25 +6283,25 @@
       "parameters": [
         {
           "name": "sensorId",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "physical sensor ID"
         },
         {
           "name": "frameId",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "frame ID"
         },
         {
           "name": "dataId",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "data ID"
         },
         {
           "name": "value",
-          "type": "integer",
+          "type": "unknown",
           "required": true,
           "description": "value"
         }
@@ -6295,7 +6326,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
-      "raw_luadoc": "@function sportTelemetryPush()\n\nThis functions allows for sending SPORT telemetry data toward the receiver,\nand more generally, to anything connected SPORT bus on the receiver or transmitter.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param sensorId  (integer) physical sensor ID\n\n@param frameId   (integer) frame ID\n\n@param dataId    (integer) data ID\n\n@param value     (integer) value\n\n@retval boolean  data queued in output buffer or not.\n\n@retval nil      incorrect telemetry protocol.\n\n@status current Introduced in 2.2.0, retval nil added in 2.3.4",
+      "raw_luadoc": "@function sportTelemetryPush()\n\nThis functions allows for sending SPORT telemetry data toward the receiver,\nand more generally, to anything connected SPORT bus on the receiver or transmitter.\n\nWhen called without parameters, it will only return the status of the output buffer without sending anything.\n\n@param sensorId  physical sensor ID\n\n@param frameId   frame ID\n\n@param dataId    data ID\n\n@param value     value\n\n@retval boolean  data queued in output buffer or not.\n\n@retval nil      incorrect telemetry protocol.\n\n@status current Introduced in 2.2.0, retval nil added in 2.3.4",
       "source_line": 960
     },
     {
@@ -6332,7 +6363,7 @@
       "notes": [],
       "source_location": "radio/src/lua/api_general.cpp",
       "raw_luadoc": "@function switches([first[, last]])\n\n@param first: the first switch index. If `nil` or omitted, the first available switch is used.\n\n@param last: the last switch index. If `nil` or omitted, the last available switch is used.\n\nThis is an iterator function over switch positions. `for switchIndex, switchName in switches() do ...` will iterate over all available switch positions.\n\n@status current Introduced in 2.6",
-      "source_line": 2696
+      "source_line": 2692
     }
   ]
 }

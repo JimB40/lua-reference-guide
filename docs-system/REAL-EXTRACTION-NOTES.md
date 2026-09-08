@@ -4,17 +4,17 @@ This note captures the first extraction run against a real local EdgeTX checkout
 
 ## Extraction Baseline
 
-- EdgeTX source: `/Users/jimb40/GitHub/JimB40/edgetx`
+- EdgeTX source: `/Users/pfeerick/repos/EdgeTX/edgetx`
 - Lua source dir: `radio/src/lua`
-- Extracted from branch `cpm-tlm-sim-fix`
-- Extracted from commit `363a6e4f9`
-- Docs version used for the local run: `local-dev`
+- Extracted from branch `2.12`
+- Extracted from commit `16713095a1`
+- Docs version used for the local run: `2.12`
 
 ## Current Results
 
-- Extracted API items: `152`
+- Extracted API items: `153`
 - Modules discovered:
-  - `runtime`: `72`
+  - `runtime`: `73`
   - `lcd`: `39`
   - `model`: `37`
   - `Bitmap`: `4`
@@ -32,8 +32,8 @@ From the current quality report:
 
 - `runtime`: `19` unknown parameter types, `16` unknown return types
 - `lcd`: `7` unknown parameter types, `0` unknown return types
-- `model`: `5` unknown parameter types, `0` unknown return types
-- backlog entries recorded: `30`
+- `model`: `5` unknown parameter types, `1` unknown return type
+- backlog entries recorded: `31`
 
 ## What The Prototype Already Proves
 

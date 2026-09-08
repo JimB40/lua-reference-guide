@@ -1,12 +1,6 @@
 {
   "groups": [
     {
-      "name": "Constants",
-      "slug": "constants",
-      "description": "Shared constants and enum-like helpers used across the Lua API.",
-      "ids": []
-    },
-    {
       "name": "Display LCD",
       "slug": "display-lcd",
       "description": "Drawing, layout, color, and display helpers for LCD rendering.",
@@ -24,7 +18,8 @@
       "name": "Model Functions",
       "slug": "model-functions",
       "description": "Model data access and editing APIs.",
-      "modules": ["model"]
+      "modules": ["model"],
+      "ids": ["getFlightMode", "getOutputValue"]
     },
     {
       "name": "Filesystem",
@@ -39,10 +34,10 @@
       "ids": ["serialGetPower", "serialRead", "serialSetPower", "serialWrite", "setSerialBaudrate"]
     },
     {
-      "name": "Internal Hardware",
-      "slug": "hardware",
+      "name": "Radio Hardware",
+      "slug": "radio-hardware",
       "description": "Hardware-facing APIs and low-level device controls.",
-      "ids": ["applyRGBLedColors", "setIMU_X", "setIMU_Y", "setRGBLedColor", "setCFSLedColor", "getTxGPS"]
+      "ids": ["applyRGBLedColors", "setIMU_X", "setIMU_Y", "setRGBLedColor", "setCFSLedColor", "getTxGPS", "getStickMode"]
     },
     {
       "name": "System",
@@ -52,7 +47,8 @@
         "getAvailableMemory",
         "getGeneralSettings",
         "getUsage",
-        "getVersion"
+        "getVersion",
+        "screenshot"
       ]
     },
     {
@@ -108,28 +104,39 @@
       ]
     },
     {
-      "name": "Variables",
-      "slug": "variables",
-      "description": "Source, switch, field, and shared-memory variables exposed to scripts.",
+      "name": "Sources",
+      "slug": "sources",
+      "description": "Source identification and value lookup for telemetry and other data sources.",
       "ids": [
         "sources",
-        "switches",
         "getFieldInfo",
-        "getFlightMode",
-        "getLogicalSwitchValue",
-        "getOutputValue",
-        "getShmVar",
         "getSourceIndex",
         "getSourceName",
         "getSourceValue",
-        "getStickMode",
+        "getValue"
+      ]
+    },
+    {
+      "name": "Switches",
+      "slug": "switches",
+      "description": "Switch identification, value lookup, and sticky-switch helpers.",
+      "ids": [
+        "switches",
+        "getLogicalSwitchValue",
         "getSwitchIndex",
         "getSwitchInfo",
         "getSwitchName",
         "getSwitchValue",
-        "getValue",
-        "setShmVar",
         "setStickySwitch"
+      ]
+    },
+    {
+      "name": "Variables",
+      "slug": "variables",
+      "description": "Shared-memory variables exposed to scripts.",
+      "ids": [
+        "getShmVar",
+        "setShmVar"
       ]
     }
   ]

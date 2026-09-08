@@ -37,10 +37,10 @@ and more generally, to anything connected SPORT bus on the receiver or transmitt
 --- @since 2.3
 ---@param module integer module index (0 = internal, 1 = external)
 ---@param rxuid integer receiver index
----@param sensorid integer physical sensor ID
----@param frameid integer frame ID
----@param dataid integer data ID
----@param value integer value
+---@param sensorid unknown physical sensor ID
+---@param frameid unknown frame ID
+---@param dataid unknown data ID
+---@param value unknown value
 ---@return boolean
 function accessTelemetryPush(module, rxuid, sensorid, frameid, dataid, value) end
 
@@ -62,7 +62,7 @@ function crossfireTelemetryPop() end
 
 --- This functions allows for sending telemetry data toward the TBS Crossfire link.
 --- @since 2.2.0
----@param command integer command
+---@param command unknown command
 ---@param data table table of data bytes
 ---@return boolean
 ---@return nil
@@ -155,9 +155,9 @@ function getRAS() end
 
 --- Get RSSI value as well as low and critical RSSI alarm levels (in dB)
 --- @since 2.2.0
----@return integer rssi
----@return integer alarm_low
----@return integer alarm_crit
+---@return unknown rssi
+---@return unknown alarm_low
+---@return unknown alarm_crit
 function getRSSI() end
 
 --- Return rotary encoder mode
@@ -197,8 +197,8 @@ function getSourceName(sourceindex) end
 --- @since 2.0.0
 ---@param source string can be an index (number) (which was obtained by getFieldInfo or getSourceIndex) or a name (string) of the source.
 ---@return integer
----@return boolean iscurrent
----@return boolean isfresh
+---@return unknown iscurrent
+---@return unknown isfresh
 function getSourceValue(source) end
 
 --- 
@@ -279,7 +279,7 @@ function ghostTelemetryPop() end
 
 --- This functions allows for sending telemetry data toward the Ghost link.
 --- @since 2.7.0
----@param command integer command
+---@param command unknown command
 ---@param data table table of data bytes
 ---@return boolean
 ---@return nil
@@ -315,14 +315,14 @@ function multiBuffer(address) end
 --- @since 2.1.0
 ---@param duration integer number of seconds to play. Only integral part is used.
 ---@param hourformat? integer : * 0 or not present play format: minutes and seconds. * != 0 play format: hours, minutes and seconds. * @param volume (number): - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
----@return nil none
+---@return unknown none
 function playDuration(duration, hourformat) end
 
 --- Play a file from the SD card
 --- @since 2.0.0
 ---@param filename string full path to wav file (i.e. "/SOUNDS/en/system/tada.wav") Introduced in 2.1.0: If you use a relative path, the current language is appended to the path (example: for English language: /SOUNDS/en is appended)
 ---@param volume? integer : - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
----@return nil none
+---@return unknown none
 function playFile(filename, volume) end
 
 --- Generate haptic feedback
@@ -335,9 +335,9 @@ function playHaptic(duration, pause, flags) end
 --- Play a numerical value (text to speech)
 --- @since 2.0.0
 ---@param value integer number to play. Value is interpreted as integer.
----@param unit integer unit identifier [Full list](../../api-overview/constants/units.md)
+---@param unit integer unit identifier, see the Units reference for the full list
 ---@param attributes? integer possible values: * 0 or not present plays integral part of the number (for a number 123 it plays 123) * PREC1 plays a number with one decimal place (for a number 123 it plays 12.3) * PREC2 plays a number with two decimal places (for a number 123 it plays 1.23)
----@return nil none
+---@return unknown none
 function playNumber(value, unit, attributes) end
 
 --- Play a tone
@@ -348,7 +348,7 @@ function playNumber(value, unit, attributes) end
 ---@param flags? integer : * 0 or not present play with normal priority. * PLAY_BACKGROUND play in background (built in vario function uses this context) * PLAY_NOW play immediately
 ---@param freqincr? integer positive number increases the tone pitch (frequency with time), negative number decreases it. The frequency changes every 10 milliseconds, the change is freqIncr * 10Hz. The valid range is from -127 to 127.
 ---@param volume? integer : - (1..5) override radio settings Beep volume for the duration of file - omitting the parameter uses radio settings Beep volume
----@return nil none
+---@return unknown none
 function playTone(frequency, duration, pause, flags, freqincr, volume) end
 
 --- Raises a pop-up on screen that asks for confirmation
@@ -356,7 +356,7 @@ function playTone(frequency, duration, pause, flags, freqincr, volume) end
 ---@param title string title to display
 ---@param message string text to display
 ---@param event integer the event variable that is passed in from the Run function (key pressed)
----@return string cancel
+---@return unknown cancel
 function popupConfirmation(title, message, event) end
 
 --- Raises a pop-up on screen that allows uses input
@@ -367,15 +367,15 @@ function popupConfirmation(title, message, event) end
 ---@param min integer min value that input can reach (by pressing the - key)
 ---@param max integer max value that input can reach
 ---@return integer
----@return string ok
----@return string cancel
+---@return unknown ok
+---@return unknown cancel
 function popupInput(title, event, input, min, max) end
 
 --- Raises a pop-up on screen that shows a warning
 --- @since 2.2.0
 ---@param title string text to display
 ---@param event integer the event variable that is passed in from the Run function (key pressed)
----@return string cancel
+---@return unknown cancel
 function popupWarning(title, event) end
 
 --- Rename a file or directory
@@ -387,8 +387,13 @@ function rename(from_path) end
 
 --- Resets the radio global timer to 0.
 --- @since 2.2.2
----@param type? timer_type if set to 'all', throttle ,throttle percent and session timers are reset too if set to 'session', radio session timer is reset too if set to 'ttimer', radio throttle timer is reset too if set to 'tptimer', radio throttle percent timer is reset too
+---@param type? unknown : if set to 'all', throttle ,throttle percent and session timers are reset too if set to 'session', radio session timer is reset too if set to 'ttimer', radio throttle timer is reset too if set to 'tptimer', radio throttle percent timer is reset too
 function resetGlobalTimer(type) end
+
+--- Takes a screenshot, which is saved to the SCREENSHOTS folder on the radio SD card.
+--- @since 2.11
+---@return unknown none
+function screenshot() end
 
 --- 
 --- @since 2.9.0
@@ -400,7 +405,7 @@ function serialGetPower(port_nr) end
 --- 
 --- @since 2.3.8
 ---@param num? integer : maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer. If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer. Note that the returned string may not end in a newline if this character is not present in the buffer.
----@return string str
+---@return unknown str
 function serialRead(num) end
 
 --- 
@@ -445,7 +450,7 @@ function setRGBLedColor(id, rvalue, bvalue, cvalue) end
 
 --- 
 --- @since 2.3.12
----@param baudrate integer Desired baurate
+---@param baudrate unknown Desired baurate
 function setSerialBaudrate(baudrate) end
 
 --- 
@@ -463,14 +468,14 @@ function setStickySwitch(id, value) end
 
 --- 
 --- @since 2.2.0
----@param id integer Id of the sensor, valid range is from 0 to 0xFFFF
----@param subid integer subID of the sensor, usually 0, valid range is from 0 to 7
----@param instance integer instance of the sensor (SensorID), valid range is from 0 to 0xFF
----@param value integer fed to the sensor
----@param unit? unit_type unit of the sensor [Full list](../../api-overview/constants/units.md)
----@param precision? prec_type the precision of the sensor * 0 or not present no decimal precision. * != 0 value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00.
+---@param id unknown Id of the sensor, valid range is from 0 to 0xFFFF
+---@param subid unknown subID of the sensor, usually 0, valid range is from 0 to 7
+---@param instance unknown instance of the sensor (SensorID), valid range is from 0 to 0xFF
+---@param value unknown fed to the sensor
+---@param unit? unknown unit of the sensor, see the Units reference for the full list
+---@param precision? unknown the precision of the sensor * 0 or not present no decimal precision. * != 0 value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00.
 ---@param name? string Name of the sensor if it does not yet exist (4 chars). * not present Name defaults to the Id. * present Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., "Name"
----@return boolean true
+---@return unknown true
 function setTelemetryValue(id, subid, instance, value, unit, precision, name) end
 
 --- 
@@ -493,10 +498,10 @@ function sportTelemetryPop() end
 --- This functions allows for sending SPORT telemetry data toward the receiver,
 and more generally, to anything connected SPORT bus on the receiver or transmitter.
 --- @since 2.2.0
----@param sensorid integer physical sensor ID
----@param frameid integer frame ID
----@param dataid integer data ID
----@param value integer value
+---@param sensorid unknown physical sensor ID
+---@param frameid unknown frame ID
+---@param dataid unknown data ID
+---@param value unknown value
 ---@return boolean
 ---@return nil
 function sportTelemetryPush(sensorid, frameid, dataid, value) end

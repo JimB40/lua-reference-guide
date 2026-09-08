@@ -87,6 +87,12 @@ function model.getFlightMode(index) end
 ---@return integer
 function model.getGlobalVariable(index, flight_mode) end
 
+--- Returns details about a Global Variable, but not values
+--- @since 2.11.0
+---@param index integer zero based global variable index, use 0 for GV1, 8 for GV9
+---@return table
+function model.getGlobalVariableDetails(index) end
+
 --- Get current Model information
 --- @since 2.0.6
 ---@return table
@@ -153,12 +159,6 @@ function model.getSensor(sensor) end
 ---@return table
 function model.getSwashRing() end
 
---- Get warning state for a switch
---- @since 3.0.0
----@param switch integer switch number (use 0 for SA) @param switch (string) switch name
----@return nil
-function model.getSwitchWarning(switch) end
-
 --- Get model timer parameters
 --- @since 2.0.0
 ---@param timer integer timer index (0 for Timer 1)
@@ -207,19 +207,26 @@ function model.setCustomFunction(function, value) end
 --- Set Flight mode parameters
 --- @since 2.3.10
 ---@param index integer flight mode number (use 0 for FM0)
----@param params table|nil see model.getFlightMode return format for table format.
+---@param params unknown see model.getFlightMode return format for table format.
 function model.setFlightMode(index, params) end
 
 --- Sets current global variable value. See also model.getGlobalVariable()
 --- @since unknown
 ---@param index integer zero based global variable index, use 0 for GV1, 8 for GV9
 ---@param flight_mode integer Flight mode number (0 = FM0, 8 = FM8)
----@param value source_range_1024 new value for global variable. Permitted range is from -1024 to 1024.
+---@param value unknown new value for global variable. Permitted range is from -1024 to 1024.
 function model.setGlobalVariable(index, flight_mode, value) end
+
+--- Sets details about a Global Variable, but not values
+--- @since 2.11.0
+---@param index integer zero based global variable index, use 0 for GV1, 8 for GV9
+---@param params table see model.getGlobalVariableDetails(index) return format for table format
+---@return unknown none
+function model.setGlobalVariableDetails(index, params) end
 
 --- Set the current Model information
 --- @since 2.0.6
----@param value table model information data, see model.getInfo()
+---@param value unknown model information data, see model.getInfo()
 function model.setInfo(value) end
 
 --- Set Logical Switch parameters
@@ -231,7 +238,7 @@ function model.setLogicalSwitch(switch, value) end
 --- Set RF module parameters
 --- @since 2.2.0
 ---@param index integer module index (0 for internal, 1 for external)
----@param value table module parameters, see model.getModule()
+---@param value unknown module parameters, see model.getModule()
 function model.setModule(index, value) end
 
 --- Set servo parameters
@@ -245,15 +252,8 @@ function model.setOutput(index, value) end
 ---@param params table swash ring parameters, see model.getSwashRing() for table format
 function model.setSwashRing(params) end
 
---- Set warning state for a switch
---- @since 3.0.0
----@param switch integer switch number (use 0 for SA) @param switch (string) switch name
----@param state integer state 0 = no warning 1 = switch up 2 = switch middle 3 = switch down
----@return nil
-function model.setSwitchWarning(switch, state) end
-
 --- Set model timer parameters
 --- @since 2.0.0
 ---@param timer integer timer index (0 for Timer 1)
----@param value table timer parameters, see model.getTimer()
+---@param value unknown timer parameters, see model.getTimer()
 function model.setTimer(timer, value) end
