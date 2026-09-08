@@ -117,15 +117,35 @@ def slugify_token(text: str) -> str:
     return text.strip("-").lower()
 
 
-def default_doc_id(module: str, symbol: str) -> str:
+def scoped_symbol_parts(module: str, symbol: str) -> list[str]:
     scoped_name = symbol
     if module != "runtime" and symbol.startswith(f"{module}."):
         scoped_name = symbol[len(module) + 1 :]
     elif module == "runtime" and "." in symbol:
         scoped_name = symbol.split(".", 1)[1]
+    return [slugify_token(part) for part in scoped_name.split(".")]
+
+
+def default_doc_id(module: str, symbol: str) -> str:
     parts = [slugify_token(module)] if module else []
-    parts.extend(slugify_token(part) for part in scoped_name.split("."))
+    parts.extend(scoped_symbol_parts(module, symbol))
     return ".".join(part for part in parts if part)
+
+
+def nested_item_slug(item: dict) -> str:
+    """Item-page filename stem for the nested-by-topic-group scheme.
+
+    Unlike doc_id, this drops the "runtime" module qualifier for bare/
+    ungrouped functions -- "runtime" is an internal doc-grouping label,
+    not a real Lua namespace, and the topic-group folder already
+    disambiguates those. Real namespaces (model., lcd., lvgl., Bitmap.)
+    are kept since the group folder doesn't imply a namespace.
+    """
+    module = item["module"]
+    parts = scoped_symbol_parts(module, item["symbol"])
+    if module != "runtime":
+        parts = [slugify_token(module)] + parts
+    return "-".join(part for part in parts if part)
 
 
 def page_slug(text: str) -> str:
@@ -145,36 +165,29 @@ def group_for_item(item: dict) -> dict:
 
 def page_name_for_item(item: dict) -> str:
     group = group_for_item(item)
-    return str(Path(group["slug"]) / f"{page_slug(item['doc_id'])}.md")
-
-
-def legacy_page_name_for_item(item: dict) -> str:
-    return f"{page_slug(item['doc_id'])}.md"
+    return str(Path(group["slug"]) / f"{nested_item_slug(item)}.md")
 
 
 def review_page_name_for_item(item: dict) -> str:
-    group = group_for_item(item)
-    return str(Path("review") / group["slug"] / f"{page_slug(item['doc_id'])}.md")
-
-
-def legacy_review_page_name_for_item(item: dict) -> str:
     return f"review-{page_slug(item['doc_id'])}.md"
 
 
+def rendered_dir(path: Path) -> Path:
+    """The effective directory a page is served from under mkdocs' default
+    use_directory_urls behavior: foo/bar.md serves at .../foo/bar/, so its
+    own directory (for the purposes of resolving a relative link FROM it)
+    is one level deeper than its file-system parent. foo/index.md serves at
+    .../foo/, i.e. its own file-system parent -- no extra depth to add."""
+    if path.name == "index.md":
+        return path.parent
+    return path.parent / path.stem
+
+
 def page_href(from_page: str | Path, to_page: str | Path) -> str:
-    from_path = docs_path(from_page)
-    to_path = docs_path(to_page)
-    rel = Path(os.path.relpath(to_path, start=from_path.parent))
-    parts = list(rel.parts)
-    if parts[-1] == "index.md":
-        parts = parts[:-1]
-        href = "/".join(parts)
-        return f"{href}/" if href else "./"
-    filename = parts[-1]
-    if filename.endswith(".md"):
-        parts[-1] = filename[:-3]
-    href = "/".join(parts)
-    return f"{href}/" if href else "./"
+    from_dir = rendered_dir(docs_path(from_page))
+    to_dir = rendered_dir(docs_path(to_page))
+    href = os.path.relpath(to_dir, start=from_dir).replace(os.sep, "/")
+    return f"{href}/" if href != "." else "./"
 
 
 def doc_link(from_page: str | Path, to_page: str | Path) -> str:
@@ -189,18 +202,10 @@ def docs_path(path: str | Path) -> Path:
 
 
 def group_page_name(group: dict) -> str:
-    return str(Path(group["slug"]) / "index.md")
-
-
-def legacy_group_page_name(group: dict) -> str:
-    return f"group-{group['slug']}.md"
+    return f"{group['slug']}.md"
 
 
 def module_page_name(module_name: str) -> str:
-    return str(Path("modules") / f"{safe_file_stem(module_name)}.md")
-
-
-def legacy_module_page_name(module_name: str) -> str:
     return f"module-{safe_file_stem(module_name)}.md"
 
 
@@ -441,7 +446,7 @@ def render_api_index(model: dict) -> str:
     lines.append("")
     lines.append("This section is generated from the normalized API model and grouped with the same user-facing topic names used in the 2.11 docs.")
     lines.append("")
-    lines.append(f"Start with the [API Review Dashboard]({doc_link(current_page, Path('review') / 'index.md')}) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.")
+    lines.append(f"Start with the [API Review Dashboard]({doc_link(current_page, 'review.md')}) if you want to review gaps, suspicious items, and likely upstream annotation fixes first.")
     lines.append("")
     for group, items in items_by_group(model):
         page = group_page_name(group)
@@ -487,7 +492,7 @@ def render_module_page(module_name: str, items: list[dict], report: dict, page_p
     lines.append("")
     lines.append(f"`{len(items)}` APIs in this module.")
     lines.append("")
-    lines.append(f"[Back to API overview]({doc_link(page_path, 'index.md')}) | [Open review dashboard]({doc_link(page_path, Path('review') / 'index.md')})")
+    lines.append(f"[Back to API overview]({doc_link(page_path, 'index.md')}) | [Open review dashboard]({doc_link(page_path, 'review.md')})")
     lines.append("")
     lines.append('<div class="api-grid">')
     for item in sorted(items, key=lambda entry: entry["symbol"]):
@@ -558,7 +563,7 @@ def render_overlay_sections(overlay_text: str) -> list[str]:
 
 
 def render_review_page(model: dict) -> str:
-    current_page = Path("review") / "index.md"
+    current_page = Path("review.md")
     report = quality_report(model)
     decisions = load_review_decisions()
     lines = []
@@ -645,7 +650,7 @@ def render_review_item_page(item: dict, page_path: str | Path) -> str:
     lines = []
     lines.append(f"# Review: {item['id']}")
     lines.append("")
-    lines.append(f"[Back to dashboard]({doc_link(page_path, Path('review') / 'index.md')}) | [Open API page]({doc_link(page_path, page_name_for_item(item))})")
+    lines.append(f"[Back to dashboard]({doc_link(page_path, 'review.md')}) | [Open API page]({doc_link(page_path, page_name_for_item(item))})")
     lines.append("")
     lines.append("## Snapshot")
     lines.append("")
@@ -1411,25 +1416,50 @@ def render_luals_module(module_name: str, items: list[dict], alias_lines: list[s
     return "\n".join(lines).rstrip() + "\n"
 
 
-def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outputs: list[Path]) -> None:
+def build_outputs(
+    model: dict,
+    overlay_dir: Path,
+    docs_output: Path,
+    luals_outputs: list[Path],
+    report_unowned: bool = False,
+) -> None:
     ensure_dir(docs_output)
     for luals_output in luals_outputs:
         ensure_dir(luals_output)
     report = quality_report(model)
 
+    # A zero-item group's page is normally just the empty-group stub, safe to
+    # regenerate freely. But if a group has zero *currently extracted* items
+    # and its page already holds real, hand-authored content (e.g. LVGL,
+    # whose firmware has no luadoc annotations at all to extract from), never
+    # overwrite or delete it -- both here and in the stale-page cleanup below,
+    # which would otherwise unlink it before the per-group write loop ever
+    # gets a chance to check what's currently on disk.
+    preserved_group_pages: dict[str, str] = {}
+    for group, group_items in items_by_group(model):
+        if group_items:
+            continue
+        group_page = group_page_name(group)
+        group_path = docs_output / group_page
+        if not group_path.exists():
+            continue
+        existing = group_path.read_text(encoding="utf-8")
+        rendered = render_group_page(group, group_items, report, group_page)
+        if existing.strip() != rendered.strip():
+            preserved_group_pages[group_page] = (
+                f"group '{group['slug']}' has zero extracted items, but the page "
+                "already has real (non-stub) content"
+            )
+
     generated_pages = {
         "index.md",
-        str(Path("review") / "index.md"),
         "review.md",
     }
     generated_pages.update(module_page_name(module_name) for module_name in {item["module"] for item in model["items"]})
     generated_pages.update(group_page_name(group) for group, _ in items_by_group(model))
     generated_pages.update(page_name_for_item(item) for item in model["items"])
     generated_pages.update(review_page_name_for_item(item) for item in model["items"])
-    generated_pages.update(legacy_module_page_name(module_name) for module_name in {item["module"] for item in model["items"]})
-    generated_pages.update(legacy_group_page_name(group) for group, _ in items_by_group(model))
-    generated_pages.update(legacy_page_name_for_item(item) for item in model["items"])
-    generated_pages.update(legacy_review_page_name_for_item(item) for item in model["items"])
+    generated_pages -= preserved_group_pages.keys()
     for page_name in generated_pages:
         stale_page = docs_output / page_name
         if stale_page.exists():
@@ -1437,8 +1467,7 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
 
     index_path = docs_output / "index.md"
     write_generated_markdown(index_path, render_api_index(model))
-    review_path = docs_output / "review" / "index.md"
-    ensure_dir(review_path.parent)
+    review_path = docs_output / "review.md"
     write_generated_markdown(review_path, render_review_page(model))
 
     modules: dict[str, list[dict]] = {}
@@ -1451,9 +1480,14 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
         write_generated_markdown(module_path, render_module_page(module_name, module_items, report, module_page_name(module_name)))
 
     for group, group_items in items_by_group(model):
-        group_path = docs_output / group_page_name(group)
+        group_page = group_page_name(group)
+        if group_page in preserved_group_pages:
+            print(f"Skipping {docs_output / group_page}: {preserved_group_pages[group_page]}. Not overwriting.")
+            continue
+        group_path = docs_output / group_page
+        rendered = render_group_page(group, group_items, report, group_page)
         ensure_dir(group_path.parent)
-        write_generated_markdown(group_path, render_group_page(group, group_items, report, group_page_name(group)))
+        write_generated_markdown(group_path, rendered)
 
     for item in model["items"]:
         overlay_text = None
@@ -1474,6 +1508,28 @@ def build_outputs(model: dict, overlay_dir: Path, docs_output: Path, luals_outpu
         for luals_output in luals_outputs:
             target_path = luals_output / f"{module_name}.d.lua"
             target_path.write_text(content, encoding="utf-8")
+
+    if report_unowned:
+        owned = set(generated_pages) | set(preserved_group_pages.keys())
+        unowned = []
+        for path in sorted(docs_output.rglob("*.md")):
+            rel = str(path.relative_to(docs_output))
+            if rel not in owned:
+                unowned.append(rel)
+        if unowned:
+            print(
+                f"\n{len(unowned)} .md file(s) under {docs_output} are not accounted "
+                "for by the current model (not an index/review/module/group page, "
+                "not an item page, not a preserved zero-item group page). This does "
+                "NOT delete anything -- some of these may be legitimate hand-authored "
+                "content with no model backing (e.g. LVGL pages); some may be genuine "
+                "orphans left over from a prior run under a different page-naming "
+                "scheme or group assignment. Review each one manually:"
+            )
+            for rel in unowned:
+                print(f"  {rel}")
+        else:
+            print(f"\nNo unowned .md files found under {docs_output}.")
 
 
 def parse_args() -> argparse.Namespace:
@@ -1498,6 +1554,20 @@ def parse_args() -> argparse.Namespace:
     build_parser.add_argument("--overlay-dir", required=True, type=Path)
     build_parser.add_argument("--docs-output", required=True, type=Path)
     build_parser.add_argument("--luals-output", required=True, type=Path, nargs="+")
+    build_parser.add_argument(
+        "--report-unowned",
+        action="store_true",
+        help=(
+            "After building, list every .md file under --docs-output that the "
+            "current model doesn't account for (not an index/review/module/group "
+            "page, not an item page, not a preserved zero-item group page). "
+            "Report-only -- never deletes anything. Some listed files may be "
+            "legitimate hand-authored content the pipeline has no model data "
+            "for (e.g. LVGL pages); some may be genuine orphans left over from "
+            "a prior run under a different page-naming scheme or group "
+            "assignment. Review each one manually before deleting."
+        ),
+    )
 
     return parser.parse_args()
 
@@ -1532,7 +1602,7 @@ def main() -> int:
 
         if args.command == "build":
             model = load_model(args.input)
-            build_outputs(model, args.overlay_dir, args.docs_output, args.luals_output)
+            build_outputs(model, args.overlay_dir, args.docs_output, args.luals_output, args.report_unowned)
             print(f"Built Markdown into {args.docs_output}")
             for luals_output in args.luals_output:
                 print(f"Built LuaLS into {luals_output}")
