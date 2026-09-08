@@ -903,36 +903,9 @@
   color: rgba(180, 83, 9, 0.78);
 }
 
-.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav {
-  margin-left: 0.05rem;
-  max-height: none;
-  overflow: visible;
-  padding-left: 0.2rem;
-}
-
 .md-sidebar--primary .md-nav--primary .md-nav__list,
 .md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__list {
   overflow: visible;
-}
-
-/* Material's collapse/expand mechanism moved to CSS Grid (grid-template-rows
-   + visibility) some time after the max-height/overflow rules above were
-   written, silently making those a no-op. This site's design intent is for
-   every nav section to stay permanently expanded (no accordion), not just
-   the current page's active-path ancestors -- which matters even more for
-   pages like individual API reference function pages that aren't part of
-   the declared nav tree at all and so have no active-path ancestors to
-   auto-expand, collapsing the entire sidebar. Force every toggle open
-   regardless of its :checked state, matching Material's own "checked" rule
-   properties so the transition/appearance stays consistent. */
-.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__toggle ~ .md-nav {
-  grid-template-rows: minmax(0.4rem, 1fr);
-  opacity: 1;
-  visibility: visible;
-}
-
-.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__toggle ~ .md-nav__link .md-nav__icon:after {
-  transform: rotate(90deg);
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item::before {
