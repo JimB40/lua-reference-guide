@@ -24,7 +24,7 @@ Get Logical Switch parameters
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `nil` | requested logical switch does not exist |
-| `-` | `table` | logical switch data: * `func` (number) function index  * `v1` (number) V1 value (index)  * `v2` (number) V2 value (index or value)  * `v3` (number) V3 value (index or value)  * `and` (number) AND switch index  * `delay` (number) delay (time in 1/10 s)  * `duration` (number) duration (time in 1/10 s)  * `state` (boolean) current state of the logical switch  * `persistent` (boolean) if true then the state is persistent across reboot of the radio |
+| `-` | `table` | logical switch data: * `func` (number) function index<ul><li>`v1` (number) V1 value (index)</li><li>`v2` (number) V2 value (index or value)</li><li>`v3` (number) V3 value (index or value)</li><li>`and` (number) AND switch index</li><li>`delay` (number) delay (time in 1/10 s)</li><li>`duration` (number) duration (time in 1/10 s)</li><li>`state` (boolean) current state of the logical switch</li><li>`persistent` (boolean) if true then the state is persistent across reboot of the radio</li></ul> |
 
 ## Availability
 

@@ -24,7 +24,7 @@ Get servo parameters
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `nil` | requested output does not exist |
-| `-` | `table` | output parameters: * `name` (string) name  * `min` (number) Minimum % * 10  * `max` (number) Maximum % * 10  * `offset` (number) Subtrim * 10  * `ppmCenter` (number) offset from PPM Center. 0 = 1500  * `symetrical` (number) linear Subtrim 0 = Off, 1 = On  * `revert` (number) irection 0 = ­­­---, 1 = INV  * `curve`    * (number) Curve number (0 for Curve1)    * or `nil` if no curve set |
+| `-` | `table` | output parameters: * `name` (string) name<ul><li>`min` (number) Minimum % * 10</li><li>`max` (number) Maximum % * 10</li><li>`offset` (number) Subtrim * 10</li><li>`ppmCenter` (number) offset from PPM Center. 0 = 1500</li><li>`symetrical` (number) linear Subtrim 0 = Off, 1 = On</li><li>`revert` (number) irection 0 = ­­­---, 1 = INV</li><li>`curve`</li><li>(number) Curve number (0 for Curve1)</li><li>or `nil` if no curve set</li></ul> |
 
 ## Availability
 

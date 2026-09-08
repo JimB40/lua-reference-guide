@@ -24,7 +24,7 @@ Get Curve parameters
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `nil` | requested curve does not exist |
-| `-` | `table` | curve data: * `name` (string) name  * `type` (number) type  * `smooth` (boolean) smooth  * `points` (number) number of points  * `y` (table) table of Y values:    * `key` is point number (zero based)    * `value` is y value  * `x` (table) **only included for custom curve type**:    * `key` is point number (zero based)    * `value` is x value |
+| `-` | `table` | curve data: * `name` (string) name<ul><li>`type` (number) type</li><li>`smooth` (boolean) smooth</li><li>`points` (number) number of points</li><li>`y` (table) table of Y values:</li><li>`key` is point number (zero based)</li><li>`value` is y value</li><li>`x` (table) **only included for custom curve type**:</li><li>`key` is point number (zero based)</li><li>`value` is x value</li></ul> |
 
 ## Availability
 

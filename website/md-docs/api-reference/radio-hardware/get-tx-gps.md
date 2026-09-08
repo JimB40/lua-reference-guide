@@ -21,7 +21,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | representing the current radio position * `lat` (number) internal GPS latitude, positive is North  * `lon` (number) internal GPS longitude, positive is East  * `numsat` (number) current number of sats locked in by the GPS sensor  * `fix` (boolean) fix status  * `alt` (number) internal GPS altitude in 0.1m  * `speed` (number) internal GPSspeed in 0.1m/s  * `heading`  (number) internal GPS ground course estimation in degrees * 10  * `hdop` (number)  internal GPS horizontal dilution of precision |
+| `-` | `table` | representing the current radio position * `lat` (number) internal GPS latitude, positive is North<ul><li>`lon` (number) internal GPS longitude, positive is East</li><li>`numsat` (number) current number of sats locked in by the GPS sensor</li><li>`fix` (boolean) fix status</li><li>`alt` (number) internal GPS altitude in 0.1m</li><li>`speed` (number) internal GPSspeed in 0.1m/s</li><li>`heading`  (number) internal GPS ground course estimation in degrees * 10</li><li>`hdop` (number)  internal GPS horizontal dilution of precision</li></ul> |
 
 ## Availability
 

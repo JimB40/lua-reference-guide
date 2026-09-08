@@ -1,7 +1,7 @@
 {
   "docs_version": "2.12",
   "upstream_ref": "2.12@16713095a1",
-  "generated_at": "2026-09-08T21:06:36.314063Z",
+  "generated_at": "2026-09-08T21:14:58.670767Z",
   "items": [
     {
       "id": "Bitmap.getSize",
@@ -5208,7 +5208,7 @@
           "name": "hourFormat",
           "type": "integer",
           "required": false,
-          "description": ": * `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n *\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume"
+          "description": "* `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n *\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume"
         }
       ],
       "returns": [
@@ -5250,7 +5250,7 @@
           "name": "volume",
           "type": "integer",
           "required": false,
-          "description": ": - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume"
+          "description": "- (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume"
         }
       ],
       "returns": [
@@ -5298,7 +5298,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": ": * `0 or not present` play with normal priority\n * `PLAY_NOW` play immediately"
+          "description": "* `0 or not present` play with normal priority\n * `PLAY_NOW` play immediately"
         }
       ],
       "returns": [],
@@ -5346,7 +5346,7 @@
           "name": "volume",
           "type": "integer",
           "required": false,
-          "description": ": - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume"
+          "description": "- (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume"
         }
       ],
       "returns": [
@@ -5400,7 +5400,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": ": * `0 or not present` play with normal priority.\n * `PLAY_BACKGROUND` play in background (built in vario function uses this context)\n * `PLAY_NOW` play immediately"
+          "description": "* `0 or not present` play with normal priority.\n * `PLAY_BACKGROUND` play in background (built in vario function uses this context)\n * `PLAY_NOW` play immediately"
         },
         {
           "name": "freqIncr",
@@ -5412,7 +5412,7 @@
           "name": "volume",
           "type": "integer",
           "required": false,
-          "description": ": - (1..5) override radio settings Beep volume for the duration of file\n - omitting the parameter uses radio settings Beep volume"
+          "description": "- (1..5) override radio settings Beep volume for the duration of file\n - omitting the parameter uses radio settings Beep volume"
         }
       ],
       "returns": [
@@ -5746,7 +5746,7 @@
           "name": "num",
           "type": "integer",
           "required": false,
-          "description": ": maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer.\n                       If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.\n                       Note that the returned string may not end in a newline if this character is not present in the buffer."
+          "description": "maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer.\n                       If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer.\n                       Note that the returned string may not end in a newline if this character is not present in the buffer."
         }
       ],
       "returns": [

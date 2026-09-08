@@ -314,14 +314,14 @@ function multiBuffer(address) end
 --- Play a time value (text to speech)
 --- @since 2.1.0
 ---@param duration integer number of seconds to play. Only integral part is used.
----@param hourformat? integer : * 0 or not present play format: minutes and seconds. * != 0 play format: hours, minutes and seconds. * @param volume (number): - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
+---@param hourformat? integer * 0 or not present play format: minutes and seconds. * != 0 play format: hours, minutes and seconds. * @param volume (number): - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
 ---@return unknown none
 function playDuration(duration, hourformat) end
 
 --- Play a file from the SD card
 --- @since 2.0.0
 ---@param filename string full path to wav file (i.e. "/SOUNDS/en/system/tada.wav") Introduced in 2.1.0: If you use a relative path, the current language is appended to the path (example: for English language: /SOUNDS/en is appended)
----@param volume? integer : - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
+---@param volume? integer - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
 ---@return unknown none
 function playFile(filename, volume) end
 
@@ -329,7 +329,7 @@ function playFile(filename, volume) end
 --- @since 2.2.0
 ---@param duration integer length of the haptic feedback in milliseconds
 ---@param pause integer length of the silence after haptic feedback in milliseconds
----@param flags? integer : * 0 or not present play with normal priority * PLAY_NOW play immediately
+---@param flags? integer * 0 or not present play with normal priority * PLAY_NOW play immediately
 function playHaptic(duration, pause, flags) end
 
 --- Play a numerical value (text to speech)
@@ -337,7 +337,7 @@ function playHaptic(duration, pause, flags) end
 ---@param value integer number to play. Value is interpreted as integer.
 ---@param unit integer unit identifier, see the Units reference for the full list
 ---@param attributes? integer possible values: * 0 or not present plays integral part of the number (for a number 123 it plays 123) * PREC1 plays a number with one decimal place (for a number 123 it plays 12.3) * PREC2 plays a number with two decimal places (for a number 123 it plays 1.23)
----@param volume? integer : - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
+---@param volume? integer - (1..5) override radio settings Wav volume for the duration of file - omitting the parameter uses radio settings Wav volume
 ---@return unknown none
 function playNumber(value, unit, attributes, volume) end
 
@@ -346,9 +346,9 @@ function playNumber(value, unit, attributes, volume) end
 ---@param frequency integer tone frequency in Hz (from 150 to 15000)
 ---@param duration integer length of the tone in milliseconds
 ---@param pause integer length of the silence after the tone in milliseconds
----@param flags? integer : * 0 or not present play with normal priority. * PLAY_BACKGROUND play in background (built in vario function uses this context) * PLAY_NOW play immediately
+---@param flags? integer * 0 or not present play with normal priority. * PLAY_BACKGROUND play in background (built in vario function uses this context) * PLAY_NOW play immediately
 ---@param freqincr? integer positive number increases the tone pitch (frequency with time), negative number decreases it. The frequency changes every 10 milliseconds, the change is freqIncr * 10Hz. The valid range is from -127 to 127.
----@param volume? integer : - (1..5) override radio settings Beep volume for the duration of file - omitting the parameter uses radio settings Beep volume
+---@param volume? integer - (1..5) override radio settings Beep volume for the duration of file - omitting the parameter uses radio settings Beep volume
 ---@return unknown none
 function playTone(frequency, duration, pause, flags, freqincr, volume) end
 
@@ -405,7 +405,7 @@ function serialGetPower(port_nr) end
 
 --- 
 --- @since 2.3.8
----@param num? integer : maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer. If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer. Note that the returned string may not end in a newline if this character is not present in the buffer.
+---@param num? integer maximum number of bytes to read. If non-zero, serialRead will read up to num characters from the buffer. If 0 or left out, serialRead will read up to and including the first newline character or the end of the buffer. Note that the returned string may not end in a newline if this character is not present in the buffer.
 ---@return unknown str
 function serialRead(num) end
 

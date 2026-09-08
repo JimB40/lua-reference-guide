@@ -21,7 +21,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | with elements: * `battWarn` (number) radio battery range - warning value  * `battMin` (number) radio battery range - minimum value  * `battMax` (number) radio battery range - maximum value  * `imperial` (number) set to a value different from 0 if the radio is set to the  IMPERIAL units  * `language` (string) radio language (used for menus)  * `voice` (string) voice language (used for speech)  * `gtimer` (number) radio global timer in seconds (does not include current session) |
+| `-` | `table` | with elements: * `battWarn` (number) radio battery range - warning value<ul><li>`battMin` (number) radio battery range - minimum value</li><li>`battMax` (number) radio battery range - maximum value</li><li>`imperial` (number) set to a value different from 0 if the radio is set to the IMPERIAL units</li><li>`language` (string) radio language (used for menus)</li><li>`voice` (string) voice language (used for speech)</li><li>`gtimer` (number) radio global timer in seconds (does not include current session)</li></ul> |
 
 ## Availability
 

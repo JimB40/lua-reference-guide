@@ -24,7 +24,7 @@ Get model timer parameters
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `nil` | requested timer does not exist |
-| `-` | `table` | timer parameters: * `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw  * `start` (number) start value [seconds], 0 for up timer, 0> down timer  * `value` (number) current value [seconds]  * `countdownBeep` (number) countdown beep (0­ = silent, 1 =­ beeps, 2­ = voice)  * `minuteBeep` (boolean) minute beep  * `persistent` (number) persistent timer  * `name` (string) timer name  * `showElapsed` (boolean) show elapsed |
+| `-` | `table` | timer parameters: * `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw<ul><li>`start` (number) start value [seconds], 0 for up timer, 0> down timer</li><li>`value` (number) current value [seconds]</li><li>`countdownBeep` (number) countdown beep (0­ = silent, 1 =­ beeps, 2­ = voice)</li><li>`minuteBeep` (boolean) minute beep</li><li>`persistent` (number) persistent timer</li><li>`name` (string) timer name</li><li>`showElapsed` (boolean) show elapsed</li></ul> |
 
 ## Availability
 

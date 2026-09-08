@@ -25,7 +25,7 @@ Return input data for given input and line number
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `nil` | requested input or line does not exist |
-| `-` | `table` | input data: * `name` (string) input line name  * `inputName` (string) input input name  * `source` (number) input source index  * `scale` (number)  input scaling (for telemetry)  * `weight` (number) input weight  * `offset` (number) input offset  * `switch` (number) input switch index  * `curveType` (number) curve type (function, expo, custom curve)  * `curveValue` (number) curve index  * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)  * 'trimSource' (number) a positive number representing trim source  * 'side' (number) input side (positive, negative or all)  * 'flightModes' (number) bit-mask of active flight modes |
+| `-` | `table` | input data: * `name` (string) input line name<ul><li>`inputName` (string) input input name</li><li>`source` (number) input source index</li><li>`scale` (number)  input scaling (for telemetry)</li><li>`weight` (number) input weight</li><li>`offset` (number) input offset</li><li>`switch` (number) input switch index</li><li>`curveType` (number) curve type (function, expo, custom curve)</li><li>`curveValue` (number) curve index</li><li>`carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)</li><li>'trimSource' (number) a positive number representing trim source</li><li>'side' (number) input side (positive, negative or all)</li><li>'flightModes' (number) bit-mask of active flight modes</li></ul> |
 
 ## Availability
 

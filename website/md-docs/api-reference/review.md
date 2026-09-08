@@ -15,7 +15,7 @@ This page is generated from the extracted API model and is meant to speed up rev
 
 - Docs version: `2.12`
 - Upstream ref: `2.12@16713095a1`
-- Generated at: `2026-09-08T21:06:36.314063Z`
+- Generated at: `2026-09-08T21:14:58.670767Z`
 - Total items: `153`
 - Review backlog entries: `31`
 - Backlog items with saved decisions: `26`

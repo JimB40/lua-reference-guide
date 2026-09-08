@@ -20,9 +20,9 @@ Play a tone
 | `frequency` | yes | `integer` | tone frequency in Hz (from 150 to 15000) |
 | `duration` | yes | `integer` | length of the tone in milliseconds |
 | `pause` | yes | `integer` | length of the silence after the tone in milliseconds |
-| `flags` | no | `integer` | : * `0 or not present` play with normal priority.  * `PLAY_BACKGROUND` play in background (built in vario function uses this context)  * `PLAY_NOW` play immediately |
-| `freqIncr` | no | `integer` | positive number increases the tone pitch (frequency with time), negative number decreases it. The frequency changes every 10 milliseconds, the change is `freqIncr * 10Hz`. The valid range is from -127 to 127. |
-| `volume` | no | `integer` | : - (1..5) override radio settings Beep volume for the duration of file  - omitting the parameter uses radio settings Beep volume |
+| `flags` | no | `integer` | <ul><li>`0 or not present` play with normal priority.</li><li>`PLAY_BACKGROUND` play in background (built in vario function uses this context)</li><li>`PLAY_NOW` play immediately</li></ul> |
+| `freqIncr` | no | `integer` | positive number increases the tone pitch (frequency with time), negative number decreases it. The frequency changes every 10 milliseconds, the change is `freqIncr * 10Hz`.<br>The valid range is from -127 to 127. |
+| `volume` | no | `integer` | <ul><li>(1..5) override radio settings Beep volume for the duration of file</li><li>omitting the parameter uses radio settings Beep volume</li></ul> |
 
 ## Returns
 

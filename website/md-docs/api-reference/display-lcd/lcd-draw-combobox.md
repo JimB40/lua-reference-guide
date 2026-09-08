@@ -22,7 +22,7 @@ Draw a combo box
 | `w` | yes | `integer` | width of combo box in pixels |
 | `list` | yes | `table` | combo box elements, each element is a string |
 | `idx` | yes | `integer` | index of entry to highlight |
-| `flags` | no | `integer` | drawing flags, the flags can not be combined: * `BLINK` combo box is expanded  * `INVERS` combo box collapsed, text inversed  * `0 or not present` combo box collapsed, text normal |
+| `flags` | no | `integer` | drawing flags, the flags can not be combined: * `BLINK` combo box is expanded<ul><li>`INVERS` combo box collapsed, text inversed</li><li>`0 or not present` combo box collapsed, text normal</li></ul> |
 
 ## Returns
 

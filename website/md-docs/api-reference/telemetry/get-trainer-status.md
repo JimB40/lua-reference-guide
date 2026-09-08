@@ -21,7 +21,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `integer` | current output value (number). 0 - Not Connected  1 - Connected  2 - Disconnected  3 - Reconnected |
+| `-` | `integer` | current output value (number). 0 - Not Connected<br>1 - Connected<br>2 - Disconnected<br>3 - Reconnected |
 
 ## Availability
 

@@ -21,7 +21,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | with elements: * `gtimer` (number) radio global timer in seconds * `session` (number) radio session in seconds * `ttimer` (number) radio throttle timer in seconds * `tptimer` (number) radio throttle percent timer in seconds |
+| `-` | `table` | with elements: * `gtimer` (number) radio global timer in seconds<ul><li>`session` (number) radio session in seconds</li><li>`ttimer` (number) radio throttle timer in seconds</li><li>`tptimer` (number) radio throttle percent timer in seconds</li></ul> |
 
 ## Availability
 

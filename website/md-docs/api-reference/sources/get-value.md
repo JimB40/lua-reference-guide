@@ -23,10 +23,10 @@ Returns the value of a source.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `integer` | current source value (number). Zero is returned for: * non-existing sources  * for all telemetry source when the telemetry stream is not received  * far all non allowed sensors while FAI MODE is active |
-| `-` | `table` | GPS position is returned in a table: * `lat` (number) latitude, positive is North  * `lon` (number) longitude, positive is East  * `pilot-lat` (number) pilot latitude, positive is North  * `pilot-lon` (number) pilot longitude, positive is East |
+| `-` | `integer` | current source value (number). Zero is returned for: * non-existing sources<ul><li>for all telemetry source when the telemetry stream is not received</li><li>far all non allowed sensors while FAI MODE is active</li></ul> |
+| `-` | `table` | GPS position is returned in a table: * `lat` (number) latitude, positive is North<ul><li>`lon` (number) longitude, positive is East</li><li>`pilot-lat` (number) pilot latitude, positive is North</li><li>`pilot-lon` (number) pilot longitude, positive is East</li></ul> |
 | `-` | `table` | GPS date/time, see getDateTime() |
-| `-` | `table` | Cells are returned in a table (except where no cells were detected in which case the returned value is 0):  * table has one item for each detected cell:   * key (number) cell number (1 to number of cells)   * value (number) current cell voltage |
+| `-` | `table` | Cells are returned in a table (except where no cells were detected in which<br>case the returned value is 0):<ul><li>table has one item for each detected cell:</li><li>key (number) cell number (1 to number of cells)</li><li>value (number) current cell voltage</li></ul> |
 
 ## Availability
 

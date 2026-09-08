@@ -24,7 +24,7 @@ Get RF module parameters
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `nil` | requested module does not exist |
-| `-` | `table` | module parameters: * `subType` (number) protocol index  * `modelId` (number) receiver number  * `firstChannel` (number) start channel (0 is CH1)  * `channelsCount` (number) number of channels sent to module  * `Type` (number) module type  * if the module type is Multi additional information are available  * `protocol` (number) protocol number (Multi only)  * `subProtocol` (number) sub-protocol number (Multi only)  * `channelsOrder` (number) first 4 channels expected order (Multi only)  * if the module type is LemonDSMP additional info is available  * `channelsOrder` (number) first 4 channels expected order (DSMP only) |
+| `-` | `table` | module parameters: * `subType` (number) protocol index<ul><li>`modelId` (number) receiver number</li><li>`firstChannel` (number) start channel (0 is CH1)</li><li>`channelsCount` (number) number of channels sent to module</li><li>`Type` (number) module type</li><li>if the module type is Multi additional information are available</li><li>`protocol` (number) protocol number (Multi only)</li><li>`subProtocol` (number) sub-protocol number (Multi only)</li><li>`channelsOrder` (number) first 4 channels expected order (Multi only)</li><li>if the module type is LemonDSMP additional info is available</li><li>`channelsOrder` (number) first 4 channels expected order (DSMP only)</li></ul> |
 
 ## Availability
 

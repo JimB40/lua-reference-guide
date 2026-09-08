@@ -23,7 +23,7 @@ Return detailed information about field (source)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier  * `name` (string) field name  * `desc` (string) field description  * `unit` (number) unit identifier, see the Units reference for the full list |
+| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier<ul><li>`name` (string) field name</li><li>`desc` (string) field description</li><li>`unit` (number) unit identifier, see the Units reference for the full list</li></ul> |
 | `-` | `nil` | the requested field was not found |
 
 ## Availability

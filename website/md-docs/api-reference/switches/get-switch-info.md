@@ -23,7 +23,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | information about requested field, table elements: * `type`   (number) field identifier 0 = SWITCH_NONE 1 = SWITCH_TOGGLE 2 = SWITCH_2POS 3 = SWITCH_3POS |
+| `-` | `table` | information about requested field, table elements: * `type`   (number) field identifier<br>0 = SWITCH_NONE<br>1 = SWITCH_TOGGLE<br>2 = SWITCH_2POS<br>3 = SWITCH_3POS |
 
 ## Availability
 

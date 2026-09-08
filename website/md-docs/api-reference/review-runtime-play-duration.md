@@ -33,7 +33,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>duration</code></td><td>param</td><td><code>integer</code></td><td>number of seconds to play. Only integral part is used.</td><td><select data-field-kind="param" data-field-name="duration" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="duration" data-custom-type="true" /></td></tr>
-<tr><td><code>hourFormat</code></td><td>param</td><td><code>integer</code></td><td>: * `0 or not present` play format: minutes and seconds.
+<tr><td><code>hourFormat</code></td><td>param</td><td><code>integer</code></td><td>* `0 or not present` play format: minutes and seconds.
  * `!= 0` play format: hours, minutes and seconds.
  *
 @param volume (number):
@@ -43,7 +43,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playDuration&quot;, &quot;symbol&quot;: &quot;playDuration&quot;, &quot;summary&quot;: &quot;Play a time value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number of seconds to play. Only integral part is used.&quot;}, {&quot;name&quot;: &quot;hourFormat&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: * `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n *\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.1.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playDuration&quot;, &quot;symbol&quot;: &quot;playDuration&quot;, &quot;summary&quot;: &quot;Play a time value (text to speech)&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;number of seconds to play. Only integral part is used.&quot;}, {&quot;name&quot;: &quot;hourFormat&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;* `0 or not present` play format: minutes and seconds.\n * `!= 0` play format: hours, minutes and seconds.\n *\n@param volume (number):\n - (1..5) override radio settings Wav volume for the duration of file\n - omitting the parameter uses radio settings Wav volume&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;none&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;description&quot;: &quot;&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.1.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -89,7 +89,7 @@ Play a time value (text to speech)
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `duration` | yes | `integer` | number of seconds to play. Only integral part is used. |
-| `hourFormat` | no | `integer` | : * `0 or not present` play format: minutes and seconds.  * `!= 0` play format: hours, minutes and seconds.  * @param volume (number):  - (1..5) override radio settings Wav volume for the duration of file  - omitting the parameter uses radio settings Wav volume |
+| `hourFormat` | no | `integer` | * `0 or not present` play format: minutes and seconds.  * `!= 0` play format: hours, minutes and seconds.  * @param volume (number):  - (1..5) override radio settings Wav volume for the duration of file  - omitting the parameter uses radio settings Wav volume |
 
 #### Returns
 
@@ -115,7 +115,7 @@ Play a time value (text to speech)
 
 @param duration (integer) number of seconds to play. Only integral part is used.
 
-@param hourFormat (integer) : * `0 or not present` play format: minutes and seconds.
+@param hourFormat (integer) * `0 or not present` play format: minutes and seconds.
  * `!= 0` play format: hours, minutes and seconds.
  *
 @param volume (number):

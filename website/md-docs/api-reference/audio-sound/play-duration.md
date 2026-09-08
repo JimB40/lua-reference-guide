@@ -18,7 +18,7 @@ Play a time value (text to speech)
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `duration` | yes | `integer` | number of seconds to play. Only integral part is used. |
-| `hourFormat` | no | `integer` | : * `0 or not present` play format: minutes and seconds.  * `!= 0` play format: hours, minutes and seconds.  * @param volume (number):  - (1..5) override radio settings Wav volume for the duration of file  - omitting the parameter uses radio settings Wav volume |
+| `hourFormat` | no | `integer` | <ul><li>`0 or not present` play format: minutes and seconds.</li><li>`!= 0` play format: hours, minutes and seconds. * @param volume (number):</li><li>(1..5) override radio settings Wav volume for the duration of file</li><li>omitting the parameter uses radio settings Wav volume</li></ul> |
 
 ## Returns
 

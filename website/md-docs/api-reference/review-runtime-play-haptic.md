@@ -33,12 +33,12 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>duration</code></td><td>param</td><td><code>integer</code></td><td>length of the haptic feedback in milliseconds</td><td><select data-field-kind="param" data-field-name="duration" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="duration" data-custom-type="true" /></td></tr>
 <tr><td><code>pause</code></td><td>param</td><td><code>integer</code></td><td>length of the silence after haptic feedback in milliseconds</td><td><select data-field-kind="param" data-field-name="pause" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="pause" data-custom-type="true" /></td></tr>
-<tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>: * `0 or not present` play with normal priority
+<tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>* `0 or not present` play with normal priority
  * `PLAY_NOW` play immediately</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playHaptic&quot;, &quot;symbol&quot;: &quot;playHaptic&quot;, &quot;summary&quot;: &quot;Generate haptic feedback&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the haptic feedback in milliseconds&quot;}, {&quot;name&quot;: &quot;pause&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the silence after haptic feedback in milliseconds&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;: * `0 or not present` play with normal priority\n * `PLAY_NOW` play immediately&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;playHaptic&quot;, &quot;symbol&quot;: &quot;playHaptic&quot;, &quot;summary&quot;: &quot;Generate haptic feedback&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;duration&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the haptic feedback in milliseconds&quot;}, {&quot;name&quot;: &quot;pause&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;length of the silence after haptic feedback in milliseconds&quot;}, {&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;* `0 or not present` play with normal priority\n * `PLAY_NOW` play immediately&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -74,7 +74,7 @@ Generate haptic feedback
 | --- | --- | --- | --- |
 | `duration` | yes | `integer` | length of the haptic feedback in milliseconds |
 | `pause` | yes | `integer` | length of the silence after haptic feedback in milliseconds |
-| `flags` | no | `integer` | : * `0 or not present` play with normal priority  * `PLAY_NOW` play immediately |
+| `flags` | no | `integer` | * `0 or not present` play with normal priority  * `PLAY_NOW` play immediately |
 
 #### Returns
 
@@ -100,7 +100,7 @@ Generate haptic feedback
 
 @param pause (integer) length of the silence after haptic feedback in milliseconds
 
-@param flags (integer) : * `0 or not present` play with normal priority
+@param flags (integer) * `0 or not present` play with normal priority
  * `PLAY_NOW` play immediately
 
 @status current Introduced in 2.2.0

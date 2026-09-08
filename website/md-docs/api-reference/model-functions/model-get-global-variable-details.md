@@ -23,7 +23,7 @@ Returns details about a Global Variable, but not values
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | details of the global variable: * `name` (string) global variable name  * `min` (number) minimum value  * `max` (number) maximum value  * `prec` (number) precision  * `unit` (number) unit  * `popup` (boolean) show popup - if exists |
+| `-` | `table` | details of the global variable: * `name` (string) global variable name<ul><li>`min` (number) minimum value</li><li>`max` (number) maximum value</li><li>`prec` (number) precision</li><li>`unit` (number) unit</li><li>`popup` (boolean) show popup - if exists</li></ul> |
 
 ## Availability
 

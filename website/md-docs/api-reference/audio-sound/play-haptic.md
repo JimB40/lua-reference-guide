@@ -19,7 +19,7 @@ Generate haptic feedback
 | --- | --- | --- | --- |
 | `duration` | yes | `integer` | length of the haptic feedback in milliseconds |
 | `pause` | yes | `integer` | length of the silence after haptic feedback in milliseconds |
-| `flags` | no | `integer` | : * `0 or not present` play with normal priority  * `PLAY_NOW` play immediately |
+| `flags` | no | `integer` | <ul><li>`0 or not present` play with normal priority</li><li>`PLAY_NOW` play immediately</li></ul> |
 
 ## Returns
 

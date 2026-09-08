@@ -25,7 +25,7 @@ Checks the existence of file or directory.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `integer` | object info, table elements: * 'size' (number) file size * 'attrib' (number) file attribute flags * 'time' (table) table with last time modified date and times, table elements:   * `year` (number) year   * `mon` (number) month   * `day` (number) day of month   * `hour` (number) hours   * `hour12` (number) hours in US format   * `min` (number) minutes   * `sec` (number) seconds   * `suffix` (text) am or pm |
+| `-` | `integer` | object info, table elements: * 'size' (number) file size<ul><li>'attrib' (number) file attribute flags</li><li>'time' (table) table with last time modified date and times, table elements:</li><li>`year` (number) year</li><li>`mon` (number) month</li><li>`day` (number) day of month</li><li>`hour` (number) hours</li><li>`hour12` (number) hours in US format</li><li>`min` (number) minutes</li><li>`sec` (number) seconds</li><li>`suffix` (text) am or pm</li></ul> |
 
 ## Availability
 

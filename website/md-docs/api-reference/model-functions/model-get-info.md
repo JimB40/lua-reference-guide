@@ -21,7 +21,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | model information: * `name` (string) model name  * `extendedLimits` (boolean) extended limits enabled  * `jitterFilter` (number) model level ADC filter  * `bitmap` (string) bitmap name (not present on X7)  * `filename` (string) model filename |
+| `-` | `table` | model information: * `name` (string) model name<ul><li>`extendedLimits` (boolean) extended limits enabled</li><li>`jitterFilter` (number) model level ADC filter</li><li>`bitmap` (string) bitmap name (not present on X7)</li><li>`filename` (string) model filename</li></ul> |
 
 ## Availability
 

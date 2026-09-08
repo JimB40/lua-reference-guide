@@ -377,6 +377,35 @@ def render_doc_text(text: str, page_path: str | Path) -> str:
     return rewrite_legacy_doc_links(text, page_path)
 
 
+def render_table_cell_text(text: str) -> str:
+    """Render possibly-multi-line description text for a Markdown table
+    cell. Table cells can't contain literal newlines, and GFM only parses
+    inline markup inside them (not block-level lists), so collapsing
+    newlines to spaces crushes any `* item` bullet list (e.g. a
+    `@commonparams`-expanded settings list) into an unreadable run-on
+    paragraph. Bullet lines are rendered as a real `<ul><li>` list --
+    GFM tables allow raw inline HTML in cells, and this convention is
+    already used elsewhere in this site's hand-authored pages. Any
+    non-bullet lines are joined with `<br>`."""
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    intro: list[str] = []
+    items: list[str] = []
+    for line in lines:
+        bullet_match = re.match(r"^[*-]\s+(.*)$", line)
+        if bullet_match:
+            items.append(bullet_match.group(1))
+        elif items:
+            items[-1] = f"{items[-1]} {line}"
+        else:
+            intro.append(line)
+    parts = []
+    if intro:
+        parts.append("<br>".join(intro))
+    if items:
+        parts.append("<ul>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>")
+    return "".join(parts)
+
+
 def render_api_page(item: dict, overlay_text: str | None, page_path: str | Path) -> str:
     lines = []
     lines.append(f"# {item['symbol']}")
@@ -401,7 +430,7 @@ def render_api_page(item: dict, overlay_text: str | None, page_path: str | Path)
         lines.append("| --- | --- | --- | --- |")
         for param in item["parameters"]:
             req = "yes" if param["required"] else "no"
-            description = render_doc_text(param["description"], page_path).replace("\n", " ")
+            description = render_table_cell_text(render_doc_text(param["description"], page_path))
             lines.append(f"| `{param['name']}` | {req} | `{param['type']}` | {description} |")
     else:
         lines.append("None.")
@@ -413,7 +442,7 @@ def render_api_page(item: dict, overlay_text: str | None, page_path: str | Path)
         lines.append("| --- | --- | --- |")
         for retval in item["returns"]:
             name = retval.get("name") or "-"
-            description = render_doc_text(retval["description"], page_path).replace("\n", " ")
+            description = render_table_cell_text(render_doc_text(retval["description"], page_path))
             lines.append(f"| `{name}` | `{retval['type']}` | {description} |")
     else:
         lines.append("None.")
@@ -993,6 +1022,13 @@ def parse_param_or_retval_body(body: str, *, is_retval: bool = False) -> tuple[s
                 raw_name = match.group(1).strip()
                 raw_type = match.group(2).strip()
                 description = match.group(3).strip()
+                if description.startswith(":"):
+                    # leftover colon from a "name (type):" line -- whether or
+                    # not more content follows it on the same line, it's
+                    # punctuation from the type annotation, not meaningful
+                    # content (e.g. a bulleted "params (table):" settings
+                    # list, or "volume (integer): - (1..5) override ...").
+                    description = description[1:].strip()
             else:
                 pieces = stripped_line.split(" ", 1)
                 raw_name = pieces[0].strip()

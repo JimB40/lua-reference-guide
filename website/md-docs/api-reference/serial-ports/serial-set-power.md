@@ -17,8 +17,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `port_nr` | yes | `valid` | values are only 0 and 1 on radios that have SWSERIALPOWER defined 0 - first serial port, e.g. on TX16S AUX1                 1 - second serial port, e.g. on TX16S AUX2 |
-| `value` | yes | `0` | - disable power 1 - enable power |
+| `port_nr` | yes | `valid` | values are only 0 and 1 on radios that have SWSERIALPOWER defined 0 - first serial port, e.g. on TX16S AUX1<br>1 - second serial port, e.g. on TX16S AUX2 |
+| `value` | yes | `0` | <ul><li>disable power 1 - enable power</li></ul> |
 
 ## Returns
 

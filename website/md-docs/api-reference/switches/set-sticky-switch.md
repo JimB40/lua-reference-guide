@@ -24,7 +24,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `bufferFull` | `true/false` | . This function sends a message from Lua to the logical switch processor via a buffer with eight slots that are read 10 times per second. If the buffer is full, then a true value is returned and no messages was sent (i.e. the switch was not changed). |
+| `bufferFull` | `true/false` | . This function sends a message from Lua to the logical switch processor via a buffer with eight slots that are read 10 times per second. If the buffer is full, then a true value<br>is returned and no messages was sent (i.e. the switch was not changed). |
 
 ## Availability
 
