@@ -1,6 +1,9 @@
 site_name: EdgeTX LuaDoc
 site_description: Next-generation Lua API docs generated from EdgeTX source annotations
 site_url: https://luadoc.edgetx.org/
+repo_url: https://github.com/JimB40/lua-reference-guide
+repo_name: JimB40/lua-reference-guide
+edit_uri: edit/edgetx_2.12/website/md-docs/
 docs_dir: website/md-docs
 site_dir: site
 exclude_docs: |
@@ -15,13 +18,33 @@ theme:
   favicon: assets/edgetx-logo.svg
   font: false
   palette:
-    primary: custom
-    accent: custom
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.indexes
     - navigation.path
+    - navigation.top
     - toc.integrate
     - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+plugins:
+  - search
+  - minify:
+      minify_html: true
 extra_css:
   - stylesheets/extra-live-v2.css
 extra_javascript:
@@ -37,6 +60,11 @@ extra:
     enabled: false
     label: Legacy version
     message: This documentation version is preserved for reference and may not include later corrections or the newest docs structure.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/JimB40/lua-reference-guide
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/wF9wUKnZ6H
 nav:
   - EdgeTX LuaDoc: index.md
   - API Overview:
@@ -178,5 +206,16 @@ nav:
 markdown_extensions:
   - tables
   - admonition
-  - fenced_code
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
