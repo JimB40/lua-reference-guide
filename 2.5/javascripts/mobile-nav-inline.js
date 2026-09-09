@@ -15,36 +15,18 @@
     return (element?.textContent || "").trim();
   }
 
-  function hideDuplicateSectionIndexItems(rootNav) {
-    const nestedItems = rootNav.querySelectorAll(".md-nav__item--nested");
-    nestedItems.forEach((item) => {
-      const label = directChild(item, "label.md-nav__link");
-      const nestedNav = directChild(item, "nav.md-nav:not(.md-nav--secondary)");
-      if (!label || !nestedNav) {
-        return;
-      }
-
-      const nestedList = directChild(nestedNav, "ul.md-nav__list");
-      if (!nestedList) {
-        return;
-      }
-
-      const firstChildItem = directChild(nestedList, "li.md-nav__item");
-      const firstChildLink = firstChildItem
-        ? directChild(firstChildItem, "a.md-nav__link[href]")
-        : null;
-      if (!firstChildItem || !firstChildLink) {
-        return;
-      }
-
-      const parentText = textOf(label.querySelector(".md-ellipsis")) || textOf(label);
-      const childText =
-        textOf(firstChildLink.querySelector(".md-ellipsis")) || textOf(firstChildLink);
-
-      if (parentText && childText && parentText === childText) {
-        firstChildItem.hidden = true;
-      }
-    });
+  // With the navigation.indexes theme feature enabled, a section that has
+  // its own index page gets its toggle <label> wrapped (alongside a real
+  // <a> link) inside a ".md-nav__container" div instead of being a direct
+  // child of the <li> -- and Material no longer renders a redundant first
+  // list entry duplicating the section name for those sections at all, so
+  // there's nothing left to hide. Sections without their own index page
+  // keep the plain unwrapped <label> structure.
+  function sectionLabel(item) {
+    return (
+      directChild(item, "label.md-nav__link") ||
+      item.querySelector(":scope > .md-nav__container > label.md-nav__link")
+    );
   }
 
   function buildLeafItem(sourceItem) {
@@ -75,7 +57,7 @@
 
   function buildNestedItem(sourceItem) {
     const toggle = directChild(sourceItem, "input.md-nav__toggle");
-    const label = directChild(sourceItem, "label.md-nav__link");
+    const label = sectionLabel(sourceItem);
     const nestedNav = directChild(sourceItem, "nav.md-nav:not(.md-nav--secondary)");
     if (!label || !nestedNav) {
       return null;
@@ -182,8 +164,6 @@
     if (!primarySidebar || !sidebarInner || !sourceNav) {
       return;
     }
-
-    hideDuplicateSectionIndexItems(sourceNav);
 
     const existing = sidebarInner.querySelector(".mobile-desktop-nav-shell");
     if (existing) {
