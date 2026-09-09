@@ -19,6 +19,22 @@
     );
   }
 
+  // When navigation.indexes wraps a section's label inside .md-nav__container
+  // (see sectionLabel above), the label itself becomes icon-only -- the
+  // section's actual visible title text moves to the sibling <a> that links
+  // to the section's own index page, not the label. getNavLabelText(label)
+  // on a wrapped section therefore always returns "" (no thrown error, no
+  // visible symptom beyond the match silently never succeeding), which is
+  // why forceNestedNavOpen appeared to do nothing on any page belonging to a
+  // wrapped section like "API Reference". Use the <a> for text, not the
+  // label -- accounting for the same possible wrapping.
+  function sectionLink(item) {
+    return (
+      item.querySelector(":scope > a.md-nav__link") ||
+      item.querySelector(":scope > .md-nav__container > a.md-nav__link")
+    );
+  }
+
   // Item pages serve at .../api-reference/<group-slug>/<item-slug>/ -- the
   // group is already encoded in the URL, so there's no need to hand-maintain
   // a slug-to-section lookup table (the previous approach, which silently
@@ -125,7 +141,7 @@
     const apiReferenceItem = Array.from(
       primaryNav.querySelectorAll(":scope > .md-nav__list > .md-nav__item--nested"),
     ).find(
-      (item) => getNavLabelText(sectionLabel(item)) === "API Reference",
+      (item) => getNavLabelText(sectionLink(item)) === "API Reference",
     );
     if (!apiReferenceItem) {
       clearApiFunctionBreadcrumb();
