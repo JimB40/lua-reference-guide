@@ -3,6 +3,22 @@
     return element?.querySelector(".md-ellipsis")?.textContent?.trim() || "";
   }
 
+  // With the navigation.indexes theme feature, a nav section that has its
+  // own index page (API Reference does) gets its toggle <label> wrapped
+  // together with the section's own <a> link inside a
+  // ".md-nav__container" div, instead of the label being a direct child of
+  // the <li> -- the same structural change mobile-nav-inline.js already
+  // accounts for via its own sectionLabel() helper. A plain
+  // ":scope > label.md-nav__link" lookup finds nothing once that wrapping
+  // applies, so forceNestedNavOpen and the "API Reference" item lookup
+  // below silently never matched anything on any page.
+  function sectionLabel(item) {
+    return (
+      item.querySelector(":scope > label.md-nav__link") ||
+      item.querySelector(":scope > .md-nav__container > label.md-nav__link")
+    );
+  }
+
   // Item pages serve at .../api-reference/<group-slug>/<item-slug>/ -- the
   // group is already encoded in the URL, so there's no need to hand-maintain
   // a slug-to-section lookup table (the previous approach, which silently
@@ -29,7 +45,7 @@
 
     item.classList.add("md-nav__item--active");
 
-    const label = item.querySelector(":scope > label.md-nav__link");
+    const label = sectionLabel(item);
     const toggle = item.querySelector(":scope > input.md-nav__toggle");
     const nav = item.querySelector(":scope > nav.md-nav");
 
@@ -89,7 +105,7 @@
       window.location.href,
     ).pathname;
 
-    breadcrumb.appendChild(buildBreadcrumbLink(siteRootHref, "EdgeTX LuaDoc"));
+    breadcrumb.appendChild(buildBreadcrumbLink(siteRootHref, "EdgeTX Lua Reference Guide"));
     appendBreadcrumbSeparator(breadcrumb);
     breadcrumb.appendChild(buildBreadcrumbLink(apiReferenceHref, "API Reference"));
     appendBreadcrumbSeparator(breadcrumb);
@@ -109,8 +125,7 @@
     const apiReferenceItem = Array.from(
       primaryNav.querySelectorAll(":scope > .md-nav__list > .md-nav__item--nested"),
     ).find(
-      (item) =>
-        getNavLabelText(item.querySelector(":scope > label.md-nav__link")) === "API Reference",
+      (item) => getNavLabelText(sectionLabel(item)) === "API Reference",
     );
     if (!apiReferenceItem) {
       clearApiFunctionBreadcrumb();
