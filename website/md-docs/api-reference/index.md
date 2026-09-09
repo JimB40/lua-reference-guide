@@ -11,82 +11,82 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 This section is generated from the normalized API model and grouped with the same user-facing topic names used in the 2.11 docs.
 
-## [Display LCD](display-lcd.md)
+## [Display LCD](display-lcd/index.md)
 
 - `47` APIs
 - Drawing, layout, color, and display helpers for LCD rendering.
 
-## [Display LVGL](display-lvgl.md)
+## [Display LVGL](display-lvgl/index.md)
 
 - `45` APIs
 - LVGL bindings and UI helpers for display-oriented Lua scripts.
 
-## [Model Functions](model-functions.md)
+## [Model Functions](model-functions/index.md)
 
 - `39` APIs
 - Model data access and editing APIs.
 
-## [Filesystem](filesystem.md)
+## [Filesystem](filesystem/index.md)
 
 - `6` APIs
 - File and directory access for scripts.
 
-## [Serial Ports](serial-ports.md)
+## [Serial Ports](serial-ports/index.md)
 
 - `5` APIs
 - Serial transport configuration and I/O.
 
-## [Radio Hardware](radio-hardware.md)
+## [Radio Hardware](radio-hardware/index.md)
 
 - `7` APIs
 - Hardware-facing APIs and low-level device controls.
 
-## [System](system.md)
+## [System](system/index.md)
 
 - `5` APIs
 - General runtime, device, and system-level helpers.
 
-## [Inputs](key-inputs.md)
+## [Inputs](key-inputs/index.md)
 
 - `5` APIs
 - Key and stick related helpers for interactive scripts.
 
-## [LUA Scripts](lua-scripts.md)
+## [Lua Scripts](lua-scripts/index.md)
 
 - `1` APIs
 - Script lifecycle helpers and interactive popups.
 
-## [Time](time.md)
+## [Time](time/index.md)
 
 - `5` APIs
 - Date, clock, and timer helpers.
 
-## [Audio-Sound](audio-sound.md)
+## [Audio-Sound](audio-sound/index.md)
 
 - `6` APIs
 - Audio playback and haptic feedback helpers.
 
-## [Telemetry](telemetry.md)
+## [Telemetry](telemetry/index.md)
 
 - `7` APIs
 - Telemetry value access, injection, and protocol helpers.
 
-## [RF module](rf-module.md)
+## [RF module](rf-module/index.md)
 
 - `5` APIs
 - RF link and module transport helpers.
 
-## [Sources](sources.md)
+## [Sources](sources/index.md)
 
 - `6` APIs
 - Source identification and value lookup for telemetry and other data sources.
 
-## [Switches](switches.md)
+## [Switches](switches/index.md)
 
 - `7` APIs
 - Switch identification, value lookup, and sticky-switch helpers.
 
-## [Variables](variables.md)
+## [Variables](variables/index.md)
 
 - `2` APIs
 - Shared-memory variables exposed to scripts.

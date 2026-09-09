@@ -1,4 +1,4 @@
-# EdgeTX LuaDoc
+# EdgeTX Lua Reference Guide
 
 This repository contains the EdgeTX Lua documentation site.
 

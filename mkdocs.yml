@@ -1,4 +1,4 @@
-site_name: EdgeTX LuaDoc
+site_name: EdgeTX Lua Reference Guide
 site_description: Next-generation Lua API docs generated from EdgeTX source annotations
 site_url: https://luadoc.edgetx.org/
 repo_url: https://github.com/JimB40/lua-reference-guide
@@ -36,7 +36,6 @@ theme:
     - navigation.indexes
     - navigation.path
     - navigation.top
-    - toc.integrate
     - toc.follow
     - search.suggest
     - search.highlight
@@ -54,7 +53,6 @@ plugins:
 extra_css:
   - stylesheets/extra-live-v2.css
 extra_javascript:
-  - javascripts/api-function-breadcrumb.js
   - javascripts/mobile-nav-inline.js
   - javascripts/legacy-version-banner.js
 extra:
@@ -72,7 +70,7 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/wF9wUKnZ6H
 nav:
-  - EdgeTX LuaDoc: index.md
+  - EdgeTX Lua Reference Guide: index.md
   - API Overview:
       - API Overview: api-overview/README.md
       - Lua version:
@@ -106,22 +104,238 @@ nav:
       - Fonts: api-overview/fonts.md
   - API Reference:
       - API Reference: api-reference/index.md
-      - Audio-Sound: api-reference/audio-sound.md
-      - Display LCD: api-reference/display-lcd.md
-      - Display LVGL: api-reference/display-lvgl.md
-      - Filesystem: api-reference/filesystem.md
-      - Inputs: api-reference/key-inputs.md
-      - Lua Scripts: api-reference/lua-scripts.md
-      - Model Functions: api-reference/model-functions.md
-      - Radio Hardware: api-reference/radio-hardware.md
-      - RF module: api-reference/rf-module.md
-      - Serial Ports: api-reference/serial-ports.md
-      - Sources: api-reference/sources.md
-      - Switches: api-reference/switches.md
-      - System: api-reference/system.md
-      - Telemetry: api-reference/telemetry.md
-      - Time: api-reference/time.md
-      - Variables: api-reference/variables.md
+      # BEGIN GENERATED -- tools/docs_pipeline.py update-nav; do not hand-edit
+      - Audio-Sound:
+          - Audio-Sound: api-reference/audio-sound/index.md
+          - flushAudio: api-reference/audio-sound/flush-audio.md
+          - playDuration: api-reference/audio-sound/play-duration.md
+          - playFile: api-reference/audio-sound/play-file.md
+          - playHaptic: api-reference/audio-sound/play-haptic.md
+          - playNumber: api-reference/audio-sound/play-number.md
+          - playTone: api-reference/audio-sound/play-tone.md
+      - Display LCD:
+          - Display LCD: api-reference/display-lcd/index.md
+          - Bitmap.getSize: api-reference/display-lcd/bitmap-get-size.md
+          - Bitmap.open: api-reference/display-lcd/bitmap-open.md
+          - Bitmap.resize: api-reference/display-lcd/bitmap-resize.md
+          - Bitmap.toMask: api-reference/display-lcd/bitmap-to-mask.md
+          - GREY: api-reference/display-lcd/grey.md
+          - lcd.RGB: api-reference/display-lcd/lcd-rgb.md
+          - lcd.clear: api-reference/display-lcd/lcd-clear.md
+          - lcd.drawAnnulus: api-reference/display-lcd/lcd-draw-annulus.md
+          - lcd.drawArc: api-reference/display-lcd/lcd-draw-arc.md
+          - lcd.drawBitmap: api-reference/display-lcd/lcd-draw-bitmap.md
+          - lcd.drawBitmapPattern: api-reference/display-lcd/lcd-draw-bitmap-pattern.md
+          - lcd.drawBitmapPatternPie: api-reference/display-lcd/lcd-draw-bitmap-pattern-pie.md
+          - lcd.drawChannel: api-reference/display-lcd/lcd-draw-channel.md
+          - lcd.drawCircle: api-reference/display-lcd/lcd-draw-circle.md
+          - lcd.drawCombobox: api-reference/display-lcd/lcd-draw-combobox.md
+          - lcd.drawFilledCircle: api-reference/display-lcd/lcd-draw-filled-circle.md
+          - lcd.drawFilledRectangle: api-reference/display-lcd/lcd-draw-filled-rectangle.md
+          - lcd.drawFilledTriangle: api-reference/display-lcd/lcd-draw-filled-triangle.md
+          - lcd.drawGauge: api-reference/display-lcd/lcd-draw-gauge.md
+          - lcd.drawHudRectangle: api-reference/display-lcd/lcd-draw-hud-rectangle.md
+          - lcd.drawLine: api-reference/display-lcd/lcd-draw-line.md
+          - lcd.drawLineWithClipping: api-reference/display-lcd/lcd-draw-line-with-clipping.md
+          - lcd.drawNumber: api-reference/display-lcd/lcd-draw-number.md
+          - lcd.drawPie: api-reference/display-lcd/lcd-draw-pie.md
+          - lcd.drawPixmap: api-reference/display-lcd/lcd-draw-pixmap.md
+          - lcd.drawPoint: api-reference/display-lcd/lcd-draw-point.md
+          - lcd.drawRectangle: api-reference/display-lcd/lcd-draw-rectangle.md
+          - lcd.drawScreenTitle: api-reference/display-lcd/lcd-draw-screen-title.md
+          - lcd.drawSource: api-reference/display-lcd/lcd-draw-source.md
+          - lcd.drawSwitch: api-reference/display-lcd/lcd-draw-switch.md
+          - lcd.drawText: api-reference/display-lcd/lcd-draw-text.md
+          - lcd.drawTextLines: api-reference/display-lcd/lcd-draw-text-lines.md
+          - lcd.drawTimer: api-reference/display-lcd/lcd-draw-timer.md
+          - lcd.drawTriangle: api-reference/display-lcd/lcd-draw-triangle.md
+          - lcd.exitFullScreen: api-reference/display-lcd/lcd-exit-full-screen.md
+          - lcd.getColor: api-reference/display-lcd/lcd-get-color.md
+          - lcd.getLastLeftPos: api-reference/display-lcd/lcd-get-last-left-pos.md
+          - lcd.getLastPos: api-reference/display-lcd/lcd-get-last-pos.md
+          - lcd.getLastRightPos: api-reference/display-lcd/lcd-get-last-right-pos.md
+          - lcd.invertRect: api-reference/display-lcd/lcd-invert-rect.md
+          - lcd.refresh: api-reference/display-lcd/lcd-refresh.md
+          - lcd.resetBacklightTimeout: api-reference/display-lcd/lcd-reset-backlight-timeout.md
+          - lcd.setColor: api-reference/display-lcd/lcd-set-color.md
+          - lcd.sizeText: api-reference/display-lcd/lcd-size-text.md
+          - popupConfirmation: api-reference/display-lcd/popup-confirmation.md
+          - popupInput: api-reference/display-lcd/popup-input.md
+          - popupWarning: api-reference/display-lcd/popup-warning.md
+      - Display LVGL:
+          - Display LVGL: api-reference/display-lvgl/index.md
+          - lvgl.align: api-reference/display-lvgl/lvgl-align.md
+          - lvgl.arc: api-reference/display-lvgl/lvgl-arc.md
+          - lvgl.box: api-reference/display-lvgl/lvgl-box.md
+          - lvgl.build: api-reference/display-lvgl/lvgl-build.md
+          - lvgl.button: api-reference/display-lvgl/lvgl-button.md
+          - lvgl.choice: api-reference/display-lvgl/lvgl-choice.md
+          - lvgl.circle: api-reference/display-lvgl/lvgl-circle.md
+          - lvgl.clear: api-reference/display-lvgl/lvgl-clear.md
+          - lvgl.close: api-reference/display-lvgl/lvgl-close.md
+          - lvgl.color: api-reference/display-lvgl/lvgl-color.md
+          - lvgl.confirm: api-reference/display-lvgl/lvgl-confirm.md
+          - lvgl.dialog: api-reference/display-lvgl/lvgl-dialog.md
+          - lvgl.disable: api-reference/display-lvgl/lvgl-disable.md
+          - lvgl.enable: api-reference/display-lvgl/lvgl-enable.md
+          - lvgl.exitFullScreen: api-reference/display-lvgl/lvgl-exit-full-screen.md
+          - lvgl.file: api-reference/display-lvgl/lvgl-file.md
+          - lvgl.font: api-reference/display-lvgl/lvgl-font.md
+          - lvgl.getContext: api-reference/display-lvgl/lvgl-get-context.md
+          - lvgl.getScrollPos: api-reference/display-lvgl/lvgl-get-scroll-pos.md
+          - lvgl.hide: api-reference/display-lvgl/lvgl-hide.md
+          - lvgl.hline: api-reference/display-lvgl/lvgl-hline.md
+          - lvgl.image: api-reference/display-lvgl/lvgl-image.md
+          - lvgl.isAppMode: api-reference/display-lvgl/lvgl-is-app-mode.md
+          - lvgl.isFullScreen: api-reference/display-lvgl/lvgl-is-full-screen.md
+          - lvgl.label: api-reference/display-lvgl/lvgl-label.md
+          - lvgl.line: api-reference/display-lvgl/lvgl-line.md
+          - lvgl.menu: api-reference/display-lvgl/lvgl-menu.md
+          - lvgl.message: api-reference/display-lvgl/lvgl-message.md
+          - lvgl.momentaryButton: api-reference/display-lvgl/lvgl-momentary-button.md
+          - lvgl.numberEdit: api-reference/display-lvgl/lvgl-number-edit.md
+          - lvgl.page: api-reference/display-lvgl/lvgl-page.md
+          - lvgl.qrcode: api-reference/display-lvgl/lvgl-qrcode.md
+          - lvgl.rectangle: api-reference/display-lvgl/lvgl-rectangle.md
+          - lvgl.set: api-reference/display-lvgl/lvgl-set.md
+          - lvgl.setting: api-reference/display-lvgl/lvgl-setting.md
+          - lvgl.show: api-reference/display-lvgl/lvgl-show.md
+          - lvgl.slider: api-reference/display-lvgl/lvgl-slider.md
+          - lvgl.source: api-reference/display-lvgl/lvgl-source.md
+          - lvgl.switch: api-reference/display-lvgl/lvgl-switch.md
+          - lvgl.textEdit: api-reference/display-lvgl/lvgl-text-edit.md
+          - lvgl.timer: api-reference/display-lvgl/lvgl-timer.md
+          - lvgl.toggle: api-reference/display-lvgl/lvgl-toggle.md
+          - lvgl.triangle: api-reference/display-lvgl/lvgl-triangle.md
+          - lvgl.verticalSlider: api-reference/display-lvgl/lvgl-vertical-slider.md
+          - lvgl.vline: api-reference/display-lvgl/lvgl-vline.md
+      - Filesystem:
+          - Filesystem: api-reference/filesystem/index.md
+          - chdir: api-reference/filesystem/chdir.md
+          - del: api-reference/filesystem/del.md
+          - dir: api-reference/filesystem/dir.md
+          - fstat: api-reference/filesystem/fstat.md
+          - mkdir: api-reference/filesystem/mkdir.md
+          - rename: api-reference/filesystem/rename.md
+      - Inputs:
+          - Inputs: api-reference/key-inputs/index.md
+          - defaultChannel: api-reference/key-inputs/default-channel.md
+          - defaultStick: api-reference/key-inputs/default-stick.md
+          - getRotEncMode: api-reference/key-inputs/get-rot-enc-mode.md
+          - getRotEncSpeed: api-reference/key-inputs/get-rot-enc-speed.md
+          - killEvents: api-reference/key-inputs/kill-events.md
+      - Lua Scripts:
+          - Lua Scripts: api-reference/lua-scripts/index.md
+          - loadScript: api-reference/lua-scripts/load-script.md
+      - Model Functions:
+          - Model Functions: api-reference/model-functions/index.md
+          - getFlightMode: api-reference/model-functions/get-flight-mode.md
+          - getOutputValue: api-reference/model-functions/get-output-value.md
+          - model.defaultInputs: api-reference/model-functions/model-default-inputs.md
+          - model.deleteFlightModes: api-reference/model-functions/model-delete-flight-modes.md
+          - model.deleteInput: api-reference/model-functions/model-delete-input.md
+          - model.deleteInputs: api-reference/model-functions/model-delete-inputs.md
+          - model.deleteMix: api-reference/model-functions/model-delete-mix.md
+          - model.deleteMixes: api-reference/model-functions/model-delete-mixes.md
+          - model.getCurve: api-reference/model-functions/model-get-curve.md
+          - model.getCustomFunction: api-reference/model-functions/model-get-custom-function.md
+          - model.getFlightMode: api-reference/model-functions/model-get-flight-mode.md
+          - model.getGlobalVariable: api-reference/model-functions/model-get-global-variable.md
+          - model.getGlobalVariableDetails: api-reference/model-functions/model-get-global-variable-details.md
+          - model.getInfo: api-reference/model-functions/model-get-info.md
+          - model.getInput: api-reference/model-functions/model-get-input.md
+          - model.getInputsCount: api-reference/model-functions/model-get-inputs-count.md
+          - model.getLogicalSwitch: api-reference/model-functions/model-get-logical-switch.md
+          - model.getMix: api-reference/model-functions/model-get-mix.md
+          - model.getMixesCount: api-reference/model-functions/model-get-mixes-count.md
+          - model.getModule: api-reference/model-functions/model-get-module.md
+          - model.getOutput: api-reference/model-functions/model-get-output.md
+          - model.getSensor: api-reference/model-functions/model-get-sensor.md
+          - model.getSwashRing: api-reference/model-functions/model-get-swash-ring.md
+          - model.getTimer: api-reference/model-functions/model-get-timer.md
+          - model.insertInput: api-reference/model-functions/model-insert-input.md
+          - model.insertMix: api-reference/model-functions/model-insert-mix.md
+          - model.resetSensor: api-reference/model-functions/model-reset-sensor.md
+          - model.resetTimer: api-reference/model-functions/model-reset-timer.md
+          - model.setCurve: api-reference/model-functions/model-set-curve.md
+          - model.setCustomFunction: api-reference/model-functions/model-set-custom-function.md
+          - model.setFlightMode: api-reference/model-functions/model-set-flight-mode.md
+          - model.setGlobalVariable: api-reference/model-functions/model-set-global-variable.md
+          - model.setGlobalVariableDetails: api-reference/model-functions/model-set-global-variable-details.md
+          - model.setInfo: api-reference/model-functions/model-set-info.md
+          - model.setLogicalSwitch: api-reference/model-functions/model-set-logical-switch.md
+          - model.setModule: api-reference/model-functions/model-set-module.md
+          - model.setOutput: api-reference/model-functions/model-set-output.md
+          - model.setSwashRing: api-reference/model-functions/model-set-swash-ring.md
+          - model.setTimer: api-reference/model-functions/model-set-timer.md
+      - RF module:
+          - RF module: api-reference/rf-module/index.md
+          - accessTelemetryPush: api-reference/rf-module/access-telemetry-push.md
+          - crossfireTelemetryPush: api-reference/rf-module/crossfire-telemetry-push.md
+          - ghostTelemetryPush: api-reference/rf-module/ghost-telemetry-push.md
+          - multiBuffer: api-reference/rf-module/multi-buffer.md
+          - sportTelemetryPush: api-reference/rf-module/sport-telemetry-push.md
+      - Radio Hardware:
+          - Radio Hardware: api-reference/radio-hardware/index.md
+          - applyRGBLedColors: api-reference/radio-hardware/apply-rgbled-colors.md
+          - getStickMode: api-reference/radio-hardware/get-stick-mode.md
+          - getTxGPS: api-reference/radio-hardware/get-tx-gps.md
+          - setCFSLedColor: api-reference/radio-hardware/set-cfsled-color.md
+          - setIMU_X: api-reference/radio-hardware/set-imu-x.md
+          - setIMU_Y: api-reference/radio-hardware/set-imu-y.md
+          - setRGBLedColor: api-reference/radio-hardware/set-rgbled-color.md
+      - Serial Ports:
+          - Serial Ports: api-reference/serial-ports/index.md
+          - serialGetPower: api-reference/serial-ports/serial-get-power.md
+          - serialRead: api-reference/serial-ports/serial-read.md
+          - serialSetPower: api-reference/serial-ports/serial-set-power.md
+          - serialWrite: api-reference/serial-ports/serial-write.md
+          - setSerialBaudrate: api-reference/serial-ports/set-serial-baudrate.md
+      - Sources:
+          - Sources: api-reference/sources/index.md
+          - getFieldInfo: api-reference/sources/get-field-info.md
+          - getSourceIndex: api-reference/sources/get-source-index.md
+          - getSourceName: api-reference/sources/get-source-name.md
+          - getSourceValue: api-reference/sources/get-source-value.md
+          - getValue: api-reference/sources/get-value.md
+          - sources: api-reference/sources/sources.md
+      - Switches:
+          - Switches: api-reference/switches/index.md
+          - getLogicalSwitchValue: api-reference/switches/get-logical-switch-value.md
+          - getSwitchIndex: api-reference/switches/get-switch-index.md
+          - getSwitchInfo: api-reference/switches/get-switch-info.md
+          - getSwitchName: api-reference/switches/get-switch-name.md
+          - getSwitchValue: api-reference/switches/get-switch-value.md
+          - setStickySwitch: api-reference/switches/set-sticky-switch.md
+          - switches: api-reference/switches/switches.md
+      - System:
+          - System: api-reference/system/index.md
+          - getAvailableMemory: api-reference/system/get-available-memory.md
+          - getGeneralSettings: api-reference/system/get-general-settings.md
+          - getUsage: api-reference/system/get-usage.md
+          - getVersion: api-reference/system/get-version.md
+          - screenshot: api-reference/system/screenshot.md
+      - Telemetry:
+          - Telemetry: api-reference/telemetry/index.md
+          - crossfireTelemetryPop: api-reference/telemetry/crossfire-telemetry-pop.md
+          - getRAS: api-reference/telemetry/get-ras.md
+          - getRSSI: api-reference/telemetry/get-rssi.md
+          - getTrainerStatus: api-reference/telemetry/get-trainer-status.md
+          - ghostTelemetryPop: api-reference/telemetry/ghost-telemetry-pop.md
+          - setTelemetryValue: api-reference/telemetry/set-telemetry-value.md
+          - sportTelemetryPop: api-reference/telemetry/sport-telemetry-pop.md
+      - Time:
+          - Time: api-reference/time/index.md
+          - getDateTime: api-reference/time/get-date-time.md
+          - getGlobalTimer: api-reference/time/get-global-timer.md
+          - getRtcTime: api-reference/time/get-rtc-time.md
+          - getTime: api-reference/time/get-time.md
+          - resetGlobalTimer: api-reference/time/reset-global-timer.md
+      - Variables:
+          - Variables: api-reference/variables/index.md
+          - getShmVar: api-reference/variables/get-shm-var.md
+          - setShmVar: api-reference/variables/set-shm-var.md
+      # END GENERATED
   - Programming:
       - Programming: programming/README.md
       - Basics:

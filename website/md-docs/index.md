@@ -1,9 +1,9 @@
-# EdgeTX LuaDoc
+# EdgeTX Lua Reference Guide
 
 This guide covers the development of user-written scripts for R/C transmitters running the EdgeTX operating system with Lua support. Readers should be familiar with EdgeTX, the EdgeTX Companion, and know how to transfer files to the SD card in the transmitter.
 
 !!! info
-    The latest version of this guide will always be available at [luadoc.edgetx.org](https://luadoc.edgetx.org).
+    The latest version of this guide will always be available at [luadoc.edgetx.org](https://luadoc.edgetx.org). There is a version option in the header if you are running an older version of EdgeTX and need the docs for that specific version.
 
 ## Sections
 

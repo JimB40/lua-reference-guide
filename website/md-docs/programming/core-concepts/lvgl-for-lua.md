@@ -12,7 +12,7 @@ The practical result is:
 - better support for state-driven UI updates
 - a closer match to native EdgeTX screens
 
-For the detailed constructor pages, see [Display LVGL](../../api-reference/display-lvgl.md). For LVGL-specific constants, see [LVGL Constants](../../api-overview/constants/lvgl-constants.md).
+For the detailed constructor pages, see [Display LVGL](../../api-reference/display-lvgl/index.md). For LVGL-specific constants, see [LVGL Constants](../../api-overview/constants/lvgl-constants.md).
 
 ## Limitations
 

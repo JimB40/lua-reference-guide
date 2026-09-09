@@ -1,4 +1,4 @@
-# EdgeTX LuaDoc Handoff
+# EdgeTX Lua Reference Guide Handoff
 
 ## Current Status
 
@@ -32,7 +32,7 @@ site; see README.md for details.
 
 These decisions were made intentionally and should be treated as the current baseline:
 
-- `EdgeTX LuaDoc` is the root docs identity
+- `EdgeTX Lua Reference Guide` is the root docs identity
 - `API Overview` is conceptual and reference context
 - `API Reference` is the user-facing API grouping area
 - `Programming` is for coding/how-to guidance

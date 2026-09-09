@@ -6,7 +6,7 @@ description: LVGL-specific constants used for layout, pickers, scrolling, and ob
 
 These constants are specific to the LVGL UI layer used on color-screen radios. They are most useful when building layouts, constraining picker controls, or creating objects dynamically.
 
-For the broader LVGL guide, see [Using LVGL Library](../../programming/core-concepts/lvgl-for-lua.md). For the constructor pages, see [Display LVGL](../../api-reference/display-lvgl.md).
+For the broader LVGL guide, see [Using LVGL Library](../../programming/core-concepts/lvgl-for-lua.md). For the constructor pages, see [Display LVGL](../../api-reference/display-lvgl/index.md).
 
 ## Layout and Padding
 

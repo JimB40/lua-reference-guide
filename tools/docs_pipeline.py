@@ -203,7 +203,18 @@ def docs_path(path: str | Path) -> Path:
 
 
 def group_page_name(group: dict) -> str:
-    return f"{group['slug']}.md"
+    # A true folder index (group/index.md), not a flat sibling (group.md) --
+    # rendered_dir() computes the same served URL either way, so every
+    # link this pipeline generates (nav, cards, page_href) is unaffected,
+    # but Material's navigation.indexes feature only recognizes and
+    # deduplicates a section's self-referencing first nav entry (hiding it
+    # from the visible list, promoting it into the clickable header
+    # instead) when that entry is a genuine folder index living alongside
+    # its siblings -- confirmed by comparing against the legacy
+    # GitBook-imported versions (tools/import_legacy_gitbook.py), whose
+    # group hub pages have always been real folder indexes and don't show
+    # the "duplicate first entry" the flat scheme caused here.
+    return f"{group['slug']}/index.md"
 
 
 def module_page_name(module_name: str) -> str:
@@ -230,6 +241,73 @@ def items_by_group(model: dict) -> list[tuple[dict, list[dict]]]:
         matched_ids.update(item["id"] for item in matched)
         ordered.append((group, matched))
     return ordered
+
+
+NAV_GENERATED_BEGIN = "      # BEGIN GENERATED -- tools/docs_pipeline.py update-nav; do not hand-edit"
+NAV_GENERATED_END = "      # END GENERATED"
+
+
+def render_nav_yaml_block(model: dict) -> list[str]:
+    """YAML lines for the API Reference nav sub-tree, adding every item
+    page as a real nav entry under its group instead of only the 16 group
+    hub pages. Without this, item pages aren't in the nav tree at all, so
+    Material can't mark them active or show a navigation.path breadcrumb
+    for them server-side -- that gap is what api-function-breadcrumb.js
+    existed to paper over with JS. The legacy GitBook-imported versions
+    don't have this problem since their nav is built straight from
+    SUMMARY.md, which already lists every page.
+
+    Indentation matches mkdocs.yml's existing "API Reference" block
+    exactly: 6 spaces for a group's own entry (sibling of the other
+    top-level API Reference children), 10 for its items, so
+    update_mkdocs_nav's marker-splice drops in without reformatting
+    anything around it. A group's self-referencing first child (its own
+    hub page) mirrors the same pattern already used one level up for
+    "API Reference" and "API Overview" -- not a new convention.
+
+    Item label is item["symbol"] (e.g. "getFlightMode", "model.getMix"),
+    the same convention render_group_page uses for its card titles,
+    sorted the same way, so the sidebar and the hub page's card grid
+    agree on naming and order.
+
+    Groups are sorted alphabetically by name rather than kept in
+    items_by_group's order (docs-system/api-groups.json's own file order,
+    which isn't alphabetical) -- matches the previous hand-authored nav's
+    order, the least surprising choice for a sidebar."""
+    lines = []
+    for group, items in sorted(items_by_group(model), key=lambda pair: pair[0]["name"]):
+        if not items:
+            continue
+        group_href = f"api-reference/{group_page_name(group)}"
+        lines.append(f"      - {group['name']}:")
+        lines.append(f"          - {group['name']}: {group_href}")
+        for item in sorted(items, key=lambda entry: entry["symbol"]):
+            item_href = f"api-reference/{page_name_for_item(item)}"
+            lines.append(f"          - {item['symbol']}: {item_href}")
+    return lines
+
+
+def update_mkdocs_nav(config_path: Path, nav_lines: list[str]) -> None:
+    """Splice the generated API Reference item nav block into an mkdocs
+    config file between two marker comments, leaving everything else in
+    the file byte-for-byte untouched. A full yaml.safe_load + yaml.safe_dump
+    round-trip would destroy this file's hand-written comments and exact
+    formatting (PyYAML preserves neither), so this edits the raw text
+    instead -- the same "generated content lives in a clearly marked
+    region, hand-authored content stays outside it" convention already
+    used for generated .md/.d.lua files in this pipeline."""
+    text = config_path.read_text(encoding="utf-8")
+    if NAV_GENERATED_BEGIN not in text or NAV_GENERATED_END not in text:
+        raise ValueError(
+            f"{config_path}: missing generated-nav markers "
+            f"({NAV_GENERATED_BEGIN!r} / {NAV_GENERATED_END!r}). Add them "
+            "once by hand around the API Reference group entries (empty "
+            "between them is fine); this command fills them in from then on."
+        )
+    before, rest = text.split(NAV_GENERATED_BEGIN, 1)
+    _, after = rest.split(NAV_GENERATED_END, 1)
+    new_text = before + NAV_GENERATED_BEGIN + "\n" + "\n".join(nav_lines) + "\n" + NAV_GENERATED_END + after
+    config_path.write_text(new_text, encoding="utf-8")
 
 
 def source_label(item: dict) -> str:
@@ -1860,6 +1938,12 @@ def parse_args() -> argparse.Namespace:
         ),
     )
 
+    nav_parser = subparsers.add_parser(
+        "update-nav", help="Regenerate the API Reference item nav sub-tree in one or more mkdocs config files."
+    )
+    nav_parser.add_argument("--input", required=True, type=Path)
+    nav_parser.add_argument("--mkdocs-config", required=True, type=Path, nargs="+")
+
     return parser.parse_args()
 
 
@@ -1897,6 +1981,14 @@ def main() -> int:
             print(f"Built Markdown into {args.docs_output}")
             for luals_output in args.luals_output:
                 print(f"Built LuaLS into {luals_output}")
+            return 0
+
+        if args.command == "update-nav":
+            model = load_model(args.input)
+            nav_lines = render_nav_yaml_block(model)
+            for config_path in args.mkdocs_config:
+                update_mkdocs_nav(config_path, nav_lines)
+                print(f"Updated nav in {config_path}")
             return 0
     except Exception as exc:
         print(f"Error: {exc}", file=sys.stderr)
