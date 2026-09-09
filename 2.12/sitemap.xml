@@ -121,66 +121,6 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/display-lcd/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/display-lvgl/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/filesystem/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/key-inputs/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/lua-scripts/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/model-functions/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/radio-hardware/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/rf-module/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/serial-ports/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/sources/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/switches/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/system/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/telemetry/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/time/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.12/api-reference/variables/</loc>
-         <lastmod>2026-09-09</lastmod>
-    </url>
-    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/audio-sound/flush-audio/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -202,6 +142,10 @@
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/audio-sound/play-tone/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/display-lcd/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
@@ -393,6 +337,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/display-lvgl/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/display-lvgl/lvgl-align/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -573,6 +521,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/filesystem/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/filesystem/chdir/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -597,6 +549,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/key-inputs/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/key-inputs/default-channel/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -617,7 +573,15 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/lua-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/lua-scripts/load-script/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/model-functions/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
@@ -777,6 +741,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/radio-hardware/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/radio-hardware/apply-rgbled-colors/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -805,6 +773,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/rf-module/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/rf-module/access-telemetry-push/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -825,6 +797,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/serial-ports/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/serial-ports/serial-get-power/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -842,6 +818,10 @@
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/serial-ports/set-serial-baudrate/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/sources/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
@@ -866,6 +846,10 @@
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/sources/sources/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/switches/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
@@ -897,6 +881,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/system/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/system/get-available-memory/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -914,6 +902,10 @@
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/system/screenshot/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/telemetry/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
@@ -945,6 +937,10 @@
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/time/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/time/get-date-time/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
@@ -962,6 +958,10 @@
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.12/api-reference/time/reset-global-timer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.12/api-reference/variables/</loc>
          <lastmod>2026-09-09</lastmod>
     </url>
     <url>
