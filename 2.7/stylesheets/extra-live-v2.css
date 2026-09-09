@@ -181,8 +181,17 @@
    a separate right-hand "on this page" TOC sidebar -- not wanted here at
    all, so hide it outright rather than styling it. The `toc` markdown
    extension itself stays on (mkdocs.yml's markdown_extensions) purely for
-   its permalink anchors on headings, which is unrelated to this sidebar. */
-.md-sidebar--secondary {
+   its permalink anchors on headings, which is unrelated to this sidebar.
+   Plain .md-sidebar--secondary alone doesn't win: Material's own
+   `.md-sidebar--secondary:not([hidden]){display:block}` has higher
+   specificity (a class plus a :not() pseudo-class beats a lone class) and
+   is exactly the rule that applies on any page with enough headings for
+   Material to want to show a TOC -- precisely the pages this needs to
+   actually hide it on. Matching that selector shape ties the specificity;
+   this stylesheet loading after Material's own settles the tie in our
+   favor via source order, no !important needed. */
+.md-sidebar--secondary,
+.md-sidebar--secondary:not([hidden]) {
   display: none;
 }
 
