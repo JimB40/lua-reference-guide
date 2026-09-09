@@ -2,1318 +2,1050 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://luadoc.edgetx.org/2.10/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/acknowledgments/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/quick-start/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/debugging-techniques/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/advanced-topics/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/function-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/advanced-topics/debugging-techniques/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/getting-started/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/advanced-topics/lua-data-sharing-across-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/handling-gps-sensor-data/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/advanced-topics/optimization-tricks/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/handling-lipo-sensor-data/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/included-lua-libraries/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/audio-sound/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/init-function-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/audio-sound/flushaudio/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/input-table-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/audio-sound/playduration/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/introduction/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/audio-sound/playfile/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/key-events/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/audio-sound/playhaptic/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/known-issues/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/audio-sound/playnumber/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lua-data-sharing-across-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/audio-sound/playtone/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/mix/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/bitmap/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/one-time-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/bitmap/bitmap-resize/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/optimization-tricks/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/bitmap/bitmap-tomask/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/output-table-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/bitmap/getsize/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-i-script-type-overview/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/bitmap/open/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/color-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iv-converting-opentx-20-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/flags-and-pattern-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-vi-advanced-topics/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/key-event-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-vii-appendix/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/key-events/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/return-statement-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/logical-switch-function-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/run-function-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/screen-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/telemetry/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/special-character-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/theme-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/special-function-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/widget-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/touch-event-constants/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/wizard/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/units/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/constants/widget-options/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/clear/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawannulus/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawarc/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawbitmap/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawchannel/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawcircle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawcombobox/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawfilledcircle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawfilledrectangle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawfilledtriangle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawgauge/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawhudrectangle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawline/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawlinewithclipping/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawnumber/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawpie/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawpixmap/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawpoint/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawrectangle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawscreentitle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawsource/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawswitch/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawtext/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawtimer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/drawtriangle/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/getcolor/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/getlastleftpos/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/getlastpos/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/getlastrightpos/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/grey/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/lcd-drawbitmappattern/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/lcd-drawbitmappatternpie/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/lcd-drawtextlines/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/lcd-exitfullscreen/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/lcd-functions-overview/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/lcd-invertrect/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/popupconfirmation/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/popupinput/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/popupwarning/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/refresh/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/resetbacklighttimeout/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/rgb/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/setcolor/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/display-lcd/sizetext/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/filesystem/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/filesystem/chdir/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/filesystem/del/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/filesystem/dir/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/filesystem/fstat/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/gps/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/gps/gettxgps/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/key-inputs/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/key-inputs/getrotencmode/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/key-inputs/getrotencspeed/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/key-inputs/killevents/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/lua-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/lua-scripts/getavailablememory/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/lua-scripts/getusage/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/lua-scripts/loadscript/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/defaultinputs/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/deleteflightmodes/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/deleteinput/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/deleteinputs/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/deletemix/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/deletemixes/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getcurve/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getcustomfunction/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getflightmode/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getglobalvariable/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getinfo/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getinput/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getinputscount/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getlogicalswitch/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getmix/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getmixescount/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getmodule/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getoutput/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/getsensor/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/gettimer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/insertinput/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/insertmix/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/model-getswashring/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/model-setswashring-params/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/resetsensor/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/resettimer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setcurve/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setcustomfunction/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setflightmode/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setglobalvariable/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setinfo/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setlogicalswitch/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setmodule/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/setoutput/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/model/settimer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/accesstelemetrypush/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/crossfiretelemetrypop/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/crossfiretelemetrypush/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/getras/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/ghosttelemetrypop/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/ghosttelemetrypush/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/multibuffer-address-value/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/multibuffer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/sporttelemetrypop/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/rf-module/sporttelemetrypush/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/serial-ports/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/serial-ports/serialgetpower/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/serial-ports/serialread/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/serial-ports/serialsetpower/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/serial-ports/serialwrite/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/serial-ports/setserialbaudrate/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/system/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/system/defaultchannel/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/system/defaultstick/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/system/getgeneralsettings/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/system/getversion/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/telemetry/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/telemetry/getrssi/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/telemetry/settelemetryvalue/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/time/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/time/getdatetime/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/time/getglobaltimer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/time/getrtctime/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/time/gettime/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/time/resetglobaltimer/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getfieldinfo/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getflightmode/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getlogicalswitchvalue/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getoutputvalue/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getshmvar/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getsourceindex/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getsourcename/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getsourcevalue/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getswitchindex/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getswitchname/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getswitchvalue/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/getvalue/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/setshmvar/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/setstickyswitch/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/sources/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/api-reference/variables/switches/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/appendix/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/appendix/fonts/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/appendix/units/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/archive/bit32-library/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/math-library/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/string-library/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/table-library/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/io-library/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/io-library/io-close/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/io-library/io-open/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/io-library/io-read/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/io-library/io-seek/</loc>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/archive/io-library/io-write/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/assets/legacy-2.10/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/bitmap/getsize/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/bitmap/open/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/general/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/accesstelemetrypush/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/chdir/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/crossfiretelemetrypop/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/crossfiretelemetrypush/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/defaultchannel/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/defaultstick/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getavailablememory/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getdatetime/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getfieldinfo/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getflightmode/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getgeneralsettings/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getglobaltimer/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getras/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getrotencspeed/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getrssi/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getrtctime/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/gettime/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/gettxgps/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getusage/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getvalue/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/getversion/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/grey/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/killevents/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/loadscript/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/multibuffer/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/playduration/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/playfile/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/playhaptic/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/playnumber/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/playtone/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/popupconfirmation/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/popupinput/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/popupwarning/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/resetglobaltimer/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/serialread/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/serialwrite/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/setserialbaudrate/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/settelemetryvalue/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/sporttelemetrypop/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/general/sporttelemetrypush/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
+    </url>
+    <url>
+         <loc>https://luadoc.edgetx.org/2.10/gitbook/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
          <loc>https://luadoc.edgetx.org/2.10/gitbook/assets/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/introduction/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/introduction/acknowledgments/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/lua-basics/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/introduction/getting-started/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/internal-indexes/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/clear/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/internal-indexes/source-list/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawbitmap/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/internal-indexes/switch-positions-id/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawchannel/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/radios/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawcombobox/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/radios/betafpv/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawfilledrectangle/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/radios/flysky/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawgauge/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/radios/frsky/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawline/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/radios/jumper/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawnumber/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/radios/radiomaster/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawpixmap/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/radios/radiomaster/tx16s/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawpoint/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/script-types/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawrectangle/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/script-types/function-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawscreentitle/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/script-types/mixes-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawsource/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/script-types/one-time-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawswitch/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/script-types/telemetry-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawtext/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/script-types/widget-scripts/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/drawtimer/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/version-libraries/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/getcolor/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/overview/version-libraries/io-library/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/getlastleftpos/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/getlastpos/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/data-exchange-with-the-edgetx-model-setup/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/getlastrightpos/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/drawing-flags-and-colors/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/lcd-functions-overview/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/init-function-syntax/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/refresh/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/input-table-syntax/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/resetbacklighttimeout/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/loading-code-modules-dynamically/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/rgb/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/output-table-syntax/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/lcd/setcolor/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/return-statement-syntax/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/defaultinputs/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/run-function-syntax/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/deleteflightmodes/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/saving-memory/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
     <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/deleteinput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/deleteinputs/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/deletemix/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/deletemixes/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getcurve/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getcustomfunction/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getflightmode/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getglobalvariable/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getinfo/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getinput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getinputscount/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getlogicalswitch/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getmix/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getmixescount/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getmodule/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getoutput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/getsensor/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/gettimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/insertinput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/insertmix/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/resetsensor/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/resettimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setcurve/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setcustomfunction/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setflightmode/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setglobalvariable/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setinfo/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setlogicalswitch/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setmodule/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/setoutput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/model/settimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-i-script-type-overview/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-i-script-type-overview/function-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-i-script-type-overview/mix/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-i-script-type-overview/one-time-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-i-script-type-overview/telemetry/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-i-script-type-overview/widget-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/data-exchange-with-the-edgetx-model-setup/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/drawing-flags-and-colors/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/init-function-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/input-table-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/loading-code-modules-dynamically/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/lua-basics/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/output-table-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/return-statement-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/run-function-syntax/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/saving-memory/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/using-key-and-touch-events/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/bit32-library/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/math-library/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/string-library/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/io-library/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/io-library/io-close/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/io-library/io-open/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/io-library/io-read/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/io-library/io-seek/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-ii-opentx-lua-api-programming-guide/included-lua-libraries/io-library/io-write/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/bitmap-functions-less-than-greater-than-luadoc-begin-bitmap/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/bitmap-functions-less-than-greater-than-luadoc-begin-bitmap/bitmap-resize-bitmap-width-height/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/bitmap-functions-less-than-greater-than-luadoc-begin-bitmap/bitmap-tomask-bitmap/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/bitmap-functions-less-than-greater-than-luadoc-begin-bitmap/getsize/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/bitmap-functions-less-than-greater-than-luadoc-begin-bitmap/open/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/color-constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/flags-and-pattern-constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/key-events/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/logical-switch-function-constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/screen-constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/special-character-constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/special-function-constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/touch-event-constants/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/constants/widget-options/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/filesystem/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/filesystem/del-file-or-directory/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/filesystem/dir-directory/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/filesystem/fstat-path/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/accesstelemetrypush/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/chdir/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/crossfiretelemetrypop/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/crossfiretelemetrypush/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/defaultchannel/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/defaultstick/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/flushaudio/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getavailablememory/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getdatetime/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getfieldinfo/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getflightmode/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getgeneralsettings/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getglobaltimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getlogicalswitchvalue-id/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getoutputvalue-outputindex/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getras/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getrotencmode/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getrotencspeed/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getrssi/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getrtctime/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getshmvar-id/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getsourceindex-sourcename/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getsourcename-sourceindex/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getsourcevalue-source/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getswitchindex-positionname/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getswitchname-switchindex/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getswitchvalue-switchindex/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/gettime/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/gettxgps/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getusage/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getvalue/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/getversion/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/ghosttelemetrypop/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/ghosttelemetrypush/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/grey/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/killevents/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/loadscript/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/multibuffer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/playduration/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/playfile/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/playhaptic/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/playnumber/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/playtone/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/popupconfirmation-title-message-event/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/popupconfirmation/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/popupinput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/popupwarning/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/resetglobaltimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/serialgetpower-port-nr/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/serialread/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/serialsetpower-port-nr-value/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/serialwrite/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/setserialbaudrate-baudrate/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/setserialbaudrate/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/setshmvar-id-value/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/setstickyswitch-id-value/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/settelemetryvalue/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/sources-first-last/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/sporttelemetrypop/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/sporttelemetrypush/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/general-functions-less-than-greater-than-luadoc-begin-general/switches-first-last/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/clear/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawannulus/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawarc/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawbitmap/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawchannel/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawcircle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawcombobox/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawfilledcircle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawfilledrectangle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawfilledtriangle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawgauge/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawhudrectangle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawline/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawlinewithclipping/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawnumber/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawpie/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawpixmap/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawpoint/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawrectangle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawscreentitle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawsource/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawswitch/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawtext/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawtimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/drawtriangle/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/getcolor/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/getlastleftpos/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/getlastpos/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/getlastrightpos/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd-drawbitmappattern-bitmap-x-y-flags/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd-drawbitmappatternpie-bitmap-x-y-startangle-endangle-flags/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd-drawtextlines-x-y-w-h-text-flags/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd-exitfullscreen/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd-functions-overview/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/lcd-invertrect-x-y-w-h-flags/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/refresh/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/resetbacklighttimeout/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/rgb/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/setcolor/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/lcd-functions-less-than-greater-than-luadoc-begin-lcd/sizetext/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/defaultinputs/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/deleteflightmodes/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/deleteinput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/deleteinputs/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/deletemix/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/deletemixes/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getcurve/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getcustomfunction/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getflightmode/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getglobalvariable/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getinfo/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getinput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getinputscount/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getlogicalswitch/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getmix/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getmixescount/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getmodule/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getoutput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/getsensor/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/gettimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/insertinput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/insertmix/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/model-getswashring/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/model-setswashring-params/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/resetsensor/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/resettimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setcurve/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setcustomfunction/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setflightmode/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setglobalvariable/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setinfo/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setlogicalswitch/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setmodule/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/setoutput/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iii-opentx-lua-api-reference/model-functions-less-than-greater-than-luadoc-begin-model/settimer/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iv-advanced-topics/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iv-advanced-topics/debugging-techniques/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iv-advanced-topics/lua-data-sharing-across-scripts/</loc>
-         <lastmod>2026-03-28</lastmod>
-    </url>
-    <url>
-         <loc>https://luadoc.edgetx.org/2.10/part-iv-advanced-topics/optimization-tricks/</loc>
-         <lastmod>2026-03-28</lastmod>
+         <loc>https://luadoc.edgetx.org/2.10/programming/using-key-and-touch-events/</loc>
+         <lastmod>2026-09-09</lastmod>
     </url>
 </urlset>
