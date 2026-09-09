@@ -45,13 +45,23 @@ LEGACY_PATH_PREFIX_ALIASES: tuple[tuple[str, str], ...] = (
     ("part_ii_-_opentx_lua_api_programming_guide/", "programming/"),
     ("part_iii_-_opentx_lua_api_reference/", "api-reference/"),
     ("part_iv_-_advanced_topics/", "advanced-topics/"),
+    # The real branch content (2.4-2.9, verified against the actual repo
+    # trees) always uses the undotted "opentx_20_scripts" spelling -- no
+    # branch anywhere uses the dotted "2.0" form below. Kept the dotted
+    # entries too rather than replacing them, in case some other branch we
+    # haven't checked still uses it; either way both fall through cleanly
+    # to raw slugging if genuinely unmatched.
+    ("part_iv_-_converting_opentx_20_scripts/", "converting-opentx-20-scripts/"),
     ("part_iv_-_converting_opentx_2.0_scripts/", "converting-opentx-2-0-scripts/"),
+    ("part_v_-_converting_opentx_21_scripts/", "converting-opentx-21-scripts/"),
     ("part_vi_-_advanced_topics/", "advanced-topics/"),
     ("part_vii_-_appendix/", "appendix/"),
     ("part_i_-_script_type_overview.md", "overview/index.md"),
     ("part_ii_-_opentx_lua_api_programming_guide.md", "programming/index.md"),
     ("part_iii_-_opentx_lua_api_reference.md", "api-reference/index.md"),
+    ("part_iv_-_converting_opentx_20_scripts.md", "converting-opentx-20-scripts/index.md"),
     ("part_iv_-_converting_opentx_2.0_scripts.md", "converting-opentx-2-0-scripts/index.md"),
+    ("part_v_-_converting_opentx_21_scripts.md", "converting-opentx-21-scripts/index.md"),
     ("part_vi_-_advanced_topics.md", "advanced-topics/index.md"),
     ("part_vii_-_appendix.md", "appendix/index.md"),
     ("lua-api-programming/", "programming/"),
@@ -183,14 +193,48 @@ def build_path_map(source_root: Path) -> dict[Path, Path]:
 
 
 def build_source_lookup(source_root: Path) -> dict[str, Path]:
-    lookup: dict[str, Path] = {}
+    # Two passes: first register every file under its own *exact*-case path
+    # (unconditional assignment -- each real file has a distinct exact path,
+    # so these never collide with each other). Only then build the
+    # case-insensitive fallback, deciding collisions explicitly instead of
+    # via a plain setdefault ordered by rglob's sort. The naive single-pass
+    # setdefault version had a real bug: when a lowercase folder (the
+    # "real" one, with its own README.md) coexists with an accidental
+    # differently-cased duplicate (e.g. edgetx_2.4's
+    # "Bitmap-functions.../getsize.md" next to
+    # "bitmap-functions.../getsize.md"), the capitalized variant sorts
+    # first and its *lowercased* key registration collides with -- and
+    # silently wins over -- the real lowercase file's own *exact*-case key,
+    # since for an already-lowercase path those two strings are identical.
+    # SUMMARY.md links use the real folder's exact original casing, so this
+    # was resolving to the wrong (duplicate, README-less) source file.
+    exact: dict[str, Path] = {}
+    case_insensitive_candidates: dict[str, list[Path]] = {}
     for source_file in sorted(source_root.rglob("*.md")):
         relative_path = source_file.relative_to(source_root)
         if relative_path.name == "SUMMARY.md":
             continue
         decoded = decode_gitbook_path(relative_path.as_posix())
-        lookup.setdefault(decoded, relative_path)
-        lookup.setdefault(decoded.lower(), relative_path)
+        exact[decoded] = relative_path
+        case_insensitive_candidates.setdefault(decoded.lower(), []).append(relative_path)
+
+    lookup: dict[str, Path] = dict(exact)
+    for lower_key, candidates in case_insensitive_candidates.items():
+        if lower_key in lookup:
+            continue
+        if len(candidates) == 1:
+            lookup[lower_key] = candidates[0]
+            continue
+        # Multiple differently-cased source files collapse to the same
+        # lowercased key. Prefer whichever one's directory has its own
+        # README.md -- the real, "complete" section -- over a bare
+        # duplicate with no index page; otherwise fall back to the first
+        # in sorted order (prior behavior).
+        with_readme = [c for c in candidates if (source_root / c.parent / "README.md").exists()]
+        chosen = with_readme[0] if with_readme else candidates[0]
+        lookup[lower_key] = chosen
+        others = [c for c in candidates if c != chosen]
+        print(f"  (case-duplicate sources for {lower_key!r}: using {chosen}, ignoring {others})")
     return lookup
 
 
@@ -238,7 +282,7 @@ def nav_entry(node: SummaryNode) -> dict[str, object]:
 def build_nav(summary_nodes: list[SummaryNode]) -> list[object]:
     nav: list[object] = []
     for node in summary_nodes:
-        title = "EdgeTX LuaDoc" if node.path == "README.md" else node.title
+        title = "EdgeTX Lua Reference Guide" if node.path == "README.md" else node.title
         rewritten = SummaryNode(title=title, path=node.path, children=node.children)
         nav.append(nav_entry(rewritten))
     return nav
@@ -414,12 +458,35 @@ def build_output_tree(
     copy_current_theme_assets(output_docs_dir)
     copy_legacy_assets(source_root, output_docs_dir, legacy_assets_dir)
 
+    # Every book has both a real section folder (.../part_i_-_..._overview/
+    # README.md) and a same-titled top-level stub file
+    # (part_i_-_..._overview.md) that LEGACY_PATH_PREFIX_ALIASES maps
+    # straight to the same "overview/index.md" target the folder's
+    # README.md also auto-mirrors to below. Verified empirically against
+    # edgetx_2.4: the folder's README.md is consistently the more complete
+    # of the two (has frontmatter, more current wording -- "EdgeTX" vs the
+    # stub's "OpenTX" -- more lines), so it should win. build_path_map's own
+    # collision handling doesn't cover this (it only dedupes when two
+    # *different source files* map to the *same explicit target*, which
+    # isn't this case: the stub's target IS index.md, the folder's target
+    # is its own README.md; the mirror write below is untracked by it
+    # entirely). Rather than special-case the mirror, track every path
+    # actually written to output_docs_dir and make ANY write -- primary or
+    # mirror -- back off once something else already claimed that exact
+    # path, first-processed wins. rglob's sort naturally processes each
+    # folder's README.md (and its mirror) before that section's top-level
+    # stub (Path comparison is by parts-tuple, and "section" as a bare
+    # first part sorts before "section.md" as a longer first part), so this
+    # gives the README priority without needing to special-case which side
+    # is the "real" one.
+    written_targets: set[Path] = set()
+
     for source_file in sorted(source_root.rglob("*.md")):
         relative_path = source_file.relative_to(source_root)
         if relative_path.name == "SUMMARY.md":
             continue
-        destination = output_docs_dir / path_map[relative_path]
-        destination.parent.mkdir(parents=True, exist_ok=True)
+        target = path_map[relative_path]
+        destination = output_docs_dir / target
         transformed = transform_markdown(
             source_file.read_text(encoding="utf-8"),
             source_file,
@@ -428,9 +495,21 @@ def build_output_tree(
             source_lookup,
             legacy_assets_dir,
         )
-        destination.write_text(transformed, encoding="utf-8")
+
+        if target in written_targets:
+            print(f"  (skipping {relative_path}: {target} was already written by an earlier source file)")
+        else:
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(transformed, encoding="utf-8")
+            written_targets.add(target)
+
         if destination.name == "README.md":
-            (destination.parent / "index.md").write_text(transformed, encoding="utf-8")
+            index_target = (destination.parent / "index.md").relative_to(output_docs_dir)
+            if index_target in written_targets:
+                print(f"  (skipping index.md mirror for {relative_path}: {index_target} already written)")
+            else:
+                (destination.parent / "index.md").write_text(transformed, encoding="utf-8")
+                written_targets.add(index_target)
 
 
 def build_config(
@@ -440,25 +519,72 @@ def build_config(
     site_dir: Path,
     version_name: str,
 ) -> None:
+    # theme/plugins/markdown_extensions mirror the current root mkdocs.yml
+    # feature-for-feature (dark mode palette, the dotted-symbol search
+    # separator fix, minify, pymdownx set) so a legacy
+    # version doesn't look or search noticeably worse than the current
+    # site just because it was generated once and never regenerated.
+    # There's no shared-config loader between the two -- this is a plain
+    # copy -- so if mkdocs.yml's theme config changes again, update this
+    # to match.
     config = {
-        "site_name": "EdgeTX LuaDoc",
+        "site_name": "EdgeTX Lua Reference Guide",
         "site_description": f"Legacy EdgeTX {version_name} Lua documentation imported from the GitBook branch",
         "site_url": "https://luadoc.edgetx.org/",
+        "repo_url": "https://github.com/JimB40/lua-reference-guide",
+        "repo_name": "JimB40/lua-reference-guide",
+        # No edit_uri: docs_dir is a temp workspace, not real repo content
+        # (this converted GitBook page isn't something you can "edit" back
+        # into the branch the same way), so leave it empty to suppress
+        # Material's edit-this-page pencil rather than let it infer a
+        # broken link from repo_url. repo_url/repo_name alone are enough to
+        # show the GitHub header widget, which is all that's wanted here.
+        "edit_uri": "",
         "docs_dir": str(output_docs_dir),
         "site_dir": str(site_dir),
         "theme": {
             "name": "material",
             "logo": "assets/edgetx-logo.svg",
             "favicon": "assets/edgetx-logo.svg",
-            "palette": {"primary": "custom", "accent": "custom"},
-            "features": ["navigation.path"],
+            "font": False,
+            "palette": [
+                {
+                    "media": "(prefers-color-scheme: light)",
+                    "scheme": "default",
+                    "primary": "custom",
+                    "accent": "custom",
+                    "toggle": {"icon": "material/brightness-7", "name": "Switch to dark mode"},
+                },
+                {
+                    "media": "(prefers-color-scheme: dark)",
+                    "scheme": "slate",
+                    "primary": "custom",
+                    "accent": "custom",
+                    "toggle": {"icon": "material/brightness-4", "name": "Switch to light mode"},
+                },
+            ],
+            "features": [
+                "navigation.indexes",
+                "navigation.path",
+                "navigation.top",
+                "toc.follow",
+                "search.suggest",
+                "search.highlight",
+                "content.code.copy",
+            ],
         },
+        "plugins": [
+            {
+                "search": {
+                    "separator": "[\\s\\-\\.]+",
+                },
+            },
+            {"minify": {"minify_html": True}},
+        ],
         "extra_css": ["stylesheets/extra-live-v2.css"],
         "extra_javascript": [
-            "javascripts/api-function-breadcrumb.js",
             "javascripts/mobile-nav-inline.js",
             "javascripts/legacy-version-banner.js",
-            "javascripts/toc-visibility.js",
         ],
         "extra": {
             "version": {"provider": "mike", "default": "latest", "alias": True},
@@ -468,7 +594,20 @@ def build_config(
                 "message": f"This documentation version preserves the original {version_name} GitBook content and structure for reference.",
             },
         },
-        "markdown_extensions": ["tables", "admonition", "fenced_code"],
+        "markdown_extensions": [
+            "tables",
+            "admonition",
+            "pymdownx.details",
+            "pymdownx.superfences",
+            {"pymdownx.highlight": {"anchor_linenums": True}},
+            "pymdownx.inlinehilite",
+            "pymdownx.snippets",
+            {"pymdownx.tabbed": {"alternate_style": True}},
+            "pymdownx.tilde",
+            "attr_list",
+            "md_in_html",
+            {"toc": {"permalink": True}},
+        ],
         "nav": nav,
     }
     config_path.parent.mkdir(parents=True, exist_ok=True)

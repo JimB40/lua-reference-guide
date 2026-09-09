@@ -191,6 +191,8 @@ Requirements:
 - imported legacy versions should display a small notice that the content is historical and may not include later corrections
 - imported legacy versions should be built from their own branch content, not from duplicated copies stored under another version
 
+**Status: done.** 2.4 through 2.11 are imported and published via `mike`, built from `tools/import_legacy_gitbook.py` against each version's own GitBook-era branch content (2.4-2.7 and 2.11 come from the upstream `EdgeTX/lua-reference-guide` repo, since this fork doesn't carry those branches). Deployed manually (`mike deploy --config-file ... --push` per version), not via `.github/workflows/publish-versioned-docs.yml` -- that workflow only handles `main`/`edgetx_2.12`, since the legacy branches don't exist in this fork for it to trigger from. `opentx_2.2`/`opentx_2.3` (pre-EdgeTX) were left out of scope.
+
 Non-requirement:
 
 - imported legacy versions do not need to match historical GitBook visuals
@@ -294,16 +296,7 @@ Done when:
 
 ### Workstream 5: Decide legacy-version migration timing
 
-Scope:
-
-- keep pre-2.12 versions on GitBook during the transition unless there is a clear reason to move them sooner
-- evaluate whether 2.11 or older need to be imported into MkDocs after 2.12 is stable
-- if imported, publish them from their own branches using the shared MkDocs UI
-
-Done when:
-
-- there is an explicit decision for each older version: stay on GitBook for now, or migrate into MkDocs later
-- any migrated legacy version uses branch-based content and a legacy notice
+**Status: done.** 2.4 through 2.11 are imported into MkDocs and published via `mike`, each from its own branch content with the legacy-version notice enabled. See the note under "Versioning Approach" above for how. `opentx_2.2`/`opentx_2.3` were left on their own (pre-EdgeTX, not part of this migration).
 
 ## Immediate Execution Order
 
@@ -314,7 +307,7 @@ The recommended order of implementation is:
 3. Update the publish workflow to support `edgetx_2.12`, `dev`, and `latest`
 4. Validate the complete 2.12 site locally
 5. Publish 2.12 as the first MkDocs release
-6. Revisit whether 2.11 and older should remain on GitBook or be imported later
+6. ~~Revisit whether 2.11 and older should remain on GitBook or be imported later~~ -- done, see Workstream 5
 
 ## First Actionable Tasks
 

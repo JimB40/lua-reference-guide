@@ -58,7 +58,7 @@
       "ids": ["defaultChannel", "defaultStick", "getRotEncMode", "getRotEncSpeed", "killEvents"]
     },
     {
-      "name": "LUA Scripts",
+      "name": "Lua Scripts",
       "slug": "lua-scripts",
       "description": "Script lifecycle helpers and interactive popups.",
       "ids": ["loadScript"]
