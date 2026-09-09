@@ -2,14 +2,19 @@
   {
     "version": "edgetx-v2.12",
     "title": "2.12",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "preview",
     "title": "2.12",
     "aliases": []
+  },
+  {
+    "version": "2.12",
+    "title": "2.12",
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "2.11",
