@@ -42,7 +42,13 @@ theme:
     - search.highlight
     - content.code.copy
 plugins:
-  - search
+  - search:
+      # Default separator only splits on whitespace/hyphens ([\s\-]+), so a
+      # dotted API symbol like "model.getMix" indexes as one token and a
+      # search for just "getMix" can't prefix-match it (the token starts
+      # with "model", not "getmix"). Also split on "." so the module and
+      # member name become separate searchable tokens.
+      separator: '[\s\-\.]+'
   - minify:
       minify_html: true
 extra_css:
