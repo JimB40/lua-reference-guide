@@ -15,8 +15,8 @@ Typical use cases:
 
 ## Execution & Lifetime
 
-Mixes script is loded when model is selected.\
-\
+Mixes script is loded when model is selected.
+
 Script executes until
 
 * it misbehaves (e.g. run-time error or low memory)
@@ -42,7 +42,7 @@ Script executes until
 
 ## File Location
 
-Mixes scripts are located on SD card in folder /SCRIPTS/MIXES/
+Mixes scripts are located on SD card in folder `/SCRIPTS/MIXES/`
 
 !!! warning
     File name length (without extension) **must be 6 characters or less**
@@ -57,13 +57,13 @@ Every Mixes Script must include a `return` statement at the end, defining its in
 | ---------- | -------- | -------- |
 | **run**    | function | yes      |
 
-This function is called periodicaly when script is running. \
-\
-**Parameters** \
-Variables matching those used in `input` table\
-\
-**Return values**\
-Variables matching those used in `output` table\
+This function is called periodicaly when script is running.
+
+**Parameters**<br>
+Variables matching those used in `input` table
+
+**Return values**<br>
+Variables matching those used in `output` table
 
 
 | table item | type     | required |
@@ -72,11 +72,11 @@ Variables matching those used in `output` table\
 
 This function is called once when Mixes Script is loaded and executed for the first time
 
-**Parameters**\
-none\
-\
-**Return values**\
-none\
+**Parameters**<br>
+none
+
+**Return values**<br>
+none
 
 
 | table item | type  | required |
@@ -93,7 +93,7 @@ There are two forms of input table entries
 { "<name>", SOURCE }
 ```
 
-SOURCE inputs provide the current value of a selected EdgeTX variable. The source must be selected by the user when the script is configured. Source can be any value that EdgeTX knows about (inputs, channels, telemetry values, switches, custom functions etc.).\
+SOURCE inputs provide the current value of a selected EdgeTX variable. The source must be selected by the user when the script is configured. Source can be any value that EdgeTX knows about (inputs, channels, telemetry values, switches, custom functions etc.).<br>
 **Note:** the typical input range is -1024 thru +1024. Simply divide the input value by 10.24 to convert to a percentage from -100% to +100%.
 
 **VALUE**

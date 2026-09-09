@@ -9,7 +9,7 @@ Most of the time, widget scripts show some info in a _Widget's zone_ in one of t
 Each model can have up to nine Main Views, with up to 8 widgets per screen, depending on their size and layout. Each instance of a widget has its own _options_ table.
 
 !!! warning
-    Widget scripts are only available on radios with color LCD screens, such as e.g. FrSky X10 or X12, Radiomaster TX16S, Jumper T16 or T18, Flysky NV14, etc.\
+    Widget scripts are only available on radios with color LCD screens, such as e.g. FrSky X10 or X12, Radiomaster TX16S, Jumper T16 or T18, Flysky NV14, etc.<br>
     Read more about [supported radios](../../radios/README.md).
 
 ## Execution & Lifetime
@@ -26,8 +26,8 @@ Script executes until:
 
 ## File Location
 
-Widget scripts are located on the SD card, each one in their specific folder: \
-/WIDGETS/\<folder _name_>/
+Widget scripts are located on the SD card, each one in their specific folder:<br>
+`/WIDGETS/<folder name>/`
 
 !!! warning
     Widget script folder name length **must be 8 characters or less**
@@ -35,8 +35,8 @@ Widget scripts are located on the SD card, each one in their specific folder: \
 Widget script name is constant and has to be named **main.lua**
 
 !!! info
-    Example of proper Widget script placement to be registered by EdgeTX as a valid Widget script available to the user in the Widgets selection menu:\
-    /WIDGETS/MYWGT/main.lua
+    Example of proper Widget script placement to be registered by EdgeTX as a valid Widget script available to the user in the Widgets selection menu:<br>
+    `/WIDGETS/MYWGT/main.lua`
 
 !!! info
     Try to use a unique folder name. In case of a naming clash, the previously installed widget will be overwritten.
@@ -99,7 +99,7 @@ _Parameters_
 | **widget**<br>table | Widget's table returned by the `create` function, described above. |
 | **options**<br>table | Initial options table as described above |
 
-_Return values_\
+_Return values_<br>
 _none_
 
 | Field | Type | Required | Description |
@@ -112,7 +112,7 @@ _Parameters_
 | --- | --- |
 | **widget**<br>table | Widget's table returned by the `create` function, described above. |
 
-_Return values_\
+_Return values_<br>
 _none_
 
 | Field | Type | Required | Description |
@@ -127,7 +127,7 @@ _Parameters_
 | **event**<br>number | <ul><li>When the Widget Script is in full screen mode, then `event` is either 0, a [key event value](../constants/key-event-constants.md), or a [touch event value](../constants/touch-event-constants.md).</li><li>When the widget is not in full screen mode, then `event` is `nil`</li></ul>See [Key Events](../constants/key-event-constants.md). |
 | **touchState**<br>table | This parameter is only present when the radio is equipped with a touch interface and `event` is a touch event.<br><ul><li>If `event` is a [touch event value](../constants/touch-event-constants.md), then `touchState` is a table. Otherwise, it is `nil`.</li><li>When the widget is not in full screen mode then `touchState` is `nil`</li></ul>See [Touch State Events](../constants/touch-event-constants.md). |
 
-_Return values_\
+_Return values_<br>
 _none_
 
 !!! info

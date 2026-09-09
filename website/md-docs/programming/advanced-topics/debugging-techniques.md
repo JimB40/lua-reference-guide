@@ -43,7 +43,7 @@ An example of such a script is found under the notes. You can adapt it for other
 
 ### Script Loader
 
-This script loader will load the file /SCRIPTS/TELEM/telem1.lua, run it, and wait for an Enter Break event. Once received, it will unload the code and wait for a next Enter Break event.
+This script loader will load the file `/SCRIPTS/TELEM/telem1.lua`, run it, and wait for an Enter Break event. Once received, it will unload the code and wait for a next Enter Break event.
 
 ```lua
 local fileToLoad="/SCRIPTS/TELEM/telem1.lua"

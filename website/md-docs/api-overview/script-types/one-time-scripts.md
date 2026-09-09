@@ -21,18 +21,18 @@ The script executes until:
 
 ## File Location
 
-One-Time Scripts can be placed anywhere on SD card, however, the folder /SCRIPTS/ is recommended.
+One-Time Scripts can be placed anywhere on SD card, however, the folder `/SCRIPTS/` is recommended.
 
 !!! info
-    If One-Time Script is placed in special folder /SCRIPTS/TOOLS it will be visible in EdgeTX RADIO>TOOLS tab\
-    \
-    To give this One-Time Script unique name place at the beginning of lua script line:\
+    If One-Time Script is placed in special folder `/SCRIPTS/TOOLS` it will be visible in EdgeTX RADIO>TOOLS tab
+
+    To give this One-Time Script unique name place at the beginning of lua script line:<br>
     `-- toolName = "TNS|ScriptName|TNE`
 
     Otherwise script's filename will be used to display in RADIO>TOOLS list.
 
 !!! info
-    Wizard scripts must be stored in the same subfolder of /TEMPLATES/ with the same "first name" as the template file using it. Some Wizard scripts are just small scripts that load one of the common scripts located in /SCRIPTS/WIZARD/.
+    Wizard scripts must be stored in the same subfolder of `/TEMPLATES/` with the same "first name" as the template file using it. Some Wizard scripts are just small scripts that load one of the common scripts located in `/SCRIPTS/WIZARD/`.
 
 ## **Interface**
 
@@ -52,10 +52,10 @@ _Return values_
 
 <table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>init</strong></td><td>function</td><td>false</td><td>This function is called once when script is executed</td></tr></tbody></table>
 
-_Parameters_\
+_Parameters_<br>
 none
 
-_Return Values_\
+_Return Values_<br>
 none
 
 

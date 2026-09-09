@@ -19,19 +19,19 @@ This example consists of three scripts
 ## Installation:
 
 * count-dn.lua
-  * copy to /SCRIPTS/MIXES
+  * copy to `/SCRIPTS/MIXES`
   * configure on the transmitter CUSTOM SCRIPT page
     * suggested switch = "SA"
     * suggested mins = 3
     * suggested sw\_high = 0
   * on screen, this script shows a countdown (and, once it reaches zero, a count-up) timer next to output values `ctup` and `ctdn`
 * count-up.lua
-  * copy to /SCRIPTS/FUNCTIONS
+  * copy to `/SCRIPTS/FUNCTIONS`
   * configure on the transmitter SPECIAL FUNCTIONS page
     * suggested switch SA\(down\)
   * on screen, this script announces each count-up milestone as `gCountUp` reaches it
 * shocount.lua
-  * copy to /SCRIPTS/TELEMETRY
+  * copy to `/SCRIPTS/TELEMETRY`
   * configure on the transmitter TELEMETRY page
   * on screen, this script shows the current `gCountUp` and `gCountDown` values as plain text
 

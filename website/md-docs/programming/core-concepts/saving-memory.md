@@ -141,7 +141,7 @@ return {
 }
 ```
 
-The `create` function loads the file `loadable.lua` in the folder /WIDGETS/\<widget name>/, and calls it immediately as described in [the previous section](loading-code-modules-dynamically.md). It passes `zone` and `options` as arguments to `loadable.lua`. This scripts adds the functions `refresh`, `update` and (optionally) `background` to the `widget` table:
+The `create` function loads the file `loadable.lua` in the folder `/WIDGETS/<widget name>/`, and calls it immediately as described in [the previous section](loading-code-modules-dynamically.md). It passes `zone` and `options` as arguments to `loadable.lua`. This scripts adds the functions `refresh`, `update` and (optionally) `background` to the `widget` table:
 
 ```lua
 -- loadable.lua

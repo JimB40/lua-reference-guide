@@ -11,8 +11,8 @@ Typical uses of Function scripts are:
 
 ## Execution & Lifetime
 
-Function script is loded when model is selected.\
-\
+Function script is loded when model is selected.
+
 Script executes until
 
 * it misbehaves (e.g. run-time error or low memory)
@@ -23,7 +23,7 @@ Script executes until
 
 ## File Location
 
-Function scripts are located on the SD card in the folder /SCRIPTS/FUNCTIONS/
+Function scripts are located on the SD card in the folder `/SCRIPTS/FUNCTIONS/`
 
 !!! warning
     File name length (without extension) **must be 6 characters or less**
@@ -36,31 +36,31 @@ This statement returns a table with the following fields:
 
 <table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>run</strong></td><td>function</td><td>true</td><td>This function is called periodicaly when <strong>switch</strong> assiociated the Special Function <strong>is ON</strong>. </td></tr></tbody></table>
 
-_Parameters_\
+_Parameters_<br>
 _none_
 
-_Return values_\
+_Return values_<br>
 _none_
 
 
 
 <table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>init</strong></td><td>function</td><td>false</td><td>This function is called once when Function script is loaded and executed for the first time</td></tr></tbody></table>
 
-_Parameters_\
+_Parameters_<br>
 none
 
-_Return Values_\
+_Return Values_<br>
 none
 
 
 
 <table><thead><tr><th width="142.33333333333331">Field</th><th width="108">Type</th><th width="105" data-type="checkbox">Required</th><th>Desctiption</th></tr></thead><tbody><tr><td><strong>background</strong></td><td>function</td><td>true</td><td>This function is called periodicaly when <strong>switch</strong> assiociated the Special Function <strong>is OFF</strong></td></tr></tbody></table>
 
-_Parameters_\
+_Parameters_<br>
 none
 
-_Return Values_\
-none\
+_Return Values_<br>
+none
 
 
 ### Example
