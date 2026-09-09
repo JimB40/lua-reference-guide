@@ -1,8 +1,8 @@
 site_name: EdgeTX Lua Reference Guide
 site_description: Next-generation Lua API docs generated from EdgeTX source annotations
 site_url: https://luadoc.edgetx.org/
-repo_url: https://github.com/JimB40/lua-reference-guide
-repo_name: JimB40/lua-reference-guide
+repo_url: https://github.com/EdgeTX/lua-reference-guide
+repo_name: EdgeTX/lua-reference-guide
 edit_uri: edit/edgetx_2.12/website/md-docs/
 docs_dir: website/md-docs
 site_dir: site
@@ -66,7 +66,7 @@ extra:
     message: This documentation version is preserved for reference and may not include later corrections or the newest docs structure.
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/JimB40/lua-reference-guide
+      link: https://github.com/EdgeTX/lua-reference-guide
     - icon: fontawesome/brands/discord
       link: https://discord.gg/wF9wUKnZ6H
 nav:

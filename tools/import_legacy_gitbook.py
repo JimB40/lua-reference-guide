@@ -531,8 +531,8 @@ def build_config(
         "site_name": "EdgeTX Lua Reference Guide",
         "site_description": f"Legacy EdgeTX {version_name} Lua documentation imported from the GitBook branch",
         "site_url": "https://luadoc.edgetx.org/",
-        "repo_url": "https://github.com/JimB40/lua-reference-guide",
-        "repo_name": "JimB40/lua-reference-guide",
+        "repo_url": "https://github.com/EdgeTX/lua-reference-guide",
+        "repo_name": "EdgeTX/lua-reference-guide",
         # No edit_uri: docs_dir is a temp workspace, not real repo content
         # (this converted GitBook page isn't something you can "edit" back
         # into the branch the same way), so leave it empty to suppress
