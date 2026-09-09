@@ -29,6 +29,20 @@
     );
   }
 
+  // A wrapped section's <label> is icon-only -- its visible title text
+  // lives on the sibling <a> inside the same .md-nav__container, not the
+  // label (confirmed empirically: label.querySelector(".md-ellipsis") and
+  // even label's own textContent are both empty for a wrapped section).
+  // Reading the label for text, as sectionLabel's callers used to, silently
+  // produced an empty button title for every wrapped section (e.g. "API
+  // Reference") in the rebuilt mobile nav.
+  function sectionLinkText(item) {
+    const link =
+      directChild(item, "a.md-nav__link") ||
+      item.querySelector(":scope > .md-nav__container > a.md-nav__link");
+    return textOf(link?.querySelector(".md-ellipsis")) || textOf(link);
+  }
+
   function buildLeafItem(sourceItem) {
     const link = directChild(sourceItem, "a.md-nav__link[href]");
     if (!link) {
@@ -80,8 +94,7 @@
     button.className = "mobile-desktop-nav__toggle";
     button.innerHTML =
       '<span class="mobile-desktop-nav__label"></span><span class="mobile-desktop-nav__icon" aria-hidden="true"></span>';
-    button.querySelector(".mobile-desktop-nav__label").textContent =
-      textOf(label.querySelector(".md-ellipsis")) || textOf(label);
+    button.querySelector(".mobile-desktop-nav__label").textContent = sectionLinkText(sourceItem);
 
     const nestedList = buildList(nestedListSource);
     nestedList.classList.add("mobile-desktop-nav__list--nested");
