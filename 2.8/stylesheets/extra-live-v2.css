@@ -176,6 +176,16 @@
   font-weight: 600;
 }
 
+/* toc.integrate is off (folding the per-page TOC into the left nav wasn't
+   wanted either), and Material's default behaviour without it is to show
+   a separate right-hand "on this page" TOC sidebar -- not wanted here at
+   all, so hide it outright rather than styling it. The `toc` markdown
+   extension itself stays on (mkdocs.yml's markdown_extensions) purely for
+   its permalink anchors on headings, which is unrelated to this sidebar. */
+.md-sidebar--secondary {
+  display: none;
+}
+
 .legacy-version-banner {
   background: var(--lua-legacy-banner-bg);
   border: 1px solid var(--lua-legacy-banner-border);
