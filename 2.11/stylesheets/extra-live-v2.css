@@ -22,20 +22,84 @@
   --md-accent-fg-color: #38c0f7;
 }
 
+/* Brand-specific colors used throughout this stylesheet that Material has no
+   equivalent semantic variable for (sidebar branding, migration/legacy amber
+   callouts, the api-card quality badge). Defined once per color scheme here
+   instead of duplicating every selector under [data-md-color-scheme="slate"]
+   -- anywhere a hardcoded color below was just "readable default text/
+   background" it uses Material's own theme-aware variables
+   (--md-default-fg-color, --md-default-bg-color, --md-default-fg-color--lightest)
+   instead of one of these, since those already adapt correctly on their own. */
 [data-md-color-scheme="default"] {
   --md-primary-fg-color: #0c7bcd;
   --md-primary-fg-color--light: #38c0f7;
   --md-primary-fg-color--dark: #095f9e;
   --md-accent-fg-color: #38c0f7;
+
+  --lua-sidebar-text: #35556f;
+  --lua-sidebar-hover-text: #095f9e;
+  --lua-sidebar-active-text: #084c7f;
+  --lua-sidebar-icon: rgba(12, 123, 205, 0.72);
+
+  --lua-migration-bg: rgba(255, 247, 237, 0.92);
+  --lua-migration-border: rgba(245, 158, 11, 0.28);
+  --lua-migration-border-strong: rgba(217, 119, 6, 0.78);
+  --lua-migration-hover-bg: rgba(245, 158, 11, 0.12);
+  --lua-migration-active-bg: rgba(245, 158, 11, 0.18);
+  --lua-migration-text: #9a3412;
+  --lua-migration-text-alt: #7c3e12;
+  --lua-migration-text-active: #7c2d12;
+  --lua-migration-icon: rgba(180, 83, 9, 0.78);
+
+  --lua-legacy-banner-bg: linear-gradient(135deg, rgba(255, 248, 225, 0.98), rgba(255, 243, 205, 0.94));
+  --lua-legacy-banner-border: rgba(217, 119, 6, 0.3);
+  --lua-legacy-banner-shadow: rgba(120, 53, 15, 0.08);
+  --lua-legacy-banner-label: #9a3412;
+  --lua-legacy-banner-message: #7c2d12;
+
+  --lua-badge-bg: rgba(255, 152, 0, 0.12);
+  --lua-badge-border: rgba(255, 152, 0, 0.28);
+  --lua-badge-text: rgb(191, 107, 0);
+
+  --lua-decision-btn-text: rgb(33, 110, 190);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0c7bcd;
+  --md-primary-fg-color--light: #38c0f7;
+  --md-primary-fg-color--dark: #38c0f7;
+  --md-accent-fg-color: #38c0f7;
+
+  --lua-sidebar-text: #a9c9e6;
+  --lua-sidebar-hover-text: #7fd0ff;
+  --lua-sidebar-active-text: #bfe4ff;
+  --lua-sidebar-icon: rgba(127, 208, 255, 0.85);
+
+  --lua-migration-bg: rgba(72, 44, 16, 0.6);
+  --lua-migration-border: rgba(245, 158, 11, 0.4);
+  --lua-migration-border-strong: rgba(251, 191, 36, 0.8);
+  --lua-migration-hover-bg: rgba(245, 158, 11, 0.22);
+  --lua-migration-active-bg: rgba(245, 158, 11, 0.3);
+  --lua-migration-text: #fdba74;
+  --lua-migration-text-alt: #fed7aa;
+  --lua-migration-text-active: #ffedd5;
+  --lua-migration-icon: rgba(251, 191, 36, 0.85);
+
+  --lua-legacy-banner-bg: linear-gradient(135deg, rgba(69, 45, 10, 0.65), rgba(56, 35, 8, 0.6));
+  --lua-legacy-banner-border: rgba(245, 158, 11, 0.4);
+  --lua-legacy-banner-shadow: rgba(0, 0, 0, 0.35);
+  --lua-legacy-banner-label: #fdba74;
+  --lua-legacy-banner-message: #fed7aa;
+
+  --lua-badge-bg: rgba(255, 152, 0, 0.2);
+  --lua-badge-border: rgba(255, 152, 0, 0.4);
+  --lua-badge-text: rgb(255, 179, 92);
+
+  --lua-decision-btn-text: #7fd0ff;
 }
 
 .md-header {
   background-color: #0c7bcd;
-}
-
-.md-header__option,
-.md-version {
-  display: none !important;
 }
 
 .md-header__button.md-logo img,
@@ -48,95 +112,26 @@
   font-weight: 700;
 }
 
-.md-header__title .md-header__topic:first-child {
-  align-items: center;
-  display: flex;
-  gap: 0.85rem;
+/* Material swaps the header title from the site name to the current
+   heading's text once you scroll past it: .md-header__title--active fades
+   BOTH .md-header__topic elements to opacity 0 first, then a more specific
+   sibling-combinator rule fades the second (page-title) one back to 1 --
+   the first (site-title) one only stays visible because that second rule
+   doesn't touch it. Hiding just the second one (display: none) still left
+   the first one caught by the blanket opacity: 0, so the header went blank
+   on scroll instead of keeping the site title. Fix: re-pin the first one's
+   opacity back to 1 under --active too (:first-child gives this higher
+   specificity than Material's plain .md-header__topic rule, so it wins
+   without !important), and keep permanently hiding the second one so its
+   JS-updated page-title text never shows either. */
+.md-header__title--active .md-header__topic:first-child {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+  z-index: 0;
 }
 
-.md-header__title .md-header__topic:first-child > .md-ellipsis {
-  flex: 0 1 auto;
-}
-
-.header-version-switcher {
-  align-items: center;
-  display: flex;
-  flex: 0 0 auto;
-  margin-left: 0;
-}
-
-.header-version-switcher__select {
-  appearance: none;
-  -webkit-appearance: none;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 10px;
-  box-shadow: none;
-  color: #f8fbff;
-  cursor: pointer;
-  display: block;
-  font: inherit;
-  font-size: 0.8rem;
-  line-height: 1.3;
-  font-weight: 600;
-  max-width: 8rem;
-  min-width: 5.6rem;
-  padding: 0.45rem 2.1rem 0.45rem 0.75rem;
-  transition: background-color 140ms ease, border-color 140ms ease;
-  width: 100%;
-  background-image:
-    linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.9) 50%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%);
-  background-position:
-    calc(100% - 0.95rem) calc(50% - 0.1rem),
-    calc(100% - 0.68rem) calc(50% - 0.1rem);
-  background-repeat: no-repeat;
-  background-size: 0.33rem 0.33rem, 0.33rem 0.33rem;
-}
-
-.header-version-switcher__select:hover,
-.header-version-switcher__select:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 0 3px rgba(56, 192, 247, 0.2);
-  outline: none;
-}
-
-.header-version-switcher__select option {
-  color: #1f2937;
-}
-
-@media screen and (max-width: 76.2344em) {
-  .header-version-switcher__select {
-    font-size: 0.76rem;
-    max-width: 6rem;
-    min-width: 4.8rem;
-    padding-left: 0.55rem;
-  }
-}
-
-@media screen and (max-width: 44.9844em) {
-  .md-header__title .md-header__topic:first-child {
-    gap: 0.5rem;
-  }
-
-  .header-version-switcher {
-    margin-right: 0;
-  }
-
-  .header-version-switcher__select {
-    font-size: 0.74rem;
-    max-width: 5.8rem;
-    min-width: 4.6rem;
-    padding: 0.38rem 1.85rem 0.38rem 0.55rem;
-  }
-}
-
-.md-nav__item--section-link > label.md-nav__link {
-  cursor: pointer;
-}
-
-.md-nav__item--section-link-target {
+.md-header__topic + .md-header__topic {
   display: none;
 }
 
@@ -181,49 +176,11 @@
   font-weight: 600;
 }
 
-.md-sidebar--secondary .md-nav--secondary {
-  background: transparent;
-  border: 1px solid rgba(12, 123, 205, 0.16);
-  border-left: 4px solid #0c7bcd;
-  border-radius: 14px;
-  padding: 0.5rem 0.55rem 0.7rem;
-  transition: background-color 160ms ease, border-color 160ms ease;
-}
-
-.md-sidebar--secondary .md-nav--secondary > .md-nav__title {
-  color: #095f9e;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  padding-bottom: 0.35rem;
-  text-transform: uppercase;
-}
-
-.md-sidebar--secondary .md-nav--secondary .md-nav__link {
-  border-radius: 10px;
-  color: #33516d;
-  margin: 0.08rem 0;
-  padding: 0.45rem 0.7rem;
-}
-
-.md-sidebar--secondary .md-nav--secondary .md-nav__link:hover,
-.md-sidebar--secondary .md-nav--secondary .md-nav__link:focus {
-  background: rgba(56, 192, 247, 0.12);
-  color: #095f9e;
-}
-
-.md-sidebar--secondary .md-nav--secondary .md-nav__link--active {
-  background: rgba(12, 123, 205, 0.14);
-  color: #084c7f;
-  font-weight: 700;
-}
-
 .legacy-version-banner {
-  background:
-    linear-gradient(135deg, rgba(255, 248, 225, 0.98), rgba(255, 243, 205, 0.94));
-  border: 1px solid rgba(217, 119, 6, 0.3);
+  background: var(--lua-legacy-banner-bg);
+  border: 1px solid var(--lua-legacy-banner-border);
   border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(120, 53, 15, 0.08);
+  box-shadow: 0 8px 22px var(--lua-legacy-banner-shadow);
   margin: 0 0 1.15rem;
   padding: 0.9rem 1rem;
 }
@@ -234,7 +191,7 @@
 }
 
 .legacy-version-banner__label {
-  color: #9a3412;
+  color: var(--lua-legacy-banner-label);
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -242,7 +199,7 @@
 }
 
 .legacy-version-banner__message {
-  color: #7c2d12;
+  color: var(--lua-legacy-banner-message);
   font-size: 0.8rem;
   line-height: 1.45;
   margin-top: 0.32rem;
@@ -255,7 +212,7 @@
 }
 
 .md-typeset h1 {
-  color: #1f2937;
+  color: var(--md-default-fg-color);
   font-size: 1.55rem;
   font-weight: 850;
   letter-spacing: -0.025em;
@@ -264,7 +221,7 @@
 }
 
 .md-typeset h2 {
-  color: #1f2937;
+  color: var(--md-default-fg-color);
   font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -273,7 +230,7 @@
 }
 
 .md-typeset h3 {
-  color: #1f2937;
+  color: var(--md-default-fg-color);
   font-size: 0.92rem;
   font-weight: 750;
   letter-spacing: -0.01em;
@@ -341,14 +298,14 @@
 
 .md-typeset table:not([class]) th {
   background: transparent;
-  color: #1f2937;
+  color: var(--md-default-fg-color);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
 .md-typeset .radio-list-table th {
   background: transparent;
-  color: #1f2937;
+  color: var(--md-default-fg-color);
   font-size: 0.8rem;
   font-weight: 700;
   text-align: left;
@@ -357,6 +314,65 @@
 .md-typeset table:not([class]) td,
 .md-typeset .radio-list-table td {
   font-size: 0.8rem;
+}
+
+.md-typeset table:not([class]) tbody td:first-child a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.md-typeset table:not([class]) tbody td:first-child a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* A `table`-typed parameter's own sub-fields (e.g. lvgl.arc's `params`)
+   render as a full-width row spanning every column, directly under that
+   parameter's own row -- see render_field_html_table in
+   tools/docs_pipeline.py. A slightly tinted background sets the spanning
+   row apart from the plain rows above it, and tighter padding keeps the
+   nested table from picking up the same roomy padding as a normal cell. */
+.md-typeset .lua-nested-field-row > td {
+  background: rgba(12, 123, 205, 0.03);
+  padding: 0.5rem 0.7rem 0.65rem;
+}
+
+/* Deliberately lighter than the outer table (tighter padding, no rounded
+   corners/overflow clip) so it reads as a sub-table contained within the
+   spanning row, not a second independent table competing with the page's
+   other tables. */
+.md-typeset .lua-nested-field-table {
+  border: 1px solid rgba(12, 123, 205, 0.18);
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  margin: 0.35rem 0 0.15rem;
+  width: 100%;
+}
+
+.md-typeset .lua-nested-field-table th,
+.md-typeset .lua-nested-field-table td {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.3rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.md-typeset .lua-nested-field-table thead {
+  background: rgba(12, 123, 205, 0.08);
+}
+
+.md-typeset .lua-nested-field-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* A caveat bullet that doesn't name a specific field (e.g. lvgl.build's
+   "any other key accepted by the constructor...") -- see
+   render_nested_field_table. Sits right under the field table it
+   qualifies, so it reads as a footnote on the table rather than a floating
+   list. */
+.md-typeset .lua-nested-field-notes {
+  font-size: 0.78rem;
+  margin: 0.3rem 0 0.15rem;
 }
 
 .md-typeset .admonition,
@@ -422,10 +438,10 @@
 
 .api-card-badge {
   align-self: flex-start;
-  background: rgba(255, 152, 0, 0.12);
-  border: 1px solid rgba(255, 152, 0, 0.28);
+  background: var(--lua-badge-bg);
+  border: 1px solid var(--lua-badge-border);
   border-radius: 999px;
-  color: rgb(191, 107, 0);
+  color: var(--lua-badge-text);
   font-size: 0.8rem;
   font-weight: 700;
   margin-top: auto;
@@ -501,8 +517,8 @@
 .decision-actions button {
   border: 1px solid rgba(33, 150, 243, 0.35);
   border-radius: 999px;
-  background: white;
-  color: rgb(33, 110, 190);
+  background: var(--md-default-bg-color);
+  color: var(--lua-decision-btn-text);
   cursor: pointer;
   font: inherit;
   padding: 0.4rem 0.8rem;
@@ -584,7 +600,7 @@
   }
 
   .md-sidebar--primary {
-    background: #fff !important;
+    background: var(--md-default-bg-color) !important;
     border: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
@@ -596,7 +612,7 @@
 
   .md-sidebar--primary .md-sidebar__scrollwrap,
   .md-sidebar--primary .md-sidebar__inner {
-    background: #fff !important;
+    background: var(--md-default-bg-color) !important;
     border: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
@@ -635,7 +651,7 @@
   }
 
   .mobile-desktop-nav-shell {
-    background: #fff;
+    background: var(--md-default-bg-color);
     box-sizing: border-box;
     display: block;
     height: 100%;
@@ -682,7 +698,7 @@
     border: 0;
     border-radius: 0;
     box-sizing: border-box;
-    color: #35556f;
+    color: var(--lua-sidebar-text);
     cursor: pointer;
     display: flex;
     font-family: inherit;
@@ -704,14 +720,14 @@
   .mobile-desktop-nav__toggle:focus {
     background: rgba(56, 192, 247, 0.12);
     box-shadow: none;
-    color: #095f9e;
+    color: var(--lua-sidebar-hover-text);
     outline: none;
   }
 
   .mobile-desktop-nav__item--active > .mobile-desktop-nav__link,
   .mobile-desktop-nav__item--expanded > .mobile-desktop-nav__toggle {
     background: rgba(12, 123, 205, 0.14);
-    color: #084c7f;
+    color: var(--lua-sidebar-active-text);
     font-weight: 700;
   }
 
@@ -723,7 +739,7 @@
 
   .mobile-desktop-nav__item--migration > .mobile-desktop-nav__toggle,
   .mobile-desktop-nav__item--migration > .mobile-desktop-nav__link {
-    color: #9a3412;
+    color: var(--lua-migration-text);
   }
 
   .mobile-desktop-nav__icon {
@@ -770,7 +786,7 @@
 
 .radio-list-table tbody td {
   border: 0;
-  border-top: 1px solid rgba(15, 23, 42, 0.12);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
 }
 
 .radio-list-table tbody tr:first-child td {
@@ -810,14 +826,14 @@
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
-  color: #095f9e;
+  color: var(--lua-sidebar-hover-text);
   font-weight: 700;
 }
 
 .md-sidebar--primary .md-nav--primary .md-nav__link,
 .md-sidebar--primary .md-nav--primary label.md-nav__link {
   border-radius: 0;
-  color: #35556f;
+  color: var(--lua-sidebar-text);
   margin: 0.08rem 0;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
@@ -826,37 +842,64 @@
   transition: background-color 140ms ease, color 140ms ease;
 }
 
+/* navigation.indexes wraps a section's own link and its expand/collapse
+   label together in a shared <div class="md-nav__link md-nav__container">
+   instead of the label being a direct child of the <li>. The rule above
+   already styles that wrapping div (it also carries .md-nav__link), so
+   without this its two children would each additionally get their own
+   nested copy of the same padding/margin/background/color -- on top of
+   showing through the container's own copy of the same styling, two
+   overlapping semi-transparent backgrounds of the same color render
+   darker than either alone, so a state (hover, active, section-active)
+   applied to both container and child shows as a visibly different
+   shade right where the child sits, not one flat row color. Unconditionally
+   neutralize the children instead of chasing this per state -- the
+   container alone should ever paint a background or set its own color;
+   letting a state's rule also match a container child (as opposed to
+   just the container itself) is exactly what caused this. Specificity
+   is bumped one class above the plain-link hover rule below (via the
+   redundant-but-real .md-nav__list ancestor qualifier) so this wins
+   outright rather than relying on source order against a tie. */
+.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__container > .md-nav__link {
+  background: transparent;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 .md-sidebar--primary .md-nav--primary .md-nav__link:hover,
 .md-sidebar--primary .md-nav--primary .md-nav__link:focus,
 .md-sidebar--primary .md-nav--primary label.md-nav__link:hover,
 .md-sidebar--primary .md-nav--primary label.md-nav__link:focus {
   background: rgba(56, 192, 247, 0.12);
-  color: #095f9e;
+  color: var(--lua-sidebar-hover-text);
 }
 
 .md-sidebar--primary .md-nav--primary .md-nav__link--active,
 .md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav__link,
 .md-sidebar--primary .md-nav--primary .md-nav__item--active > label.md-nav__link,
-.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > label.md-nav__link {
+.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > label.md-nav__link,
+.md-sidebar--primary .md-nav--primary .md-nav__item--section-active > .md-nav__container {
   background: rgba(12, 123, 205, 0.14);
-  color: #084c7f;
+  color: var(--lua-sidebar-active-text);
   font-weight: 700;
 }
 
-.md-sidebar--primary .md-nav--primary .md-nav__item--nested > label.md-nav__link .md-nav__icon {
-  color: rgba(12, 123, 205, 0.72);
+.md-sidebar--primary .md-nav--primary .md-nav__item--nested > label.md-nav__link .md-nav__icon,
+.md-sidebar--primary .md-nav--primary .md-nav__item--nested > .md-nav__container > label.md-nav__link .md-nav__icon {
+  color: var(--lua-sidebar-icon);
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > .md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > label.md-nav__link {
-  background: rgba(245, 158, 11, 0.12);
-  color: #9a3412;
+  background: var(--lua-migration-hover-bg);
+  color: var(--lua-migration-text);
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration {
-  background: rgba(255, 247, 237, 0.92);
-  border: 1px solid rgba(245, 158, 11, 0.28);
-  border-left: 4px solid rgba(217, 119, 6, 0.78);
+  background: var(--lua-migration-bg);
+  border: 1px solid var(--lua-migration-border);
+  border-left: 4px solid var(--lua-migration-border-strong);
   border-radius: 0;
   margin: 0.85rem 0.1rem 0 0.1rem;
   padding: 0.35rem 0.2rem 0.45rem;
@@ -872,55 +915,40 @@
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav .md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav label.md-nav__link {
-  color: #7c3e12;
+  color: var(--lua-migration-text-alt);
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav .md-nav__link:hover,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav .md-nav__link:focus,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav label.md-nav__link:hover,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav label.md-nav__link:focus {
-  background: rgba(245, 158, 11, 0.12);
-  color: #7c2d12;
+  background: var(--lua-migration-hover-bg);
+  color: var(--lua-migration-text-active);
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav .md-nav__link--active,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav .md-nav__item--active > .md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav .md-nav__item--active > label.md-nav__link,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > nav.md-nav .md-nav__item--section-active > label.md-nav__link {
-  background: rgba(245, 158, 11, 0.18);
-  color: #7c2d12;
+  background: var(--lua-migration-active-bg);
+  color: var(--lua-migration-text-active);
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > .md-nav__link:hover,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > .md-nav__link:focus,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > label.md-nav__link:hover,
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > label.md-nav__link:focus {
-  background: rgba(245, 158, 11, 0.18);
-  color: #7c2d12;
+  background: var(--lua-migration-active-bg);
+  color: var(--lua-migration-text-active);
 }
 
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--migration > label.md-nav__link .md-nav__icon {
-  color: rgba(180, 83, 9, 0.78);
-}
-
-.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav {
-  margin-left: 0.05rem;
-  max-height: none;
-  overflow: visible;
-  padding-left: 0.2rem;
+  color: var(--lua-migration-icon);
 }
 
 .md-sidebar--primary .md-nav--primary .md-nav__list,
 .md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__list {
   overflow: visible;
-}
-
-.md-sidebar--primary .md-nav--primary .md-nav__list .md-nav__item {
-  position: relative;
-}
-
-.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item::before {
-  display: none;
 }
 
 @media screen and (min-width: 76.25em) {
@@ -946,6 +974,6 @@
   }
 
   .md-main__inner {
-    grid-template-columns: 13.6rem minmax(0, 1fr) 12.1rem;
+    grid-template-columns: 13.6rem minmax(0, 1fr);
   }
 }
