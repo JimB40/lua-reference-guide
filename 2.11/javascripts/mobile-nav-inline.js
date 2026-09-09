@@ -36,10 +36,15 @@
   // Reading the label for text, as sectionLabel's callers used to, silently
   // produced an empty button title for every wrapped section (e.g. "API
   // Reference") in the rebuilt mobile nav.
-  function sectionLinkText(item) {
-    const link =
+  function sectionLink(item) {
+    return (
       directChild(item, "a.md-nav__link") ||
-      item.querySelector(":scope > .md-nav__container > a.md-nav__link");
+      item.querySelector(":scope > .md-nav__container > a.md-nav__link")
+    );
+  }
+
+  function sectionLinkText(item) {
+    const link = sectionLink(item);
     return textOf(link?.querySelector(".md-ellipsis")) || textOf(link);
   }
 
@@ -92,9 +97,40 @@
     const button = document.createElement("button");
     button.type = "button";
     button.className = "mobile-desktop-nav__toggle";
-    button.innerHTML =
-      '<span class="mobile-desktop-nav__label"></span><span class="mobile-desktop-nav__icon" aria-hidden="true"></span>';
-    button.querySelector(".mobile-desktop-nav__label").textContent = sectionLinkText(sourceItem);
+    button.innerHTML = '<span class="mobile-desktop-nav__icon" aria-hidden="true"></span>';
+
+    // A section with its own index page (navigation.indexes wraps its
+    // label alongside a real <a> in .md-nav__container -- see sectionLabel)
+    // needs the rebuilt mobile nav to offer that link too, not just a
+    // toggle. Every API Reference group used to be a flat leaf item with no
+    // children at all, so this path was never exercised before item pages
+    // were added to the nav tree -- the toggle button alone silently made
+    // every group's hub page completely unreachable from the mobile nav
+    // (clicking the header only ever toggled the list; the section's own
+    // page was only reachable via the duplicate first child buildList
+    // already renders inside the expanded list).
+    const hubLink = sectionLink(sourceItem);
+    let headerLabelHost = button;
+    if (hubLink) {
+      const header = document.createElement("div");
+      header.className = "mobile-desktop-nav__header";
+
+      const anchor = document.createElement("a");
+      anchor.className = "mobile-desktop-nav__link";
+      anchor.href = hubLink.href;
+
+      header.appendChild(anchor);
+      header.appendChild(button);
+      item.appendChild(header);
+      headerLabelHost = anchor;
+    } else {
+      item.appendChild(button);
+    }
+
+    const labelSpan = document.createElement("span");
+    labelSpan.className = "mobile-desktop-nav__label";
+    labelSpan.textContent = sectionLinkText(sourceItem);
+    headerLabelHost.insertBefore(labelSpan, headerLabelHost.firstChild);
 
     const nestedList = buildList(nestedListSource);
     nestedList.classList.add("mobile-desktop-nav__list--nested");
@@ -119,7 +155,6 @@
       button.setAttribute("aria-expanded", nowExpanded ? "true" : "false");
     });
 
-    item.appendChild(button);
     item.appendChild(nestedList);
     return item;
   }

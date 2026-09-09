@@ -714,6 +714,31 @@
     width: 100%;
   }
 
+  /* A section with its own index page gets both a real link (navigates to
+     the hub page) and a toggle (expands/collapses the list) side by side,
+     instead of one full-width toggle button covering the whole row -- see
+     buildNestedItem's hubLink branch. The generic width:100% above assumes
+     a lone full-row child (true for a plain toggle-only section, or any
+     leaf item's <a>); override it here so the two share the row instead of
+     each trying to claim it. */
+  .mobile-desktop-nav__header {
+    display: flex;
+    width: 100%;
+  }
+
+  .mobile-desktop-nav__header > .mobile-desktop-nav__link {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+  }
+
+  .mobile-desktop-nav__header > .mobile-desktop-nav__toggle {
+    flex: 0 0 auto;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    width: auto;
+  }
+
   .mobile-desktop-nav__link:hover,
   .mobile-desktop-nav__link:focus,
   .mobile-desktop-nav__toggle:hover,
@@ -725,7 +750,9 @@
   }
 
   .mobile-desktop-nav__item--active > .mobile-desktop-nav__link,
-  .mobile-desktop-nav__item--expanded > .mobile-desktop-nav__toggle {
+  .mobile-desktop-nav__item--active > .mobile-desktop-nav__header > .mobile-desktop-nav__link,
+  .mobile-desktop-nav__item--expanded > .mobile-desktop-nav__toggle,
+  .mobile-desktop-nav__item--expanded > .mobile-desktop-nav__header > .mobile-desktop-nav__toggle {
     background: rgba(12, 123, 205, 0.14);
     color: var(--lua-sidebar-active-text);
     font-weight: 700;
@@ -737,8 +764,14 @@
     padding-left: 1.8rem;
   }
 
+  .mobile-desktop-nav__list--nested .mobile-desktop-nav__header > .mobile-desktop-nav__toggle {
+    padding-left: 0.7rem;
+  }
+
   .mobile-desktop-nav__item--migration > .mobile-desktop-nav__toggle,
-  .mobile-desktop-nav__item--migration > .mobile-desktop-nav__link {
+  .mobile-desktop-nav__item--migration > .mobile-desktop-nav__link,
+  .mobile-desktop-nav__item--migration > .mobile-desktop-nav__header > .mobile-desktop-nav__toggle,
+  .mobile-desktop-nav__item--migration > .mobile-desktop-nav__header > .mobile-desktop-nav__link {
     color: var(--lua-migration-text);
   }
 
