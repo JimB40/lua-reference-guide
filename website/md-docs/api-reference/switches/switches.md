@@ -17,8 +17,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `first` | no | `the` | first switch index. If `nil` or omitted, the first available switch is used. |
-| `last` | no | `the` | last switch index. If `nil` or omitted, the last available switch is used. |
+| `first` | no | `integer` | first switch index. If `nil` or omitted, the first available switch is used. |
+| `last` | no | `integer` | last switch index. If `nil` or omitted, the last available switch is used. |
 
 ## Returns
 

@@ -21,10 +21,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `nil` | requested input or line does not exist |
-| `-` | `table` | input data: * `name` (string) input line name<ul><li>`switch` (number) input switch index</li><li>`fadeIn` (number) fade in value (in 0.1s)</li><li>`fadeOut` (number) fade out value (in 0.1s)</li><li>`trimsValues` (table) table of trim values:</li><li>`key` is trim number (zero based)</li><li>`value` is trim value</li><li>`trimsModes` (table) table of trim mode:</li><li>`key` is trim number (zero based)</li><li>`value` is trim mode</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>nil</code></td><td>requested input or line does not exist</td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>input data:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>string</code></td><td>input line name</td></tr><tr><td><code>switch</code></td><td><code>number</code></td><td>input switch index</td></tr><tr><td><code>fadeIn</code></td><td><code>number</code></td><td>fade in value (in 0.1s)</td></tr><tr><td><code>fadeOut</code></td><td><code>number</code></td><td>fade out value (in 0.1s)</td></tr><tr><td><code>trimsValues</code></td><td><code>table</code></td><td>table of trim values:</td></tr><tr><td><code>key</code></td><td>-</td><td>is trim number (zero based)</td></tr><tr><td><code>value</code></td><td>-</td><td>is trim value</td></tr><tr><td><code>trimsModes</code></td><td><code>table</code></td><td>table of trim mode:</td></tr><tr><td><code>key</code></td><td>-</td><td>is trim number (zero based)</td></tr><tr><td><code>value</code></td><td>-</td><td>is trim mode</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

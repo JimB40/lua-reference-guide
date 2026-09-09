@@ -33,7 +33,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>curve</code></td><td>param</td><td><code>integer</code></td><td>curve number (use 0 for Curve1)</td><td><select data-field-kind="param" data-field-name="curve" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="curve" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested curve does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>curve data: * `name` (string) name
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>curve data:
+* `name` (string) name
  * `type` (number) type
  * `smooth` (boolean) smooth
  * `points` (number) number of points
@@ -46,7 +47,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getCurve&quot;, &quot;symbol&quot;: &quot;model.getCurve&quot;, &quot;summary&quot;: &quot;Get Curve parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;curve&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;curve number (use 0 for Curve1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested curve does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;curve data: * `name` (string) name\n * `type` (number) type\n * `smooth` (boolean) smooth\n * `points` (number) number of points\n * `y` (table) table of Y values:\n   * `key` is point number (zero based)\n   * `value` is y value\n * `x` (table) **only included for custom curve type**:\n   * `key` is point number (zero based)\n   * `value` is x value&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.12&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getCurve&quot;, &quot;symbol&quot;: &quot;model.getCurve&quot;, &quot;summary&quot;: &quot;Get Curve parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;curve&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;curve number (use 0 for Curve1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested curve does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;curve data:\n* `name` (string) name\n * `type` (number) type\n * `smooth` (boolean) smooth\n * `points` (number) number of points\n * `y` (table) table of Y values:\n   * `key` is point number (zero based)\n   * `value` is y value\n * `x` (table) **only included for custom curve type**:\n   * `key` is point number (zero based)\n   * `value` is x value&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.12&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -120,7 +121,8 @@ Get Curve parameters
 
 @retval (nil) requested curve does not exist
 
-@retval (table) curve data: * `name` (string) name
+@retval (table) curve data:
+* `name` (string) name
  * `type` (number) type
  * `smooth` (boolean) smooth
  * `points` (number) number of points

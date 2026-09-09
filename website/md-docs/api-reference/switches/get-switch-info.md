@@ -21,9 +21,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | information about requested field, table elements: * `type`   (number) field identifier<br>0 = SWITCH_NONE<br>1 = SWITCH_TOGGLE<br>2 = SWITCH_2POS<br>3 = SWITCH_3POS |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>information about requested field, table elements:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>type</code></td><td><code>number</code></td><td>field identifier 0 = SWITCH_NONE 1 = SWITCH_TOGGLE 2 = SWITCH_2POS 3 = SWITCH_3POS</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

@@ -15,9 +15,7 @@ Open a popup menu with multiple options to choose from, using EdgeTX styling.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `params` | yes | `table` | <ul><li>`title` (string) text displayed in the popup's header, defaults to an empty string</li><li>`values` (table) simple table of option strings shown in the popup, defaults to an empty list</li><li>`get` (function) called when the popup is opened, to get the index of the currently selected option (1..number of values), defaults to nil</li><li>`set` (function) called when the user taps a menu item; passed the selected item's index (1..number of values), defaults to nil</li></ul> |
+<table><thead><tr><th>Name</th><th>Req</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>params</code></td><td>yes</td><td><code>table</code></td><td></td></tr><tr class="lua-nested-field-row"><td colspan="4"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td><code>string</code></td><td>text displayed in the popup's header, defaults to an empty string</td></tr><tr><td><code>values</code></td><td><code>table</code></td><td>simple table of option strings shown in the popup, defaults to an empty list</td></tr><tr><td><code>get</code></td><td><code>function</code></td><td>called when the popup is opened, to get the index of the currently selected option (1..number of values), defaults to nil</td></tr><tr><td><code>set</code></td><td><code>function</code></td><td>called when the user taps a menu item; passed the selected item's index (1..number of values), defaults to nil</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Returns
 

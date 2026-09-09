@@ -32,7 +32,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>index</code></td><td>param</td><td><code>integer</code></td><td>zero based global variable index, use 0 for GV1, 8 for GV9</td><td><select data-field-kind="param" data-field-name="index" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="index" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>details of the global variable: * `name` (string) global variable name
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>details of the global variable:
+* `name` (string) global variable name
  * `min` (number) minimum value
  * `max` (number) maximum value
  * `prec` (number) precision
@@ -41,7 +42,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getGlobalVariableDetails&quot;, &quot;symbol&quot;: &quot;model.getGlobalVariableDetails&quot;, &quot;summary&quot;: &quot;Returns details about a Global Variable, but not values&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;zero based global variable index, use 0 for GV1, 8 for GV9&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;details of the global variable: * `name` (string) global variable name\n * `min` (number) minimum value\n * `max` (number) maximum value\n * `prec` (number) precision\n * `unit` (number) unit\n * `popup` (boolean) show popup - if exists&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.11.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getGlobalVariableDetails&quot;, &quot;symbol&quot;: &quot;model.getGlobalVariableDetails&quot;, &quot;summary&quot;: &quot;Returns details about a Global Variable, but not values&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;zero based global variable index, use 0 for GV1, 8 for GV9&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;details of the global variable:\n* `name` (string) global variable name\n * `min` (number) minimum value\n * `max` (number) maximum value\n * `prec` (number) precision\n * `unit` (number) unit\n * `popup` (boolean) show popup - if exists&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.11.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -103,7 +104,8 @@ Returns details about a Global Variable, but not values
 
 @param index (integer) zero based global variable index, use 0 for GV1, 8 for GV9
 
-@retval (table) details of the global variable: * `name` (string) global variable name
+@retval (table) details of the global variable:
+* `name` (string) global variable name
  * `min` (number) minimum value
  * `max` (number) maximum value
  * `prec` (number) precision

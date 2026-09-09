@@ -32,11 +32,11 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>flags</code></td><td>param</td><td><code>integer</code></td><td>please see the Lcd functions overview</td><td><select data-field-kind="param" data-field-name="flags" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="flags" data-custom-type="true" /></td></tr>
-<tr><td><code>color</code></td><td>return</td><td><code>flag</code></td><td>only the RGB565 color value of the input</td><td><select data-field-kind="return" data-field-name="color" data-current-type="flag"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="color" data-custom-type="true" /></td></tr>
+<tr><td><code>color</code></td><td>return</td><td><code>integer</code></td><td>only the RGB565 color value of the input</td><td><select data-field-kind="return" data-field-name="color" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="color" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.getColor&quot;, &quot;symbol&quot;: &quot;lcd.getColor&quot;, &quot;summary&quot;: &quot;Get the color value from flags&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;please see the Lcd functions overview&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;color&quot;, &quot;type&quot;: &quot;flag&quot;, &quot;description&quot;: &quot;only the RGB565 color value of the input&quot;}], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.3.11&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;lcd.getColor&quot;, &quot;symbol&quot;: &quot;lcd.getColor&quot;, &quot;summary&quot;: &quot;Get the color value from flags&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;flags&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;please see the Lcd functions overview&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;color&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;only the RGB565 color value of the input&quot;}], &quot;notes&quot;: [&quot;Only available on radios with color display&quot;], &quot;since&quot;: &quot;2.3.11&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -74,7 +74,7 @@ Get the color value from flags
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `color` | `flag` | only the RGB565 color value of the input |
+| `color` | `integer` | only the RGB565 color value of the input |
 
 #### Notes
 
@@ -94,7 +94,7 @@ Get the color value from flags
 
 @param flags (integer) please see the Lcd functions overview
 
-@retval color (flag) only the RGB565 color value of the input
+@retval color (integer) only the RGB565 color value of the input
 
 @notice Only available on radios with color display
 

@@ -32,11 +32,11 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>switchIndex</code></td><td>param</td><td><code>integer</code></td><td>identifying a switch as returned by `getSwitchIndex(positionName)` or fields in the table returned by `model.getLogicalSwitch(switch)` identifying switches.</td><td><select data-field-kind="param" data-field-name="switchIndex" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="switchIndex" data-custom-type="true" /></td></tr>
-<tr><td><code>value</code></td><td>return</td><td><code>true/false</code></td><td>. The value of the switch.</td><td><select data-field-kind="return" data-field-name="value" data-current-type="true/false"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="value" data-custom-type="true" /></td></tr>
+<tr><td><code>value</code></td><td>return</td><td><code>integer</code></td><td>. The value of the switch.</td><td><select data-field-kind="return" data-field-name="value" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="value" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getSwitchValue&quot;, &quot;symbol&quot;: &quot;getSwitchValue&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;switchIndex&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;identifying a switch as returned by `getSwitchIndex(positionName)` or fields in the table returned by `model.getLogicalSwitch(switch)` identifying switches.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;true/false&quot;, &quot;description&quot;: &quot;. The value of the switch.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.6&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getSwitchValue&quot;, &quot;symbol&quot;: &quot;getSwitchValue&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;switchIndex&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;identifying a switch as returned by `getSwitchIndex(positionName)` or fields in the table returned by `model.getLogicalSwitch(switch)` identifying switches.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;value&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;. The value of the switch.&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.6&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -71,7 +71,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `value` | `true/false` | . The value of the switch. |
+| `value` | `integer` | . The value of the switch. |
 
 #### Notes
 
@@ -89,7 +89,7 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 @param switchIndex (integer) identifying a switch as returned by `getSwitchIndex(positionName)` or fields in the table returned by `model.getLogicalSwitch(switch)` identifying switches.
 
-@retval value (true/false) . The value of the switch.
+@retval value (integer) . The value of the switch.
 
 @status current Introduced in 2.6
 ~~~~

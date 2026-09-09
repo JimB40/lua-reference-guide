@@ -23,9 +23,7 @@ Checks the existence of file or directory.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `integer` | object info, table elements: * 'size' (number) file size<ul><li>'attrib' (number) file attribute flags</li><li>'time' (table) table with last time modified date and times, table elements:</li><li>`year` (number) year</li><li>`mon` (number) month</li><li>`day` (number) day of month</li><li>`hour` (number) hours</li><li>`hour12` (number) hours in US format</li><li>`min` (number) minutes</li><li>`sec` (number) seconds</li><li>`suffix` (text) am or pm</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>object info, table elements:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>size</code></td><td><code>number</code></td><td>file size</td></tr><tr><td><code>attrib</code></td><td><code>number</code></td><td>file attribute flags</td></tr><tr><td><code>time</code></td><td><code>table</code></td><td>table with last time modified date and times, table elements:</td></tr><tr><td><code>year</code></td><td><code>number</code></td><td>year</td></tr><tr><td><code>mon</code></td><td><code>number</code></td><td>month</td></tr><tr><td><code>day</code></td><td><code>number</code></td><td>day of month</td></tr><tr><td><code>hour</code></td><td><code>number</code></td><td>hours</td></tr><tr><td><code>hour12</code></td><td><code>number</code></td><td>hours in US format</td></tr><tr><td><code>min</code></td><td><code>number</code></td><td>minutes</td></tr><tr><td><code>sec</code></td><td><code>number</code></td><td>seconds</td></tr><tr><td><code>suffix</code></td><td><code>text</code></td><td>am or pm</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

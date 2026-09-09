@@ -15,10 +15,7 @@ Build a complex UI in a single operation from a table of object definitions.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `parent` | no | `object` | optional LVGL object to attach the built objects to; if omitted they attach to the top-level script window |
-| `params` | yes | `table` | a table of tables, each defining one LVGL object: * `type` (string or type constant) mandatory, selects the kind of object to create, e.g. `"rectangle"` or `lvgl.RECTANGLE`; named type constants (e.g. `lvgl.RECTANGLE`) added in 2.11.4, string names work in all versions<ul><li>`name` (string) optional name used to look up this object in the returned table, defaults to an empty string</li><li>`children` (table) optional nested table of the same shape, to create child objects</li><li>any other key accepted by the constructor function for the chosen `type`</li></ul> |
+<table><thead><tr><th>Name</th><th>Req</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>parent</code></td><td>no</td><td><code>object</code></td><td>optional LVGL object to attach the built objects to; if omitted they attach to the top-level script window</td></tr><tr><td><code>params</code></td><td>yes</td><td><code>table</code></td><td>a table of tables, each defining one LVGL object:</td></tr><tr class="lua-nested-field-row"><td colspan="4"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>type</code></td><td><code>string or type constant</code></td><td>mandatory, selects the kind of object to create, e.g. <code>"rectangle"</code> or <code>lvgl.RECTANGLE</code>; named type constants (e.g. <code>lvgl.RECTANGLE</code>) added in 2.11.4, string names work in all versions</td></tr><tr><td><code>name</code></td><td><code>string</code></td><td>optional name used to look up this object in the returned table, defaults to an empty string</td></tr><tr><td><code>children</code></td><td><code>table</code></td><td>optional nested table of the same shape, to create child objects</td></tr></tbody></table><ul class="lua-nested-field-notes"><li>any other key accepted by the constructor function for the chosen <code>type</code></li></ul></td></tr></tbody></table>
 
 ## Returns
 

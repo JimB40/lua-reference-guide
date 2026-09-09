@@ -23,7 +23,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `integer` | current output value (number). Zero is returned for: * non-existing outputs |
+| `-` | `integer` | current output value (number). Zero is returned for:<ul><li>non-existing outputs</li></ul> |
 
 ## Availability
 

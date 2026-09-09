@@ -19,9 +19,7 @@ None.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | with elements: * `battWarn` (number) radio battery range - warning value<ul><li>`battMin` (number) radio battery range - minimum value</li><li>`battMax` (number) radio battery range - maximum value</li><li>`imperial` (number) set to a value different from 0 if the radio is set to the IMPERIAL units</li><li>`language` (string) radio language (used for menus)</li><li>`voice` (string) voice language (used for speech)</li><li>`gtimer` (number) radio global timer in seconds (does not include current session)</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>with elements:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>battWarn</code></td><td><code>number</code></td><td>radio battery range - warning value</td></tr><tr><td><code>battMin</code></td><td><code>number</code></td><td>radio battery range - minimum value</td></tr><tr><td><code>battMax</code></td><td><code>number</code></td><td>radio battery range - maximum value</td></tr><tr><td><code>imperial</code></td><td><code>number</code></td><td>set to a value different from 0 if the radio is set to the IMPERIAL units</td></tr><tr><td><code>language</code></td><td><code>string</code></td><td>radio language (used for menus)</td></tr><tr><td><code>voice</code></td><td><code>string</code></td><td>voice language (used for speech)</td></tr><tr><td><code>gtimer</code></td><td><code>number</code></td><td>radio global timer in seconds (does not include current session)</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

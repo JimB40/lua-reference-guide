@@ -31,7 +31,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with elements: * `battWarn` (number) radio battery range - warning value
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with elements:
+* `battWarn` (number) radio battery range - warning value
  * `battMin` (number) radio battery range - minimum value
  * `battMax` (number) radio battery range - maximum value
  * `imperial` (number) set to a value different from 0 if the radio is set to the
@@ -42,7 +43,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getGeneralSettings&quot;, &quot;symbol&quot;: &quot;getGeneralSettings&quot;, &quot;summary&quot;: &quot;Returns (some of) the general radio settings&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with elements: * `battWarn` (number) radio battery range - warning value\n * `battMin` (number) radio battery range - minimum value\n * `battMax` (number) radio battery range - maximum value\n * `imperial` (number) set to a value different from 0 if the radio is set to the\n IMPERIAL units\n * `language` (string) radio language (used for menus)\n * `voice` (string) voice language (used for speech)\n * `gtimer` (number) radio global timer in seconds (does not include current session)&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.6&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getGeneralSettings&quot;, &quot;symbol&quot;: &quot;getGeneralSettings&quot;, &quot;summary&quot;: &quot;Returns (some of) the general radio settings&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with elements:\n* `battWarn` (number) radio battery range - warning value\n * `battMin` (number) radio battery range - minimum value\n * `battMax` (number) radio battery range - maximum value\n * `imperial` (number) set to a value different from 0 if the radio is set to the\n IMPERIAL units\n * `language` (string) radio language (used for menus)\n * `voice` (string) voice language (used for speech)\n * `gtimer` (number) radio global timer in seconds (does not include current session)&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.6&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -101,7 +102,8 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Returns (some of) the general radio settings
 
-@retval (table) with elements: * `battWarn` (number) radio battery range - warning value
+@retval (table) with elements:
+* `battWarn` (number) radio battery range - warning value
  * `battMin` (number) radio battery range - minimum value
  * `battMax` (number) radio battery range - maximum value
  * `imperial` (number) set to a value different from 0 if the radio is set to the

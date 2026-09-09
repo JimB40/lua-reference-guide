@@ -21,10 +21,7 @@ Get model timer parameters
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `nil` | requested timer does not exist |
-| `-` | `table` | timer parameters: * `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw<ul><li>`start` (number) start value [seconds], 0 for up timer, 0> down timer</li><li>`value` (number) current value [seconds]</li><li>`countdownBeep` (number) countdown beep (0­ = silent, 1 =­ beeps, 2­ = voice)</li><li>`minuteBeep` (boolean) minute beep</li><li>`persistent` (number) persistent timer</li><li>`name` (string) timer name</li><li>`showElapsed` (boolean) show elapsed</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>nil</code></td><td>requested timer does not exist</td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>timer parameters:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>mode</code></td><td><code>number</code></td><td>timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw</td></tr><tr><td><code>start</code></td><td><code>number</code></td><td>start value [seconds], 0 for up timer, 0&gt; down timer</td></tr><tr><td><code>value</code></td><td><code>number</code></td><td>current value [seconds]</td></tr><tr><td><code>countdownBeep</code></td><td><code>number</code></td><td>countdown beep (0­ = silent, 1 =­ beeps, 2­ = voice)</td></tr><tr><td><code>minuteBeep</code></td><td><code>boolean</code></td><td>minute beep</td></tr><tr><td><code>persistent</code></td><td><code>number</code></td><td>persistent timer</td></tr><tr><td><code>name</code></td><td><code>string</code></td><td>timer name</td></tr><tr><td><code>showElapsed</code></td><td><code>boolean</code></td><td>show elapsed</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

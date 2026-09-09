@@ -4,6 +4,7 @@ import argparse
 import datetime
 import json
 import html
+import markdown
 import os
 from pathlib import Path
 import re
@@ -377,16 +378,15 @@ def render_doc_text(text: str, page_path: str | Path) -> str:
     return rewrite_legacy_doc_links(text, page_path)
 
 
-def render_table_cell_text(text: str) -> str:
-    """Render possibly-multi-line description text for a Markdown table
-    cell. Table cells can't contain literal newlines, and GFM only parses
-    inline markup inside them (not block-level lists), so collapsing
-    newlines to spaces crushes any `* item` bullet list (e.g. a
-    `@commonparams`-expanded settings list) into an unreadable run-on
-    paragraph. Bullet lines are rendered as a real `<ul><li>` list --
-    GFM tables allow raw inline HTML in cells, and this convention is
-    already used elsewhere in this site's hand-authored pages. Any
-    non-bullet lines are joined with `<br>`."""
+TABLE_FIELD_BULLET_RE = re.compile(r"^`([^`]+)`\s*\(([^)]+)\)\s*(.*)$")
+TABLE_FIELD_BULLET_NO_TYPE_RE = re.compile(r"^`([^`]+)`\s+(.*)$")
+
+
+def split_intro_and_bullets(text: str) -> tuple[list[str], list[str]]:
+    """Split a possibly-multi-line description into leading non-bullet
+    lines and `* item` bullet lines (a continuation line with no bullet
+    marker is folded into the previous bullet). Shared by both the plain
+    Markdown-table cell renderer and the raw-HTML table renderer below."""
     lines = [line.strip() for line in text.split("\n") if line.strip()]
     intro: list[str] = []
     items: list[str] = []
@@ -398,12 +398,165 @@ def render_table_cell_text(text: str) -> str:
             items[-1] = f"{items[-1]} {line}"
         else:
             intro.append(line)
+    return intro, items
+
+
+def render_table_cell_text(intro: list[str], items: list[str]) -> str:
+    """Render a description's already-split intro/bullet lines (see
+    split_intro_and_bullets) for a plain Markdown table cell. Table cells
+    can't contain literal newlines, and GFM only parses inline markup
+    inside them (not block-level lists), so collapsing newlines to spaces
+    would crush any `* item` bullet list (e.g. a `@commonparams`-expanded
+    settings list) into an unreadable run-on paragraph. Bullet lines are
+    rendered as a real `<ul><li>` list -- GFM tables allow raw inline HTML
+    in cells, and this convention is already used elsewhere in this site's
+    hand-authored pages. Any non-bullet lines are joined with `<br>`. Only
+    used for rows that don't need a nested field table -- see
+    render_field_html_table for those."""
     parts = []
     if intro:
         parts.append("<br>".join(intro))
     if items:
         parts.append("<ul>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>")
     return "".join(parts)
+
+
+def html_code(text: str) -> str:
+    """Wrap plain text (a param/return name or type) in a literal <code>
+    tag, for a cell in a hand-built raw <table> -- see render_field_html_table.
+    Used instead of re-wrapping in backticks and relying on Markdown to
+    convert them, since that conversion doesn't happen inside a raw HTML
+    block (see render_inline_markdown)."""
+    return f"<code>{html.escape(text)}</code>"
+
+
+def render_inline_markdown(text: str) -> str:
+    """Render a single line of description text (may contain a backtick
+    code span or a Markdown link from rewrite_legacy_doc_links) to HTML, for
+    embedding in a hand-built raw <table> -- see render_field_html_table.
+    A full <table>...</table> is classified as an HTML block by
+    Python-Markdown, and content inside an HTML block does NOT get inline
+    Markdown processing by default (confirmed empirically -- even
+    md_in_html's markdown="1" attribute doesn't reach into hand-authored
+    <td> content), unlike a plain Markdown-table cell, which processes
+    inline Markdown for free. So cell content headed into a raw table has
+    to be pre-rendered here instead."""
+    text = text.strip()
+    if not text:
+        return ""
+    rendered = markdown.markdown(text)
+    if rendered.startswith("<p>") and rendered.endswith("</p>") and rendered.count("<p>") == 1:
+        rendered = rendered[len("<p>") : -len("</p>")]
+    return rendered
+
+
+def render_nested_field_table(items: list[str], type_hint: str) -> str | None:
+    """A `table`-typed parameter's own sub-fields are documented in the
+    firmware source as `* `name` (type) description` bullets (see e.g.
+    lvgl.arc's `params`) -- occasionally missing the `(type)` part (e.g.
+    model.getMix's `delayPrec`/`speedPrec`, a genuine gap in the upstream
+    annotation). Rendered as a flat `<ul>`, a field list of any real size
+    (some run past 15 fields) turns into a wall of text with no visible
+    Type column for the sub-fields themselves, and crammed into the
+    Description cell it's still squeezed into whatever width that one
+    column got. When every bullet in a cell matches one of those two
+    shapes, this renders a real Field/Type/Description `<table>` instead
+    (blank Type cell for a bullet missing one), for the caller to place in
+    a full-width row of its own (see render_field_html_table) rather than
+    inside the narrow cell.
+
+    Only attempted when type_hint is exactly "table": an integer/string
+    parameter's bullets are enum/flag VALUE options (e.g. play-tone's
+    `flags`), not fields of a table, and share the exact same
+    `` `TOKEN` description `` surface shape as a name-only field bullet --
+    the parameter's own type is what actually distinguishes them, not
+    anything about the bullet text itself. Returns None (caller falls back
+    to the plain `<ul>`) if the type isn't "table", or if not one single
+    item matches either field shape.
+
+    A bullet that matches neither shape (e.g. lvgl.build's trailing "any
+    other key accepted by the constructor function for the chosen `type`",
+    which names no field at all) is kept as a plain note appended after the
+    field table rather than forcing the whole list back to a flat `<ul>` --
+    once type_hint has already established this is a table's own field
+    list and not an enum/flag value list, a bullet that doesn't fit the
+    `name (type) description` shape is safely read as a caveat about the
+    table as a whole, not a value option to preserve alongside real
+    fields."""
+    if type_hint != "table":
+        return None
+    rows = []
+    notes = []
+    for item in items:
+        match = TABLE_FIELD_BULLET_RE.match(item)
+        if match:
+            name, field_type, description = match.groups()
+        else:
+            match = TABLE_FIELD_BULLET_NO_TYPE_RE.match(item)
+            if not match:
+                notes.append(item)
+                continue
+            name, description = match.groups()
+            field_type = ""
+        rows.append(
+            "<tr><td>"
+            + html_code(name)
+            + "</td><td>"
+            + (html_code(field_type) if field_type else "-")
+            + "</td><td>"
+            + render_inline_markdown(description)
+            + "</td></tr>"
+        )
+    if not rows:
+        return None
+    header = "<thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>"
+    table_html = f'<table class="lua-nested-field-table">{header}<tbody>{"".join(rows)}</tbody></table>'
+    if notes:
+        notes_html = "<ul class=\"lua-nested-field-notes\">" + "".join(
+            f"<li>{render_inline_markdown(note)}</li>" for note in notes
+        ) + "</ul>"
+        return table_html + notes_html
+    return table_html
+
+
+def render_table_cell_html(intro: list[str], items: list[str], type_hint: str) -> tuple[str, str | None]:
+    """Render a cell's intro/bullet content for the raw-HTML table path
+    (see render_field_html_table). Mirrors render_table_cell_text's
+    intro/bullet handling, but pre-renders inline Markdown itself via
+    render_inline_markdown instead of relying on GFM's per-cell inline
+    processing, which a hand-built raw HTML table doesn't get for free.
+    Returns (cell_html, nested_table_html_or_None)."""
+    nested_table = render_nested_field_table(items, type_hint) if items else None
+    if nested_table:
+        intro_html = render_inline_markdown("<br>".join(intro)) if intro else ""
+        return intro_html, nested_table
+    parts = []
+    if intro:
+        parts.append("<br>".join(render_inline_markdown(line) for line in intro))
+    if items:
+        parts.append("<ul>" + "".join(f"<li>{render_inline_markdown(item)}</li>" for item in items) + "</ul>")
+    return "".join(parts), None
+
+
+def render_field_html_table(headers: list[str], row_specs: list[tuple[list[str], str | None]]) -> str:
+    """Hand-built raw HTML <table> for a Parameters/Returns section where at
+    least one row needs a genuine full-width row underneath it (a
+    table-typed parameter's own field list, from render_nested_field_table).
+    Plain Markdown pipe tables have no colspan support, and a pipe-syntax
+    table can't have extra raw-HTML rows spliced into its <tbody> either (the
+    `tables` extension owns that whole element), so once any row in a
+    section needs one, the entire section's table is built here instead --
+    keeps the visual result a single real <table> with one seamless
+    full-width row, rather than a second table stacked underneath with a
+    visible border/gap."""
+    col_count = len(headers)
+    head = "<tr>" + "".join(f"<th>{h}</th>" for h in headers) + "</tr>"
+    body_rows = []
+    for cells, nested_html in row_specs:
+        body_rows.append("<tr>" + "".join(f"<td>{cell}</td>" for cell in cells) + "</tr>")
+        if nested_html:
+            body_rows.append(f'<tr class="lua-nested-field-row"><td colspan="{col_count}">{nested_html}</td></tr>')
+    return f"<table><thead>{head}</thead><tbody>{''.join(body_rows)}</tbody></table>"
 
 
 def render_api_page(item: dict, overlay_text: str | None, page_path: str | Path) -> str:
@@ -426,24 +579,48 @@ def render_api_page(item: dict, overlay_text: str | None, page_path: str | Path)
     lines.append("## Parameters")
     lines.append("")
     if item["parameters"]:
-        lines.append("| Name | Req | Type | Description |")
-        lines.append("| --- | --- | --- | --- |")
+        parsed_params = []
         for param in item["parameters"]:
             req = "yes" if param["required"] else "no"
-            description = render_table_cell_text(render_doc_text(param["description"], page_path))
-            lines.append(f"| `{param['name']}` | {req} | `{param['type']}` | {description} |")
+            intro, bullet_items = split_intro_and_bullets(render_doc_text(param["description"], page_path))
+            nested_html = render_nested_field_table(bullet_items, param["type"]) if bullet_items else None
+            parsed_params.append((param, req, intro, bullet_items, nested_html))
+        if any(nested_html for *_, nested_html in parsed_params):
+            row_specs = []
+            for param, req, intro, bullet_items, nested_html in parsed_params:
+                cell_html, nested_html = render_table_cell_html(intro, bullet_items, param["type"])
+                row_specs.append(([html_code(param["name"]), req, html_code(param["type"]), cell_html], nested_html))
+            lines.append(render_field_html_table(["Name", "Req", "Type", "Description"], row_specs))
+        else:
+            lines.append("| Name | Req | Type | Description |")
+            lines.append("| --- | --- | --- | --- |")
+            for param, req, intro, bullet_items, _ in parsed_params:
+                description = render_table_cell_text(intro, bullet_items)
+                lines.append(f"| `{param['name']}` | {req} | `{param['type']}` | {description} |")
     else:
         lines.append("None.")
     lines.append("")
     lines.append("## Returns")
     lines.append("")
     if item["returns"]:
-        lines.append("| Name | Type | Description |")
-        lines.append("| --- | --- | --- |")
+        parsed_returns = []
         for retval in item["returns"]:
             name = retval.get("name") or "-"
-            description = render_table_cell_text(render_doc_text(retval["description"], page_path))
-            lines.append(f"| `{name}` | `{retval['type']}` | {description} |")
+            intro, bullet_items = split_intro_and_bullets(render_doc_text(retval["description"], page_path))
+            nested_html = render_nested_field_table(bullet_items, retval["type"]) if bullet_items else None
+            parsed_returns.append((name, retval, intro, bullet_items, nested_html))
+        if any(nested_html for *_, nested_html in parsed_returns):
+            row_specs = []
+            for name, retval, intro, bullet_items, nested_html in parsed_returns:
+                cell_html, nested_html = render_table_cell_html(intro, bullet_items, retval["type"])
+                row_specs.append(([html_code(name), html_code(retval["type"]), cell_html], nested_html))
+            lines.append(render_field_html_table(["Name", "Type", "Description"], row_specs))
+        else:
+            lines.append("| Name | Type | Description |")
+            lines.append("| --- | --- | --- |")
+            for name, retval, intro, bullet_items, _ in parsed_returns:
+                description = render_table_cell_text(intro, bullet_items)
+                lines.append(f"| `{name}` | `{retval['type']}` | {description} |")
     else:
         lines.append("None.")
     lines.append("")
@@ -1030,7 +1207,16 @@ def parse_param_or_retval_body(body: str, *, is_retval: bool = False) -> tuple[s
 
     if rest:
         extra = clean_text("\n".join(rest))
-        description = f"{description} {extra}".strip()
+        if description and re.match(r"^[*-]\s+", extra):
+            # `extra` starts with a bullet list (e.g. a `table` return value's
+            # own field list, see model.getMix) -- joining with a space would
+            # glue the first bullet onto the intro line (e.g. "mix data: *
+            # `name` ..."), silently dropping it from bullet-list parsing
+            # downstream (split_intro_and_bullets, render_nested_field_table)
+            # since it's no longer at the start of its own line.
+            description = f"{description}\n{extra}".strip()
+        else:
+            description = f"{description} {extra}".strip()
 
     return raw_name, normalize_type_annotation(raw_type), description
 
@@ -1076,7 +1262,29 @@ def normalize_param_name(raw_name: str, signature_names: list[str], parameter_in
     return [part.strip() for part in name.split(",") if part.strip()]
 
 
+CONCRETE_PRACTICAL_TYPES = {"nil", "integer", "string", "boolean", "function", "table", "pointer"}
+
+
+def is_concrete_practical_type(practical_type: str) -> bool:
+    """True if every part of a (possibly `|`-joined) practical type is
+    already one raw_type_to_practical_type recognized outright, as opposed
+    to a raw type string it didn't know how to map (falls through to
+    `raw_type.replace(" ", "-")`, e.g. "flags") or the "unknown" sentinel.
+    Used to gate infer_type_from_description's content-sniffing heuristics
+    below -- they exist to guess a real type from context when the source
+    only gave a vague placeholder, and must never get a chance to
+    second-guess an already-unambiguous declared type. A word like "flag"
+    or "path" appearing incidentally inside an otherwise-unrelated
+    description (e.g. a `table` return whose own field list happens to
+    mention "file attribute flags") is exactly the false-positive this
+    guards against -- confirmed empirically as the actual cause of fstat's
+    return being misclassified as `integer` instead of `table`."""
+    return all(part in CONCRETE_PRACTICAL_TYPES for part in practical_type.split("|"))
+
+
 def infer_type_from_description(name: str, description: str, fallback_type: str, module: str) -> str:
+    if is_concrete_practical_type(fallback_type):
+        return fallback_type
     text = f"{name} {description}".lower()
     if module in GOLDEN_MODULES:
         if "true/false" in text or "true if" in text or "false otherwise" in text:
@@ -1090,8 +1298,7 @@ def infer_type_from_description(name: str, description: str, fallback_type: str,
         if "drawing flags" in text or "flag" in text:
             return "integer"
         if "index" in text or "number" in text or "value of" in text or "coordinates" in text:
-            if fallback_type == "unknown":
-                return "integer"
+            return "integer"
     return fallback_type
 
 

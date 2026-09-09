@@ -21,10 +21,7 @@ Return detailed information about field (source)
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | information about requested field, table elements: * `id`   (number) field identifier<ul><li>`name` (string) field name</li><li>`desc` (string) field description</li><li>`unit` (number) unit identifier, see the Units reference for the full list</li></ul> |
-| `-` | `nil` | the requested field was not found |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>information about requested field, table elements:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>id</code></td><td><code>number</code></td><td>field identifier</td></tr><tr><td><code>name</code></td><td><code>string</code></td><td>field name</td></tr><tr><td><code>desc</code></td><td><code>string</code></td><td>field description</td></tr><tr><td><code>unit</code></td><td><code>number</code></td><td>unit identifier, see the Units reference for the full list</td></tr></tbody></table></td></tr><tr><td><code>-</code></td><td><code>nil</code></td><td>the requested field was not found</td></tr></tbody></table>
 
 ## Availability
 

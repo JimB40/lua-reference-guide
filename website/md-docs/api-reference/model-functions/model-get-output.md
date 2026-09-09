@@ -21,10 +21,7 @@ Get servo parameters
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `nil` | requested output does not exist |
-| `-` | `table` | output parameters: * `name` (string) name<ul><li>`min` (number) Minimum % * 10</li><li>`max` (number) Maximum % * 10</li><li>`offset` (number) Subtrim * 10</li><li>`ppmCenter` (number) offset from PPM Center. 0 = 1500</li><li>`symetrical` (number) linear Subtrim 0 = Off, 1 = On</li><li>`revert` (number) irection 0 = ­­­---, 1 = INV</li><li>`curve`</li><li>(number) Curve number (0 for Curve1)</li><li>or `nil` if no curve set</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>nil</code></td><td>requested output does not exist</td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>output parameters:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>string</code></td><td>name</td></tr><tr><td><code>min</code></td><td><code>number</code></td><td>Minimum % * 10</td></tr><tr><td><code>max</code></td><td><code>number</code></td><td>Maximum % * 10</td></tr><tr><td><code>offset</code></td><td><code>number</code></td><td>Subtrim * 10</td></tr><tr><td><code>ppmCenter</code></td><td><code>number</code></td><td>offset from PPM Center. 0 = 1500</td></tr><tr><td><code>symetrical</code></td><td><code>number</code></td><td>linear Subtrim 0 = Off, 1 = On</td></tr><tr><td><code>revert</code></td><td><code>number</code></td><td>irection 0 = ­­­---, 1 = INV</td></tr></tbody></table><ul class="lua-nested-field-notes"><li><code>curve</code></li><li>(number) Curve number (0 for Curve1)</li><li>or <code>nil</code> if no curve set</li></ul></td></tr></tbody></table>
 
 ## Availability
 

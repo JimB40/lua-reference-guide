@@ -33,7 +33,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>index</code></td><td>param</td><td><code>integer</code></td><td>module index (0 for internal, 1 for external)</td><td><select data-field-kind="param" data-field-name="index" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="index" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested module does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>module parameters: * `subType` (number) protocol index
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>module parameters:
+* `subType` (number) protocol index
  * `modelId` (number) receiver number
  * `firstChannel` (number) start channel (0 is CH1)
  * `channelsCount` (number) number of channels sent to module
@@ -47,7 +48,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getModule&quot;, &quot;symbol&quot;: &quot;model.getModule&quot;, &quot;summary&quot;: &quot;Get RF module parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;module index (0 for internal, 1 for external)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested module does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;module parameters: * `subType` (number) protocol index\n * `modelId` (number) receiver number\n * `firstChannel` (number) start channel (0 is CH1)\n * `channelsCount` (number) number of channels sent to module\n * `Type` (number) module type\n * if the module type is Multi additional information are available\n * `protocol` (number) protocol number (Multi only)\n * `subProtocol` (number) sub-protocol number (Multi only)\n * `channelsOrder` (number) first 4 channels expected order (Multi only)\n * if the module type is LemonDSMP additional info is available\n * `channelsOrder` (number) first 4 channels expected order (DSMP only)&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getModule&quot;, &quot;symbol&quot;: &quot;model.getModule&quot;, &quot;summary&quot;: &quot;Get RF module parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;module index (0 for internal, 1 for external)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested module does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;module parameters:\n* `subType` (number) protocol index\n * `modelId` (number) receiver number\n * `firstChannel` (number) start channel (0 is CH1)\n * `channelsCount` (number) number of channels sent to module\n * `Type` (number) module type\n * if the module type is Multi additional information are available\n * `protocol` (number) protocol number (Multi only)\n * `subProtocol` (number) sub-protocol number (Multi only)\n * `channelsOrder` (number) first 4 channels expected order (Multi only)\n * if the module type is LemonDSMP additional info is available\n * `channelsOrder` (number) first 4 channels expected order (DSMP only)&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -145,7 +146,8 @@ Get RF module parameters
 
 @retval (nil) requested module does not exist
 
-@retval (table) module parameters: * `subType` (number) protocol index
+@retval (table) module parameters:
+* `subType` (number) protocol index
  * `modelId` (number) receiver number
  * `firstChannel` (number) start channel (0 is CH1)
  * `channelsCount` (number) number of channels sent to module

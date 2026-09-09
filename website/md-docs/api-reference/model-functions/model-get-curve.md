@@ -21,10 +21,7 @@ Get Curve parameters
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `nil` | requested curve does not exist |
-| `-` | `table` | curve data: * `name` (string) name<ul><li>`type` (number) type</li><li>`smooth` (boolean) smooth</li><li>`points` (number) number of points</li><li>`y` (table) table of Y values:</li><li>`key` is point number (zero based)</li><li>`value` is y value</li><li>`x` (table) **only included for custom curve type**:</li><li>`key` is point number (zero based)</li><li>`value` is x value</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>nil</code></td><td>requested curve does not exist</td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>curve data:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>string</code></td><td>name</td></tr><tr><td><code>type</code></td><td><code>number</code></td><td>type</td></tr><tr><td><code>smooth</code></td><td><code>boolean</code></td><td>smooth</td></tr><tr><td><code>points</code></td><td><code>number</code></td><td>number of points</td></tr><tr><td><code>y</code></td><td><code>table</code></td><td>table of Y values:</td></tr><tr><td><code>key</code></td><td>-</td><td>is point number (zero based)</td></tr><tr><td><code>value</code></td><td>-</td><td>is y value</td></tr><tr><td><code>x</code></td><td><code>table</code></td><td><strong>only included for custom curve type</strong>:</td></tr><tr><td><code>key</code></td><td>-</td><td>is point number (zero based)</td></tr><tr><td><code>value</code></td><td>-</td><td>is x value</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

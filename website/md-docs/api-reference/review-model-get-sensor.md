@@ -33,7 +33,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>sensor</code></td><td>param</td><td><code>integer</code></td><td>sensor number (use 0 for sensor 1)</td><td><select data-field-kind="param" data-field-name="sensor" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="sensor" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested sensor does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with sensor data: * `type` (number) 0 = custom, 1 = calculated
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with sensor data:
+* `type` (number) 0 = custom, 1 = calculated
  * `name` (string) Name
  * `unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide
  * `prec` (number) Number of decimals
@@ -43,7 +44,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getSensor&quot;, &quot;symbol&quot;: &quot;model.getSensor&quot;, &quot;summary&quot;: &quot;Get Telemetry Sensor parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;sensor&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;sensor number (use 0 for sensor 1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested sensor does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with sensor data: * `type` (number) 0 = custom, 1 = calculated\n * `name` (string) Name\n * `unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide\n * `prec` (number) Number of decimals\n * `id`   (number) Only custom sensors\n * `instance` (number) Only custom sensors\n * `formula` (number) Only calculated sensors. 0 = Add etc. see list of formula choices in Companion popup&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getSensor&quot;, &quot;symbol&quot;: &quot;model.getSensor&quot;, &quot;summary&quot;: &quot;Get Telemetry Sensor parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;sensor&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;sensor number (use 0 for sensor 1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested sensor does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with sensor data:\n* `type` (number) 0 = custom, 1 = calculated\n * `name` (string) Name\n * `unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide\n * `prec` (number) Number of decimals\n * `id`   (number) Only custom sensors\n * `instance` (number) Only custom sensors\n * `formula` (number) Only calculated sensors. 0 = Add etc. see list of formula choices in Companion popup&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -111,7 +112,8 @@ Get Telemetry Sensor parameters
 
 @retval (nil) requested sensor does not exist
 
-@retval (table) with sensor data: * `type` (number) 0 = custom, 1 = calculated
+@retval (table) with sensor data:
+* `type` (number) 0 = custom, 1 = calculated
  * `name` (string) Name
  * `unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide
  * `prec` (number) Number of decimals

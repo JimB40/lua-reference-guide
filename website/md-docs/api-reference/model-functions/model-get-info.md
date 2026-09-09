@@ -19,9 +19,7 @@ None.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | model information: * `name` (string) model name<ul><li>`extendedLimits` (boolean) extended limits enabled</li><li>`jitterFilter` (number) model level ADC filter</li><li>`bitmap` (string) bitmap name (not present on X7)</li><li>`filename` (string) model filename</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>model information:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>string</code></td><td>model name</td></tr><tr><td><code>extendedLimits</code></td><td><code>boolean</code></td><td>extended limits enabled</td></tr><tr><td><code>jitterFilter</code></td><td><code>number</code></td><td>model level ADC filter</td></tr><tr><td><code>bitmap</code></td><td><code>string</code></td><td>bitmap name (not present on X7)</td></tr><tr><td><code>filename</code></td><td><code>string</code></td><td>model filename</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

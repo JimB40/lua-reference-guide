@@ -32,7 +32,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>sourceIndex</code></td><td>param</td><td><code>integer</code></td><td>identifying a value source as returned by `getSourceIndex(sourceName)` or the `id` field in the table returned by `getFieldInfo`.</td><td><select data-field-kind="param" data-field-name="sourceIndex" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="sourceIndex" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>information about requested field, table elements: * `type`   (number) field identifier
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>information about requested field, table elements:
+* `type`   (number) field identifier
 0 = SWITCH_NONE
 1 = SWITCH_TOGGLE
 2 = SWITCH_2POS
@@ -40,7 +41,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getSwitchInfo&quot;, &quot;symbol&quot;: &quot;getSwitchInfo&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;sourceIndex&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;identifying a value source as returned by `getSourceIndex(sourceName)` or the `id` field in the table returned by `getFieldInfo`.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;information about requested field, table elements: * `type`   (number) field identifier\n0 = SWITCH_NONE\n1 = SWITCH_TOGGLE\n2 = SWITCH_2POS\n3 = SWITCH_3POS&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.12&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getSwitchInfo&quot;, &quot;symbol&quot;: &quot;getSwitchInfo&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;sourceIndex&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;identifying a value source as returned by `getSourceIndex(sourceName)` or the `id` field in the table returned by `getFieldInfo`.&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;information about requested field, table elements:\n* `type`   (number) field identifier\n0 = SWITCH_NONE\n1 = SWITCH_TOGGLE\n2 = SWITCH_2POS\n3 = SWITCH_3POS&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.12&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -102,7 +103,8 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 @param sourceIndex (integer) identifying a value source as returned by `getSourceIndex(sourceName)` or the `id` field in the table returned by `getFieldInfo`.
 
-@retval (table) information about requested field, table elements: * `type`   (number) field identifier
+@retval (table) information about requested field, table elements:
+* `type`   (number) field identifier
 0 = SWITCH_NONE
 1 = SWITCH_TOGGLE
 2 = SWITCH_2POS

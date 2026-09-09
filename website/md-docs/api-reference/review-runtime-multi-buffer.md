@@ -33,11 +33,11 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>address</code></td><td>param</td><td><code>unknown</code></td><td>to read/write in the buffer @param (optional): value to write in the buffer</td><td><select data-field-kind="param" data-field-name="address" data-current-type="TODO"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="address" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>buffer</code></td><td>value (number)</td><td><select data-field-kind="return" data-field-name="-" data-current-type="buffer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
+<tr><td><code>-</code></td><td>return</td><td><code>integer</code></td><td>value (number)</td><td><select data-field-kind="return" data-field-name="-" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;multiBuffer&quot;, &quot;symbol&quot;: &quot;multiBuffer&quot;, &quot;summary&quot;: &quot;This function reads/writes the Multi protocol buffer to interact with a protocol.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;address&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;to read/write in the buffer @param (optional): value to write in the buffer&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;buffer&quot;, &quot;description&quot;: &quot;value (number)&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.2&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;multiBuffer&quot;, &quot;symbol&quot;: &quot;multiBuffer&quot;, &quot;summary&quot;: &quot;This function reads/writes the Multi protocol buffer to interact with a protocol.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;address&quot;, &quot;type&quot;: &quot;unknown&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;to read/write in the buffer @param (optional): value to write in the buffer&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;value (number)&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.2&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -74,7 +74,7 @@ This function reads/writes the Multi protocol buffer to interact with a protocol
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `buffer` | value (number) |
+| `-` | `integer` | value (number) |
 
 #### Notes
 
@@ -94,7 +94,7 @@ This function reads/writes the Multi protocol buffer to interact with a protocol
 
 @param address (TODO) to read/write in the buffer @param (optional): value to write in the buffer
 
-@retval (buffer) value (number)
+@retval (integer) value (number)
 
 @status current Introduced in 2.3.2
 ~~~~

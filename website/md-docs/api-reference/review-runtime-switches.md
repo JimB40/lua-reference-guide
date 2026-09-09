@@ -31,12 +31,12 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>first</code></td><td>param</td><td><code>the</code></td><td>first switch index. If `nil` or omitted, the first available switch is used.</td><td><select data-field-kind="param" data-field-name="first" data-current-type="the"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="first" data-custom-type="true" /></td></tr>
-<tr><td><code>last</code></td><td>param</td><td><code>the</code></td><td>last switch index. If `nil` or omitted, the last available switch is used.</td><td><select data-field-kind="param" data-field-name="last" data-current-type="the"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="last" data-custom-type="true" /></td></tr>
+<tr><td><code>first</code></td><td>param</td><td><code>integer</code></td><td>first switch index. If `nil` or omitted, the first available switch is used.</td><td><select data-field-kind="param" data-field-name="first" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="first" data-custom-type="true" /></td></tr>
+<tr><td><code>last</code></td><td>param</td><td><code>integer</code></td><td>last switch index. If `nil` or omitted, the last available switch is used.</td><td><select data-field-kind="param" data-field-name="last" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="last" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;switches&quot;, &quot;symbol&quot;: &quot;switches&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;first&quot;, &quot;type&quot;: &quot;the&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;first switch index. If `nil` or omitted, the first available switch is used.&quot;}, {&quot;name&quot;: &quot;last&quot;, &quot;type&quot;: &quot;the&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;last switch index. If `nil` or omitted, the last available switch is used.&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.6&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;switches&quot;, &quot;symbol&quot;: &quot;switches&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;first&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;first switch index. If `nil` or omitted, the first available switch is used.&quot;}, {&quot;name&quot;: &quot;last&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: false, &quot;description&quot;: &quot;last switch index. If `nil` or omitted, the last available switch is used.&quot;}], &quot;returns&quot;: [], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.6&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -66,8 +66,8 @@ None.
 
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
-| `first` | no | `the` | first switch index. If `nil` or omitted, the first available switch is used. |
-| `last` | no | `the` | last switch index. If `nil` or omitted, the last available switch is used. |
+| `first` | no | `integer` | first switch index. If `nil` or omitted, the first available switch is used. |
+| `last` | no | `integer` | last switch index. If `nil` or omitted, the last available switch is used. |
 
 #### Returns
 
@@ -87,9 +87,9 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 ~~~~text
 @function switches([first, last])
 
-@param first (the) first switch index. If `nil` or omitted, the first available switch is used.
+@param first (integer) first switch index. If `nil` or omitted, the first available switch is used.
 
-@param last (the) last switch index. If `nil` or omitted, the last available switch is used.
+@param last (integer) last switch index. If `nil` or omitted, the last available switch is used.
 
 @status current Introduced in 2.6
 ~~~~

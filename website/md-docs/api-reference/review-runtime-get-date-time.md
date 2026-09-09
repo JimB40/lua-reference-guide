@@ -31,7 +31,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>current date and time, table elements: * `year` (number) year
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>current date and time, table elements:
+* `year` (number) year
  * `mon` (number) month
  * `day` (number) day of month
  * `hour` (number) hours
@@ -42,7 +43,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getDateTime&quot;, &quot;symbol&quot;: &quot;getDateTime&quot;, &quot;summary&quot;: &quot;Return current system date and time that is kept by the RTC unit&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;current date and time, table elements: * `year` (number) year\n * `mon` (number) month\n * `day` (number) day of month\n * `hour` (number) hours\n * `hour12` (number) hours in US format\n * `min` (number) minutes\n * `sec` (number) seconds\n * `suffix` (text) am or pm&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;unknown&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getDateTime&quot;, &quot;symbol&quot;: &quot;getDateTime&quot;, &quot;summary&quot;: &quot;Return current system date and time that is kept by the RTC unit&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;current date and time, table elements:\n* `year` (number) year\n * `mon` (number) month\n * `day` (number) day of month\n * `hour` (number) hours\n * `hour12` (number) hours in US format\n * `min` (number) minutes\n * `sec` (number) seconds\n * `suffix` (text) am or pm&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;unknown&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -98,7 +99,8 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Return current system date and time that is kept by the RTC unit
 
-@retval (table) current date and time, table elements: * `year` (number) year
+@retval (table) current date and time, table elements:
+* `year` (number) year
  * `mon` (number) month
  * `day` (number) day of month
  * `hour` (number) hours

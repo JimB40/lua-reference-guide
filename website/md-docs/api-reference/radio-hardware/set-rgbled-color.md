@@ -18,9 +18,9 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `id` | yes | `integer` | identifying a led in the led chain |
-| `rvalue` | yes | `interger` | value of red channel |
-| `bvalue` | yes | `interger` | value of green channel |
-| `cvalue` | yes | `interger` | value of blue channel |
+| `rvalue` | yes | `integer` | value of red channel |
+| `bvalue` | yes | `integer` | value of green channel |
+| `cvalue` | yes | `integer` | value of blue channel |
 
 ## Returns
 

@@ -15,9 +15,7 @@ Display a message dialog box.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `params` | yes | `table` | <ul><li>`title` (string) text displayed in the dialog's header, defaults to an empty string</li><li>`message` (string) text displayed in the dialog's body, defaults to an empty string</li><li>`details` (string) additional text displayed in the dialog's body, defaults to an empty string</li></ul> |
+<table><thead><tr><th>Name</th><th>Req</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>params</code></td><td>yes</td><td><code>table</code></td><td></td></tr><tr class="lua-nested-field-row"><td colspan="4"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td><code>string</code></td><td>text displayed in the dialog's header, defaults to an empty string</td></tr><tr><td><code>message</code></td><td><code>string</code></td><td>text displayed in the dialog's body, defaults to an empty string</td></tr><tr><td><code>details</code></td><td><code>string</code></td><td>additional text displayed in the dialog's body, defaults to an empty string</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Returns
 

@@ -21,10 +21,7 @@ Get Logical Switch parameters
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `nil` | requested logical switch does not exist |
-| `-` | `table` | logical switch data: * `func` (number) function index<ul><li>`v1` (number) V1 value (index)</li><li>`v2` (number) V2 value (index or value)</li><li>`v3` (number) V3 value (index or value)</li><li>`and` (number) AND switch index</li><li>`delay` (number) delay (time in 1/10 s)</li><li>`duration` (number) duration (time in 1/10 s)</li><li>`state` (boolean) current state of the logical switch</li><li>`persistent` (boolean) if true then the state is persistent across reboot of the radio</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>nil</code></td><td>requested logical switch does not exist</td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>logical switch data:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>func</code></td><td><code>number</code></td><td>function index</td></tr><tr><td><code>v1</code></td><td><code>number</code></td><td>V1 value (index)</td></tr><tr><td><code>v2</code></td><td><code>number</code></td><td>V2 value (index or value)</td></tr><tr><td><code>v3</code></td><td><code>number</code></td><td>V3 value (index or value)</td></tr><tr><td><code>and</code></td><td><code>number</code></td><td>AND switch index</td></tr><tr><td><code>delay</code></td><td><code>number</code></td><td>delay (time in 1/10 s)</td></tr><tr><td><code>duration</code></td><td><code>number</code></td><td>duration (time in 1/10 s)</td></tr><tr><td><code>state</code></td><td><code>boolean</code></td><td>current state of the logical switch</td></tr><tr><td><code>persistent</code></td><td><code>boolean</code></td><td>if true then the state is persistent across reboot of the radio</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

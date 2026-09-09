@@ -19,9 +19,7 @@ None.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | representing the current radio position * `lat` (number) internal GPS latitude, positive is North<ul><li>`lon` (number) internal GPS longitude, positive is East</li><li>`numsat` (number) current number of sats locked in by the GPS sensor</li><li>`fix` (boolean) fix status</li><li>`alt` (number) internal GPS altitude in 0.1m</li><li>`speed` (number) internal GPSspeed in 0.1m/s</li><li>`heading`  (number) internal GPS ground course estimation in degrees * 10</li><li>`hdop` (number)  internal GPS horizontal dilution of precision</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>representing the current radio position</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>lat</code></td><td><code>number</code></td><td>internal GPS latitude, positive is North</td></tr><tr><td><code>lon</code></td><td><code>number</code></td><td>internal GPS longitude, positive is East</td></tr><tr><td><code>numsat</code></td><td><code>number</code></td><td>current number of sats locked in by the GPS sensor</td></tr><tr><td><code>fix</code></td><td><code>boolean</code></td><td>fix status</td></tr><tr><td><code>alt</code></td><td><code>number</code></td><td>internal GPS altitude in 0.1m</td></tr><tr><td><code>speed</code></td><td><code>number</code></td><td>internal GPSspeed in 0.1m/s</td></tr><tr><td><code>heading</code></td><td><code>number</code></td><td>internal GPS ground course estimation in degrees * 10</td></tr><tr><td><code>hdop</code></td><td><code>number</code></td><td>internal GPS horizontal dilution of precision</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

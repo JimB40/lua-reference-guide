@@ -1,7 +1,7 @@
 {
   "docs_version": "2.12",
   "upstream_ref": "2.12@8718d2473a",
-  "generated_at": "2026-09-08T21:42:10.893096Z",
+  "generated_at": "2026-09-09T02:38:02.672726Z",
   "items": [
     {
       "id": "Bitmap.getSize",
@@ -576,8 +576,8 @@
       "returns": [
         {
           "name": "",
-          "type": "integer",
-          "description": "object info, table elements: * 'size' (number) file size\n* 'attrib' (number) file attribute flags\n* 'time' (table) table with last time modified date and times, table elements:\n  * `year` (number) year\n  * `mon` (number) month\n  * `day` (number) day of month\n  * `hour` (number) hours\n  * `hour12` (number) hours in US format\n  * `min` (number) minutes\n  * `sec` (number) seconds\n  * `suffix` (text) am or pm"
+          "type": "table",
+          "description": "object info, table elements:\n* `size` (number) file size\n* `attrib` (number) file attribute flags\n* `time` (table) table with last time modified date and times, table elements:\n  * `year` (number) year\n  * `mon` (number) month\n  * `day` (number) day of month\n  * `hour` (number) hours\n  * `hour12` (number) hours in US format\n  * `min` (number) minutes\n  * `sec` (number) seconds\n  * `suffix` (text) am or pm"
         }
       ],
       "availability": {
@@ -588,7 +588,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_filesystem.cpp",
-      "raw_luadoc": "@function fstat(path)\n\n Checks the existence of file or directory.\n If not exist, return nil.\n If exist, return the object information.\n\n@param path (string) path to the object\n\n@retval table object info, table elements:\n* 'size' (number) file size\n* 'attrib' (number) file attribute flags\n* 'time' (table) table with last time modified date and times, table elements:\n  * `year` (number) year\n  * `mon` (number) month\n  * `day` (number) day of month\n  * `hour` (number) hours\n  * `hour12` (number) hours in US format\n  * `min` (number) minutes\n  * `sec` (number) seconds\n  * `suffix` (text) am or pm\n\n### Example\n\n```lua\n  info = fstat(\"radio\")\n  if info ~= nil then\n    if (info.attrib == AM_DIR) then\n      print(\"is a directory\")\n    end\n\n    size = info.size\n    time = info.time\n  end\n```\n@status current Introduced in 2.5.0",
+      "raw_luadoc": "@function fstat(path)\n\n Checks the existence of file or directory.\n If not exist, return nil.\n If exist, return the object information.\n\n@param path (string) path to the object\n\n@retval table object info, table elements:\n* `size` (number) file size\n* `attrib` (number) file attribute flags\n* `time` (table) table with last time modified date and times, table elements:\n  * `year` (number) year\n  * `mon` (number) month\n  * `day` (number) day of month\n  * `hour` (number) hours\n  * `hour12` (number) hours in US format\n  * `min` (number) minutes\n  * `sec` (number) seconds\n  * `suffix` (text) am or pm\n\n### Example\n\n```lua\n  info = fstat(\"radio\")\n  if info ~= nil then\n    if (info.attrib == AM_DIR) then\n      print(\"is a directory\")\n    end\n\n    size = info.size\n    time = info.time\n  end\n```\n@status current Introduced in 2.5.0",
       "source_line": 88
     },
     {
@@ -635,7 +635,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "current date and time, table elements: * `year` (number) year\n * `mon` (number) month\n * `day` (number) day of month\n * `hour` (number) hours\n * `hour12` (number) hours in US format\n * `min` (number) minutes\n * `sec` (number) seconds\n * `suffix` (text) am or pm"
+          "description": "current date and time, table elements:\n* `year` (number) year\n * `mon` (number) month\n * `day` (number) day of month\n * `hour` (number) hours\n * `hour12` (number) hours in US format\n * `min` (number) minutes\n * `sec` (number) seconds\n * `suffix` (text) am or pm"
         }
       ],
       "availability": {
@@ -671,7 +671,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "information about requested field, table elements: * `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier, see the Units reference for the full list"
+          "description": "information about requested field, table elements:\n* `id`   (number) field identifier\n * `name` (string) field name\n * `desc` (string) field description\n * `unit` (number) unit identifier, see the Units reference for the full list"
         },
         {
           "name": "",
@@ -746,7 +746,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "with elements: * `battWarn` (number) radio battery range - warning value\n * `battMin` (number) radio battery range - minimum value\n * `battMax` (number) radio battery range - maximum value\n * `imperial` (number) set to a value different from 0 if the radio is set to the\n IMPERIAL units\n * `language` (string) radio language (used for menus)\n * `voice` (string) voice language (used for speech)\n * `gtimer` (number) radio global timer in seconds (does not include current session)"
+          "description": "with elements:\n* `battWarn` (number) radio battery range - warning value\n * `battMin` (number) radio battery range - minimum value\n * `battMax` (number) radio battery range - maximum value\n * `imperial` (number) set to a value different from 0 if the radio is set to the\n IMPERIAL units\n * `language` (string) radio language (used for menus)\n * `voice` (string) voice language (used for speech)\n * `gtimer` (number) radio global timer in seconds (does not include current session)"
         }
       ],
       "availability": {
@@ -775,7 +775,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "with elements: * `gtimer` (number) radio global timer in seconds\n* `session` (number) radio session in seconds\n* `ttimer` (number) radio throttle timer in seconds\n* `tptimer` (number) radio throttle percent timer in seconds"
+          "description": "with elements:\n* `gtimer` (number) radio global timer in seconds\n* `session` (number) radio session in seconds\n* `ttimer` (number) radio throttle timer in seconds\n* `tptimer` (number) radio throttle percent timer in seconds"
         }
       ],
       "availability": {
@@ -847,7 +847,7 @@
         {
           "name": "",
           "type": "integer",
-          "description": "current output value (number). Zero is returned for: * non-existing outputs"
+          "description": "current output value (number). Zero is returned for:\n* non-existing outputs"
         }
       ],
       "availability": {
@@ -1267,7 +1267,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "information about requested field, table elements: * `type`   (number) field identifier\n0 = SWITCH_NONE\n1 = SWITCH_TOGGLE\n2 = SWITCH_2POS\n3 = SWITCH_3POS"
+          "description": "information about requested field, table elements:\n* `type`   (number) field identifier\n0 = SWITCH_NONE\n1 = SWITCH_TOGGLE\n2 = SWITCH_2POS\n3 = SWITCH_3POS"
         }
       ],
       "availability": {
@@ -1338,7 +1338,7 @@
       "returns": [
         {
           "name": "value",
-          "type": "true/false",
+          "type": "integer",
           "description": ". The value of the switch."
         }
       ],
@@ -1426,7 +1426,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "representing the current radio position * `lat` (number) internal GPS latitude, positive is North\n * `lon` (number) internal GPS longitude, positive is East\n * `numsat` (number) current number of sats locked in by the GPS sensor\n * `fix` (boolean) fix status\n * `alt` (number) internal GPS altitude in 0.1m\n * `speed` (number) internal GPSspeed in 0.1m/s\n * `heading`  (number) internal GPS ground course estimation in degrees * 10\n * `hdop` (number)  internal GPS horizontal dilution of precision"
+          "description": "representing the current radio position\n* `lat` (number) internal GPS latitude, positive is North\n * `lon` (number) internal GPS longitude, positive is East\n * `numsat` (number) current number of sats locked in by the GPS sensor\n * `fix` (boolean) fix status\n * `alt` (number) internal GPS altitude in 0.1m\n * `speed` (number) internal GPSspeed in 0.1m/s\n * `heading`  (number) internal GPS ground course estimation in degrees * 10\n * `hdop` (number)  internal GPS horizontal dilution of precision"
         }
       ],
       "availability": {
@@ -1491,12 +1491,12 @@
         {
           "name": "",
           "type": "integer",
-          "description": "current source value (number). Zero is returned for: * non-existing sources\n * for all telemetry source when the telemetry stream is not received\n * far all non allowed sensors while FAI MODE is active"
+          "description": "current source value (number). Zero is returned for:\n* non-existing sources\n * for all telemetry source when the telemetry stream is not received\n * far all non allowed sensors while FAI MODE is active"
         },
         {
           "name": "",
           "type": "table",
-          "description": "GPS position is returned in a table: * `lat` (number) latitude, positive is North\n * `lon` (number) longitude, positive is East\n * `pilot-lat` (number) pilot latitude, positive is North\n * `pilot-lon` (number) pilot longitude, positive is East"
+          "description": "GPS position is returned in a table:\n* `lat` (number) latitude, positive is North\n * `lon` (number) longitude, positive is East\n * `pilot-lat` (number) pilot latitude, positive is North\n * `pilot-lon` (number) pilot longitude, positive is East"
         },
         {
           "name": "",
@@ -2222,7 +2222,7 @@
           "name": "flags",
           "type": "integer",
           "required": false,
-          "description": "drawing flags, the flags can not be combined: * `BLINK` combo box is expanded\n * `INVERS` combo box collapsed, text inversed\n * `0 or not present` combo box collapsed, text normal"
+          "description": "drawing flags, the flags can not be combined:\n* `BLINK` combo box is expanded\n * `INVERS` combo box collapsed, text inversed\n * `0 or not present` combo box collapsed, text normal"
         }
       ],
       "returns": [],
@@ -3409,7 +3409,7 @@
       "returns": [
         {
           "name": "color",
-          "type": "flag",
+          "type": "integer",
           "description": "only the RGB565 color value of the input"
         }
       ],
@@ -3904,7 +3904,7 @@
           "name": "params",
           "type": "table",
           "required": true,
-          "description": "a table of tables, each defining one LVGL object: * `type` (string or type constant) mandatory, selects the kind of object to create, e.g. `\"rectangle\"` or `lvgl.RECTANGLE`; named type constants (e.g. `lvgl.RECTANGLE`) added in 2.11.4, string names work in all versions\n * `name` (string) optional name used to look up this object in the returned table, defaults to an empty string\n * `children` (table) optional nested table of the same shape, to create child objects\n * any other key accepted by the constructor function for the chosen `type`"
+          "description": "a table of tables, each defining one LVGL object:\n* `type` (string or type constant) mandatory, selects the kind of object to create, e.g. `\"rectangle\"` or `lvgl.RECTANGLE`; named type constants (e.g. `lvgl.RECTANGLE`) added in 2.11.4, string names work in all versions\n * `name` (string) optional name used to look up this object in the returned table, defaults to an empty string\n * `children` (table) optional nested table of the same shape, to create child objects\n * any other key accepted by the constructor function for the chosen `type`"
         }
       ],
       "returns": [
@@ -5802,7 +5802,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "curve data: * `name` (string) name\n * `type` (number) type\n * `smooth` (boolean) smooth\n * `points` (number) number of points\n * `y` (table) table of Y values:\n   * `key` is point number (zero based)\n   * `value` is y value\n * `x` (table) **only included for custom curve type**:\n   * `key` is point number (zero based)\n   * `value` is x value"
+          "description": "curve data:\n* `name` (string) name\n * `type` (number) type\n * `smooth` (boolean) smooth\n * `points` (number) number of points\n * `y` (table) table of Y values:\n   * `key` is point number (zero based)\n   * `value` is y value\n * `x` (table) **only included for custom curve type**:\n   * `key` is point number (zero based)\n   * `value` is x value"
         }
       ],
       "availability": {
@@ -5843,7 +5843,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "custom function data: * `switch` (number) switch index\n * `func` (number) function index\n * `name` (string)  Name of track to play (only returned only returned if action is play track, sound or script)\n * `value` (number) value (only returned only returned if action is **not** play track, sound or script)\n * `mode` (number) mode (only returned only returned if action is **not** play track, sound or script)\n * `param` (number) parameter (only returned only returned if action is **not** play track, sound or script)\n * `active` (number) 0 = disabled, 1 = enabled\n * `repetition` (number) -1 to 60, range and meaning depend on function"
+          "description": "custom function data:\n* `switch` (number) switch index\n * `func` (number) function index\n * `name` (string)  Name of track to play (only returned only returned if action is play track, sound or script)\n * `value` (number) value (only returned only returned if action is **not** play track, sound or script)\n * `mode` (number) mode (only returned only returned if action is **not** play track, sound or script)\n * `param` (number) parameter (only returned only returned if action is **not** play track, sound or script)\n * `active` (number) 0 = disabled, 1 = enabled\n * `repetition` (number) -1 to 60, range and meaning depend on function"
         }
       ],
       "availability": {
@@ -5884,7 +5884,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "input data: * `name` (string) input line name\n * `switch` (number) input switch index\n * `fadeIn` (number) fade in value (in 0.1s)\n * `fadeOut` (number) fade out value (in 0.1s)\n * `trimsValues` (table) table of trim values:\n   * `key` is trim number (zero based)\n   * `value` is trim value\n * `trimsModes` (table) table of trim mode:\n   * `key` is trim number (zero based)\n   * `value` is trim mode"
+          "description": "input data:\n* `name` (string) input line name\n * `switch` (number) input switch index\n * `fadeIn` (number) fade in value (in 0.1s)\n * `fadeOut` (number) fade out value (in 0.1s)\n * `trimsValues` (table) table of trim values:\n   * `key` is trim number (zero based)\n   * `value` is trim value\n * `trimsModes` (table) table of trim mode:\n   * `key` is trim number (zero based)\n   * `value` is trim mode"
         }
       ],
       "availability": {
@@ -5969,7 +5969,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "details of the global variable: * `name` (string) global variable name\n * `min` (number) minimum value\n * `max` (number) maximum value\n * `prec` (number) precision\n * `unit` (number) unit\n * `popup` (boolean) show popup - if exists"
+          "description": "details of the global variable:\n* `name` (string) global variable name\n * `min` (number) minimum value\n * `max` (number) maximum value\n * `prec` (number) precision\n * `unit` (number) unit\n * `popup` (boolean) show popup - if exists"
         }
       ],
       "availability": {
@@ -5998,7 +5998,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "model information: * `name` (string) model name\n * `extendedLimits` (boolean) extended limits enabled\n * `jitterFilter` (number) model level ADC filter\n * `bitmap` (string) bitmap name (not present on X7)\n * `filename` (string) model filename"
+          "description": "model information:\n* `name` (string) model name\n * `extendedLimits` (boolean) extended limits enabled\n * `jitterFilter` (number) model level ADC filter\n * `bitmap` (string) bitmap name (not present on X7)\n * `filename` (string) model filename"
         }
       ],
       "availability": {
@@ -6045,7 +6045,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "input data: * `name` (string) input line name\n * `inputName` (string) input input name\n * `source` (number) input source index\n * `scale` (number)  input scaling (for telemetry)\n * `weight` (number) input weight\n * `offset` (number) input offset\n * `switch` (number) input switch index\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)\n * 'trimSource' (number) a positive number representing trim source\n * 'side' (number) input side (positive, negative or all)\n * 'flightModes' (number) bit-mask of active flight modes"
+          "description": "input data:\n* `name` (string) input line name\n * `inputName` (string) input input name\n * `source` (number) input source index\n * `scale` (number)  input scaling (for telemetry)\n * `weight` (number) input weight\n * `offset` (number) input offset\n * `switch` (number) input switch index\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)\n * `trimSource` (number) a positive number representing trim source\n * `side` (number) input side (positive, negative or all)\n * `flightModes` (number) bit-mask of active flight modes"
         }
       ],
       "availability": {
@@ -6056,7 +6056,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.getInput(input, line)\n\nReturn input data for given input and line number\n\n@param input (unsigned number) input number (use 0 for Input1)\n\n@param line  (unsigned number) input line (use 0 for first line)\n\n@retval nil requested input or line does not exist\n\n@retval table input data:\n * `name` (string) input line name\n * `inputName` (string) input input name\n * `source` (number) input source index\n * `scale` (number)  input scaling (for telemetry)\n * `weight` (number) input weight\n * `offset` (number) input offset\n * `switch` (number) input switch index\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)\n * 'trimSource' (number) a positive number representing trim source\n * 'side' (number) input side (positive, negative or all)\n * 'flightModes' (number) bit-mask of active flight modes\n\n@status current Introduced in 2.0.0, curveType/curveValue/carryTrim added in 2.3, inputName added 2.3.10, flighmode reworked in 2.3.11, broken carryTrim replaced by trimSource in 2.8.1, scale added in 2.10, side added in 2.11",
+      "raw_luadoc": "@function model.getInput(input, line)\n\nReturn input data for given input and line number\n\n@param input (unsigned number) input number (use 0 for Input1)\n\n@param line  (unsigned number) input line (use 0 for first line)\n\n@retval nil requested input or line does not exist\n\n@retval table input data:\n * `name` (string) input line name\n * `inputName` (string) input input name\n * `source` (number) input source index\n * `scale` (number)  input scaling (for telemetry)\n * `weight` (number) input weight\n * `offset` (number) input offset\n * `switch` (number) input switch index\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)\n * `trimSource` (number) a positive number representing trim source\n * `side` (number) input side (positive, negative or all)\n * `flightModes` (number) bit-mask of active flight modes\n\n@status current Introduced in 2.0.0, curveType/curveValue/carryTrim added in 2.3, inputName added 2.3.10, flighmode reworked in 2.3.11, broken carryTrim replaced by trimSource in 2.8.1, scale added in 2.10, side added in 2.11",
       "source_line": 594
     },
     {
@@ -6122,7 +6122,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "logical switch data: * `func` (number) function index\n * `v1` (number) V1 value (index)\n * `v2` (number) V2 value (index or value)\n * `v3` (number) V3 value (index or value)\n * `and` (number) AND switch index\n * `delay` (number) delay (time in 1/10 s)\n * `duration` (number) duration (time in 1/10 s)\n * `state` (boolean) current state of the logical switch\n * `persistent` (boolean) if true then the state is persistent across reboot of the radio"
+          "description": "logical switch data:\n* `func` (number) function index\n * `v1` (number) V1 value (index)\n * `v2` (number) V2 value (index or value)\n * `v3` (number) V3 value (index or value)\n * `and` (number) AND switch index\n * `delay` (number) delay (time in 1/10 s)\n * `duration` (number) duration (time in 1/10 s)\n * `state` (boolean) current state of the logical switch\n * `persistent` (boolean) if true then the state is persistent across reboot of the radio"
         }
       ],
       "availability": {
@@ -6169,7 +6169,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "mix data: * `name` (string) mix line name\n * `source` (number) source index\n * `weight` (number) weight value (-512 to 511) or source (>= 1024 or <= -1024)\n * `offset` (number) offset value (-512 to 511) or source (>= 1024 or <= -1024)\n * `switch` (number) switch index\n * `multiplex` (number) multiplex (0 = ADD, 1 = MULTIPLY, 2 = REPLACE)\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `flightModes` (number) bit-mask of active flight modes\n * `carryTrim` (boolean) carry trim\n * `mixWarn` (number) warning (0 = off, 1 = 1 beep, .. 3 = 3 beeps)\n * `delayPrec` precision of delay up/down (1 or 10)\n * `delayUp` (number) delay up (time in 1/10 s)\n * `delayDown` (number) delay down\n * `speedPrec` precision of speed up/down (1 or 10)\n * `speedUp` (number) speed up\n * `speedDown` (number) speed down"
+          "description": "mix data:\n* `name` (string) mix line name\n * `source` (number) source index\n * `weight` (number) weight value (-512 to 511) or source (>= 1024 or <= -1024)\n * `offset` (number) offset value (-512 to 511) or source (>= 1024 or <= -1024)\n * `switch` (number) switch index\n * `multiplex` (number) multiplex (0 = ADD, 1 = MULTIPLY, 2 = REPLACE)\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `flightModes` (number) bit-mask of active flight modes\n * `carryTrim` (boolean) carry trim\n * `mixWarn` (number) warning (0 = off, 1 = 1 beep, .. 3 = 3 beeps)\n * `delayPrec` precision of delay up/down (1 or 10)\n * `delayUp` (number) delay up (time in 1/10 s)\n * `delayDown` (number) delay down\n * `speedPrec` precision of speed up/down (1 or 10)\n * `speedUp` (number) speed up\n * `speedDown` (number) speed down"
         }
       ],
       "availability": {
@@ -6246,7 +6246,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "module parameters: * `subType` (number) protocol index\n * `modelId` (number) receiver number\n * `firstChannel` (number) start channel (0 is CH1)\n * `channelsCount` (number) number of channels sent to module\n * `Type` (number) module type\n * if the module type is Multi additional information are available\n * `protocol` (number) protocol number (Multi only)\n * `subProtocol` (number) sub-protocol number (Multi only)\n * `channelsOrder` (number) first 4 channels expected order (Multi only)\n * if the module type is LemonDSMP additional info is available\n * `channelsOrder` (number) first 4 channels expected order (DSMP only)"
+          "description": "module parameters:\n* `subType` (number) protocol index\n * `modelId` (number) receiver number\n * `firstChannel` (number) start channel (0 is CH1)\n * `channelsCount` (number) number of channels sent to module\n * `Type` (number) module type\n * if the module type is Multi additional information are available\n * `protocol` (number) protocol number (Multi only)\n * `subProtocol` (number) sub-protocol number (Multi only)\n * `channelsOrder` (number) first 4 channels expected order (Multi only)\n * if the module type is LemonDSMP additional info is available\n * `channelsOrder` (number) first 4 channels expected order (DSMP only)"
         }
       ],
       "availability": {
@@ -6287,7 +6287,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "output parameters: * `name` (string) name\n * `min` (number) Minimum % * 10\n * `max` (number) Maximum % * 10\n * `offset` (number) Subtrim * 10\n * `ppmCenter` (number) offset from PPM Center. 0 = 1500\n * `symetrical` (number) linear Subtrim 0 = Off, 1 = On\n * `revert` (number) irection 0 = \u00ad\u00ad\u00ad---, 1 = INV\n * `curve`\n   * (number) Curve number (0 for Curve1)\n   * or `nil` if no curve set"
+          "description": "output parameters:\n* `name` (string) name\n * `min` (number) Minimum % * 10\n * `max` (number) Maximum % * 10\n * `offset` (number) Subtrim * 10\n * `ppmCenter` (number) offset from PPM Center. 0 = 1500\n * `symetrical` (number) linear Subtrim 0 = Off, 1 = On\n * `revert` (number) irection 0 = \u00ad\u00ad\u00ad---, 1 = INV\n * `curve`\n   * (number) Curve number (0 for Curve1)\n   * or `nil` if no curve set"
         }
       ],
       "availability": {
@@ -6328,7 +6328,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "with sensor data: * `type` (number) 0 = custom, 1 = calculated\n * `name` (string) Name\n * `unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide\n * `prec` (number) Number of decimals\n * `id`   (number) Only custom sensors\n * `instance` (number) Only custom sensors\n * `formula` (number) Only calculated sensors. 0 = Add etc. see list of formula choices in Companion popup"
+          "description": "with sensor data:\n* `type` (number) 0 = custom, 1 = calculated\n * `name` (string) Name\n * `unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide\n * `prec` (number) Number of decimals\n * `id`   (number) Only custom sensors\n * `instance` (number) Only custom sensors\n * `formula` (number) Only calculated sensors. 0 = Add etc. see list of formula choices in Companion popup"
         }
       ],
       "availability": {
@@ -6357,7 +6357,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* 'collectiveSource' (number) source index\n* 'aileronSource' (number) source index\n* 'elevatorSource' (number) source index\n* 'collectiveWeight'(value) -100 to 100\n* 'aileronWeight' (value) -100 to 100\n* 'elevatorWeight' (value) -100 to 100"
+          "description": "with heli swash parameters:\n* `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* `collectiveSource` (number) source index\n* `aileronSource` (number) source index\n* `elevatorSource` (number) source index\n* `collectiveWeight`(value) -100 to 100\n* `aileronWeight` (value) -100 to 100\n* `elevatorWeight` (value) -100 to 100"
         }
       ],
       "availability": {
@@ -6368,7 +6368,7 @@
       },
       "notes": [],
       "source_location": "radio/src/lua/api_model.cpp",
-      "raw_luadoc": "@function model.getSwashRing()\n\nGet heli swash parameters\n\n@retval table with heli swash parameters:\n* `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* 'collectiveSource' (number) source index\n* 'aileronSource' (number) source index\n* 'elevatorSource' (number) source index\n* 'collectiveWeight'(value) -100 to 100\n* 'aileronWeight' (value) -100 to 100\n* 'elevatorWeight' (value) -100 to 100\n\n @status current Introduced in 2.8.0",
+      "raw_luadoc": "@function model.getSwashRing()\n\nGet heli swash parameters\n\n@retval table with heli swash parameters:\n* `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* `collectiveSource` (number) source index\n* `aileronSource` (number) source index\n* `elevatorSource` (number) source index\n* `collectiveWeight`(value) -100 to 100\n* `aileronWeight` (value) -100 to 100\n* `elevatorWeight` (value) -100 to 100\n\n @status current Introduced in 2.8.0",
       "source_line": 1798
     },
     {
@@ -6398,7 +6398,7 @@
         {
           "name": "",
           "type": "table",
-          "description": "timer parameters: * `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw\n * `start` (number) start value [seconds], 0 for up timer, 0> down timer\n * `value` (number) current value [seconds]\n * `countdownBeep` (number) countdown beep (0\u00ad = silent, 1 =\u00ad beeps, 2\u00ad = voice)\n * `minuteBeep` (boolean) minute beep\n * `persistent` (number) persistent timer\n * `name` (string) timer name\n * `showElapsed` (boolean) show elapsed"
+          "description": "timer parameters:\n* `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw\n * `start` (number) start value [seconds], 0 for up timer, 0> down timer\n * `value` (number) current value [seconds]\n * `countdownBeep` (number) countdown beep (0\u00ad = silent, 1 =\u00ad beeps, 2\u00ad = voice)\n * `minuteBeep` (boolean) minute beep\n * `persistent` (number) persistent timer\n * `name` (string) timer name\n * `showElapsed` (boolean) show elapsed"
         }
       ],
       "availability": {
@@ -7002,7 +7002,7 @@
       "returns": [
         {
           "name": "",
-          "type": "buffer",
+          "type": "integer",
           "description": "value (number)"
         }
       ],
@@ -7170,7 +7170,7 @@
           "name": "attributes",
           "type": "integer",
           "required": false,
-          "description": "possible values: * `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)"
+          "description": "possible values:\n* `0 or not present` plays integral part of the number (for a number 123 it plays 123)\n * `PREC1` plays a number with one decimal place (for a number 123 it plays 12.3)\n * `PREC2` plays a number with two decimal places (for a number 123 it plays 1.23)"
         },
         {
           "name": "volume",
@@ -7688,19 +7688,19 @@
         },
         {
           "name": "rvalue",
-          "type": "interger",
+          "type": "integer",
           "required": true,
           "description": "value of red channel"
         },
         {
           "name": "bvalue",
-          "type": "interger",
+          "type": "integer",
           "required": true,
           "description": "value of green channel"
         },
         {
           "name": "cvalue",
-          "type": "interger",
+          "type": "integer",
           "required": true,
           "description": "value of blue channel"
         }
@@ -7808,19 +7808,19 @@
         },
         {
           "name": "rvalue",
-          "type": "interger",
+          "type": "integer",
           "required": true,
           "description": "value of red channel"
         },
         {
           "name": "bvalue",
-          "type": "interger",
+          "type": "integer",
           "required": true,
           "description": "value of green channel"
         },
         {
           "name": "cvalue",
-          "type": "interger",
+          "type": "integer",
           "required": true,
           "description": "value of blue channel"
         }
@@ -7924,7 +7924,7 @@
         },
         {
           "name": "value",
-          "type": "true/false",
+          "type": "integer",
           "required": true,
           "description": ". The new value of the sticky logical switch."
         }
@@ -7992,13 +7992,13 @@
           "name": "precision",
           "type": "unknown",
           "required": false,
-          "description": "the precision of the sensor * `0 or not present` no decimal precision.\n * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00."
+          "description": "the precision of the sensor\n* `0 or not present` no decimal precision.\n * `!= 0` value is divided by 10^precision, e.g. value=1000, prec=2 => 10.00."
         },
         {
           "name": "name",
           "type": "string",
           "required": false,
-          "description": "Name of the sensor if it does not yet exist (4 chars). * `not present` Name defaults to the Id.\n * `present` Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., \"Name\""
+          "description": "Name of the sensor if it does not yet exist (4 chars).\n* `not present` Name defaults to the Id.\n * `present` Sensor takes name of the argument. Argument must have name surrounded by quotes: e.g., \"Name\""
         }
       ],
       "returns": [
@@ -8034,13 +8034,13 @@
       "parameters": [
         {
           "name": "first",
-          "type": "the",
+          "type": "integer",
           "required": false,
           "description": "first source index. If `nil` or omitted, the first available source is used."
         },
         {
           "name": "last",
-          "type": "the",
+          "type": "integer",
           "required": false,
           "description": "last soure index. If `nil` or omitted, the last available source is used."
         }
@@ -8178,13 +8178,13 @@
       "parameters": [
         {
           "name": "first",
-          "type": "the",
+          "type": "integer",
           "required": false,
           "description": "first switch index. If `nil` or omitted, the first available switch is used."
         },
         {
           "name": "last",
-          "type": "the",
+          "type": "integer",
           "required": false,
           "description": "last switch index. If `nil` or omitted, the last available switch is used."
         }

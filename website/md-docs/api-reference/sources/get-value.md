@@ -21,12 +21,7 @@ Returns the value of a source.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `integer` | current source value (number). Zero is returned for: * non-existing sources<ul><li>for all telemetry source when the telemetry stream is not received</li><li>far all non allowed sensors while FAI MODE is active</li></ul> |
-| `-` | `table` | GPS position is returned in a table: * `lat` (number) latitude, positive is North<ul><li>`lon` (number) longitude, positive is East</li><li>`pilot-lat` (number) pilot latitude, positive is North</li><li>`pilot-lon` (number) pilot longitude, positive is East</li></ul> |
-| `-` | `table` | GPS date/time, see getDateTime() |
-| `-` | `table` | Cells are returned in a table (except where no cells were detected in which<br>case the returned value is 0):<ul><li>table has one item for each detected cell:</li><li>key (number) cell number (1 to number of cells)</li><li>value (number) current cell voltage</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>integer</code></td><td>current source value (number). Zero is returned for:<ul><li>non-existing sources</li><li>for all telemetry source when the telemetry stream is not received</li><li>far all non allowed sensors while FAI MODE is active</li></ul></td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>GPS position is returned in a table:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>lat</code></td><td><code>number</code></td><td>latitude, positive is North</td></tr><tr><td><code>lon</code></td><td><code>number</code></td><td>longitude, positive is East</td></tr><tr><td><code>pilot-lat</code></td><td><code>number</code></td><td>pilot latitude, positive is North</td></tr><tr><td><code>pilot-lon</code></td><td><code>number</code></td><td>pilot longitude, positive is East</td></tr></tbody></table></td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>GPS date/time, see getDateTime()</td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>Cells are returned in a table (except where no cells were detected in which<br>case the returned value is 0):<ul><li>table has one item for each detected cell:</li><li>key (number) cell number (1 to number of cells)</li><li>value (number) current cell voltage</li></ul></td></tr></tbody></table>
 
 ## Availability
 

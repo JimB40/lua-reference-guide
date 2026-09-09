@@ -31,18 +31,19 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with heli swash parameters:
+* `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90
 * `value` (number) swash ring value (normally 0)
-* &#x27;collectiveSource&#x27; (number) source index
-* &#x27;aileronSource&#x27; (number) source index
-* &#x27;elevatorSource&#x27; (number) source index
-* &#x27;collectiveWeight&#x27;(value) -100 to 100
-* &#x27;aileronWeight&#x27; (value) -100 to 100
-* &#x27;elevatorWeight&#x27; (value) -100 to 100</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
+* `collectiveSource` (number) source index
+* `aileronSource` (number) source index
+* `elevatorSource` (number) source index
+* `collectiveWeight`(value) -100 to 100
+* `aileronWeight` (value) -100 to 100
+* `elevatorWeight` (value) -100 to 100</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getSwashRing&quot;, &quot;symbol&quot;: &quot;model.getSwashRing&quot;, &quot;summary&quot;: &quot;Get heli swash parameters&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* &#x27;collectiveSource&#x27; (number) source index\n* &#x27;aileronSource&#x27; (number) source index\n* &#x27;elevatorSource&#x27; (number) source index\n* &#x27;collectiveWeight&#x27;(value) -100 to 100\n* &#x27;aileronWeight&#x27; (value) -100 to 100\n* &#x27;elevatorWeight&#x27; (value) -100 to 100&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.8.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getSwashRing&quot;, &quot;symbol&quot;: &quot;model.getSwashRing&quot;, &quot;summary&quot;: &quot;Get heli swash parameters&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with heli swash parameters:\n* `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90\n* `value` (number) swash ring value (normally 0)\n* `collectiveSource` (number) source index\n* `aileronSource` (number) source index\n* `elevatorSource` (number) source index\n* `collectiveWeight`(value) -100 to 100\n* `aileronWeight` (value) -100 to 100\n* `elevatorWeight` (value) -100 to 100&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.8.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -57,12 +58,12 @@ Get heli swash parameters
 @retval table with heli swash parameters:
 * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90
 * `value` (number) swash ring value (normally 0)
-* 'collectiveSource' (number) source index
-* 'aileronSource' (number) source index
-* 'elevatorSource' (number) source index
-* 'collectiveWeight'(value) -100 to 100
-* 'aileronWeight' (value) -100 to 100
-* 'elevatorWeight' (value) -100 to 100
+* `collectiveSource` (number) source index
+* `aileronSource` (number) source index
+* `elevatorSource` (number) source index
+* `collectiveWeight`(value) -100 to 100
+* `aileronWeight` (value) -100 to 100
+* `elevatorWeight` (value) -100 to 100
 
  @status current Introduced in 2.8.0
 ~~~~
@@ -82,7 +83,7 @@ None.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `table` | with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90 * `value` (number) swash ring value (normally 0) * 'collectiveSource' (number) source index * 'aileronSource' (number) source index * 'elevatorSource' (number) source index * 'collectiveWeight'(value) -100 to 100 * 'aileronWeight' (value) -100 to 100 * 'elevatorWeight' (value) -100 to 100 |
+| `-` | `table` | with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90 * `value` (number) swash ring value (normally 0) * `collectiveSource` (number) source index * `aileronSource` (number) source index * `elevatorSource` (number) source index * `collectiveWeight`(value) -100 to 100 * `aileronWeight` (value) -100 to 100 * `elevatorWeight` (value) -100 to 100 |
 
 #### Notes
 
@@ -100,14 +101,15 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Get heli swash parameters
 
-@retval (table) with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90
+@retval (table) with heli swash parameters:
+* `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90
 * `value` (number) swash ring value (normally 0)
-* 'collectiveSource' (number) source index
-* 'aileronSource' (number) source index
-* 'elevatorSource' (number) source index
-* 'collectiveWeight'(value) -100 to 100
-* 'aileronWeight' (value) -100 to 100
-* 'elevatorWeight' (value) -100 to 100
+* `collectiveSource` (number) source index
+* `aileronSource` (number) source index
+* `elevatorSource` (number) source index
+* `collectiveWeight`(value) -100 to 100
+* `aileronWeight` (value) -100 to 100
+* `elevatorWeight` (value) -100 to 100
 
 @status current Introduced in 2.8.0
 ~~~~

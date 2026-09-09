@@ -34,7 +34,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tr><td><code>input</code></td><td>param</td><td><code>integer</code></td><td>input number (use 0 for Input1)</td><td><select data-field-kind="param" data-field-name="input" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="input" data-custom-type="true" /></td></tr>
 <tr><td><code>line</code></td><td>param</td><td><code>integer</code></td><td>input line (use 0 for first line)</td><td><select data-field-kind="param" data-field-name="line" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="line" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested input or line does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>input data: * `name` (string) input line name
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>input data:
+* `name` (string) input line name
  * `inputName` (string) input input name
  * `source` (number) input source index
  * `scale` (number)  input scaling (for telemetry)
@@ -44,13 +45,13 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
  * `curveType` (number) curve type (function, expo, custom curve)
  * `curveValue` (number) curve index
  * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)
- * &#x27;trimSource&#x27; (number) a positive number representing trim source
- * &#x27;side&#x27; (number) input side (positive, negative or all)
- * &#x27;flightModes&#x27; (number) bit-mask of active flight modes</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
+ * `trimSource` (number) a positive number representing trim source
+ * `side` (number) input side (positive, negative or all)
+ * `flightModes` (number) bit-mask of active flight modes</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getInput&quot;, &quot;symbol&quot;: &quot;model.getInput&quot;, &quot;summary&quot;: &quot;Return input data for given input and line number&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;input&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;input number (use 0 for Input1)&quot;}, {&quot;name&quot;: &quot;line&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;input line (use 0 for first line)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested input or line does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;input data: * `name` (string) input line name\n * `inputName` (string) input input name\n * `source` (number) input source index\n * `scale` (number)  input scaling (for telemetry)\n * `weight` (number) input weight\n * `offset` (number) input offset\n * `switch` (number) input switch index\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)\n * &#x27;trimSource&#x27; (number) a positive number representing trim source\n * &#x27;side&#x27; (number) input side (positive, negative or all)\n * &#x27;flightModes&#x27; (number) bit-mask of active flight modes&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getInput&quot;, &quot;symbol&quot;: &quot;model.getInput&quot;, &quot;summary&quot;: &quot;Return input data for given input and line number&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;input&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;input number (use 0 for Input1)&quot;}, {&quot;name&quot;: &quot;line&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;input line (use 0 for first line)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested input or line does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;input data:\n* `name` (string) input line name\n * `inputName` (string) input input name\n * `source` (number) input source index\n * `scale` (number)  input scaling (for telemetry)\n * `weight` (number) input weight\n * `offset` (number) input offset\n * `switch` (number) input switch index\n * `curveType` (number) curve type (function, expo, custom curve)\n * `curveValue` (number) curve index\n * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)\n * `trimSource` (number) a positive number representing trim source\n * `side` (number) input side (positive, negative or all)\n * `flightModes` (number) bit-mask of active flight modes&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -79,9 +80,9 @@ Return input data for given input and line number
  * `curveType` (number) curve type (function, expo, custom curve)
  * `curveValue` (number) curve index
  * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)
- * 'trimSource' (number) a positive number representing trim source
- * 'side' (number) input side (positive, negative or all)
- * 'flightModes' (number) bit-mask of active flight modes
+ * `trimSource` (number) a positive number representing trim source
+ * `side` (number) input side (positive, negative or all)
+ * `flightModes` (number) bit-mask of active flight modes
 
 @status current Introduced in 2.0.0, curveType/curveValue/carryTrim added in 2.3, inputName added 2.3.10, flighmode reworked in 2.3.11, broken carryTrim replaced by trimSource in 2.8.1, scale added in 2.10, side added in 2.11
 ~~~~
@@ -105,7 +106,7 @@ Return input data for given input and line number
 | Name | Type | Description |
 | --- | --- | --- |
 | `-` | `nil` | requested input or line does not exist |
-| `-` | `table` | input data: * `name` (string) input line name  * `inputName` (string) input input name  * `source` (number) input source index  * `scale` (number)  input scaling (for telemetry)  * `weight` (number) input weight  * `offset` (number) input offset  * `switch` (number) input switch index  * `curveType` (number) curve type (function, expo, custom curve)  * `curveValue` (number) curve index  * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)  * 'trimSource' (number) a positive number representing trim source  * 'side' (number) input side (positive, negative or all)  * 'flightModes' (number) bit-mask of active flight modes |
+| `-` | `table` | input data: * `name` (string) input line name  * `inputName` (string) input input name  * `source` (number) input source index  * `scale` (number)  input scaling (for telemetry)  * `weight` (number) input weight  * `offset` (number) input offset  * `switch` (number) input switch index  * `curveType` (number) curve type (function, expo, custom curve)  * `curveValue` (number) curve index  * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)  * `trimSource` (number) a positive number representing trim source  * `side` (number) input side (positive, negative or all)  * `flightModes` (number) bit-mask of active flight modes |
 
 #### Notes
 
@@ -129,7 +130,8 @@ Return input data for given input and line number
 
 @retval (nil) requested input or line does not exist
 
-@retval (table) input data: * `name` (string) input line name
+@retval (table) input data:
+* `name` (string) input line name
  * `inputName` (string) input input name
  * `source` (number) input source index
  * `scale` (number)  input scaling (for telemetry)
@@ -139,9 +141,9 @@ Return input data for given input and line number
  * `curveType` (number) curve type (function, expo, custom curve)
  * `curveValue` (number) curve index
  * `carryTrim` deprecated, please use trimSource instead. WARNING: carryTrim was getting negative values (carryTrim = - trimSource)
- * 'trimSource' (number) a positive number representing trim source
- * 'side' (number) input side (positive, negative or all)
- * 'flightModes' (number) bit-mask of active flight modes
+ * `trimSource` (number) a positive number representing trim source
+ * `side` (number) input side (positive, negative or all)
+ * `flightModes` (number) bit-mask of active flight modes
 
 @status current Introduced in 2.0.0
 ~~~~

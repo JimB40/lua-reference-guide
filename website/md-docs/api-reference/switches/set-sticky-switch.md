@@ -18,7 +18,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `id` | yes | `integer` | identifying the sticky logical switch (zero for LS1 etc.). |
-| `value` | yes | `true/false` | . The new value of the sticky logical switch. |
+| `value` | yes | `integer` | . The new value of the sticky logical switch. |
 
 ## Returns
 

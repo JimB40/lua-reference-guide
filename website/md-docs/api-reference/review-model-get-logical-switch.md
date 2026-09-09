@@ -33,7 +33,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>switch</code></td><td>param</td><td><code>integer</code></td><td>logical switch number (use 0 for LS1)</td><td><select data-field-kind="param" data-field-name="switch" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="switch" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested logical switch does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>logical switch data: * `func` (number) function index
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>logical switch data:
+* `func` (number) function index
  * `v1` (number) V1 value (index)
  * `v2` (number) V2 value (index or value)
  * `v3` (number) V3 value (index or value)
@@ -45,7 +46,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getLogicalSwitch&quot;, &quot;symbol&quot;: &quot;model.getLogicalSwitch&quot;, &quot;summary&quot;: &quot;Get Logical Switch parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;switch&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;logical switch number (use 0 for LS1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested logical switch does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;logical switch data: * `func` (number) function index\n * `v1` (number) V1 value (index)\n * `v2` (number) V2 value (index or value)\n * `v3` (number) V3 value (index or value)\n * `and` (number) AND switch index\n * `delay` (number) delay (time in 1/10 s)\n * `duration` (number) duration (time in 1/10 s)\n * `state` (boolean) current state of the logical switch\n * `persistent` (boolean) if true then the state is persistent across reboot of the radio&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getLogicalSwitch&quot;, &quot;symbol&quot;: &quot;model.getLogicalSwitch&quot;, &quot;summary&quot;: &quot;Get Logical Switch parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;switch&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;logical switch number (use 0 for LS1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested logical switch does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;logical switch data:\n* `func` (number) function index\n * `v1` (number) V1 value (index)\n * `v2` (number) V2 value (index or value)\n * `v3` (number) V3 value (index or value)\n * `and` (number) AND switch index\n * `delay` (number) delay (time in 1/10 s)\n * `duration` (number) duration (time in 1/10 s)\n * `state` (boolean) current state of the logical switch\n * `persistent` (boolean) if true then the state is persistent across reboot of the radio&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -115,7 +116,8 @@ Get Logical Switch parameters
 
 @retval (nil) requested logical switch does not exist
 
-@retval (table) logical switch data: * `func` (number) function index
+@retval (table) logical switch data:
+* `func` (number) function index
  * `v1` (number) V1 value (index)
  * `v2` (number) V2 value (index or value)
  * `v3` (number) V3 value (index or value)

@@ -31,7 +31,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>model information: * `name` (string) model name
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>model information:
+* `name` (string) model name
  * `extendedLimits` (boolean) extended limits enabled
  * `jitterFilter` (number) model level ADC filter
  * `bitmap` (string) bitmap name (not present on X7)
@@ -39,7 +40,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getInfo&quot;, &quot;symbol&quot;: &quot;model.getInfo&quot;, &quot;summary&quot;: &quot;Get current Model information&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;model information: * `name` (string) model name\n * `extendedLimits` (boolean) extended limits enabled\n * `jitterFilter` (number) model level ADC filter\n * `bitmap` (string) bitmap name (not present on X7)\n * `filename` (string) model filename&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.6&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getInfo&quot;, &quot;symbol&quot;: &quot;model.getInfo&quot;, &quot;summary&quot;: &quot;Get current Model information&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;model information:\n* `name` (string) model name\n * `extendedLimits` (boolean) extended limits enabled\n * `jitterFilter` (number) model level ADC filter\n * `bitmap` (string) bitmap name (not present on X7)\n * `filename` (string) model filename&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.6&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -94,7 +95,8 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Get current Model information
 
-@retval (table) model information: * `name` (string) model name
+@retval (table) model information:
+* `name` (string) model name
  * `extendedLimits` (boolean) extended limits enabled
  * `jitterFilter` (number) model level ADC filter
  * `bitmap` (string) bitmap name (not present on X7)

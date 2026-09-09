@@ -306,7 +306,7 @@ function lcd.exitFullScreen() end
 --- Get the color value from flags
 --- @since 2.3.11
 ---@param flags integer please see the Lcd functions overview
----@return flag color
+---@return integer color
 function lcd.getColor(flags) end
 
 --- Returns the leftmost x position from previous drawtext or drawNumber output

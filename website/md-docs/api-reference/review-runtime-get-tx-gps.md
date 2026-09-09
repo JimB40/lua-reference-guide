@@ -31,7 +31,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>representing the current radio position * `lat` (number) internal GPS latitude, positive is North
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>representing the current radio position
+* `lat` (number) internal GPS latitude, positive is North
  * `lon` (number) internal GPS longitude, positive is East
  * `numsat` (number) current number of sats locked in by the GPS sensor
  * `fix` (boolean) fix status
@@ -42,7 +43,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getTxGPS&quot;, &quot;symbol&quot;: &quot;getTxGPS&quot;, &quot;summary&quot;: &quot;Return the internal GPS position or nil if no valid hardware found&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;representing the current radio position * `lat` (number) internal GPS latitude, positive is North\n * `lon` (number) internal GPS longitude, positive is East\n * `numsat` (number) current number of sats locked in by the GPS sensor\n * `fix` (boolean) fix status\n * `alt` (number) internal GPS altitude in 0.1m\n * `speed` (number) internal GPSspeed in 0.1m/s\n * `heading`  (number) internal GPS ground course estimation in degrees * 10\n * `hdop` (number)  internal GPS horizontal dilution of precision&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.2&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getTxGPS&quot;, &quot;symbol&quot;: &quot;getTxGPS&quot;, &quot;summary&quot;: &quot;Return the internal GPS position or nil if no valid hardware found&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;representing the current radio position\n* `lat` (number) internal GPS latitude, positive is North\n * `lon` (number) internal GPS longitude, positive is East\n * `numsat` (number) current number of sats locked in by the GPS sensor\n * `fix` (boolean) fix status\n * `alt` (number) internal GPS altitude in 0.1m\n * `speed` (number) internal GPSspeed in 0.1m/s\n * `heading`  (number) internal GPS ground course estimation in degrees * 10\n * `hdop` (number)  internal GPS horizontal dilution of precision&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.2.2&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -100,7 +101,8 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Return the internal GPS position or nil if no valid hardware found
 
-@retval (table) representing the current radio position * `lat` (number) internal GPS latitude, positive is North
+@retval (table) representing the current radio position
+* `lat` (number) internal GPS latitude, positive is North
  * `lon` (number) internal GPS longitude, positive is East
  * `numsat` (number) current number of sats locked in by the GPS sensor
  * `fix` (boolean) fix status

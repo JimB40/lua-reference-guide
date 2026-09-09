@@ -21,9 +21,7 @@ Returns details about a Global Variable, but not values
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | details of the global variable: * `name` (string) global variable name<ul><li>`min` (number) minimum value</li><li>`max` (number) maximum value</li><li>`prec` (number) precision</li><li>`unit` (number) unit</li><li>`popup` (boolean) show popup - if exists</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>details of the global variable:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>string</code></td><td>global variable name</td></tr><tr><td><code>min</code></td><td><code>number</code></td><td>minimum value</td></tr><tr><td><code>max</code></td><td><code>number</code></td><td>maximum value</td></tr><tr><td><code>prec</code></td><td><code>number</code></td><td>precision</td></tr><tr><td><code>unit</code></td><td><code>number</code></td><td>unit</td></tr><tr><td><code>popup</code></td><td><code>boolean</code></td><td>show popup - if exists</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

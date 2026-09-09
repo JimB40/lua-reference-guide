@@ -19,9 +19,7 @@ None.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | with heli swash parameters: * `type` (number) 0=---, 1=120, 2=120X, 3=140, 4=90<ul><li>`value` (number) swash ring value (normally 0)</li><li>'collectiveSource' (number) source index</li><li>'aileronSource' (number) source index</li><li>'elevatorSource' (number) source index</li><li>'collectiveWeight'(value) -100 to 100</li><li>'aileronWeight' (value) -100 to 100</li><li>'elevatorWeight' (value) -100 to 100</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>with heli swash parameters:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>type</code></td><td><code>number</code></td><td>0=---, 1=120, 2=120X, 3=140, 4=90</td></tr><tr><td><code>value</code></td><td><code>number</code></td><td>swash ring value (normally 0)</td></tr><tr><td><code>collectiveSource</code></td><td><code>number</code></td><td>source index</td></tr><tr><td><code>aileronSource</code></td><td><code>number</code></td><td>source index</td></tr><tr><td><code>elevatorSource</code></td><td><code>number</code></td><td>source index</td></tr><tr><td><code>collectiveWeight</code></td><td><code>value</code></td><td>-100 to 100</td></tr><tr><td><code>aileronWeight</code></td><td><code>value</code></td><td>-100 to 100</td></tr><tr><td><code>elevatorWeight</code></td><td><code>value</code></td><td>-100 to 100</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

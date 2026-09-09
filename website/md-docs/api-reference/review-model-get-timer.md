@@ -33,7 +33,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>timer</code></td><td>param</td><td><code>integer</code></td><td>timer index (0 for Timer 1)</td><td><select data-field-kind="param" data-field-name="timer" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="timer" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested timer does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>timer parameters: * `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>timer parameters:
+* `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw
  * `start` (number) start value [seconds], 0 for up timer, 0&gt; down timer
  * `value` (number) current value [seconds]
  * `countdownBeep` (number) countdown beep (0­ = silent, 1 =­ beeps, 2­ = voice)
@@ -44,7 +45,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getTimer&quot;, &quot;symbol&quot;: &quot;model.getTimer&quot;, &quot;summary&quot;: &quot;Get model timer parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;timer&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;timer index (0 for Timer 1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested timer does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;timer parameters: * `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw\n * `start` (number) start value [seconds], 0 for up timer, 0&gt; down timer\n * `value` (number) current value [seconds]\n * `countdownBeep` (number) countdown beep (0\u00ad = silent, 1 =\u00ad beeps, 2\u00ad = voice)\n * `minuteBeep` (boolean) minute beep\n * `persistent` (number) persistent timer\n * `name` (string) timer name\n * `showElapsed` (boolean) show elapsed&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getTimer&quot;, &quot;symbol&quot;: &quot;model.getTimer&quot;, &quot;summary&quot;: &quot;Get model timer parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;timer&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;timer index (0 for Timer 1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested timer does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;timer parameters:\n* `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw\n * `start` (number) start value [seconds], 0 for up timer, 0&gt; down timer\n * `value` (number) current value [seconds]\n * `countdownBeep` (number) countdown beep (0\u00ad = silent, 1 =\u00ad beeps, 2\u00ad = voice)\n * `minuteBeep` (boolean) minute beep\n * `persistent` (number) persistent timer\n * `name` (string) timer name\n * `showElapsed` (boolean) show elapsed&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -113,7 +114,8 @@ Get model timer parameters
 
 @retval (nil) requested timer does not exist
 
-@retval (table) timer parameters: * `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw
+@retval (table) timer parameters:
+* `mode` (number) timer trigger source: off, abs, stk,  stk%, sw/!sw, !m_sw/!m_sw
  * `start` (number) start value [seconds], 0 for up timer, 0> down timer
  * `value` (number) current value [seconds]
  * `countdownBeep` (number) countdown beep (0­ = silent, 1 =­ beeps, 2­ = voice)

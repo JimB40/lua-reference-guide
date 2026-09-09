@@ -33,7 +33,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>index</code></td><td>param</td><td><code>integer</code></td><td>output number (use 0 for CH1)</td><td><select data-field-kind="param" data-field-name="index" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="index" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested output does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>output parameters: * `name` (string) name
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>output parameters:
+* `name` (string) name
  * `min` (number) Minimum % * 10
  * `max` (number) Maximum % * 10
  * `offset` (number) Subtrim * 10
@@ -46,7 +47,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getOutput&quot;, &quot;symbol&quot;: &quot;model.getOutput&quot;, &quot;summary&quot;: &quot;Get servo parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;output number (use 0 for CH1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested output does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;output parameters: * `name` (string) name\n * `min` (number) Minimum % * 10\n * `max` (number) Maximum % * 10\n * `offset` (number) Subtrim * 10\n * `ppmCenter` (number) offset from PPM Center. 0 = 1500\n * `symetrical` (number) linear Subtrim 0 = Off, 1 = On\n * `revert` (number) irection 0 = \u00ad\u00ad\u00ad---, 1 = INV\n * `curve`\n   * (number) Curve number (0 for Curve1)\n   * or `nil` if no curve set&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getOutput&quot;, &quot;symbol&quot;: &quot;model.getOutput&quot;, &quot;summary&quot;: &quot;Get servo parameters&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;output number (use 0 for CH1)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested output does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;output parameters:\n* `name` (string) name\n * `min` (number) Minimum % * 10\n * `max` (number) Maximum % * 10\n * `offset` (number) Subtrim * 10\n * `ppmCenter` (number) offset from PPM Center. 0 = 1500\n * `symetrical` (number) linear Subtrim 0 = Off, 1 = On\n * `revert` (number) irection 0 = \u00ad\u00ad\u00ad---, 1 = INV\n * `curve`\n   * (number) Curve number (0 for Curve1)\n   * or `nil` if no curve set&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.0.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -117,7 +118,8 @@ Get servo parameters
 
 @retval (nil) requested output does not exist
 
-@retval (table) output parameters: * `name` (string) name
+@retval (table) output parameters:
+* `name` (string) name
  * `min` (number) Minimum % * 10
  * `max` (number) Maximum % * 10
  * `offset` (number) Subtrim * 10

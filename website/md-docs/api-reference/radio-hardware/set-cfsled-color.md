@@ -18,9 +18,9 @@ Overrides the LED color for a custom function switch
 | Name | Req | Type | Description |
 | --- | --- | --- | --- |
 | `id` | yes | `string` | identifying a custom function switch name |
-| `rvalue` | yes | `interger` | value of red channel |
-| `bvalue` | yes | `interger` | value of green channel |
-| `cvalue` | yes | `interger` | value of blue channel |
+| `rvalue` | yes | `integer` | value of red channel |
+| `bvalue` | yes | `integer` | value of green channel |
+| `cvalue` | yes | `integer` | value of blue channel |
 
 ## Returns
 

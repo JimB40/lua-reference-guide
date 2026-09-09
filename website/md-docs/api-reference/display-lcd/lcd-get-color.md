@@ -23,7 +23,7 @@ Get the color value from flags
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `color` | `flag` | only the RGB565 color value of the input |
+| `color` | `integer` | only the RGB565 color value of the input |
 
 ## Availability
 

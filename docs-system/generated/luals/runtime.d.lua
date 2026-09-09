@@ -99,7 +99,7 @@ function flushAudio() end
  If exist, return the object information.
 --- @since 2.5.0
 ---@param path string path to the object
----@return integer
+---@return table
 function fstat(path) end
 
 --- Get available memory remaining in the Heap for Lua.
@@ -227,7 +227,7 @@ function getSwitchName(switchindex) end
 --- 
 --- @since 2.6
 ---@param switchindex integer identifying a switch as returned by getSwitchIndex(positionName) or fields in the table returned by model.getLogicalSwitch(switch) identifying switches.
----@return true/false value
+---@return integer value
 function getSwitchValue(switchindex) end
 
 --- Return the time since the radio was started in multiple of 10ms
@@ -308,7 +308,7 @@ function mkdir(directory) end
 --- This function reads/writes the Multi protocol buffer to interact with a protocol.
 --- @since 2.3.2
 ---@param address unknown to read/write in the buffer @param (optional): value to write in the buffer
----@return buffer
+---@return integer
 function multiBuffer(address) end
 
 --- Play a time value (text to speech)
@@ -424,9 +424,9 @@ function serialWrite(str) end
 --- Overrides the LED color for a custom function switch
 --- @since 3.0.0
 ---@param id string identifying a custom function switch name
----@param rvalue interger value of red channel
----@param bvalue interger value of green channel
----@param cvalue interger value of blue channel
+---@param rvalue integer value of red channel
+---@param bvalue integer value of green channel
+---@param cvalue integer value of blue channel
 function setCFSLedColor(id, rvalue, bvalue, cvalue) end
 
 --- 
@@ -444,9 +444,9 @@ function setIMU_Y(offset, range) end
 --- 
 --- @since 2.10
 ---@param id integer identifying a led in the led chain
----@param rvalue interger value of red channel
----@param bvalue interger value of green channel
----@param cvalue interger value of blue channel
+---@param rvalue integer value of red channel
+---@param bvalue integer value of green channel
+---@param cvalue integer value of blue channel
 function setRGBLedColor(id, rvalue, bvalue, cvalue) end
 
 --- 
@@ -463,7 +463,7 @@ function setShmVar(id, value) end
 --- 
 --- @since 2.6
 ---@param id integer identifying the sticky logical switch (zero for LS1 etc.).
----@param value true/false . The new value of the sticky logical switch.
+---@param value integer . The new value of the sticky logical switch.
 ---@return true/false bufferfull
 function setStickySwitch(id, value) end
 
@@ -481,8 +481,8 @@ function setTelemetryValue(id, subid, instance, value, unit, precision, name) en
 
 --- 
 --- @since 2.6
----@param first? the first source index. If nil or omitted, the first available source is used.
----@param last? the last soure index. If nil or omitted, the last available source is used.
+---@param first? integer first source index. If nil or omitted, the first available source is used.
+---@param last? integer last soure index. If nil or omitted, the last available source is used.
 function sources(first, last) end
 
 --- Pops a received SPORT packet from the queue. Please note that only packets using a data ID within 0x5000 to 0x50FF
@@ -509,6 +509,6 @@ function sportTelemetryPush(sensorid, frameid, dataid, value) end
 
 --- 
 --- @since 2.6
----@param first? the first switch index. If nil or omitted, the first available switch is used.
----@param last? the last switch index. If nil or omitted, the last available switch is used.
+---@param first? integer first switch index. If nil or omitted, the first available switch is used.
+---@param last? integer last switch index. If nil or omitted, the last available switch is used.
 function switches(first, last) end

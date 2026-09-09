@@ -19,9 +19,7 @@ None.
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `table` | with elements: * `gtimer` (number) radio global timer in seconds<ul><li>`session` (number) radio session in seconds</li><li>`ttimer` (number) radio throttle timer in seconds</li><li>`tptimer` (number) radio throttle percent timer in seconds</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>table</code></td><td>with elements:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>gtimer</code></td><td><code>number</code></td><td>radio global timer in seconds</td></tr><tr><td><code>session</code></td><td><code>number</code></td><td>radio session in seconds</td></tr><tr><td><code>ttimer</code></td><td><code>number</code></td><td>radio throttle timer in seconds</td></tr><tr><td><code>tptimer</code></td><td><code>number</code></td><td>radio throttle percent timer in seconds</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

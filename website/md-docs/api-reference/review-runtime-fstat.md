@@ -32,9 +32,10 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
 <tr><td><code>path</code></td><td>param</td><td><code>string</code></td><td>path to the object</td><td><select data-field-kind="param" data-field-name="path" data-current-type="string"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="path" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>integer</code></td><td>object info, table elements: * &#x27;size&#x27; (number) file size
-* &#x27;attrib&#x27; (number) file attribute flags
-* &#x27;time&#x27; (table) table with last time modified date and times, table elements:
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>object info, table elements:
+* `size` (number) file size
+* `attrib` (number) file attribute flags
+* `time` (table) table with last time modified date and times, table elements:
   * `year` (number) year
   * `mon` (number) month
   * `day` (number) day of month
@@ -42,11 +43,11 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
   * `hour12` (number) hours in US format
   * `min` (number) minutes
   * `sec` (number) seconds
-  * `suffix` (text) am or pm</td><td><select data-field-kind="return" data-field-name="-" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
+  * `suffix` (text) am or pm</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;fstat&quot;, &quot;symbol&quot;: &quot;fstat&quot;, &quot;summary&quot;: &quot;Checks the existence of file or directory.\n If not exist, return nil.\n If exist, return the object information.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;path&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;path to the object&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;description&quot;: &quot;object info, table elements: * &#x27;size&#x27; (number) file size\n* &#x27;attrib&#x27; (number) file attribute flags\n* &#x27;time&#x27; (table) table with last time modified date and times, table elements:\n  * `year` (number) year\n  * `mon` (number) month\n  * `day` (number) day of month\n  * `hour` (number) hours\n  * `hour12` (number) hours in US format\n  * `min` (number) minutes\n  * `sec` (number) seconds\n  * `suffix` (text) am or pm&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.5.0&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;fstat&quot;, &quot;symbol&quot;: &quot;fstat&quot;, &quot;summary&quot;: &quot;Checks the existence of file or directory.\n If not exist, return nil.\n If exist, return the object information.&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;path&quot;, &quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;path to the object&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;object info, table elements:\n* `size` (number) file size\n* `attrib` (number) file attribute flags\n* `time` (table) table with last time modified date and times, table elements:\n  * `year` (number) year\n  * `mon` (number) month\n  * `day` (number) day of month\n  * `hour` (number) hours\n  * `hour12` (number) hours in US format\n  * `min` (number) minutes\n  * `sec` (number) seconds\n  * `suffix` (text) am or pm&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.5.0&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -63,9 +64,9 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 @param path (string) path to the object
 
 @retval table object info, table elements:
-* 'size' (number) file size
-* 'attrib' (number) file attribute flags
-* 'time' (table) table with last time modified date and times, table elements:
+* `size` (number) file size
+* `attrib` (number) file attribute flags
+* `time` (table) table with last time modified date and times, table elements:
   * `year` (number) year
   * `mon` (number) month
   * `day` (number) day of month
@@ -110,7 +111,7 @@ Checks the existence of file or directory.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `integer` | object info, table elements: * 'size' (number) file size * 'attrib' (number) file attribute flags * 'time' (table) table with last time modified date and times, table elements:   * `year` (number) year   * `mon` (number) month   * `day` (number) day of month   * `hour` (number) hours   * `hour12` (number) hours in US format   * `min` (number) minutes   * `sec` (number) seconds   * `suffix` (text) am or pm |
+| `-` | `table` | object info, table elements: * `size` (number) file size * `attrib` (number) file attribute flags * `time` (table) table with last time modified date and times, table elements:   * `year` (number) year   * `mon` (number) month   * `day` (number) day of month   * `hour` (number) hours   * `hour12` (number) hours in US format   * `min` (number) minutes   * `sec` (number) seconds   * `suffix` (text) am or pm |
 
 #### Notes
 
@@ -132,9 +133,10 @@ Checks the existence of file or directory.
 
 @param path (string) path to the object
 
-@retval (integer) object info, table elements: * 'size' (number) file size
-* 'attrib' (number) file attribute flags
-* 'time' (table) table with last time modified date and times, table elements:
+@retval (table) object info, table elements:
+* `size` (number) file size
+* `attrib` (number) file attribute flags
+* `time` (table) table with last time modified date and times, table elements:
   * `year` (number) year
   * `mon` (number) month
   * `day` (number) day of month

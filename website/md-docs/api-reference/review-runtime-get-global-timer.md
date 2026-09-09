@@ -31,14 +31,15 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <table class="decision-table">
 <thead><tr><th>Field</th><th>Kind</th><th>Current Type</th><th>Description</th><th>Select Type</th></tr></thead>
 <tbody>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with elements: * `gtimer` (number) radio global timer in seconds
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>with elements:
+* `gtimer` (number) radio global timer in seconds
 * `session` (number) radio session in seconds
 * `ttimer` (number) radio throttle timer in seconds
 * `tptimer` (number) radio throttle percent timer in seconds</td><td><select data-field-kind="return" data-field-name="-" data-current-type="table"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getGlobalTimer&quot;, &quot;symbol&quot;: &quot;getGlobalTimer&quot;, &quot;summary&quot;: &quot;Returns radio timers&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with elements: * `gtimer` (number) radio global timer in seconds\n* `session` (number) radio session in seconds\n* `ttimer` (number) radio throttle timer in seconds\n* `tptimer` (number) radio throttle percent timer in seconds&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;unknown&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;getGlobalTimer&quot;, &quot;symbol&quot;: &quot;getGlobalTimer&quot;, &quot;summary&quot;: &quot;Returns radio timers&quot;, &quot;parameters&quot;: [], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;with elements:\n* `gtimer` (number) radio global timer in seconds\n* `session` (number) radio session in seconds\n* `ttimer` (number) radio throttle timer in seconds\n* `tptimer` (number) radio throttle percent timer in seconds&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;unknown&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -92,7 +93,8 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 Returns radio timers
 
-@retval (table) with elements: * `gtimer` (number) radio global timer in seconds
+@retval (table) with elements:
+* `gtimer` (number) radio global timer in seconds
 * `session` (number) radio session in seconds
 * `ttimer` (number) radio throttle timer in seconds
 * `tptimer` (number) radio throttle percent timer in seconds

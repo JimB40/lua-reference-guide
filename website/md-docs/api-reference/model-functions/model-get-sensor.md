@@ -21,10 +21,7 @@ Get Telemetry Sensor parameters
 
 ## Returns
 
-| Name | Type | Description |
-| --- | --- | --- |
-| `-` | `nil` | requested sensor does not exist |
-| `-` | `table` | with sensor data: * `type` (number) 0 = custom, 1 = calculated<ul><li>`name` (string) Name</li><li>`unit` (number) See list of units in the appendix of the OpenTX Lua Reference Guide</li><li>`prec` (number) Number of decimals</li><li>`id`   (number) Only custom sensors</li><li>`instance` (number) Only custom sensors</li><li>`formula` (number) Only calculated sensors. 0 = Add etc. see list of formula choices in Companion popup</li></ul> |
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>-</code></td><td><code>nil</code></td><td>requested sensor does not exist</td></tr><tr><td><code>-</code></td><td><code>table</code></td><td>with sensor data:</td></tr><tr class="lua-nested-field-row"><td colspan="3"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>type</code></td><td><code>number</code></td><td>0 = custom, 1 = calculated</td></tr><tr><td><code>name</code></td><td><code>string</code></td><td>Name</td></tr><tr><td><code>unit</code></td><td><code>number</code></td><td>See list of units in the appendix of the OpenTX Lua Reference Guide</td></tr><tr><td><code>prec</code></td><td><code>number</code></td><td>Number of decimals</td></tr><tr><td><code>id</code></td><td><code>number</code></td><td>Only custom sensors</td></tr><tr><td><code>instance</code></td><td><code>number</code></td><td>Only custom sensors</td></tr><tr><td><code>formula</code></td><td><code>number</code></td><td>Only calculated sensors. 0 = Add etc. see list of formula choices in Companion popup</td></tr></tbody></table></td></tr></tbody></table>
 
 ## Availability
 

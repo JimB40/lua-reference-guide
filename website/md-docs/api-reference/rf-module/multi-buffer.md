@@ -23,7 +23,7 @@ This function reads/writes the Multi protocol buffer to interact with a protocol
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `-` | `buffer` | value (number) |
+| `-` | `integer` | value (number) |
 
 ## Availability
 

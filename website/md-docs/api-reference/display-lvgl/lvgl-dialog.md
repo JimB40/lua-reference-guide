@@ -15,9 +15,7 @@ Display a dialog box.
 
 ## Parameters
 
-| Name | Req | Type | Description |
-| --- | --- | --- | --- |
-| `params` | yes | `table` | <ul><li>`title` (string) text displayed in the dialog's header, defaults to an empty string</li><li>`close` (function) called when the dialog is closed, defaults to nil</li><li>`flexFlow` (lvgl.FLOW_COLUMN or lvgl.FLOW_ROW) enables flex layout for this box, not used by default</li><li>`flexPad` (number) padding between rows/columns when flex layout is used, defaults to `PAD_OUTLINE`</li></ul> |
+<table><thead><tr><th>Name</th><th>Req</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>params</code></td><td>yes</td><td><code>table</code></td><td></td></tr><tr class="lua-nested-field-row"><td colspan="4"><table class="lua-nested-field-table"><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td><code>string</code></td><td>text displayed in the dialog's header, defaults to an empty string</td></tr><tr><td><code>close</code></td><td><code>function</code></td><td>called when the dialog is closed, defaults to nil</td></tr><tr><td><code>flexFlow</code></td><td><code>lvgl.FLOW_COLUMN or lvgl.FLOW_ROW</code></td><td>enables flex layout for this box, not used by default</td></tr><tr><td><code>flexPad</code></td><td><code>number</code></td><td>padding between rows/columns when flex layout is used, defaults to <code>PAD_OUTLINE</code></td></tr></tbody></table></td></tr></tbody></table>
 
 ## Returns
 

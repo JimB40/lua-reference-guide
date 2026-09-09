@@ -33,7 +33,8 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 <tbody>
 <tr><td><code>index</code></td><td>param</td><td><code>integer</code></td><td>flight mode number (use 0 for FM0)</td><td><select data-field-kind="param" data-field-name="index" data-current-type="integer"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="param" data-field-name="index" data-custom-type="true" /></td></tr>
 <tr><td><code>-</code></td><td>return</td><td><code>nil</code></td><td>requested input or line does not exist</td><td><select data-field-kind="return" data-field-name="-" data-current-type="nil"><option value="TODO">TODO</option><option value="integer">integer</option><option value="number">number</option><option value="string">string</option><option value="boolean">boolean</option><option value="table">table</option><option value="function">function</option><option value="pointer">pointer</option><option value="nil">nil</option><option value="integer|string">integer|string</option><option value="table|nil">table|nil</option><option value="function|nil">function|nil</option><option value="string|nil">string|nil</option></select><input type="text" placeholder="Custom type" data-field-kind="return" data-field-name="-" data-custom-type="true" /></td></tr>
-<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>input data: * `name` (string) input line name
+<tr><td><code>-</code></td><td>return</td><td><code>table</code></td><td>input data:
+* `name` (string) input line name
  * `switch` (number) input switch index
  * `fadeIn` (number) fade in value (in 0.1s)
  * `fadeOut` (number) fade out value (in 0.1s)
@@ -46,7 +47,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 </tbody>
 </table>
 <div class="decision-actions"><button type="button" data-role="save">Save Decisions</button></div>
-<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getFlightMode&quot;, &quot;symbol&quot;: &quot;model.getFlightMode&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;flight mode number (use 0 for FM0)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested input or line does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;input data: * `name` (string) input line name\n * `switch` (number) input switch index\n * `fadeIn` (number) fade in value (in 0.1s)\n * `fadeOut` (number) fade out value (in 0.1s)\n * `trimsValues` (table) table of trim values:\n   * `key` is trim number (zero based)\n   * `value` is trim value\n * `trimsModes` (table) table of trim mode:\n   * `key` is trim number (zero based)\n   * `value` is trim mode&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.10&quot;}</script>
+<script type="application/json" class="decision-payload">{&quot;item_id&quot;: &quot;model.getFlightMode&quot;, &quot;symbol&quot;: &quot;model.getFlightMode&quot;, &quot;summary&quot;: &quot;&quot;, &quot;parameters&quot;: [{&quot;name&quot;: &quot;index&quot;, &quot;type&quot;: &quot;integer&quot;, &quot;required&quot;: true, &quot;description&quot;: &quot;flight mode number (use 0 for FM0)&quot;}], &quot;returns&quot;: [{&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;nil&quot;, &quot;description&quot;: &quot;requested input or line does not exist&quot;}, {&quot;name&quot;: &quot;&quot;, &quot;type&quot;: &quot;table&quot;, &quot;description&quot;: &quot;input data:\n* `name` (string) input line name\n * `switch` (number) input switch index\n * `fadeIn` (number) fade in value (in 0.1s)\n * `fadeOut` (number) fade out value (in 0.1s)\n * `trimsValues` (table) table of trim values:\n   * `key` is trim number (zero based)\n   * `value` is trim value\n * `trimsModes` (table) table of trim mode:\n   * `key` is trim number (zero based)\n   * `value` is trim mode&quot;}], &quot;notes&quot;: [], &quot;since&quot;: &quot;2.3.10&quot;}</script>
 </div>
 
 <div class="review-workbench">
@@ -115,7 +116,8 @@ Use this as a starting point when the issue is in the C++ annotation. `TODO` mea
 
 @retval (nil) requested input or line does not exist
 
-@retval (table) input data: * `name` (string) input line name
+@retval (table) input data:
+* `name` (string) input line name
  * `switch` (number) input switch index
  * `fadeIn` (number) fade in value (in 0.1s)
  * `fadeOut` (number) fade out value (in 0.1s)

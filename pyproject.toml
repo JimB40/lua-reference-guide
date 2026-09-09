@@ -8,6 +8,7 @@ dependencies = [
   "mkdocs-material>=9.5,<10.0",
   "mike>=2,<3",
   "mkdocs-minify-plugin>=0.8,<1.0",
+  "markdown>=3.6,<4.0",
 ]
 
 [tool.uv]

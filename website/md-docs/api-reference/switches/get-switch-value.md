@@ -23,7 +23,7 @@ edit docs-system/overlays/<doc_id>.md, then rebuild.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `value` | `true/false` | . The value of the switch. |
+| `value` | `integer` | . The value of the switch. |
 
 ## Availability
 
